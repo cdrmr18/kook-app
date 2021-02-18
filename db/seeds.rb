@@ -1,19 +1,20 @@
 
 puts 'Deleting current seed...'
 
-# User.delete_all
-# Chef.delete_all
-# Recipe.delete_all
-# Booking.delete_all
-# Chef_review.delete_all
-# Recipe_review.delete_all
-# Chat.delete_all
-# Message.delete_all
+ChefReview.delete_all
+RecipeReview.delete_all
+Message.delete_all
+Chat.delete_all
+Booking.delete_all
+Recipe.delete_all
+Chef.delete_all
+User.delete_all
+
 
 puts 'Starting seed..'
 
 puts 'creating users...'
-10.times do
+2.times do
   User.create!(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
@@ -42,7 +43,7 @@ puts 'creating recipes...'
   Recipe.create!(
     name: Faker::Food.dish,
     description: Faker::Food.description,
-    ingredients: [[Faker::Food.measurement, Faker::Food.ingredient], [Faker::Food.measurement, Faker::Food.ingredient], [Faker::Food.measurement, Faker::Food.ingredient], [Faker::Food.measurement, Faker::Food.ingredient]],
+    ingredients: Faker::Food.ingredient,
     cuisine: 'Mexican',
     cook_time: rand(15..120),
     chef_id: Chef.first.id
@@ -53,7 +54,7 @@ end
   Recipe.create!(
     name: Faker::Food.dish,
     description: Faker::Food.description,
-    ingredients: [[Faker::Food.measurement, Faker::Food.ingredient], [Faker::Food.measurement, Faker::Food.ingredient], [Faker::Food.measurement, Faker::Food.ingredient], [Faker::Food.measurement, Faker::Food.ingredient]],
+    ingredients: Faker::Food.ingredient,
     cuisine: "Italian",
     cook_time: rand(15..120),
     chef_id: Chef.last.id
@@ -123,12 +124,12 @@ puts ' creating messages...'
 Message.create!(
   chat_id: Chat.first.id,
   content: "Hi chef, I am excited to get cooking with you soon!",
-  user_id: Chat.first.booking_id
+  user_id: User.first.id
   )
 Message.create!(
   chat_id: Chat.last.id,
   content: "It's nice to meet you chef. Can't wait to make your signature dish!",
-  user_id: Chat.booking_id
+  user_id: User.last.id
   )
 
 puts "#{Message.count} messages created"
