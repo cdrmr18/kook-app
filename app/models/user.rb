@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :messages
   has_many :bookings
-  has_one_photo :photo
+  has_one_attached :photo
 end
