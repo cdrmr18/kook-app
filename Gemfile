@@ -25,8 +25,6 @@ gem 'simple_form'
 gem 'faker'
 gem 'flatpickr'
 gem 'devise'
-gem 'pundit'
-gem 'geocoder'
 gem 'pg_search', '~> 2.3.0'
 gem 'turbolinks_render'
 gem 'autoprefixer-rails'
@@ -37,7 +35,7 @@ gem 'cloudinary', '~> 1.16.0'
 # gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.2', require: false
+gem 'bootsnap', '>= 1.7.2', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
