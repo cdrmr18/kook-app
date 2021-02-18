@@ -31,6 +31,7 @@ gem 'pg_search', '~> 2.3.0'
 gem 'turbolinks_render'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
+gem 'dotenv-rails', groups: [:development, :test]
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
