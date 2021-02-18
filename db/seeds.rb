@@ -1,3 +1,4 @@
+recipes = ["https://unsplash.com/photos/auIbTAcSH6E","https://unsplash.com/photos/pLKgCsBOiw4","https://unsplash.com/photos/XoByiBymX20","https://unsplash.com/photos/zcUgjyqEwe8","https://unsplash.com/photos/OFismyezPnY","https://unsplash.com/photos/jpkfc5_d-DI","https://unsplash.com/photos/awj7sRviVXo","https://unsplash.com/photos/IGfIGP5ONV0","https://unsplash.com/photos/w6ftFbPCs9I","https://unsplash.com/photos/fdlZBWIP0aM"]
 
 puts 'Deleting current seed...'
 
@@ -10,20 +11,34 @@ Recipe.delete_all
 Chef.delete_all
 User.delete_all
 
-
 puts 'Starting seed..'
 
+
 puts 'creating users...'
-2.times do
-  User.create!(
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
-    username: Faker::Internet.username,
-    email: Faker::Internet.email,
-    password: 123456
-    )
-end
+file = URI.open("https://unsplash.com/photos/C8Ta0gwPbQg")
+user = User.new(
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
+  username: Faker::Internet.username,
+  email: Faker::Internet.email,
+  password: 123456
+  )
+user.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+user.save!
+
+file = URI.open("https://unsplash.com/photos/jzz_3jWMzHA")
+user = User.new(
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
+  username: Faker::Internet.username,
+  email: Faker::Internet.email,
+  password: 123456
+  )
+user.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+user.save!
 puts "#{User.count} users created"
+
+
 
 puts ' creating chefs...'
 Chef.create!(
@@ -38,9 +53,12 @@ Chef.create!(
 puts "#{Chef.count} chefs created"
 
 
+
 puts 'creating recipes...'
-5.times do
-  Recipe.create!(
+5.times do |idx|
+  recipe_url = recipes[idx]
+  file = URI.open(recipe_url)
+  recipe = Recipe.new(
     name: Faker::Food.dish,
     description: Faker::Food.description,
     ingredients: Faker::Food.ingredient,
@@ -48,10 +66,14 @@ puts 'creating recipes...'
     cook_time: rand(15..120),
     chef_id: Chef.first.id
     )
+  recipe.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+  recipe.save!
 end
 
-5.times do
-  Recipe.create!(
+5.times do |idx|
+  recipe_url = recipes[idx+5]
+  file = URI.open(recipe_url)
+  recipe = Recipe.new(
     name: Faker::Food.dish,
     description: Faker::Food.description,
     ingredients: Faker::Food.ingredient,
@@ -59,6 +81,8 @@ end
     cook_time: rand(15..120),
     chef_id: Chef.last.id
     )
+  recipe.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+  recipe.save!
 end
 puts "#{Recipe.count} recipes created"
 
