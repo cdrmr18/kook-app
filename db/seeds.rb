@@ -64,7 +64,8 @@ puts 'creating recipes...'
     ingredients: Faker::Food.ingredient,
     cuisine: 'Mexican',
     cook_time: rand(15..120),
-    chef_id: Chef.first.id
+    chef_id: Chef.first.id,
+    price: Faker::Number.decimal(l_digits: 2)
     )
   recipe.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
   recipe.save!
@@ -79,7 +80,8 @@ end
     ingredients: Faker::Food.ingredient,
     cuisine: "Italian",
     cook_time: rand(15..120),
-    chef_id: Chef.last.id
+    chef_id: Chef.last.id,
+    price: Faker::Number.decimal(l_digits: 2)
     )
   recipe.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
   recipe.save!

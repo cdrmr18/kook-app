@@ -1,22 +1,25 @@
 <div class="container mt-4">
   <div class="row">
     <% @recipes.each do |recipe| %>
-    <div class="col-12 col-md-6 mb-4">
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
       <div class="card-trip">
         <% recipe.photos.each do |photo| %>
             <%= cl_image_tag photo.key, class: "card-trip", crop: :fill %>
             <% break %>
-          <% end %>
+        <% end %>
         <div class="card-trip-infos">
           <div>
-            <h2><%= recipe.name %></h2>
+            <h2><%= recipe.name %> by Chef <span class="card-chef-name"><%= User.find(Chef.find(recipe.chef.user_id).user_id).first_name %> <%= User.find(Chef.find(recipe.chef.user_id).user_id).last_name %></span></h2>
             <p><%= recipe.description %></p>
           </div>
-          <h2 class="card-trip-pricing">£99.99</h2>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+          <h2 class="card-trip-pricing">$<%= recipe.price %></h2>
+          <%= cl_image_tag User.find(Chef.find(recipe.chef.user_id).user_id).photo.key, class: "card-trip-user avatar-bordered" %>
         </div>
       </div>
     </div>
     <% end %>
   </div>
 </div>
+
+
+
