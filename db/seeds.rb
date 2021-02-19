@@ -1,4 +1,6 @@
-recipes = ["https://unsplash.com/photos/auIbTAcSH6E","https://unsplash.com/photos/pLKgCsBOiw4","https://unsplash.com/photos/XoByiBymX20","https://unsplash.com/photos/zcUgjyqEwe8","https://unsplash.com/photos/OFismyezPnY","https://unsplash.com/photos/jpkfc5_d-DI","https://unsplash.com/photos/awj7sRviVXo","https://unsplash.com/photos/IGfIGP5ONV0","https://unsplash.com/photos/w6ftFbPCs9I","https://unsplash.com/photos/fdlZBWIP0aM"]
+require "open-uri"
+
+recipes = ['https://unsplash.com/photos/auIbTAcSH6E','https://unsplash.com/photos/pLKgCsBOiw4','https://unsplash.com/photos/XoByiBymX20','https://unsplash.com/photos/zcUgjyqEwe8','https://unsplash.com/photos/OFismyezPnY','https://unsplash.com/photos/jpkfc5_d-DI','https://unsplash.com/photos/awj7sRviVXo','https://unsplash.com/photos/IGfIGP5ONV0','https://unsplash.com/photos/w6ftFbPCs9I','https://unsplash.com/photos/fdlZBWIP0aM']
 
 puts 'Deleting current seed...'
 
@@ -15,7 +17,7 @@ puts 'Starting seed..'
 
 
 puts 'creating users...'
-file = URI.open("https://unsplash.com/photos/C8Ta0gwPbQg")
+file = URI.open('https://unsplash.com/photos/C8Ta0gwPbQg')
 user = User.new(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
@@ -26,7 +28,7 @@ user = User.new(
 user.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 user.save!
 
-file = URI.open("https://unsplash.com/photos/jzz_3jWMzHA")
+file = URI.open('https://unsplash.com/photos/jzz_3jWMzHA')
 user = User.new(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
@@ -107,7 +109,7 @@ Booking.create!(
 )
 puts "#{Booking.count} bookings created"
 
-puts 'creating chefs...'
+puts 'creating chef reviews...'
 ChefReview.create!(
   chef_id: Chef.first.id,
   booking_id: Booking.first.id,
@@ -122,7 +124,7 @@ ChefReview.create!(
   )
 puts "#{ChefReview.count} chef reviews created"
 
-puts 'creating recipes...'
+puts 'creating recipe reviews...'
 RecipeReview.create!(
   rating: rand(1...5),
   content: 'I have to say, I enjoyed every single bite of the meal',
