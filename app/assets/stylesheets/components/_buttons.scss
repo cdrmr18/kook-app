@@ -5,5 +5,7 @@
   &:hover {
     background-color: #4cb297;
     color: white;
+    transition-timing-function: linear;
+    transition-delay: .08s;
   }
 }
