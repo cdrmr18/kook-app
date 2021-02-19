@@ -5,11 +5,12 @@
       <div class="card-trip">
         <% recipe.photos.each do |photo| %>
             <%= cl_image_tag photo.key, class: "card-trip", crop: :fill %>
+            <% break %>
           <% end %>
         <div class="card-trip-infos">
           <div>
-            <h2>Title here</h2>
-            <p>Short description here!</p>
+            <h2><%= recipe.name %></h2>
+            <p><%= recipe.description %></p>
           </div>
           <h2 class="card-trip-pricing">£99.99</h2>
           <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
