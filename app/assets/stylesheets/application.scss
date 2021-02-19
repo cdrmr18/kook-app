@@ -11,6 +11,7 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "sessions";
 
 // search scss
 .search-form-control {
@@ -40,12 +41,4 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
-// sign_in & sign_up scss
-.log {
-  width: 50%;
-  border: 1px solid rgb(221, 221, 221);
-  border-radius: 4px;
-  padding: 24px;
-  margin: 48px auto 48px;
-  box-shadow: rgba(0,0,0,0.2) 0px 6px 16px;
-}
+
