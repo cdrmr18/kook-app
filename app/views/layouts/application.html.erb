@@ -10,6 +10,7 @@
   </head>
 
   <body>
+
     <!-- navbar start-->
     <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
       <%= link_to "#", class: "navbar-brand" do %>
@@ -47,6 +48,11 @@
       </div>
     </div>
     <!-- navbar end-->
+
+    <!-- DEVISE ALERTS -->
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    <!-- DEVISE ALERTS END -->
 
     <div class="container">
       <%= yield %>
