@@ -6,4 +6,10 @@ class User < ApplicationRecord
   has_many :messages
   has_many :bookings
   has_one_attached :photo
+
+  def owns?(item)
+    item.user==self
+  end
+
+
 end
