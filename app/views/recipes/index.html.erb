@@ -9,12 +9,12 @@
         <% end %>
         <div class="card-food-infos">
           <div>
-            <h2><%= recipe.name %> <span>| Chef <%= User.find(Chef.find(recipe.chef.user_id).user_id).first_name %> <%= User.find(Chef.find(recipe.chef.user_id).user_id).last_name %></span></h2>
+            <h2><%= recipe.name %> <span>| Chef <%= recipe.chef.user.first_name %> <%= recipe.chef.user.last_name %></span></h2>
             <p class="mt-2"><span class="mr-3"><%= recipe.cuisine %></span> ⭐️⭐️⭐️⭐️</p>
             <p class="mt-2"><%= recipe.description %></p>
           </div>
           <h2 class="card-food-pricing ">$<%= recipe.price %></h2>
-          <%= cl_image_tag User.find(Chef.find(recipe.chef.user_id).user_id).photo.key, class: "card-food-user avatar-bordered",
+          <%= cl_image_tag recipe.chef.user.photo.key, class: "card-food-user avatar-bordered",
       width: 50, height: 50,  crop: :fill %>
         </div>
       </div>
