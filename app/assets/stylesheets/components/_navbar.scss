@@ -48,7 +48,6 @@
 
 .inblk{
   display: flex;
-  align-items: center;
 }
 
 // .navbar-collapse.show img{
@@ -85,6 +84,7 @@ cursor: pointer;
 }
 
 
+/* MEDIA QUERIES */
 
 @media (min-width: 320px)and (max-width: 480px) {
   /* For mobile phones: */
@@ -103,6 +103,21 @@ cursor: pointer;
 }
 
 .navbar-collapse.collapse.show #drpdown{
-  width: 50%;
-  align-items: center;
+  width: 80%;
+
 }
+
+/* centering drop down menu in responsive to be in the middle */
+.col-md-12{
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown-item.text{
+  text-align: center;
+  margin-bottom: 10px;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+

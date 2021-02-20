@@ -47,13 +47,15 @@
             <%# </li> %> 
             <li class="nav-item dropdown">
               <%= image_tag "https://kitt.lewagon.com/placeholder/users/random", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-  
+              <div class="col-md-12">    
               <div class="dropdown-menu dropdown-menu-right" id="drpdown" aria-labelledby="navbarDropdown">
-                <div class="inblk"><i class="far fa-envelope"></i><%= link_to "Messages", chats_path, class: "dropdown-item text" %></div>
-                <div class="inblk"><i class="far fa-calendar-alt"></i><%= link_to "Bookings", bookings_path, class: "dropdown-item text" %></div>
-                <div class="inblk"> <i class="far fa-heart"></i><%= link_to "Favourites", "#", class: "dropdown-item text" %></div>
-                <div class="inblk"> <i class="far fa-address-card"></i><%= link_to "Profile", chefs_path, class: "dropdown-item text" %></div>
-                <div class="inblk"> <i class="fas fa-sign-out-alt"></i><%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item text" %></div>
+                <div class="inblk"><%= link_to "Messages", chats_path, class: "dropdown-item text" %></div>
+                <div class="inblk"><%= link_to "Bookings", bookings_path, class: "dropdown-item text" %></div>
+                <div class="inblk"><%= link_to "Favourites", "#", class: "dropdown-item text" %></div>
+                <div class="inblk"><%= link_to "Profile", chefs_path, class: "dropdown-item text" %></div>
+                <div class="inblk"><%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item text" %></div>
+              </div>
+              </div>
               </div>
               
             </li>
