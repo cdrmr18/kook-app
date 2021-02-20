@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background:#eff4f2;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -22,6 +22,7 @@
 }
 
 
+
 #drpdown { 
 
   border-color: #75CFB8;
@@ -35,10 +36,9 @@
 }
 
 #drpdown a{
-  
   &:hover{
     background-color: transparent;
-    border-bottom:2px;
+    border-bottom:12px;
   }
 }
 
@@ -83,14 +83,22 @@ cursor: pointer;
 }
 }
 
+/* END OF CSS EFFECTS ON DROP DOWN LINKS */
+
+
+
+
+
+
 
 /* MEDIA QUERIES */
 
 @media (min-width: 320px)and (max-width: 480px) {
   /* For mobile phones: */
   [id*="drpdown"] {
-    width:300px;
+    width:100px;
   }
+ 
 }
 
 @media (max-width: 580px) {
@@ -101,6 +109,9 @@ cursor: pointer;
   }
 
 }
+
+/* END MEDIA QUERIES */
+
 
 .navbar-collapse.collapse.show #drpdown{
   width: 80%;
@@ -120,4 +131,24 @@ cursor: pointer;
   font-family: Arial, Helvetica, sans-serif;
 
 }
+
+.container-fluid{
+ margin:20px;
+}
+
+.form-control{
+  width: 80%;
+}
+
+
+
+.navbar .navbar-nav {
+  float: none;
+  vertical-align: center;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
 
