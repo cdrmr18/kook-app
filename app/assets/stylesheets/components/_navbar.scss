@@ -15,6 +15,12 @@
   width: 150px;
 }
 
+.navbar-light .navbar-toggler {
+  border-radius: 20px;
+  border-color:black;
+  border-width:2px;
+}
+
 
 #drpdown { 
 
@@ -45,13 +51,20 @@
   align-items: center;
 }
 
+// .navbar-collapse.show img{
+//   display:none;
+// }
+
+.navbar-collapse.show .dropdown-menu{
+  display: block;
+}
+
 
 /* CSS EFFECTS ON DROP DOWN LINKS */
 .text {
   transition: background-size .4s ease;
 background: linear-gradient(to bottom, transparent 62%, #ffc478 0) center center/0% 75% no-repeat;
-font-family: Quicksand;
-font-size: 1.7rem;
+font-size: 1rem;
 padding: 0 6px 2px 6px;
 cursor: pointer;
     color: rgba(80, 89, 113, 0.7);
@@ -72,3 +85,24 @@ cursor: pointer;
 }
 
 
+
+@media (min-width: 320px)and (max-width: 480px) {
+  /* For mobile phones: */
+  [id*="drpdown"] {
+    width:300px;
+  }
+}
+
+@media (max-width: 580px) {
+
+  #navbarDropdown{
+    display: none;
+    opacity: 0;
+  }
+
+}
+
+.navbar-collapse.collapse.show #drpdown{
+  width: 50%;
+  align-items: center;
+}
