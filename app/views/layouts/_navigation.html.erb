@@ -18,8 +18,8 @@
             <a class="navbar-brand"></a>
               <form class="d-flex">
               <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-              <input class="form-control me-2" type="search" placeholder="cuisine or recipe" aria-label="Search">
-              <button class="btn" type="submit">Search</button>
+              <input class="form-control me-2" id="form-cont" type="search" placeholder="cuisine or recipe" aria-label="Search">
+              <button class="btn" id="search-btn" type="submit">Search</button>
             </form>
           </div>
         <% end %>
