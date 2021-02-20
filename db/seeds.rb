@@ -36,7 +36,7 @@ user = User.new(
   email: Faker::Internet.email,
   password: 123456
   )
-user.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+user.photo.attach(io: file, filename: 'nes1.png', content_type: 'image/png')
 user.save!
 puts "#{User.count} users created"
 
@@ -69,7 +69,7 @@ puts 'creating recipes...'
     chef_id: Chef.first.id,
     price: Faker::Number.decimal(l_digits: 2)
     )
-  recipe.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+  recipe.photos.attach(io: file, filename: "nes'#{idx}'.png", content_type: 'image/png')
   recipe.save!
 end
 
@@ -85,7 +85,7 @@ end
     chef_id: Chef.last.id,
     price: Faker::Number.decimal(l_digits: 2)
     )
-  recipe.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+  recipe.photos.attach(io: file, filename: "nes'#{idx}'.png", content_type: 'image/png')
   recipe.save!
 end
 puts "#{Recipe.count} recipes created"
