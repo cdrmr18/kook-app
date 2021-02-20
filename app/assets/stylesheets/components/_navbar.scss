@@ -36,10 +36,9 @@
 }
 
 #drpdown a{
-  
   &:hover{
     background-color: transparent;
-    border-bottom:2px;
+    border-bottom:12px;
   }
 }
 
@@ -84,6 +83,13 @@ cursor: pointer;
 }
 }
 
+/* END OF CSS EFFECTS ON DROP DOWN LINKS */
+
+
+
+
+
+
 
 /* MEDIA QUERIES */
 
@@ -103,6 +109,9 @@ cursor: pointer;
   }
 
 }
+
+/* END MEDIA QUERIES */
+
 
 .navbar-collapse.collapse.show #drpdown{
   width: 80%;
@@ -126,3 +135,20 @@ cursor: pointer;
 .container-fluid{
  margin:20px;
 }
+
+.form-control{
+  width: 80%;
+}
+
+
+
+.navbar .navbar-nav {
+  float: none;
+  vertical-align: center;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+
