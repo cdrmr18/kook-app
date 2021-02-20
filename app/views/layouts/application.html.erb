@@ -13,16 +13,13 @@
     <header>
     <!-- navbar start-->
     <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-      <%= link_to "/", class: "navbar-brand" do %>
+        <%= link_to "/", class: "navbar-brand" do %>
         <%= image_tag "LOGO.svg" %>
         <% end %>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon "></span>
-        <%= image_tag "https://kitt.lewagon.com/placeholder/users/random", class: "avatar dropdown-toggle", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-      </button>
-   
-
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon "></span>
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/random", class: "avatar dropdown-toggle", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        </button>
 
     <% if controller.controller_name == 'chefs' && controller.action_name == 'index' || controller.controller_name == 'recipes' && controller.action_name == 'index'%>
       <%= simple_form_for :search, url: root_path, method: :get do |f| %>
@@ -34,7 +31,7 @@
         </div>
       <% end %>
        <% end %>
-
+     
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
@@ -48,25 +45,27 @@
             <li class="nav-item dropdown">
               <%= image_tag "https://kitt.lewagon.com/placeholder/users/random", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
               <div class="col-md-12">    
-              <div class="dropdown-menu dropdown-menu-right" id="drpdown" aria-labelledby="navbarDropdown">
-                <div class="inblk"><%= link_to "Messages", chats_path, class: "dropdown-item text" %></div>
-                <div class="inblk"><%= link_to "Bookings", bookings_path, class: "dropdown-item text" %></div>
-                <div class="inblk"><%= link_to "Favourites", "#", class: "dropdown-item text" %></div>
-                <div class="inblk"><%= link_to "Profile", chefs_path, class: "dropdown-item text" %></div>
-                <div class="inblk"><%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item text" %></div>
+                <div div class="dropdown-menu dropdown-menu-right" id="drpdown" aria-labelledby="navbarDropdown">
+                    <div class="inblk"><%= link_to "Messages", chats_path, class: "dropdown-item text" %></div>
+                    <div class="inblk"><%= link_to "Bookings", bookings_path, class: "dropdown-item text" %></div>
+                    <div class="inblk"><%= link_to "Favourites", "#", class: "dropdown-item text" %></div>
+                    <div class="inblk"><%= link_to "Profile", chefs_path, class: "dropdown-item text" %></div>
+                    <div class="inblk"><%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item text" %></div>
+                  </div>
+                </div>
               </div>
-              </div>
-              </div>
-              
             </li>
-          <% else %>
-            <li class="nav-item">
-              <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-            </li>
-          <% end %>
-        </ul>
+           <% else %>
+               <li class="nav-item">
+                <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+                </li>
+            <% end %>
+         </ul>
+       </div>
       </div>
     </div>
+  
+    
     </header>
     <!-- navbar end-->
 
