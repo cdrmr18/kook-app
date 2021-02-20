@@ -1,11 +1,44 @@
 // sign_in & sign_up scss
+
+
 .log {
   background-color: white;
-  width: 50%;
+  width:60%;
   border: 1px solid rgb(221, 221, 221);
   border-radius: 4px;
   padding: 24px;
   margin: 48px auto 48px;
   box-shadow: rgba(0,0,0,0.2) 0px 6px 16px;
+  border-radius: 5px;
 }
 
+
+
+@media (min-width: 1025px) and (max-width: 1200px){
+   /* For mobile phones: */
+   [class*="log"] {
+    width: 365px;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px){
+  [class*="log"] {
+    width:365px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="log"] {
+    width:365px;
+  }
+}
+
+
+@media (min-width: 320px)and (max-width: 480px) {
+  /* For mobile phones: */
+  [class*="log"] {
+    width:80%;
+  }
+}
