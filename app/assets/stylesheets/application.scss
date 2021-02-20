@@ -49,3 +49,12 @@ body {
 
 
 
+.form-control{
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.form-control:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}

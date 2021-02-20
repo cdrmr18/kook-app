@@ -90,8 +90,9 @@ cursor: pointer;
 @media (min-width: 320px)and (max-width: 480px) {
   /* For mobile phones: */
   [id*="drpdown"] {
-    width:300px;
+    width:100px;
   }
+ 
 }
 
 @media (max-width: 580px) {
@@ -122,7 +123,6 @@ cursor: pointer;
 
 }
 
-
 .container-fluid{
-  
+ margin:20px;
 }
