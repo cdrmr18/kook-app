@@ -1,12 +1,12 @@
 <!-- chef info -->
-<div class="container card px-3 py-3">
+<div class="container  px-3 py-3 chef-info">
   <div class="container">
     <div class="row align-items-end justify-content-between">
       <div class="col-6 col-md-8 text-center">
         <h1><%= @chef.user.first_name %> <%= @chef.user.last_name %></h1>
         <p>chef job title (need column)</p>
         <p>chef restaurant name (need column)</p>
-        <p>⭐️⭐️⭐️⭐️⭐️(144 reviews)</p>
+        <p>⭐️⭐️⭐️⭐️⭐️</p>
       </div>
       <div class="col-6 col-md-4">
         <%= cl_image_tag @chef.user.photo.key, width: 200, height: 200,  crop: :fill, class: "chef-avatar"  %>
@@ -19,10 +19,25 @@
   </div>
 </div>
 
-<!-- intro video -->
+<hr>
+<!-- intro video / using animage as placeholdher until we can add a video-->
+<div class="container">
+  <h2 class="text-center">Chef intro</h2>
+  <%= image_tag("https://images.unsplash.com/photo-1541614101331-1a5a3a194e92?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1001&q=80", class: "chef-video-img") %>
+</div>
 
+<hr>
 <!-- chef recipes -->
+<div class="chef-recipe-cards">
+  <% @chef.recipes.each do | recipe | %>
+    <% recipe.photos.each do |photo| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path photo.key%>)"><%= recipe.name %></div>
+    <% end %>
+  <% end %>
+</div>
 
+<hr>
 <!-- chef calendar & booking -->
 
+<hr>
 <!-- chef reviews -->
