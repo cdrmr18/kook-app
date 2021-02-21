@@ -22,8 +22,8 @@
 <hr>
 <!-- intro video / using animage as placeholdher until we can add a video-->
 <div class="container">
-  <h2 class="text-center">Chef intro</h2>
-  <%= image_tag("https://images.unsplash.com/photo-1541614101331-1a5a3a194e92?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1001&q=80", class: "chef-video-img") %>
+  <h3 class="text-center">Chef intro</h3>
+  <iframe class="chef-video" width="80%" height="400" src= "https://youtu.be/8V-R4f1QXds" frameborder="0" allowfullscreen></iframe>
 </div>
 
 <hr>
@@ -39,11 +39,18 @@
         <% end %>
         <div class="card-food-infos">
           <div>
-            <h2><%= recipe.name %> <span>| Chef <%= recipe.chef.user.first_name %> <%= recipe.chef.user.last_name %></span></h2>
-            <p class="mt-2"><span class="mr-3"><%= recipe.cuisine %></span> ⭐️⭐️⭐️⭐️</p>
+            <h2><%= recipe.name %></h2>
+
+          <div class="container mt-2">
+            <div class="row">
+              <div class="col-6 pl-0"><p><span class="mr-3"><%= recipe.cuisine %></span> ⭐️⭐️⭐️⭐️</p></div>
+              <div class="col-6"><span>Cook time: <%= recipe.cook_time %> mins</span></div>
+            </div>
+          </div>
+
             <p class="mt-2 mr-2"><%= recipe.description %></p>
           </div>
-          <p><%= link_to "Book", new_recipe_booking_path(recipe), class: "btn button" %></p>
+
         </div>
       </div>
     </div>
@@ -52,7 +59,13 @@
 </div>
 
 <hr>
-<!-- chef calendar & booking -->
+<!-- chef calendar & booking stuck to side while scrolling-->
 
 <hr>
 <!-- chef reviews -->
+<% @chef.chef_reviews.each do |review| %>
+  <div class="container card px-3 py-2 mb-4">
+    <p><%= review.rating %></p>
+  <p><%= review.content %></p>
+  </div>
+<% end %>

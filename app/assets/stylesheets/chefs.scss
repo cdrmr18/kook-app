@@ -15,14 +15,17 @@ h1 {
   // max-width: 80%;
 }
 
-.chef-video-img {
-    width: 70%;
-    height: 200px;
+.chef-video{
     display: block;
     margin: 0 auto;
 }
 
 // card styling
+.card-food {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
 .card-food > img {
   height: 200px;
   width: 100%;
@@ -54,12 +57,4 @@ h1 {
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
-  background-color: white;
-}
-
-.card-food-infos .card-food-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
 }
