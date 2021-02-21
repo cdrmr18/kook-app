@@ -1,2 +1,21 @@
-<h1>Chefs#show</h1>
-<p>Find me in app/views/chefs/show.html.erb</p>
+<div class="container card px-3 py-3">
+
+  <div class="container">
+    <div>
+      <h1><%= @chef.user.first_name %> <%= @chef.user.last_name %></h1>
+      <p>chef job title (need column)</p>
+      <p>chef restaurant name (need column)</p>
+      <p>⭐️⭐️⭐️⭐️⭐️(144 reviews)</p>
+    </div>
+    <div>
+      <%= cl_image_tag @chef.user.photo.key, width: 250, height: 250,  crop: :fill, class: "chef-avatar"  %>
+    </div>
+  </div>
+
+
+  <div class="container mt-3">
+    <p>(need column) Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Quaerat dolore repellendus corrupti sapiente recusandae fugiat accusamus, vero, quo deserunt nemo, cupiditate, dolorum nihil libero similique laborum sint aperiam iusto accusantium.</p>
+  </div>
+
+
+</div>
