@@ -1,25 +1,6 @@
-<div class="container mt-4">
-  <div class="row">
-    <div class="col-12 col-md-6 col-lg-4 mb-4">
-      <div class="card-food">
-          <% @recipe.photos.each do |photo| %>
-            <%= cl_image_tag photo.key%>
-            <% break %>
-        <% end %>
-        <div class="card-food-infos">
-          <div>
-            <h2><%= @recipe.name %> <span>| Chef <%= @recipe.chef.user.first_name %> <%= @recipe.chef.user.last_name %></span></h2>
-            <p class="mt-2"><span class="mr-3"><%= @recipe.cuisine %></span> ⭐️⭐️⭐️⭐️</p>
-            <p class="mt-2"><%= @recipe.description %></p>
-          </div>
-          <h2 class="card-food-pricing "></h2>
-          <%= cl_image_tag @recipe.chef.user.photo.key, class: "card-food-user avatar-bordered",
-      width: 50, height: 50,  crop: :fill %>
-        </div>
-      </div>
-    </div>
+<!-- recipe image -->
+<div class="banner my-0" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(<%= cl_image_path @recipe.photos.first.key %>);">
+  <div class="container text-center">
+    <h1> <%= @recipe.name %> </h1>
   </div>
 </div>
-
-
-
