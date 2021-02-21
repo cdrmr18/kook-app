@@ -13,7 +13,6 @@
             <p class="mt-2"><span class="mr-3"><%= recipe.cuisine %></span> ⭐️⭐️⭐️⭐️</p>
             <p class="mt-2"><%= recipe.description %></p>
           </div>
-          <h2 class="card-food-pricing ">$<%= recipe.price %></h2>
           <%= cl_image_tag User.find(Chef.find(recipe.chef.user_id).user_id).photo.key, class: "card-food-user avatar-bordered",
       width: 50, height: 50,  crop: :fill %>
         </div>

@@ -5,8 +5,8 @@
       <div class="card border-0 card-chef" style="width: 100%;">
         <%= cl_image_tag User.find(chef.user_id).photo.key, class: "card-img-top", crop: :fill %>
         <div class="card-body">
-          <h5 class="card-title"><%= User.find(chef.user_id).first_name %> <%= User.find(chef.user_id).last_name %></h5>
-          <p class="mt-3"><%= chef.cuisine %></p>
+          <h5 class="card-title"><%= chef.user.first_name %> <%= chef.user.last_name %></h5>
+          <p class="mt-3"><%= chef.cuisine %> <span class="mr-4"></span><%=  "⭐️" * chef.chef_reviews.average(:rating).round(2) %> </p>
           <p class="card-text my-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         </div>
       </div>
