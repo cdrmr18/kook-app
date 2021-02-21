@@ -9,7 +9,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="d-flex flex-column">
   
     
     <%= render 'layouts/navigation' %>
@@ -26,11 +26,20 @@
       </div>
     </main>
 
+        <!-- STICKER FOOTER -->
+
+    <div id="page-content">
+
+
+
+    </div>
+
+        
 
     <footer>
-
+      <%= render 'layouts/footer' %>
     </footer>
-
+    <!--STICKY FOOTER END DIV -->
 
   </body>
 </html>
