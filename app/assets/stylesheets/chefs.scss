@@ -16,10 +16,13 @@ h1 {
 }
 
 .chef-video-img {
-    width: 100%;
+    width: 70%;
     height: 200px;
+    display: block;
+    margin: 0 auto;
 }
 
+// card styling
 .card-food > img {
   height: 200px;
   width: 100%;
@@ -51,6 +54,7 @@ h1 {
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  background-color: white;
 }
 
 .card-food-infos .card-food-user {
@@ -59,4 +63,3 @@ h1 {
   top: -20px;
   width: 40px;
 }
-
