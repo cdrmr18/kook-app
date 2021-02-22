@@ -13,7 +13,8 @@
 @import "pages/index";
 @import "sessions";
 @import "registrations";
-
+@import "chefs";
+@import "recipes";
 
 // general page styling
 body {
@@ -27,17 +28,16 @@ body {
 
 .search-form-control .btn {
   position: absolute;
-  top: 8px;
-  bottom: 8px;
-  right: 8px;
+  bottom: 4px;
+  right: 4px;
 }
 
 .search-form-control .form-control {
-  height: 3.5rem;
-  width: 480px;
+  height: 2.5rem;
+  width:340px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   border: 1px solid #E7E7E7;
-  border-radius: 30px;
+  border-radius: 10px;
   margin-top: 15px;
 
 }
@@ -50,3 +50,12 @@ body {
 
 
 
+#form-cont{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#form-cont:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
