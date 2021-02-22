@@ -5,4 +5,13 @@ class Chef < ApplicationRecord
   has_many :recipes
 
   validates :cuisine, presence: true
+
+
+
+  include PgSearch::Model
+    multisearchable against: [:user, :bookings]
+  
+
+
+
 end
