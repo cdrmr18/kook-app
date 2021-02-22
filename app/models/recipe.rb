@@ -14,11 +14,11 @@ class Recipe < ApplicationRecord
 
 
   include PgSearch::Model
-    multisearchable against: [:name, :cuisine, :cook_time, :description]
+    multisearchable against: [:name, :cuisine, :description]
   
 
   pg_search_scope :search_by_cuisine_and_name,
-    against: [ :cuisine, :name ],
+    against: [ :cuisine, :name, :description ],
     using: {
       tsearch: { prefix: true }
     }

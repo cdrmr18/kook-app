@@ -8,8 +8,9 @@ class Chef < ApplicationRecord
 
 
 
+  # once chef information is populated this search can be implemented
   include PgSearch::Model
-    multisearchable against: [:user, :bookings]
+  multisearchable against: [:first_name, :last_name]
   
 
 
