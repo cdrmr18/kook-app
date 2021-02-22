@@ -17,14 +17,20 @@
           <div class="container-fluid">
             <a class="navbar-brand"></a>
               <form class="d-flex">
-              <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-              <input class="form-control me-2" id="form-cont" type="search" placeholder="cuisine or recipe" aria-label="Search">
-              <button class="btn" id="search-btn" type="submit">Search</button>
+              <%= form_tag recipes_path, method: :get do %>
+                <%= text_field_tag :query, params[:query], class: "form-control me-2", id: "form-cont",
+                    placeholder: "cuisine or recipe" %>
+                    <%= submit_tag "search", class:"btn",  id: "search-btn" %>
             </form>
           </div>
         <% end %>
       <% end %>
     <!-- search bar end -->
+
+
+
+
+
 
  
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
