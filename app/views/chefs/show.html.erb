@@ -1,2 +1,81 @@
-<h1>Chefs#show</h1>
-<p>Find me in app/views/chefs/show.html.erb</p>
+<!-- chef info -->
+<div class="container  px-3 py-3 chef-info">
+  <div class="container">
+    <div class="row align-items-end justify-content-between">
+      <div class="col-6 col-md-8 text-center">
+        <h1><%= @chef.user.first_name %> <%= @chef.user.last_name %></h1>
+        <p>chef job title (need column)</p>
+        <p>chef restaurant name (need column)</p>
+        <p>⭐️⭐️⭐️⭐️⭐️</p>
+      </div>
+      <div class="col-6 col-md-4">
+        <%= cl_image_tag @chef.user.photo.key, width: 200, height: 200,  crop: :fill, class: "chef-avatar"  %>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-3 col-12">
+    <p>(need column) Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Quaerat dolore repellendus corrupti sapiente recusandae fugiat accusamus, vero, quo deserunt nemo, cupiditate, dolorum nihil libero similique laborum sint aperiam iusto accusantium.</p>
+  </div>
+</div>
+
+<hr>
+<!-- intro video / using animage as placeholdher until we can add a video-->
+<div class="container">
+  <h3 class="text-center">Chef intro</h3>
+  <iframe class="chef-video" width="80%" height="400" src= "https://youtu.be/8V-R4f1QXds" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<hr>
+<!-- chef recipes -->
+<div class="container mt-4">
+  <div class="row">
+    <% @chef.recipes.each do |recipe| %>
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+      <div class="card-food">
+        <% recipe.photos.each do |photo| %>
+            <%= cl_image_tag photo.key%>
+            <% break %>
+        <% end %>
+        <div class="card-food-infos">
+          <div>
+            <h2><%= recipe.name %></h2>
+
+          <div class="container mt-2">
+            <div class="row">
+              <div class="col-6 pl-0"><p><span class="mr-3"><%= recipe.cuisine %></span> ⭐️⭐️⭐️⭐️</p></div>
+              <div class="col-6"><span>Cook time: <%= recipe.cook_time %> mins</span></div>
+            </div>
+          </div>
+
+            <p class="mt-2 mr-2"><%= recipe.description %></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<hr>
+<!-- chef calendar & booking stuck to side while scrolling-->
+
+<hr>
+<!-- chef reviews -->
+<% @chef.chef_reviews.each do |review| %>
+  <div class="notification">
+    <%= cl_image_tag review.booking.user.photo.key, class: "avatar-large" %>
+    <div class="notification-content">
+      <p class="my-0"><strong><%= review.booking.user.first_name %> <%= review.booking.user.last_name %></strong></p>
+      <p><span><%= review.created_at.strftime("%B %e, %Y") %> |</span>  <%= "⭐️" * review.rating %></p>
+      <p><%= review.content %></p>
+    </div>
+  </div>
+<% end %>
+
+
+
+
+
+

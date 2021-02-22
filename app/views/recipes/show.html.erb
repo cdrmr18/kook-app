@@ -1,2 +1,23 @@
-<h1>Recipes#show</h1>
-<p>Find me in app/views/recipes/show.html.erb</p>
+<!-- recipe image -->
+<div class="banner my-0" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(<%= cl_image_path @recipe.photos.first.key %>);">
+  <div class="container text-center">
+    <h1> <%= @recipe.name %> </h1>
+  </div>
+</div>
+
+<!-- recipe details -->
+<div class="container  recipe-details">
+  <h4> Recipe Courtesy of <%= @recipe.chef.user.first_name %>  <%= @recipe.chef.user.last_name %></h4>
+  <p class="text-center"><%= link_to "Favorite"%></p>
+  <p class="text-center"><%= @recipe.recipe_reviews.blank? ? "" : "⭐️" * @recipe.recipe_reviews.average(:rating).round(2) %></p>
+  <div class="container">
+    <p><strong>Cook time:</strong> <%= @recipe.cook_time %> mins</p>
+    <p><%= @recipe.description %></p>
+  </div>
+
+  <div class="container">
+    <h4>Ingredients</h4>
+    <p> <i class="fas fa-circle bullet"></i> <%= @recipe.ingredients %> </p>
+  </div>
+
+</div>

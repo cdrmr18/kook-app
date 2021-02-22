@@ -24,5 +24,4 @@ class Recipe < ApplicationRecord
     }
 
 
-
 end
