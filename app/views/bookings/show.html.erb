@@ -1,31 +1,37 @@
 <h1>Booking #<%= @booking.id %></h1>
-
-<%= cl_image_tag @chef_photo, width: 250, height: 250, crop: :fill, class: "chef-avatar my-4"  %>
-
-<h2>Add a review for Chef <%= @chef_name %> </h2>
-
+<!-- booking details -->
 <div class="container">
-  <div class="row">
-    <div class="col-12 col-md-8 col-sm-4">
+
+</div>
+
+<!-- chef review form and chef image-->
+<div class="container card mb-4" style="width: 100%;">
+  <div class="card-body row justify-content-center">
+    <div class="col-12 col-md-8 ">
+      <%= cl_image_tag @chef_photo, width: 250, height: 250, crop: :fill, class: "avatar-square"  %>
+      <h3>Add a review for Chef <%= @chef_name %> </h3>
       <%= simple_form_for [@booking, @chef_review] do |f| %>
-        <%= f.input :rating, as: :radio_buttons, collection: 1..5, selected: 5 %>
+        <%= f.input :rating, as: :radio_buttons, collection: 1..5 %>
         <%= f.input :content %>
-        <%= f.button :submit, class: "btn button" %>
+        <%= f.button :submit, class: "btn button col-12" %>
       <% end %>
     </div>
   </div>
 </div>
+<!--  -->
 
-<h2 class="mt-4">Add a review for Recipe <%= @booking.recipe.name %> </h2>
-
-<div class="container mb-4">
-  <div class="row">
-    <div class="col-12 col-md-8 col-sm-4">
+<!-- recipe review form and recipe image-->
+<div class="container card mb-4" style="width: 100%;">
+  <div class="row card-body justify-content-center">
+    <div class="col-12 col-md-8 ">
+      <%= cl_image_tag @recipe_photo, width: 250, height: 250, crop: :fill, class: "avatar-square"  %>
+      <h3 class="mt-4">Add a review for Recipe <%= @booking.recipe.name %> </h3>
       <%= simple_form_for [@booking, @recipe_review] do |f| %>
-        <%= f.input :rating, as: :radio_buttons, collection: 1..5, selected: 5 %>
+        <%= f.input :rating, as: :radio_buttons, collection: 1..5 %>
         <%= f.input :content %>
-        <%= f.button :submit, class: "btn button" %>
+        <%= f.button :submit, class: "btn button col-12" %>
       <% end %>
     </div>
   </div>
 </div>
+<!--  -->

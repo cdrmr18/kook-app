@@ -15,6 +15,9 @@ class BookingsController < ApplicationController
     @chef_name = "#{@booking.recipe.chef.user.first_name + " " + @booking.recipe.chef.user.last_name}"
     # chef photo
     @chef_photo = @booking.recipe.chef.user.photo.key
+    # recipe photo
+    @recipe = @booking.recipe
+    @recipe_photo = @recipe.photos.first.key
   end
 
   def update
