@@ -1,15 +1,19 @@
 class ChefReviewsController < ApplicationController
   def create
-      @restaurant = Restaurant.find(params[:restaurant_id])
-      @review = Review.new(review_params)
-      @review.restaurant = @restaurant
-      if @review.save
-        redirect_to restaurant_path(@restaurant)
+      @booking = Booking.find(params[:booking_id])
+      @chef = @booking.recipe.chef
+      @chef_review = ChefReview.new(review_params)
+      @chef_review.chef_id = @chef
+      if @chef_review.save
+        redirect_to order_path(@booking)
       else
-        render 'orders/show'
+        render 'bookings/:id/show'
       end
   end
 
-  def new
+  private
+
+  def review_params
+    params.require(:chef_review).permit(:ratng, :content)
   end
 end
