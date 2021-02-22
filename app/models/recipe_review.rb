@@ -1,5 +1,5 @@
 class RecipeReview < ApplicationRecord
   belongs_to :booking
-  validates :rating, inclusion: { in: 1..5 }, numericality: { only_integer: true }
-  validates :content, presence: true
+  # validat for rating not working
+  # validates :rating, inclusion: { in: 1..5, allow_nil: false }
 end

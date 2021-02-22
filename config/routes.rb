@@ -4,10 +4,10 @@ Rails.application.routes.draw do
 
   # /bookings -- /bookings/:id -- /bookings/:id/edit
   resources :bookings, only: [ :index, :show, :destroy, :edit, :update] do
-    # /bookings/:id/show
-    resources :chef_reviews, only: [:create]
-    # /bookings/:id/show
-    resources :recipe_reviews, only: [:create]
+    # /bookings/:id/chef_reviews/new
+    resources :chef_reviews, only: [:new, :create]
+    # /bookings/:id/recipe_reviews/new
+    resources :recipe_reviews, only: [:new, :create]
   end
 
  # All CRUD actions for recipes
