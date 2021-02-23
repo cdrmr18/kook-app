@@ -1,2 +1,10 @@
-<h1>Bookings#show</h1>
-<p>Find me in app/views/bookings/show.html.erb</p>
+<h1>Booking #<%= @booking.id %></h1>
+<!-- booking details -->
+<div class="container">
+  <h2>
+  <p><%= pluralize @booking.chef_reviews.size, "chef review" %></p>
+  <p><%= pluralize @booking.recipe_reviews.size, "chef review" %></p>
+</h2>
+</div>
+
+

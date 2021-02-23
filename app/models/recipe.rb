@@ -1,7 +1,7 @@
 class Recipe < ApplicationRecord
   belongs_to :chef
   has_many :bookings
-  has_many :recipe_reviews, through: :bookings
+  has_many :recipe_reviews
   has_many_attached :photos
 
   validates :name, presence: true
@@ -15,7 +15,7 @@ class Recipe < ApplicationRecord
 
   include PgSearch::Model
     multisearchable against: [:name, :cuisine, :description]
-  
+
 
   pg_search_scope :search_by_cuisine_and_name,
     against: [ :cuisine, :name, :description ],
