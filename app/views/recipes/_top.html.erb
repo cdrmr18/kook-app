@@ -1,0 +1,12 @@
+    
+
+<div class="container  recipe-details">
+  <h1> TOP RECIPES</h1>
+  <% recipes.each do |recipe| %>
+    <h1> <%= recipe.name %> </h1>
+    <% recipe.recipe_reviews.sample(3).each do |review| %>
+      <%= review.content  %>
+    <% end %>
+  <% end %>
+</div>
+    

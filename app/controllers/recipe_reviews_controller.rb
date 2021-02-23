@@ -3,5 +3,12 @@ class RecipeReviewsController < ApplicationController
   end
 
   def new
+    # @reviews = Recipe_reviews.new
   end
+
+ 
+
+
+
+
 end

@@ -1,3 +1,18 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.jumbotron{
+  background-image: url("https://source.unsplash.com/9p6pFEwq-wI") ;
+  background-size: cover; 
+  height: 100%;
+  width: 100%;
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 100px) and (max-width: 575px) {
+  .jumbotron {
+    background-image: url("https://source.unsplash.com/my1mDMraGf0") ;
+    height: 50%;
+  }
+}
