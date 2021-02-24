@@ -1,12 +1,21 @@
     
 
-<div class="container  recipe-details">
-  <h1> TOP RECIPES</h1>
-  <% recipes.each do |recipe| %>
-    <h1> <%= recipe.name %> </h1>
-    <% recipe.recipe_reviews.sample(3).each do |review| %>
-      <%= review.content  %>
-    <% end %>
-  <% end %>
-</div>
-    
+
+  <h1>Top Recipes</h1>
+  <div class="container">
+    <div class="cards my-4">
+      <% recipes.each do |recipe| %>
+      <%# <h3> <%= recipe.name %>
+        <% recipe.photos.each do |photo| %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%=  cl_image_path photo.key%>)"><%= recipe.name %></div>
+         <% recipe.recipe_reviews.sample(3).each do |review| %>
+            <em class=""><%= review.content  %></em>
+        </div>
+         
+          <% end %>
+        <% end %>
+      <%end %>
+  </div>
+
+
+

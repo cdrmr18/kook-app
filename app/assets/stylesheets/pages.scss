@@ -1,18 +1,74 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.jumbotron{
-  background-image: url("https://source.unsplash.com/9p6pFEwq-wI") ;
+.bg-main{
+  background-image: url("https://source.unsplash.com/GAdALRhpups") ;
+  
   background-size: cover; 
-  height: 100%;
-  width: 100%;
+  background-repeat: no-repeat;
+  border-top-right-radius: 1px;
+  border-top-left-radius: 1px;
+  color:white;
+  height: 100vh;
 }
 
+
+.bg-text{
+  justify-content: center;
+  align-items: center;
+}
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 100px) and (max-width: 575px) {
-  .jumbotron {
-    background-image: url("https://source.unsplash.com/my1mDMraGf0") ;
-    height: 50%;
+  .bg-main{
+    background-image: url("https://source.unsplash.com/my1mDMraGf0");
+    height: 50vh;
   }
 }
+
+h1 {
+  font-weight: 900;
+  color:#75CFB8;
+  margin-top:15px;
+  padding: 10px;
+}
+
+.recipe-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.review-text{
+  background-color: rgb(255, 182, 23);
+  color:black;
+  font-weight: bolder;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+
+
+.home-page-cards{
+  background-size: cover;
+  background-position: center;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .home-page-cards{
+    width: 100%;
+  }
+}
+
+

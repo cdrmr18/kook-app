@@ -4,7 +4,7 @@ class PagesController < ApplicationController
     @top_recipes = Recipe.joins(:recipe_reviews).where(recipe_reviews:{rating: 1})
   end
 
-
+  
   
   
 end
