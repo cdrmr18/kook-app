@@ -1,3 +1,57 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.bg-main{
+  background-image: url("https://source.unsplash.com/GAdALRhpups") ;
+  
+  background-size: cover; 
+  background-repeat: no-repeat;
+  border-top-right-radius: 1px;
+  border-top-left-radius: 1px;
+  color:white;
+  height: 100vh;
+}
+
+
+.bg-text{
+  justify-content: center;
+  align-items: center;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 100px) and (max-width: 575px) {
+  .bg-main{
+    background-image: url("https://source.unsplash.com/my1mDMraGf0");
+    height: 50vh;
+  }
+}
+
+h1 {
+  font-weight: 900;
+  color:#75CFB8;
+  margin-top:15px;
+  padding: 10px;
+}
+
+.recipe-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+
+.recipe-link {
+  color: white;
+
+  &:hover {
+    text-decoration: none;
+    color: #76CFB8;
+  }
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .home-page-cards{
+    
+  }
+}

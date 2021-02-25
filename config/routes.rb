@@ -8,12 +8,18 @@ Rails.application.routes.draw do
     resources :chef_reviews, only: [:new, :create]
     # /bookings/:id/recipe_reviews/new
     resources :recipe_reviews, only: [:new, :create]
+ 
+   
   end
 
  # All CRUD actions for recipes
   resources :recipes do
+    collection do
+      get :top
     # /recipes/:id/bookings/new
     resources :bookings, only: [:new, :create]
+  
+    end
   end
 
   # /chats  -- /chats/:id
@@ -24,5 +30,8 @@ Rails.application.routes.draw do
 
   # /chefs/:id -- /chefs/new  -- /chefs
   resources :chefs, only: [:show, :new, :create, :index]
+
+
+
 
 end
