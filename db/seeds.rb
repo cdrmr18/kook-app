@@ -63,13 +63,12 @@ puts 'creating recipes...'
   recipe = Recipe.new(
     name: Faker::Food.dish,
     description: Faker::Food.description,
-    ingredients: Faker::Food.ingredient,
     cuisine: 'Mexican',
     cook_time: rand(15..120),
     chef_id: Chef.first.id,
-    price: Faker::Number.decimal(l_digits: 2)
+    price: rand(20..100)
     )
-  recipe.photos.attach(io: file, filename: "nes#{idx}.png", content_type: 'image/png')
+  recipe.photo.attach(io: file, filename: "nes#{idx}.png", content_type: 'image/png')
   recipe.save!
 end
 
@@ -79,13 +78,12 @@ end
   recipe = Recipe.new(
     name: Faker::Food.dish,
     description: Faker::Food.description,
-    ingredients: Faker::Food.ingredient,
     cuisine: "Italian",
     cook_time: rand(15..120),
     chef_id: Chef.last.id,
-    price: Faker::Number.decimal(l_digits: 2)
+    price: rand(20..100)
     )
-  recipe.photos.attach(io: file, filename: "nes#{idx}.png", content_type: 'image/png')
+  recipe.photo.attach(io: file, filename: "nes#{idx}.png", content_type: 'image/png')
   recipe.save!
 end
 puts "#{Recipe.count} recipes created"
