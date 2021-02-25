@@ -40,6 +40,15 @@ h1 {
 }
 
 
+.recipe-link {
+  color: white;
+
+  &:hover {
+    text-decoration: none;
+    color: #76CFB8;
+  }
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .home-page-cards{
