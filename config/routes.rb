@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'measurements/new'
+  get 'measurements/create'
   devise_for :users
   root to: 'pages#home'
 
@@ -15,7 +17,7 @@ Rails.application.routes.draw do
     # /recipes/:id/bookings/new
     resources :bookings, only: [:new, :create]
     # recipes/:id/measurements/new
-    resources :measurements, only: [:create]
+    resources :measurements, only: [:new, :create]
   end
 
   # /chats  -- /chats/:id
@@ -28,5 +30,5 @@ Rails.application.routes.draw do
   resources :chefs, only: [:show, :new, :create, :index]
 
   #  measuremnts/:id
-  resources :measurements, only [:destroy]
+  resources :measurements, only: [:destroy]
 end

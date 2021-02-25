@@ -1,3 +1,9 @@
+<div class="container text-center">
+  <!-- create recipe link -->
+  <%= link_to "Add Recipe", new_recipe_path, class: "btn button" %>
+  <!--  -->
+</div>
+<!-- list of recipes -->
 <div class="recipe-cards my-4">
   <% @recipes.each do | recipe | %>
       <div class="container">
@@ -18,3 +24,4 @@
       </div>
   <% end %>
 </div>
+<!--  -->

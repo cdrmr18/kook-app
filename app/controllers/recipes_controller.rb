@@ -9,7 +9,17 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @recipe = Recipe.new(recipe_params)
+    @recipe = Recipe.new
+    @recipe = Recipe.create(recipe_params)
+    chef = Chef.new(user_id: current_user.id, cuisine: @recipe.cuisine)
+    @recipe.chef = chef
+    @recipe.save
+
+    if @recipe.save
+      redirect_to new_recipe_measurement_path(@recipe)
+    else
+      render :new
+    end
 
   end
 
@@ -34,6 +44,6 @@ class RecipesController < ApplicationController
   private
 
   def recipe_params
-    params.requre(:recipe).permit(:name, :description, :cuisine, :cook_time, :price, :photo)
+    params.require(:recipe).permit(:name, :description, :cuisine, :cook_time, :price, :photo)
   end
 end

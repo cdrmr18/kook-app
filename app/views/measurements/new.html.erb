@@ -1,0 +1,7 @@
+<h1>Add Ingredients and Measurements</h1>
+
+<%= simple_form_for [@recipe, @measurement] do |f| %>
+  <%= f.input :description, placeholder: '6 leaves' %>
+  <%= f.association :ingredient, as: :select%>
+  <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>
