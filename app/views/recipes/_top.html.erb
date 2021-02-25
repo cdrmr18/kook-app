@@ -1,9 +1,5 @@
 
 
-
-
-
-
       <h1>Top Recipes</h1>
 
     <div class="recipe-cards my-4">
@@ -11,9 +7,9 @@
         <%# <h3> <%= recipe.name %>
         <% recipe.photos.each do |photo| %>
           <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%=  cl_image_path photo.key%>)"><%= recipe.name %></div>
-          <%# <% recipe.recipe_reviews.sample(3).each do |review| %>
-          <%# <em><%= review.content</em> %>
-          <%# <% end %>
+          <% recipe.recipe_reviews.sample(3).each do |review| %>
+          <%# <%= review.content %>
+        <% end %>
   
         <% end %>
       <%end %>
