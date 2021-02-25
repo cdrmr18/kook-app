@@ -1,0 +1,34 @@
+
+
+
+
+<div class="recipe-cards my-4">
+  <% recipes.each do | recipe | %>
+    <% recipe.photos.each do |photo| %>
+      <div class="container">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path photo.key%>)"><%= link_to recipe.name, recipe_path(recipe),class: "recipe-link" %>
+        </div>
+        <div class="recipe-info card-body pb-0">
+          <div class="row">
+              <div class="col-6">
+              <% recipe.recipe_reviews.sample(3).each do |review| %>
+              </div>
+              <div class="col-12">
+               <em><%= review.content %></em>
+              </div>
+            </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+    <% end %>
+
+</div>
+
+
+
+
+
+
+
+

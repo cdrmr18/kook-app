@@ -24,9 +24,16 @@ class RecipeReviewsController < ApplicationController
       end
   end
 
+
   private
 
   def review_params
     params.require(:recipe_review).permit(:ratng, :content)
   end
+
+ 
+
+
+
+
 end
