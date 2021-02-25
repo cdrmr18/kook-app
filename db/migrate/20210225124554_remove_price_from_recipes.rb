@@ -1,5 +1,5 @@
 class RemovePriceFromRecipes < ActiveRecord::Migration[6.0]
   def change
-    remove_column :recipes, :price, :integer
+    remove_column :recipes, :price, :string
   end
 end

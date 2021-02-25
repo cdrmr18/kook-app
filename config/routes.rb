@@ -18,8 +18,11 @@ Rails.application.routes.draw do
       get :top
     # /recipes/:id/bookings/new
     resources :bookings, only: [:new, :create]
-  
+
+    # recipes/:id/measurements/new
+    resources :measurements, only: [:new, :create]
     end
+
   end
 
   # /chats  -- /chats/:id
@@ -31,7 +34,6 @@ Rails.application.routes.draw do
   # /chefs/:id -- /chefs/new  -- /chefs
   resources :chefs, only: [:show, :new, :create, :index]
 
-
-
-
+  #  measuremnts/:id
+  resources :measurements, only: [:destroy]
 end
