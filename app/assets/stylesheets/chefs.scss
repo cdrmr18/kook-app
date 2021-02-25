@@ -7,13 +7,15 @@
   border: white 1px solid;
 }
 
-h1 {
-  font-family: caveat;
-}
 .chef-info {
-  // need to add media query to make 80% when full screen view
+ // need to add media query to make 80% when full screen view
   // max-width: 80%;
+
+  h1 {
+    font-family: caveat;
+    }
 }
+
 
 .chef-video{
     display: block;
