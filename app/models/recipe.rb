@@ -10,6 +10,7 @@ class Recipe < ApplicationRecord
   validates :description, presence: true
   validates :cuisine, presence: true
   validates :cook_time, presence: true
+  validates :photo, presence: true
   validates :price, presence: true, format: { with: /\A\d+(?:\.\d{2})?\z/ }, numericality: { greater_than: 0, less_than: 1000000 }
 
   monetize :price_cents

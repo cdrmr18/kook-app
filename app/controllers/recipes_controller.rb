@@ -16,7 +16,7 @@ class RecipesController < ApplicationController
     @recipe.save
 
     if @recipe.save
-      redirect_to new_recipe_measurement_path(@recipe)
+      redirect_to recipe_path(@recipe)
     else
       render :new
     end
@@ -33,6 +33,8 @@ class RecipesController < ApplicationController
   def show
     # recipes/:id
     @recipe = Recipe.find(params[:id])
+
+    @measurement = Measurement.new
   end
 
   def update

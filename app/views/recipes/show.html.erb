@@ -17,14 +17,25 @@
   </div>
   <!--  -->
 
+ <!-- price -->
+  <p><%= humanized_money_with_symbol(@recipe.price) %></p>
+  <!--  -->
+
   <!-- ingredients -->
   <div class="container">
     <h4>Ingredients</h4>
     <p> <i class="fas fa-circle bullet"></i> <%#= @recipe.ingredients %> </p>
   </div>
+
+  <div class="container">
+    <p>Add Ingredients and Measurements</p>
+    <%= simple_form_for [@recipe, @measurement] do |f| %>
+      <%= f.input :description, placeholder: '6 leaves' %>
+      <%= f.association :ingredient, as: :select %>
+      <%= f.button :submit, class: "btn button col-9" %>
+    <% end %>
+  </div>
   <!--  -->
 
-  <!-- price -->
-  <p><%= humanized_money_with_symbol(@recipe.price) %></p>
-  <!--  -->
+
 </div>

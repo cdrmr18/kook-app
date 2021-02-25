@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'measurements/new'
-  get 'measurements/create'
   devise_for :users
   root to: 'pages#home'
 
