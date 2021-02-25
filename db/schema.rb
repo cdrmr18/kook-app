@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_21_160355) do
+ActiveRecord::Schema.define(version: 2021_02_25_121727) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,6 +75,22 @@ ActiveRecord::Schema.define(version: 2021_02_21_160355) do
     t.index ["user_id"], name: "index_chefs_on_user_id"
   end
 
+  create_table "ingredients", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "measurements", force: :cascade do |t|
+    t.bigint "ingredient_id", null: false
+    t.bigint "recipe_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "description"
+    t.index ["ingredient_id"], name: "index_measurements_on_ingredient_id"
+    t.index ["recipe_id"], name: "index_measurements_on_recipe_id"
+  end
+
   create_table "messages", force: :cascade do |t|
     t.bigint "chat_id", null: false
     t.text "content"
@@ -109,11 +125,11 @@ ActiveRecord::Schema.define(version: 2021_02_21_160355) do
     t.bigint "chef_id", null: false
     t.string "name"
     t.text "description"
-    t.string "ingredients"
     t.string "cuisine"
     t.integer "cook_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.decimal "price"
     t.index ["chef_id"], name: "index_recipes_on_chef_id"
   end
 
@@ -139,6 +155,8 @@ ActiveRecord::Schema.define(version: 2021_02_21_160355) do
   add_foreign_key "chef_reviews", "bookings"
   add_foreign_key "chef_reviews", "chefs"
   add_foreign_key "chefs", "users"
+  add_foreign_key "measurements", "ingredients"
+  add_foreign_key "measurements", "recipes"
   add_foreign_key "messages", "chats"
   add_foreign_key "messages", "users"
   add_foreign_key "recipe_reviews", "bookings"

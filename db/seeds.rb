@@ -4,14 +4,14 @@ recipes = ['https://images.unsplash.com/photo-1432139509613-5c4255815697?ixid=MX
 
 puts 'Deleting current seed...'
 
-ChefReview.delete_all
-RecipeReview.delete_all
-Message.delete_all
-Chat.delete_all
-Booking.delete_all
-Recipe.delete_all
-Chef.delete_all
-User.delete_all
+ChefReview.destroy_all
+RecipeReview.destroy_all
+Message.destroy_all
+Chat.destroy_all
+Booking.destroy_all
+Recipe.destroy_all
+Chef.destroy_all
+User.destroy_all
 
 puts 'Starting seed..'
 
