@@ -4,6 +4,7 @@
     <h1> <%= @recipe.name %> </h1>
   </div>
 </div>
+<!--  -->
 
 <!-- recipe details -->
 <div class="container  recipe-details">
@@ -14,11 +15,16 @@
     <p><strong>Cook time:</strong> <%= @recipe.cook_time %> mins</p>
     <p><%= @recipe.description %></p>
   </div>
+  <!--  -->
 
+  <!-- ingredients -->
   <div class="container">
     <h4>Ingredients</h4>
     <p> <i class="fas fa-circle bullet"></i> <%#= @recipe.ingredients %> </p>
   </div>
+  <!--  -->
 
+  <!-- price -->
   <p><%= humanized_money_with_symbol(@recipe.price) %></p>
+  <!--  -->
 </div>

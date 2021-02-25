@@ -1,10 +1,12 @@
 class Recipe < ApplicationRecord
   belongs_to :chef
   has_many :bookings
-  has_many :recipe_reviews
+  has_many :recipe_reviews, through: :bookings
+  has_many :measurements, dependent: :destroy
+  has_many :ingredients, through: :measurements
   has_one_attached :photo
 
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: true
   validates :description, presence: true
   validates :cuisine, presence: true
   validates :cook_time, presence: true
