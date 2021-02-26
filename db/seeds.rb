@@ -445,100 +445,102 @@ roger_five = Recipe.new(
 roger_five.photo.attach(io: file, filename: "nes31.png", content_type: 'image/png')
 roger_five.save!
 
-file = URI.open('')
+file = URI.open('https://images.unsplash.com/photo-1513623954575-263b061498a3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')
 roger_six = Recipe.new(
-  name: 'Ginger Garlic Noodle Soup',
+  name: 'Duck Confit',
   description: Faker::Food.description,
   cuisine: 'French',
   cook_time: rand(30..90),
   chef_id: roger.id,
   price: rand(30..75)
   )
-roger_six.photo.attach(io: file, filename: "nes3.png", content_type: 'image/png')
+roger_six.photo.attach(io: file, filename: "nes32.png", content_type: 'image/png')
 roger_six.save!
+
+# chef samuel recipes
+file = URI.open('https://images.unsplash.com/photo-1611712142269-12b7433e28e9?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTV8fGFmcmljYW4lMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+samuel_one = Recipe.new(
+  name: 'Moroccan Chicken Rfissa',
+  description: Faker::Food.description,
+  cuisine: 'North African',
+  cook_time: rand(30..90),
+  chef_id: samuel.id,
+  price: rand(30..75)
+  )
+samuel_one.photo.attach(io: file, filename: "ne33.png", content_type: 'image/png')
+samuel_one.save!
+
+file = URI.open('https://images.unsplash.com/photo-1576577445504-6af96477db52?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTgyfHxtZWF0YmFsbCUyMHNvdXB8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+samuel_two = Recipe.new(
+  name: 'Moroccan Meatball Soup',
+  description: Faker::Food.description,
+  cuisine: 'North African',
+  cook_time: rand(30..90),
+  chef_id: samuel.id,
+  price: rand(30..75)
+  )
+samuel_two.photo.attach(io: file, filename: "nes34.png", content_type: 'image/png')
+samuel_two.save!
+
+file = URI.open('https://images.unsplash.com/photo-1532636875304-0c89119d9b4d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')
+samuel_three = Recipe.new(
+  name: 'Aromatic Lamb with Dates',
+  description: Faker::Food.description,
+  cuisine: 'North African',
+  cook_time: rand(30..90),
+  chef_id: samuel.id,
+  price: rand(30..75)
+  )
+samuel_three.photo.attach(io: file, filename: "nes35.png", content_type: 'image/png')
+samuel_three.save!
+
+file = URI.open('https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTl8fHJvYXN0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+samuel_four = Recipe.new(
+  name: 'Morrocan Roast Lamb',
+  description: Faker::Food.description,
+  cuisine: 'North African',
+  cook_time: rand(30..90),
+  chef_id: samuel.id,
+  price: rand(30..75)
+  )
+samuel_four.photo.attach(io: file, filename: "nes36.png", content_type: 'image/png')
+samuel_four.save!
+
+file = URI.open('https://images.unsplash.com/photo-1519624014191-508652cbd7b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80')
+samuel_five = Recipe.new(
+  name: 'Chicken Tagine',
+  description: Faker::Food.description,
+  cuisine: 'North African',
+  cook_time: rand(30..90),
+  chef_id: samuel.id,
+  price: rand(30..75)
+  )
+samuel_five.photo.attach(io: file, filename: "nes37.png", content_type: 'image/png')
+samuel_five.save!
+
+file = URI.open('https://images.unsplash.com/photo-1512058556646-c4da40fba323?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8cGFuJTIwZnJ5fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+samuel_six = Recipe.new(
+  name: 'Mixed-grain Paella with Lamb',
+  description: Faker::Food.description,
+  cuisine: 'North African',
+  cook_time: rand(30..90),
+  chef_id: samuel.id,
+  price: rand(30..75)
+  )
+samuel_six.photo.attach(io: file, filename: "nes38.png", content_type: 'image/png')
+samuel_six.save!
+
 # chef chz recipes
 file = URI.open('')
 bec_one = Recipe.new(
   name: 'Prawns with Sweet Chilli Sauce',
   description: Faker::Food.description,
-  cuisine: 'French',
-  cook_time: rand(30..90),
-  chef_id: bec.id,
-  price: rand(30..75)
-  )
-bec_one.photo.attach(io: file, filename: "ne3.png", content_type: 'image/png')
-bec_one.save!
-
-file = URI.open('')
-bec_two = Recipe.new(
-  name: 'Roast Chicken with Sauce Chasseur',
-  description: Faker::Food.description,
-  cuisine: 'French',
-  cook_time: rand(30..90),
-  chef_id: bec.id,
-  price: rand(30..75)
-  )
-bec_two.photo.attach(io: file, filename: "nes3.png", content_type: 'image/png')
-bec_two.save!
-
-file = URI.open('')
-bec_three = Recipe.new(
-  name: 'Sashimi with Chilli-lime Dressing',
-  description: Faker::Food.description,
   cuisine: 'Thai',
   cook_time: rand(30..90),
   chef_id: bec.id,
   price: rand(30..75)
   )
-bec_three.photo.attach(io: file, filename: "nes3.png", content_type: 'image/png')
-bec_three.save!
-
-file = URI.open('')
-bec_four = Recipe.new(
-  name: 'Stir-fried Asparagus',
-  description: Faker::Food.description,
-  cuisine: 'Thai',
-  cook_time: rand(30..90),
-  chef_id: bec.id,
-  price: rand(30..75)
-  )
-bec_four.photo.attach(io: file, filename: "nes3.png", content_type: 'image/png')
-bec_four.save!
-
-file = URI.open('')
-bec_five = Recipe.new(
-  name: 'Pork & Eggs',
-  description: Faker::Food.description,
-  cuisine: 'Thai',
-  cook_time: rand(30..90),
-  chef_id: bec.id,
-  price: rand(30..75)
-  )
-bec_five.photo.attach(io: file, filename: "nes3.png", content_type: 'image/png')
-bec_five.save!
-
-file = URI.open('')
-bec_six = Recipe.new(
-  name: 'Ginger Garlic Noodle Soup',
-  description: Faker::Food.description,
-  cuisine: 'Thai',
-  cook_time: rand(30..90),
-  chef_id: bec.id,
-  price: rand(30..75)
-  )
-bec_six.photo.attach(io: file, filename: "nes3.png", content_type: 'image/png')
-bec_six.save!
-# chef chz recipes
-file = URI.open('')
-bec_one = Recipe.new(
-  name: 'Prawns with Sweet Chilli Sauce',
-  description: Faker::Food.description,
-  cuisine: 'Thai',
-  cook_time: rand(30..90),
-  chef_id: bec.id,
-  price: rand(30..75)
-  )
-bec_one.photo.attach(io: file, filename: "nes3.png", content_type: 'image/png')
+bec_one.photo.attach(io: file, filename: "nes39.png", content_type: 'image/png')
 bec_one.save!
 
 file = URI.open('')
