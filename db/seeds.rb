@@ -15,30 +15,95 @@ User.destroy_all
 
 puts 'Starting seed..'
 
-
+# -------- USERS  START ----------------
 puts 'creating users...'
 file = URI.open('https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80')
-user = User.new(
+kathy = User.new(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
   username: Faker::Internet.username,
-  email: Faker::Internet.email,
+  email: kathy@test.com,
   password: 123456
   )
-user.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
-user.save!
+kathy.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+kathy.save!
 
 file = URI.open('https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1500&q=80')
-user = User.new(
+raj = User.new(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
   username: Faker::Internet.username,
-  email: Faker::Internet.email,
+  email: raj@test.com,
   password: 123456
   )
-user.photo.attach(io: file, filename: 'nes1.png', content_type: 'image/png')
-user.save!
+raj.photo.attach(io: file, filename: 'nes1.png', content_type: 'image/png')
+raj.save!
+
+
+file = URI.open('https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1500&q=80')
+luis = User.new(
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
+  username: Faker::Internet.username,
+  email: luis@test.com,
+  password: 123456
+  )
+luis.photo.attach(io: file, filename: 'nes2.png', content_type: 'image/png')
+luis.save!
+
+file = URI.open('https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1500&q=80')
+dragan = User.new(
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
+  username: Faker::Internet.username,
+  email: dragan@test.com,
+  password: 123456
+  )
+dragan.photo.attach(io: file, filename: 'nes3.png', content_type: 'image/png')
+dragan.save!
+
+file = URI.open('https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+bec = User.new(
+  first_name: "Bec",
+  last_name: "Brown",
+  username: Faker::Internet.username,
+  email: bec@test.com,
+  password: 123456
+  )
+bec.photo.attach(io: file, filename: 'nes4.png', content_type: 'image/png')
+bec.save!
+
+file = URI.open('https://images.unsplash.com/photo-1612282131240-6e878907d0f6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1308&q=80')
+chaz = User.new(
+  first_name: "Chaz",
+  last_name: "James",
+  username: Faker::Internet.username,
+  email: chaz@test.com,
+  password: 123456
+  )
+chaz.photo.attach(io: file, filename: 'nes5.png', content_type: 'image/png')
+chaz.save!
+
+file = URI.open('https://images.unsplash.com/photo-1612282131240-6e878907d0f6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1308&q=80')
+jamal = User.new(
+  first_name: "Jamal",
+  last_name: "Al Tamimi",
+  username: Faker::Internet.username,
+  email: Jamal@test.com,
+  password: 123456
+  )
+Jamal.photo.attach(io: file, filename: 'nes5.png', content_type: 'image/png')
+Jamal.save!
+
+
+
 puts "#{User.count} users created"
+
+ # -------- USERS  END ----------------
+
+
+
+
 
 
 
