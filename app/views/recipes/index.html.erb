@@ -1,8 +1,13 @@
+<div class="container text-center">
+  <!-- create recipe link -->
+  <%= link_to "Add Recipe", new_recipe_path, class: "btn button" %>
+  <!--  -->
+</div>
+<!-- list of recipes -->
 <div class="recipe-cards my-4">
   <% @recipes.each do | recipe | %>
-    <% recipe.photos.each do |photo| %>
       <div class="container">
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path photo.key%>)"><%= link_to recipe.name, recipe_path(recipe),class: "recipe-link" %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path recipe.photo.key%>)"><%= link_to recipe.name, recipe_path(recipe),class: "recipe-link" %>
         </div>
         <div class="recipe-info card-body pb-0">
           <div class="row">
@@ -12,16 +17,11 @@
               </div>
               <div class="col-6">
                 <p><%= recipe.recipe_reviews.blank? ? "✩ 0 reviews" : "⭐️" * recipe.recipe_reviews.average(:rating).round(2) %> </p>
-                <p class="chef-link"><%= link_to "#{recipe.chef.user.first_name + "" + recipe.chef.user.last_name}" , chef_path(recipe.chef) %> </p>
+                <p><%= humanized_money_with_symbol(recipe.price) %></p>
               </div>
             </div>
         </div>
       </div>
-    <% end %>
   <% end %>
 </div>
-
-
-
-
-
+<!--  -->

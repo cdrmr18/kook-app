@@ -4,14 +4,14 @@ recipes = ['https://images.unsplash.com/photo-1432139509613-5c4255815697?ixid=MX
 
 puts 'Deleting current seed...'
 
-ChefReview.delete_all
-RecipeReview.delete_all
-Message.delete_all
-Chat.delete_all
-Booking.delete_all
-Recipe.delete_all
-Chef.delete_all
-User.delete_all
+ChefReview.destroy_all
+RecipeReview.destroy_all
+Message.destroy_all
+Chat.destroy_all
+Booking.destroy_all
+Recipe.destroy_all
+Chef.destroy_all
+User.destroy_all
 
 puts 'Starting seed..'
 
@@ -63,13 +63,12 @@ puts 'creating recipes...'
   recipe = Recipe.new(
     name: Faker::Food.dish,
     description: Faker::Food.description,
-    ingredients: Faker::Food.ingredient,
     cuisine: 'Mexican',
     cook_time: rand(15..120),
     chef_id: Chef.first.id,
-    price: Faker::Number.decimal(l_digits: 2)
+    price: rand(20..100)
     )
-  recipe.photos.attach(io: file, filename: "nes#{idx}.png", content_type: 'image/png')
+  recipe.photo.attach(io: file, filename: "nes#{idx}.png", content_type: 'image/png')
   recipe.save!
 end
 
@@ -77,15 +76,14 @@ end
   recipe_url = recipes[idx+5]
   file = URI.open(recipe_url)
   recipe = Recipe.new(
-    name: Faker::Food.dish,
+    name: Faker::Food.sushi,
     description: Faker::Food.description,
-    ingredients: Faker::Food.ingredient,
     cuisine: "Italian",
     cook_time: rand(15..120),
     chef_id: Chef.last.id,
-    price: Faker::Number.decimal(l_digits: 2)
+    price: rand(20..100)
     )
-  recipe.photos.attach(io: file, filename: "nes#{idx}.png", content_type: 'image/png')
+  recipe.photo.attach(io: file, filename: "nes#{idx}.png", content_type: 'image/png')
   recipe.save!
 end
 puts "#{Recipe.count} recipes created"

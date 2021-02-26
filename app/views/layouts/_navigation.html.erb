@@ -3,7 +3,7 @@
         <%= link_to "/", class: "navbar-brand" do %>
         <%= image_tag "LOGO.svg" %>
         <% end %>
-      
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon "> </span></span>
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/random", class: "avatar dropdown-toggle", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -32,13 +32,13 @@
 
 
 
- 
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <% if user_signed_in? %>
             <li class="nav-item dropdown">
               <%= image_tag "https://kitt.lewagon.com/placeholder/users/random", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-              <div class="col-md-12">    
+              <div class="col-md-12">
                 <div div class="dropdown-menu dropdown-menu-right" id="drpdown" aria-labelledby="navbarDropdown">
                     <div class="inblk"><%= link_to "RECIPES", recipes_path, class: "dropdown-item text" %></div>
                     <div class="inblk"><%= link_to "CHEFS", chefs_path, class: "dropdown-item text" %></div>
@@ -60,4 +60,3 @@
        </div>
       </div>
     </div>
-  

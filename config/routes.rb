@@ -8,18 +8,18 @@ Rails.application.routes.draw do
     resources :chef_reviews, only: [:new, :create]
     # /bookings/:id/recipe_reviews/new
     resources :recipe_reviews, only: [:new, :create]
- 
-   
   end
 
  # All CRUD actions for recipes
   resources :recipes do
     collection do
       get :top
+    end
     # /recipes/:id/bookings/new
     resources :bookings, only: [:new, :create]
-  
-    end
+
+    # recipes/:id/measurements/new
+    resources :measurements, only: [:new, :create]
   end
 
   # /chats  -- /chats/:id
@@ -31,7 +31,6 @@ Rails.application.routes.draw do
   # /chefs/:id -- /chefs/new  -- /chefs
   resources :chefs, only: [:show, :new, :create, :index]
 
-
-
-
+  #  measuremnts/:id
+  resources :measurements, only: [:destroy]
 end

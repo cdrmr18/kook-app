@@ -1,9 +1,10 @@
 <!-- recipe image -->
-<div class="banner my-0" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(<%= cl_image_path @recipe.photos.first.key %>);">
+<div class="banner my-0" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(<%= cl_image_path @recipe.photo.key %>);">
   <div class="container text-center">
     <h1> <%= @recipe.name %> </h1>
   </div>
 </div>
+<!--  -->
 
 <!-- recipe details -->
 <div class="container  recipe-details">
@@ -14,11 +15,28 @@
     <p><strong>Cook time:</strong> <%= @recipe.cook_time %> mins</p>
     <p><%= @recipe.description %></p>
   </div>
+  <!--  -->
 
+ <!-- price -->
+  <p><%= humanized_money_with_symbol(@recipe.price) %></p>
+  <!--  -->
+
+  <!-- ingredients -->
   <div class="container">
     <h4>Ingredients</h4>
-    <p> <i class="fas fa-circle bullet"></i> <%= @recipe.ingredients %> </p>
+    <p> <i class="fas fa-circle bullet"></i> <%#= @recipe.ingredients %> </p>
   </div>
+
+  <div class="container">
+    <p>Add Ingredients and Measurements</p>
+    <%= simple_form_for [@recipe, @measurement] do |f| %>
+      <%= f.input :description, placeholder: '6 leaves' %>
+      <%= f.association :ingredient, as: :select %>
+      <%= f.button :submit, class: "btn button col-9" %>
+    <% end %>
+  </div>
+  <!--  -->
+
 
 </div>
 

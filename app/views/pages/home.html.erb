@@ -1,5 +1,6 @@
 
  <!--  increased the jumbotron width -->
+
   <div class="container-full-bg jumbotron bg-main">
     <div class="container my-4">
         <div class="d-flex align-items-center justify-content-center" style="height:350px">
@@ -10,6 +11,7 @@
               <%= submit_tag "search", class:"btn",  id: "search-btn" %>
               <% end %>
           </form>     
+
         </div>
     
       </div>
@@ -22,6 +24,3 @@
 <div class="container">
 <%= render '/recipes/top', recipes:@top_recipes %>
 </div>
-
-<p><%= link_to "Recipes", recipes_path %></p>
-<p><%= link_to "Chefs", chefs_path %></p>
