@@ -33,7 +33,7 @@
     <% @chef.recipes.each do |recipe| %>
     <div class="col-12 col-md-6 col-lg-4 mb-4">
       <div class="card-food">
-        <%= cl_image_tag recipe.photo.key%>
+        <%= link_to cl_image_tag(recipe.photo.key, class: "chef-recipe-show",  crop: :fill), recipe_path(recipe)%>
         <div class="card-food-infos">
           <div>
             <h2><%= recipe.name %></h2>
