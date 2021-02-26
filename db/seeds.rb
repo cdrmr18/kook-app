@@ -530,150 +530,79 @@ samuel_six = Recipe.new(
 samuel_six.photo.attach(io: file, filename: "nes38.png", content_type: 'image/png')
 samuel_six.save!
 
-# chef chz recipes
-file = URI.open('')
-bec_one = Recipe.new(
-  name: 'Prawns with Sweet Chilli Sauce',
+# chef slavo recipes
+file = URI.open('https://www.missioneurovision.co.uk/wp-content/uploads/2016/03/serboa-cevapcici.jpg')
+slavo_one = Recipe.new(
+  name: 'Bosnian Cevapi',
   description: Faker::Food.description,
-  cuisine: 'Thai',
+  cuisine: 'Balkan',
   cook_time: rand(30..90),
-  chef_id: bec.id,
+  chef_id: slavo.id,
   price: rand(30..75)
   )
-bec_one.photo.attach(io: file, filename: "nes39.png", content_type: 'image/png')
-bec_one.save!
+slavo_one.photo.attach(io: file, filename: "nes39.png", content_type: 'image/png')
+slavo_one.save!
 
-file = URI.open('')
-bec_two = Recipe.new(
-  name: 'Roast Chicken with Sauce Chasseur',
+file = URI.open('https://images.unsplash.com/photo-1580476262843-d5e9b687d4d4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8cm9hc3R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+slavo_two = Recipe.new(
+  name: 'Roast Pork Shoulder',
   description: Faker::Food.description,
-  cuisine: 'Thai',
+  cuisine: 'Balkan',
   cook_time: rand(30..90),
-  chef_id: bec.id,
+  chef_id: slavo.id,
   price: rand(30..75)
   )
-bec_two.photo.attach(io: file, filename: "nes10.png", content_type: 'image/png')
-bec_two.save!
+slavo_two.photo.attach(io: file, filename: "nes10.png", content_type: 'image/png')
+slavo_two.save!
 
-file = URI.open('')
-bec_three = Recipe.new(
-  name: 'Sashimi with Chilli-lime Dressing',
+file = URI.open('https://images.unsplash.com/photo-1613552496394-4e4b3f074e4f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTl8fHN0ZXd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+slavo_three = Recipe.new(
+  name: 'Bosnian Pot',
   description: Faker::Food.description,
-  cuisine: 'Thai',
+  cuisine: 'Balkan',
   cook_time: rand(30..90),
-  chef_id: bec.id,
+  chef_id: slavo.id,
   price: rand(30..75)
   )
-bec_three.photo.attach(io: file, filename: "nes11.png", content_type: 'image/png')
-bec_three.save!
+slavo_three.photo.attach(io: file, filename: "nes11.png", content_type: 'image/png')
+slavo_three.save!
 
-file = URI.open('')
-bec_four = Recipe.new(
-  name: 'Stir-fried Asparagus',
+file = URI.open('https://images.unsplash.com/photo-1602873520153-ec56ca3c205b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YmFrZWQlMjBiZWFuc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+slavo_four = Recipe.new(
+  name: 'Baked Beans',
   description: Faker::Food.description,
-  cuisine: 'Thai',
+  cuisine: 'Balkan',
   cook_time: rand(30..90),
-  chef_id: bec.id,
+  chef_id: slavo.id,
   price: rand(30..75)
   )
-bec_four.photo.attach(io: file, filename: "nes12.png", content_type: 'image/png')
-bec_four.save!
+slavo_four.photo.attach(io: file, filename: "nes12.png", content_type: 'image/png')
+slavo_four.save!
 
-file = URI.open('')
-bec_five = Recipe.new(
-  name: 'Pork & Eggs',
-  description: Faker::Food.description,
-  cuisine: 'Thai',
-  cook_time: rand(30..90),
-  chef_id: bec.id,
-  price: rand(30..75)
-  )
-bec_five.photo.attach(io: file, filename: "nes13.png", content_type: 'image/png')
-bec_five.save!
+# file = URI.open('')
+# slavo_five = Recipe.new(
+#   name: 'Pork & Eggs',
+#   description: Faker::Food.description,
+#   cuisine: 'Balkan',
+#   cook_time: rand(30..90),
+#   chef_id: slavo.id,
+#   price: rand(30..75)
+#   )
+# slavo_five.photo.attach(io: file, filename: "nes13.png", content_type: 'image/png')
+# slavo_five.save!
 
-file = URI.open('')
-bec_six = Recipe.new(
-  name: 'Ginger Garlic Noodle Soup',
-  description: Faker::Food.description,
-  cuisine: 'Thai',
-  cook_time: rand(30..90),
-  chef_id: bec.id,
-  price: rand(30..75)
-  )
-bec_six.photo.attach(io: file, filename: "nes14.png", content_type: 'image/png')
-bec_six.save!
-# chef chz recipes
-file = URI.open('')
-bec_one = Recipe.new(
-  name: 'Prawns with Sweet Chilli Sauce',
-  description: Faker::Food.description,
-  cuisine: 'Thai',
-  cook_time: rand(30..90),
-  chef_id: bec.id,
-  price: rand(30..75)
-  )
-bec_one.photo.attach(io: file, filename: "nes9.png", content_type: 'image/png')
-bec_one.save!
+# file = URI.open('')
+# slavo_six = Recipe.new(
+#   name: 'Ginger Garlic Noodle Soup',
+#   description: Faker::Food.description,
+#   cuisine: 'Balkan',
+#   cook_time: rand(30..90),
+#   chef_id: slavo.id,
+#   price: rand(30..75)
+#   )
+# slavo_six.photo.attach(io: file, filename: "nes14.png", content_type: 'image/png')
+# slavo_six.save!
 
-file = URI.open('')
-bec_two = Recipe.new(
-  name: 'Roast Chicken with Sauce Chasseur',
-  description: Faker::Food.description,
-  cuisine: 'Thai',
-  cook_time: rand(30..90),
-  chef_id: bec.id,
-  price: rand(30..75)
-  )
-bec_two.photo.attach(io: file, filename: "nes10.png", content_type: 'image/png')
-bec_two.save!
-
-file = URI.open('')
-bec_three = Recipe.new(
-  name: 'Sashimi with Chilli-lime Dressing',
-  description: Faker::Food.description,
-  cuisine: 'Thai',
-  cook_time: rand(30..90),
-  chef_id: bec.id,
-  price: rand(30..75)
-  )
-bec_three.photo.attach(io: file, filename: "nes11.png", content_type: 'image/png')
-bec_three.save!
-
-file = URI.open('')
-bec_four = Recipe.new(
-  name: 'Stir-fried Asparagus',
-  description: Faker::Food.description,
-  cuisine: 'Thai',
-  cook_time: rand(30..90),
-  chef_id: bec.id,
-  price: rand(30..75)
-  )
-bec_four.photo.attach(io: file, filename: "nes12.png", content_type: 'image/png')
-bec_four.save!
-
-file = URI.open('')
-bec_five = Recipe.new(
-  name: 'Pork & Eggs',
-  description: Faker::Food.description,
-  cuisine: 'Thai',
-  cook_time: rand(30..90),
-  chef_id: bec.id,
-  price: rand(30..75)
-  )
-bec_five.photo.attach(io: file, filename: "nes13.png", content_type: 'image/png')
-bec_five.save!
-
-file = URI.open('')
-bec_six = Recipe.new(
-  name: 'Ginger Garlic Noodle Soup',
-  description: Faker::Food.description,
-  cuisine: 'Thai',
-  cook_time: rand(30..90),
-  chef_id: bec.id,
-  price: rand(30..75)
-  )
-bec_six.photo.attach(io: file, filename: "nes14.png", content_type: 'image/png')
-bec_six.save!
 puts "#{Recipe.count} recipes created"
 
 # -------- RECIPES END ----------------
@@ -686,6 +615,13 @@ puts "#{Recipe.count} recipes created"
 
 
 # -------- INGREDIENTS END ----------------
+
+# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- -- -- -- -- --- -- -- -- -- -- --
+# -------- MEASUREMETNS START ----------------
+
+
+
+# -------- MEASUREMETNS END ----------------
 
 # --- ---- --- -- --- --- -- -- --- -- -- -- -- -- -- -- -- -- --- -- -- -- -- -- --
 
