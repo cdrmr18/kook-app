@@ -14,12 +14,12 @@ Rails.application.routes.draw do
   resources :recipes do
     collection do
       get :top
+    end
     # /recipes/:id/bookings/new
     resources :bookings, only: [:new, :create]
 
     # recipes/:id/measurements/new
     resources :measurements, only: [:new, :create]
-    end
   end
 
   # /chats  -- /chats/:id
