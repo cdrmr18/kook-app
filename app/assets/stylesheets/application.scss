@@ -10,7 +10,7 @@
 
 // Your CSS partials
 @import "components/index";
-@import "pages/index";
+@import "pages";
 @import "sessions";
 @import "registrations";
 @import "chefs";
@@ -59,3 +59,5 @@ body {
   border-color: #28a745;
   box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
 }
+
+

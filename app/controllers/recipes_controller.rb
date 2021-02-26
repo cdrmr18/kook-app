@@ -5,8 +5,13 @@ class RecipesController < ApplicationController
     else
       @recipes = Recipe.all
     end
-
   end
+
+    
+  def top
+    @recipes = Recipe.joins(:recipe_reviews).where(recipe_reviews:{rating: 1})
+  end
+
 
   def create
     @recipe = Recipe.new
@@ -42,6 +47,11 @@ class RecipesController < ApplicationController
 
   def destroy
   end
+
+  
+
+
+
 
   private
 
