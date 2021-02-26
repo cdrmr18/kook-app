@@ -76,7 +76,7 @@ end
   recipe_url = recipes[idx+5]
   file = URI.open(recipe_url)
   recipe = Recipe.new(
-    name: Faker::Food.dish,
+    name: Faker::Food.sushi,
     description: Faker::Food.description,
     cuisine: "Italian",
     cook_time: rand(15..120),
