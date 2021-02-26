@@ -640,7 +640,7 @@ booking_two = Booking.create!(
   end_time: Time.now + 1,
   video_url: 'www.video.com',
   user_id: kathy.id,
-  recipe_id: slavo_five.id
+  recipe_id: slavo_four.id
 )
    # dragan bookings
 booking_three = Booking.create!(
@@ -762,62 +762,62 @@ puts "#{ChefReview.count} chef reviews created"
 
 puts 'creating recipe reviews...'
 RecipeReview.create!(
-  rating: rand(1...5),
+  rating: 5,
   content: 'I have to say, I enjoyed every single bite of the meal',
   recipe_id: slavo_two.id,
   booking_id: booking_one.id
   )
 RecipeReview.create!(
-  rating: rand(1...5),
+  rating: 4,
   content: 'Excellent food.',
-  recipe_id: slavo_five.id,
+  recipe_id: slavo_four.id,
   booking_id: booking_two.id
   )
 RecipeReview.create!(
-  rating: rand(1...5),
-  content: 'Excellent food.',
+  rating: 4,
+  content: 'So glad I tried this wonder French dish. Quite delicious.',
   recipe_id: roger_two.id,
   booking_id: booking_three.id
   )
 RecipeReview.create!(
-  rating: rand(1...5),
-  content: 'Excellent food.',
+  rating: 2,
+  content: 'It looked good but wasn\'t to my liking.',
   recipe_id: samuel_one.id,
   booking_id: booking_four.id
   )
 RecipeReview.create!(
-  rating: rand(1...5),
-  content: 'Excellent food.',
+  rating: 2,
+  content: 'It tasted nice but may need to add veggies to feel less guilty about eating it.',
   recipe_id: slavo_four.id,
   booking_id: booking_five.id
   )
 RecipeReview.create!(
-  rating: rand(1...5),
-  content: 'Excellent food.',
+  rating: 5,
+  content: 'Such a fun and moutwatering dish. So glad I tried it!',
   recipe_id: bec_five.id,
   booking_id: booking_six.id
   )
 RecipeReview.create!(
-  rating: rand(1...5),
-  content: 'Excellent food.',
+  rating: 4,
+  content: 'I just absolutely enjoyed making and eating this dish!',
   recipe_id: chaz_three.id,
   booking_id: booking_seven.id
   )
 RecipeReview.create!(
-  rating: rand(1...5),
-  content: 'Excellent food.',
+  rating: 3,
+  content: 'This dish was not easy to make but it was tasty.',
   recipe_id: jamal_five.id,
   booking_id: booking_eight.id
   )
 RecipeReview.create!(
-  rating: rand(1...5),
-  content: 'Excellent food.',
+  rating: 4,
+  content: 'I will defintely try this dish again on my own. It\'s delicious and fun to make.',
   recipe_id: roger_five.id,
   booking_id: booking_nine.id
   )
 RecipeReview.create!(
-  rating: rand(1...5),
-  content: 'Excellent food.',
+  rating: 5,
+  content: 'Wow! So glad I tried this because at this point I want to make it every day. Very nice recipe Chef Jamal.',
   recipe_id: jamal_one.id,
   booking_id: booking_ten.id
   )
