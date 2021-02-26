@@ -94,7 +94,7 @@ jamal = User.new(
 jamal.photo.attach(io: file, filename: 'nes6.png', content_type: 'image/png')
 jamal.save!
 
-file = URI.open('https://images.unsplash.com/photo-1612282131240-6e878907d0f6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1308&q=80')
+file = URI.open('https://images.unsplash.com/photo-1577219491135-ce391730fb2c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8Y2hlZnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 roger = User.new(
   first_name: "Roger",
   last_name: "D’Angeline",
@@ -627,7 +627,7 @@ puts "#{Recipe.count} recipes created"
    #  kathy bookings
 puts 'creating bookings...'
 booking_one = Booking.create!(
-  date: Faker::Date.forward(days: rand(1..14)),
+  date: Faker::Date.forward(days: 14),
   start_time: Time.now + 1,
   end_time: Time.now + 2,
   video_url: 'www.video.com',
@@ -635,16 +635,16 @@ booking_one = Booking.create!(
   recipe_id: slavo_two.id
   )
 booking_two = Booking.create!(
-  date: Faker::Date.backward(days: rand(14..30)),
+  date: Faker::Date.backward(days: 7),
   start_time: Time.now,
   end_time: Time.now + 1,
   video_url: 'www.video.com',
   user_id: kathy.id,
-  recipe_id: slavo_four.id
+  recipe_id: samuel_four.id
 )
    # dragan bookings
 booking_three = Booking.create!(
-date: Faker::Date.forward(days: rand(1..14)),
+date: Faker::Date.forward(days: 10),
 start_time: Time.now + 4,
 end_time: Time.now + 5,
 video_url: 'www.video.com',
@@ -652,7 +652,7 @@ user_id: dragan.id,
 recipe_id: roger_two.id
 )
 booking_four = Booking.create!(
-  date: Faker::Date.backward(days: rand(14..30)),
+  date: Faker::Date.backward(days: 20),
   start_time: Time.now - 4,
   end_time: Time.now - 3,
   video_url: 'www.video.com',
@@ -660,7 +660,7 @@ booking_four = Booking.create!(
   recipe_id: samuel_one.id
 )
 booking_five = Booking.create!(
-date: Faker::Date.forward(days: rand(1..14)),
+date: Faker::Date.forward(days: 8),
 start_time: Time.now - 2 ,
 end_time: Time.now - 1,
 video_url: 'www.video.com',
@@ -668,7 +668,7 @@ user_id: dragan.id,
 recipe_id: slavo_four.id
 )
 booking_six = Booking.create!(
-  date: Faker::Date.backward(days: rand(14..30)),
+  date: Faker::Date.backward(days: 5),
   start_time: Time.now,
   end_time: Time.now + 1,
   video_url: 'www.video.com',
@@ -676,7 +676,7 @@ booking_six = Booking.create!(
   recipe_id: bec_five.id
 )
 booking_seven = Booking.create!(
-  date: Faker::Date.forward(days: rand(14..30)),
+  date: Faker::Date.forward(days: 25),
   start_time: Time.now,
   end_time: Time.now + 1,
   video_url: 'www.video.com',
@@ -684,7 +684,7 @@ booking_seven = Booking.create!(
   recipe_id: chaz_three.id
 )
 booking_eight = Booking.create!(
-  date: Faker::Date.forward(days: rand(14..30)),
+  date: Faker::Date.backward(days: 2),
   start_time: Time.now,
   end_time: Time.now + 1,
   video_url: 'www.video.com',
@@ -692,7 +692,7 @@ booking_eight = Booking.create!(
   recipe_id: jamal_five.id
 )
 booking_nine = Booking.create!(
-  date: Faker::Date.forward(days: rand(14..30)),
+  date: Faker::Date.backward(days: 25),
   start_time: Time.now,
   end_time: Time.now + 1,
   video_url: 'www.video.com',
@@ -700,7 +700,7 @@ booking_nine = Booking.create!(
   recipe_id: roger_five.id
 )
 booking_ten = Booking.create!(
-  date: Faker::Date.forward(days: rand(14..30)),
+  date: Faker::Date.backward(days: 3),
   start_time: Time.now,
   end_time: Time.now + 1,
   video_url: 'www.video.com',
@@ -721,10 +721,10 @@ ChefReview.create!(
   chef_id: slavo_chef.id,
   booking_id: booking_one.id,
   rating: 5,
-  content: "It’s a great experience with this chef. They were very welcoming and charming. They are extremely knowledgeable and make great recommendations."
+  content: "It was a great experience with this chef. They were very welcoming and charming. They are extremely knowledgeable and make great recommendations."
   )
 ChefReview.create!(
-  chef_id: slavo_chef.id,
+  chef_id: samuel_chef.id,
   booking_id: booking_two.id,
   rating: 5,
   content: "What a kind and patient chef!"
@@ -733,13 +733,13 @@ ChefReview.create!(
   chef_id: chaz_chef.id,
   booking_id: booking_seven.id,
   rating: 5,
-  content: "Chaz is such an awesome dude! Super helpful and knowledgeable."
+  content: "Chaz is such an awesome chef! Super helpful and knowledgeable."
   )
 ChefReview.create!(
   chef_id: jamal_chef.id,
   booking_id: booking_eight.id,
   rating: 4,
-  content: "Wow I can't believe I was able to learn to make such a beautiful dish through Jamals help. Thank you!"
+  content: "Wow I can't believe I was able to learn to make such a beautiful dish through Jamal's help. Thank you!"
   )
 ChefReview.create!(
   chef_id: roger_chef.id,
@@ -751,7 +751,7 @@ ChefReview.create!(
   chef_id: jamal_chef.id,
   booking_id: booking_ten.id,
   rating: 3,
-  content: "It was a nice class with Jamal but wish he would've explained some thigns a little better. Overall, not bad."
+  content: "It was a nice class with Jamal but wish he would've explained some of the difficult techniques a bit better. Overall, not bad."
   )
 puts "#{ChefReview.count} chef reviews created"
 # -------- CHEF REVIEWS END ----------------
@@ -770,7 +770,7 @@ RecipeReview.create!(
 RecipeReview.create!(
   rating: 4,
   content: 'Excellent food.',
-  recipe_id: slavo_four.id,
+  recipe_id: samuel_four.id,
   booking_id: booking_two.id
   )
 RecipeReview.create!(

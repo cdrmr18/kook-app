@@ -33,10 +33,7 @@
     <% @chef.recipes.each do |recipe| %>
     <div class="col-12 col-md-6 col-lg-4 mb-4">
       <div class="card-food">
-        <% recipe.photos.each do |photo| %>
-            <%= cl_image_tag photo.key%>
-            <% break %>
-        <% end %>
+        <%= cl_image_tag recipe.photo.key%>
         <div class="card-food-infos">
           <div>
             <h2><%= recipe.name %></h2>
@@ -58,10 +55,6 @@
   </div>
 </div>
 
-<hr>
-<!-- chef calendar & booking stuck to side while scrolling-->
-
-<hr>
 <!-- chef reviews -->
 <% @chef.chef_reviews.each do |review| %>
   <div class="notification">
