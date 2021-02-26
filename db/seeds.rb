@@ -22,7 +22,7 @@ kathy = User.new(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
   username: Faker::Internet.username,
-  email: kathy@test.com,
+  email: kathy@mymail.com,
   password: 123456
   )
 kathy.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
@@ -33,7 +33,7 @@ raj = User.new(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
   username: Faker::Internet.username,
-  email: raj@test.com,
+  email: raj@mymail.com,
   password: 123456
   )
 raj.photo.attach(io: file, filename: 'nes1.png', content_type: 'image/png')
@@ -45,7 +45,7 @@ luis = User.new(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
   username: Faker::Internet.username,
-  email: luis@test.com,
+  email: luis@mymail.com,
   password: 123456
   )
 luis.photo.attach(io: file, filename: 'nes2.png', content_type: 'image/png')
@@ -56,7 +56,7 @@ dragan = User.new(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
   username: Faker::Internet.username,
-  email: dragan@test.com,
+  email: dragan@mymail.com,
   password: 123456
   )
 dragan.photo.attach(io: file, filename: 'nes3.png', content_type: 'image/png')
@@ -67,7 +67,7 @@ bec = User.new(
   first_name: "Bec",
   last_name: "Brown",
   username: Faker::Internet.username,
-  email: bec@test.com,
+  email: bec@mymail.com,
   password: 123456
   )
 bec.photo.attach(io: file, filename: 'nes4.png', content_type: 'image/png')
@@ -78,48 +78,102 @@ chaz = User.new(
   first_name: "Chaz",
   last_name: "James",
   username: Faker::Internet.username,
-  email: chaz@test.com,
+  email: chaz@mymail.com,
   password: 123456
   )
 chaz.photo.attach(io: file, filename: 'nes5.png', content_type: 'image/png')
 chaz.save!
 
-file = URI.open('https://images.unsplash.com/photo-1612282131240-6e878907d0f6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1308&q=80')
+file = URI.open('https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fGNoZWZ8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 jamal = User.new(
   first_name: "Jamal",
   last_name: "Al Tamimi",
   username: Faker::Internet.username,
-  email: Jamal@test.com,
+  email: Jamal@mymail.com,
   password: 123456
   )
-Jamal.photo.attach(io: file, filename: 'nes5.png', content_type: 'image/png')
-Jamal.save!
+jamal.photo.attach(io: file, filename: 'nes6.png', content_type: 'image/png')
+jamal.save!
+
+file = URI.open('https://images.unsplash.com/photo-1612282131240-6e878907d0f6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1308&q=80')
+roger = User.new(
+  first_name: "Roger",
+  last_name: "D’Angeline",
+  username: Faker::Internet.username,
+  email: roger@mymail.com,
+  password: 123456
+  )
+roger.photo.attach(io: file, filename: 'nes6.png', content_type: 'image/png')
+roger.save!
+
+puts "#{User.count} users created"
+
+file = URI.open('https://images.unsplash.com/photo-1519164497992-65f6b58a2981?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjl8fGFmcmljYW4lMjBjaGVmfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+samuel = User.new(
+  first_name: "Samuel",
+  last_name: "De Grasse",
+  username: Faker::Internet.username,
+  email: samuel@mymail.com,
+  password: 123456
+  )
+samuel.photo.attach(io: file, filename: 'nes7.png', content_type: 'image/png')
+samuel.save!
 
 
+file = URI.open('https://images.unsplash.com/photo-1592332297790-c7c27c38ecb0?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8cnVzc2lhbiUyMGNoZWZ8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+slavo = User.new(
+  first_name: "Slavo",
+  last_name: "Bukich",
+  username: Faker::Internet.username,
+  email: slavo@mymail.com,
+  password: 123456
+  )
+slavo.photo.attach(io: file, filename: 'nes7.png', content_type: 'image/png')
+slavo.save!
 
 puts "#{User.count} users created"
 
  # -------- USERS  END ----------------
 
 
+# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- --
 
 
-
-
-
+# -------- CHEFS START ----------------
 puts 'creating chefs...'
 Chef.create!(
-  cuisine: 'Mexican',
-  user_id: User.first.id,
+  cuisine: 'Thai',
+  user_id: bec.id,
   )
 
 Chef.create!(
-  cuisine: 'Italian',
-  user_id: User.last.id,
+  cuisine: 'Modern Australian',
+  user_id: chaz.id,
   )
+Chef.create!(
+  cuisine: 'Middle Eastern',
+  user_id: jamal.id,
+  )
+Chef.create!(
+  cuisine: 'French',
+  user_id: roger.id,
+  )
+Chef.create!(
+  cuisine: 'North African',
+  user_id: samuel.id,
+  )
+Chef.create!(
+  cuisine: 'Balkan',
+  user_id: slavo.id,
+  )
+
 puts "#{Chef.count} chefs created"
 
+# -------- CHEFS END ----------------
 
+# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- --
+
+# -------- RECIPES START ----------------
 
 puts 'creating recipes...'
 5.times do |idx|
@@ -153,6 +207,12 @@ end
 end
 puts "#{Recipe.count} recipes created"
 
+# -------- RECIPES END ----------------
+
+# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- --
+
+# -------- BOOKINGS START ----------------
+
 puts 'creating bookings...'
 Booking.create!(
   date: Date.today,
@@ -171,6 +231,11 @@ Booking.create!(
   recipe_id: Recipe.last.id
 )
 puts "#{Booking.count} bookings created"
+# -------- BOOKINGS END ----------------
+
+# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- --
+
+# -------- CHEF REVIEWS START ----------------
 
 puts 'creating chef reviews...'
 ChefReview.create!(
@@ -186,6 +251,11 @@ ChefReview.create!(
   content: "What a kind a patient chef!"
   )
 puts "#{ChefReview.count} chef reviews created"
+# -------- CHEF REVIEWS END ----------------
+
+# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- --
+
+# -------- RECIPE REVIEWS START ----------------
 
 puts 'creating recipe reviews...'
 RecipeReview.create!(
@@ -201,6 +271,11 @@ RecipeReview.create!(
   booking_id: Booking.first.id
   )
 puts "#{RecipeReview.count} recipe reviews created"
+# -------- RECIPE REVIEWS END ----------------
+
+# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- --
+
+# -------- CHATS START ------------------
 
 puts 'creating chats...'
 Chat.create!(
@@ -210,8 +285,12 @@ Chat.create!(
   booking_id: Booking.last.id,
   )
 puts "#{Chat.count} chats created"
+ # -------- CHATS END ----------------
 
-puts 'creating messages...'
+# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- --
+
+# -------- MESSAGES START ----------------
+
 Message.create!(
   chat_id: Chat.first.id,
   content: "Hi chef, I am excited to get cooking with you soon!",
@@ -226,4 +305,6 @@ Message.create!(
 puts "#{Message.count} messages created"
 
 puts "Seeding complete"
+ # -------- MESSAGES END ----------------
 
+# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- --
