@@ -624,24 +624,58 @@ puts "#{Recipe.count} recipes created"
 # --- ---- --- -- --- --- -- -- --- -- -- -- -- -- -- -- -- -- --- -- -- -- -- -- --
 
 # -------- BOOKINGS START ----------------
-
+   #  kathy bookings
 puts 'creating bookings...'
-Booking.create!(
-  date: Date.today,
-  start_time: Time.now,
-  end_time: Time.now,
+booking_one = Booking.create!(
+  date: Faker::Date.forward(days: rand(1..14)),
+  start_time: Time.now + 1,
+  end_time: Time.now + 2,
   video_url: 'www.video.com',
-  user_id: User.first.id,
-  recipe_id: Recipe.first.id
+  user_id: kathy.id,
+  recipe_id: slavo_two.id
   )
-Booking.create!(
-  date: Date.today,
+booking_two = Booking.create!(
+  date: Faker::Date.backward(days: rand(14..30)),
   start_time: Time.now,
-  end_time: Time.now,
+  end_time: Time.now + 1,
   video_url: 'www.video.com',
-  user_id: User.last.id,
-  recipe_id: Recipe.last.id
+  user_id: kathy.id,
+  recipe_id: slavo_five.id
 )
+   # dragan bookings
+booking_three = Booking.create!(
+date: Faker::Date.forward(days: rand(1..14)),
+start_time: Time.now + 4,
+end_time: Time.now + 5,
+video_url: 'www.video.com',
+user_id: dragan.id,
+recipe_id: roger_two.id
+)
+booking_four = Booking.create!(
+  date: Faker::Date.backward(days: rand(14..30)),
+  start_time: Time.now - 4,
+  end_time: Time.now - 3,
+  video_url: 'www.video.com',
+  user_id: dragan.id,
+  recipe_id: samuel_one.id
+)
+booking_five = Booking.create!(
+date: Faker::Date.forward(days: rand(1..14)),
+start_time: Time.now - 2 ,
+end_time: Time.now - 1,
+video_url: 'www.video.com',
+user_id: dragan.id,
+recipe_id: slavo_four.id
+)
+booking_six = Booking.create!(
+  date: Faker::Date.backward(days: rand(14..30)),
+  start_time: Time.now,
+  end_time: Time.now + 1,
+  video_url: 'www.video.com',
+  user_id: dragan.id,
+  recipe_id: bec_five.id
+)
+
 puts "#{Booking.count} bookings created"
 # -------- BOOKINGS END ----------------
 
