@@ -17,7 +17,7 @@
           <div class="container-fluid">
             <a class="navbar-brand"></a>
               <form class="d-flex">
-              <%= form_tag recipes_path, method: :get do %>
+              <%= form_tag recipes_path method: :get do %>
                 <%= text_field_tag :query, params[:query], class: "form-control me-2", id: "form-cont",
                     placeholder: "cuisine or recipe" %>
                     <%= submit_tag "search", class:"btn",  id: "search-btn" %>
