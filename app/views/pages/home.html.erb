@@ -2,7 +2,7 @@
  <!--  increased the jumbotron width -->
   <div class="container-full-bg jumbotron bg-main">
     <div class="container my-4">
-        <div class="d-flex align-items-center justify-content-center" style="height: 350px">
+        <div class="d-flex align-items-center justify-content-center" style="height:350px">
           <form class="d-flex">
               <%= form_tag recipes_path, method: :get do %>
               <%= text_field_tag :query, params[:query], class: "form-control me-2", id: "form-cont-home",
@@ -11,9 +11,7 @@
               <% end %>
           </form>     
         </div>
-          <div class="d-flex justify-content-center">
-        <h1>FOOD IS FOR THE SOUL</h1>    
-        </div>
+    
       </div>
   </div>
       
