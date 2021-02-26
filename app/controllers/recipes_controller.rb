@@ -7,7 +7,7 @@ class RecipesController < ApplicationController
     end
   end
 
-    
+
   def top
     @recipes = Recipe.joins(:recipe_reviews).where(recipe_reviews:{rating: 1})
   end
@@ -40,6 +40,8 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
 
     @measurement = Measurement.new
+
+    @chef_name = "#{@recipe.chef.user.first_name + " " + @recipe.chef.user.last_name}"
   end
 
   def update
@@ -48,7 +50,7 @@ class RecipesController < ApplicationController
   def destroy
   end
 
-  
+
 
 
 
