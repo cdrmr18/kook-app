@@ -675,6 +675,38 @@ booking_six = Booking.create!(
   user_id: dragan.id,
   recipe_id: bec_five.id
 )
+booking_seven = Booking.create!(
+  date: Faker::Date.forward(days: rand(14..30)),
+  start_time: Time.now,
+  end_time: Time.now + 1,
+  video_url: 'www.video.com',
+  user_id: bec.id,
+  recipe_id: chaz_three.id
+)
+booking_eight = Booking.create!(
+  date: Faker::Date.forward(days: rand(14..30)),
+  start_time: Time.now,
+  end_time: Time.now + 1,
+  video_url: 'www.video.com',
+  user_id: roger.id,
+  recipe_id: jamal_five.id
+)
+booking_nine = Booking.create!(
+  date: Faker::Date.forward(days: rand(14..30)),
+  start_time: Time.now,
+  end_time: Time.now + 1,
+  video_url: 'www.video.com',
+  user_id: raj.id,
+  recipe_id: roger_five.id
+)
+booking_ten = Booking.create!(
+  date: Faker::Date.forward(days: rand(14..30)),
+  start_time: Time.now,
+  end_time: Time.now + 1,
+  video_url: 'www.video.com',
+  user_id: luis.id,
+  recipe_id: jamal_one.id
+)
 
 puts "#{Booking.count} bookings created"
 # -------- BOOKINGS END ----------------
@@ -684,17 +716,42 @@ puts "#{Booking.count} bookings created"
 # -------- CHEF REVIEWS START ----------------
 
 puts 'creating chef reviews...'
+
 ChefReview.create!(
-  chef_id: Chef.first.id,
-  booking_id: Booking.first.id,
-  rating: rand(1...5),
+  chef_id: slavo_chef.id,
+  booking_id: booking_one.id,
+  rating: 5,
   content: "It’s a great experience with this chef. They were very welcoming and charming. They are extremely knowledgeable and make great recommendations."
   )
 ChefReview.create!(
-  chef_id: Chef.last.id,
-  booking_id: Booking.last.id,
-  rating: rand(1...5),
-  content: "What a kind a patient chef!"
+  chef_id: slavo_chef.id,
+  booking_id: booking_two.id,
+  rating: 5,
+  content: "What a kind and patient chef!"
+  )
+ChefReview.create!(
+  chef_id: chaz_chef.id,
+  booking_id: booking_seven.id,
+  rating: 5,
+  content: "Chaz is such an awesome dude! Super helpful and knowledgeable."
+  )
+ChefReview.create!(
+  chef_id: jamal_chef.id,
+  booking_id: booking_eight.id,
+  rating: 4,
+  content: "Wow I can't believe I was able to learn to make such a beautiful dish through Jamals help. Thank you!"
+  )
+ChefReview.create!(
+  chef_id: roger_chef.id,
+  booking_id: booking_nine.id,
+  rating: 5,
+  content: "Roger is very detailed and is great at getting you through difficult knife skills for his French dishes."
+  )
+ChefReview.create!(
+  chef_id: jamal_chef.id,
+  booking_id: booking_ten.id,
+  rating: 3,
+  content: "It was a nice class with Jamal but wish he would've explained some thigns a little better. Overall, not bad."
   )
 puts "#{ChefReview.count} chef reviews created"
 # -------- CHEF REVIEWS END ----------------
@@ -707,48 +764,96 @@ puts 'creating recipe reviews...'
 RecipeReview.create!(
   rating: rand(1...5),
   content: 'I have to say, I enjoyed every single bite of the meal',
-  recipe_id: Booking.last.recipe_id,
-  booking_id: Booking.last.id
+  recipe_id: slavo_two.id,
+  booking_id: booking_one.id
   )
 RecipeReview.create!(
   rating: rand(1...5),
   content: 'Excellent food.',
-  recipe_id: Booking.first.recipe_id,
-  booking_id: Booking.first.id
+  recipe_id: slavo_five.id,
+  booking_id: booking_two.id
+  )
+RecipeReview.create!(
+  rating: rand(1...5),
+  content: 'Excellent food.',
+  recipe_id: roger_two.id,
+  booking_id: booking_three.id
+  )
+RecipeReview.create!(
+  rating: rand(1...5),
+  content: 'Excellent food.',
+  recipe_id: samuel_one.id,
+  booking_id: booking_four.id
+  )
+RecipeReview.create!(
+  rating: rand(1...5),
+  content: 'Excellent food.',
+  recipe_id: slavo_four.id,
+  booking_id: booking_five.id
+  )
+RecipeReview.create!(
+  rating: rand(1...5),
+  content: 'Excellent food.',
+  recipe_id: bec_five.id,
+  booking_id: booking_six.id
+  )
+RecipeReview.create!(
+  rating: rand(1...5),
+  content: 'Excellent food.',
+  recipe_id: chaz_three.id,
+  booking_id: booking_seven.id
+  )
+RecipeReview.create!(
+  rating: rand(1...5),
+  content: 'Excellent food.',
+  recipe_id: jamal_five.id,
+  booking_id: booking_eight.id
+  )
+RecipeReview.create!(
+  rating: rand(1...5),
+  content: 'Excellent food.',
+  recipe_id: roger_five.id,
+  booking_id: booking_nine.id
+  )
+RecipeReview.create!(
+  rating: rand(1...5),
+  content: 'Excellent food.',
+  recipe_id: jamal_one.id,
+  booking_id: booking_ten.id
   )
 puts "#{RecipeReview.count} recipe reviews created"
 # -------- RECIPE REVIEWS END ----------------
 
 # --- ---- --- -- --- --- -- -- --- -- -- -- -- -- -- -- -- -- --- -- -- -- -- -- --
 
-# -------- CHATS START ------------------
+# # -------- CHATS START ------------------
 
-puts 'creating chats...'
-Chat.create!(
-  booking_id: Booking.first.id,
-  )
-Chat.create!(
-  booking_id: Booking.last.id,
-  )
-puts "#{Chat.count} chats created"
- # -------- CHATS END ----------------
+# puts 'creating chats...'
+# Chat.create!(
+#   booking_id: Booking.first.id,
+#   )
+# Chat.create!(
+#   booking_id: Booking.last.id,
+#   )
+# puts "#{Chat.count} chats created"
+#  # -------- CHATS END ----------------
 
-# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- -- -- -- -- --- -- -- -- -- -- --
+# # --- ---- --- -- --- --- -- -- --- -- -- -- -- -- -- -- -- -- --- -- -- -- -- -- --
 
-# -------- MESSAGES START ----------------
+# # -------- MESSAGES START ----------------
 
-Message.create!(
-  chat_id: Chat.first.id,
-  content: "Hi chef, I am excited to get cooking with you soon!",
-  user_id: User.first.id
-  )
-Message.create!(
-  chat_id: Chat.last.id,
-  content: "It's nice to meet you chef. Can't wait to make your signature dish!",
-  user_id: User.last.id
-  )
+# Message.create!(
+#   chat_id: Chat.first.id,
+#   content: "Hi chef, I am excited to get cooking with you soon!",
+#   user_id: User.first.id
+#   )
+# Message.create!(
+#   chat_id: Chat.last.id,
+#   content: "It's nice to meet you chef. Can't wait to make your signature dish!",
+#   user_id: User.last.id
+#   )
 
-puts "#{Message.count} messages created"
+# puts "#{Message.count} messages created"
 
 puts "Seeding complete"
  # -------- MESSAGES END ----------------
