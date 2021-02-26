@@ -1,7 +1,5 @@
 require "open-uri"
 
-recipes = ['https://images.unsplash.com/photo-1432139509613-5c4255815697?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1532&q=80', 'https://images.unsplash.com/photo-1481070555726-e2fe8357725c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80', 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80', 'https://images.unsplash.com/photo-1529042410759-befb1204b468?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1533&q=80', 'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80','https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1534&q=80', 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1534&q=80', 'https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1534&q=80', 'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1553&q=80', 'https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1955&q=80', 'https://images.unsplash.com/photo-1548943487-a2e4e43b4853?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80']
-
 puts 'Deleting current seed...'
 
 ChefReview.destroy_all
@@ -18,46 +16,46 @@ puts 'Starting seed..'
 # -------- USERS  START ---------------- -- -- -- --- -- -- -- -- -- --
 
 puts 'creating users...'
-file = URI.open('https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80')
+file = URI.open('https://images.unsplash.com/photo-1531432162873-97ad5f511056?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1534&q=80')
 kathy = User.new(
-  first_name: Faker::Name.first_name,
+  first_name: 'Kathy',
   last_name: Faker::Name.last_name,
   username: Faker::Internet.username,
-  email: kathy@mymail.com,
+  email: 'kathy@mymail.com',
   password: 123456
   )
 kathy.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 kathy.save!
 
-file = URI.open('https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1500&q=80')
+file = URI.open('https://images.unsplash.com/photo-1460056560479-46cf73637e6e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1417&q=80')
 raj = User.new(
-  first_name: Faker::Name.first_name,
+  first_name: 'Raj',
   last_name: Faker::Name.last_name,
   username: Faker::Internet.username,
-  email: raj@mymail.com,
+  email: 'raj@mymail.com',
   password: 123456
   )
 raj.photo.attach(io: file, filename: 'nes1.png', content_type: 'image/png')
 raj.save!
 
 
-file = URI.open('https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1500&q=80')
+file = URI.open('https://images.unsplash.com/photo-1507438222021-237ff73669b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80')
 luis = User.new(
-  first_name: Faker::Name.first_name,
+  first_name: 'Luis',
   last_name: Faker::Name.last_name,
   username: Faker::Internet.username,
-  email: luis@mymail.com,
+  email: 'luis@mymail.com',
   password: 123456
   )
 luis.photo.attach(io: file, filename: 'nes2.png', content_type: 'image/png')
 luis.save!
 
-file = URI.open('https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1500&q=80')
+file = URI.open('https://images.unsplash.com/photo-1482849737880-498de71dda8d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1280&q=80')
 dragan = User.new(
-  first_name: Faker::Name.first_name,
+  first_name: 'Dragan',
   last_name: Faker::Name.last_name,
   username: Faker::Internet.username,
-  email: dragan@mymail.com,
+  email: 'dragan@mymail.com',
   password: 123456
   )
 dragan.photo.attach(io: file, filename: 'nes3.png', content_type: 'image/png')
@@ -68,7 +66,7 @@ bec = User.new(
   first_name: "Bec",
   last_name: "Brown",
   username: Faker::Internet.username,
-  email: bec@mymail.com,
+  email: 'bec@mymail.com',
   password: 123456
   )
 bec.photo.attach(io: file, filename: 'nes4.png', content_type: 'image/png')
@@ -79,7 +77,7 @@ chaz = User.new(
   first_name: "Chaz",
   last_name: "James",
   username: Faker::Internet.username,
-  email: chaz@mymail.com,
+  email: 'chaz@mymail.com',
   password: 123456
   )
 chaz.photo.attach(io: file, filename: 'nes5.png', content_type: 'image/png')
@@ -90,7 +88,7 @@ jamal = User.new(
   first_name: "Jamal",
   last_name: "Al Tamimi",
   username: Faker::Internet.username,
-  email: Jamal@mymail.com,
+  email: 'Jamal@mymail.com',
   password: 123456
   )
 jamal.photo.attach(io: file, filename: 'nes6.png', content_type: 'image/png')
@@ -101,20 +99,18 @@ roger = User.new(
   first_name: "Roger",
   last_name: "D’Angeline",
   username: Faker::Internet.username,
-  email: roger@mymail.com,
+  email: 'roger@mymail.com',
   password: 123456
   )
 roger.photo.attach(io: file, filename: 'nes6.png', content_type: 'image/png')
 roger.save!
-
-puts "#{User.count} users created"
 
 file = URI.open('https://images.unsplash.com/photo-1519164497992-65f6b58a2981?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjl8fGFmcmljYW4lMjBjaGVmfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 samuel = User.new(
   first_name: "Samuel",
   last_name: "De Grasse",
   username: Faker::Internet.username,
-  email: samuel@mymail.com,
+  email: 'samuel@mymail.com',
   password: 123456
   )
 samuel.photo.attach(io: file, filename: 'nes7.png', content_type: 'image/png')
@@ -126,7 +122,7 @@ slavo = User.new(
   first_name: "Slavo",
   last_name: "Bukich",
   username: Faker::Internet.username,
-  email: slavo@mymail.com,
+  email: "slavo@mymail.com",
   password: 123456
   )
 slavo.photo.attach(io: file, filename: 'nes8.png', content_type: 'image/png')
@@ -142,28 +138,28 @@ puts "#{User.count} users created"
 
 # -------- CHEFS START ----------------
 puts 'creating chefs...'
-Chef.create!(
+bec_chef = Chef.create!(
   cuisine: 'Thai',
   user_id: bec.id,
   )
 
-Chef.create!(
+chaz_chef = Chef.create!(
   cuisine: 'Modern Australian',
   user_id: chaz.id,
   )
-Chef.create!(
+jamal_chef = Chef.create!(
   cuisine: 'Middle Eastern',
   user_id: jamal.id,
   )
-Chef.create!(
+roger_chef = Chef.create!(
   cuisine: 'French',
   user_id: roger.id,
   )
-Chef.create!(
+samuel_chef = Chef.create!(
   cuisine: 'North African',
   user_id: samuel.id,
   )
-Chef.create!(
+slavo_chef = Chef.create!(
   cuisine: 'Balkan',
   user_id: slavo.id,
   )
@@ -184,7 +180,7 @@ bec_one = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'Thai',
   cook_time: rand(30..90),
-  chef_id: bec.id,
+  chef_id: bec_chef.id,
   price: rand(30..75)
   )
 bec_one.photo.attach(io: file, filename: "nes9.png", content_type: 'image/png')
@@ -196,7 +192,7 @@ bec_two = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'Thai',
   cook_time: rand(30..90),
-  chef_id: bec.id,
+  chef_id: bec_chef.id,
   price: rand(30..75)
   )
 bec_two.photo.attach(io: file, filename: "nes10.png", content_type: 'image/png')
@@ -208,7 +204,7 @@ bec_three = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'Thai',
   cook_time: rand(30..90),
-  chef_id: bec.id,
+  chef_id: bec_chef.id,
   price: rand(30..75)
   )
 bec_three.photo.attach(io: file, filename: "nes11.png", content_type: 'image/png')
@@ -220,7 +216,7 @@ bec_four = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'Thai',
   cook_time: rand(30..90),
-  chef_id: bec.id,
+  chef_id: bec_chef.id,
   price: rand(30..75)
   )
 bec_four.photo.attach(io: file, filename: "nes12.png", content_type: 'image/png')
@@ -232,7 +228,7 @@ bec_five = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'Thai',
   cook_time: rand(30..90),
-  chef_id: bec.id,
+  chef_id: bec_chef.id,
   price: rand(30..75)
   )
 bec_five.photo.attach(io: file, filename: "nes13.png", content_type: 'image/png')
@@ -244,7 +240,7 @@ bec_six = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'Thai',
   cook_time: rand(30..90),
-  chef_id: bec.id,
+  chef_id: bec_chef.id,
   price: rand(30..75)
   )
 bec_six.photo.attach(io: file, filename: "nes14.png", content_type: 'image/png')
@@ -257,7 +253,7 @@ chaz_one = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'Modern Australian',
   cook_time: rand(30..90),
-  chef_id: chaz.id,
+  chef_id: chaz_chef.id,
   price: rand(30..75)
   )
 chaz_one.photo.attach(io: file, filename: "nes15.png", content_type: 'image/png')
@@ -269,7 +265,7 @@ chaz_two = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'Modern Australian',
   cook_time: rand(30..90),
-  chef_id: chaz.id,
+  chef_id: chaz_chef.id,
   price: rand(30..75)
   )
 chaz_two.photo.attach(io: file, filename: "nes16.png", content_type: 'image/png')
@@ -281,7 +277,7 @@ chaz_three = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'Modern Australian',
   cook_time: rand(30..90),
-  chef_id: chaz.id,
+  chef_id: chaz_chef.id,
   price: rand(30..75)
   )
 chaz_three.photo.attach(io: file, filename: "nes17.png", content_type: 'image/png')
@@ -293,7 +289,7 @@ chaz_four = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'Modern Australian',
   cook_time: rand(30..90),
-  chef_id: chaz.id,
+  chef_id: chaz_chef.id,
   price: rand(30..75)
   )
 chaz_four.photo.attach(io: file, filename: "nes18.png", content_type: 'image/png')
@@ -317,7 +313,7 @@ chaz_six = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'Modern Australian',
   cook_time: rand(30..90),
-  chef_id: chaz.id,
+  chef_id: chaz_chef.id,
   price: rand(30..75)
   )
 chaz_six.photo.attach(io: file, filename: "nes20.png", content_type: 'image/png')
@@ -330,7 +326,7 @@ jamal_one = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'Middle Eastern',
   cook_time: rand(30..90),
-  chef_id: jamal.id,
+  chef_id: jamal_chef.id,
   price: rand(30..75)
   )
 jamal_one.photo.attach(io: file, filename: "nes21.png", content_type: 'image/png')
@@ -342,7 +338,7 @@ jamal_two = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'Middle Eastern',
   cook_time: rand(30..90),
-  chef_id: jamal.id,
+  chef_id: jamal_chef.id,
   price: rand(30..75)
   )
 jamal_two.photo.attach(io: file, filename: "nes22.png", content_type: 'image/png')
@@ -354,7 +350,7 @@ jamal_three = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'Middle Eastern',
   cook_time: rand(30..90),
-  chef_id: jamal.id,
+  chef_id: jamal_chef.id,
   price: rand(30..75)
   )
 jamal_three.photo.attach(io: file, filename: "nes23.png", content_type: 'image/png')
@@ -366,7 +362,7 @@ jamal_four = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'Middle Eastern',
   cook_time: rand(30..90),
-  chef_id: jamal.id,
+  chef_id: jamal_chef.id,
   price: rand(30..75)
   )
 jamal_four.photo.attach(io: file, filename: "nes24.png", content_type: 'image/png')
@@ -378,7 +374,7 @@ jamal_five = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'Middle Eastern',
   cook_time: rand(30..90),
-  chef_id: jamal.id,
+  chef_id: jamal_chef.id,
   price: rand(30..75)
   )
 jamal_five.photo.attach(io: file, filename: "nes25.png", content_type: 'image/png')
@@ -391,7 +387,7 @@ roger_one = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'French',
   cook_time: rand(30..90),
-  chef_id: roger.id,
+  chef_id: roger_chef.id,
   price: rand(30..75)
   )
 roger_one.photo.attach(io: file, filename: "nes27.png", content_type: 'image/png')
@@ -403,7 +399,7 @@ roger_two = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'French',
   cook_time: rand(30..90),
-  chef_id: roger.id,
+  chef_id: roger_chef.id,
   price: rand(30..75)
   )
 roger_two.photo.attach(io: file, filename: "nes28.png", content_type: 'image/png')
@@ -415,7 +411,7 @@ roger_three = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'French',
   cook_time: rand(30..90),
-  chef_id: roger.id,
+  chef_id: roger_chef.id,
   price: rand(30..75)
   )
 roger_three.photo.attach(io: file, filename: "nes29.png", content_type: 'image/png')
@@ -427,7 +423,7 @@ roger_four = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'French',
   cook_time: rand(30..90),
-  chef_id: roger.id,
+  chef_id: roger_chef.id,
   price: rand(30..75)
   )
 roger_four.photo.attach(io: file, filename: "nes30.png", content_type: 'image/png')
@@ -439,7 +435,7 @@ roger_five = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'French',
   cook_time: rand(30..90),
-  chef_id: roger.id,
+  chef_id: roger_chef.id,
   price: rand(30..75)
   )
 roger_five.photo.attach(io: file, filename: "nes31.png", content_type: 'image/png')
@@ -451,7 +447,7 @@ roger_six = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'French',
   cook_time: rand(30..90),
-  chef_id: roger.id,
+  chef_id: roger_chef.id,
   price: rand(30..75)
   )
 roger_six.photo.attach(io: file, filename: "nes32.png", content_type: 'image/png')
@@ -464,7 +460,7 @@ samuel_one = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'North African',
   cook_time: rand(30..90),
-  chef_id: samuel.id,
+  chef_id: samuel_chef.id,
   price: rand(30..75)
   )
 samuel_one.photo.attach(io: file, filename: "ne33.png", content_type: 'image/png')
@@ -476,7 +472,7 @@ samuel_two = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'North African',
   cook_time: rand(30..90),
-  chef_id: samuel.id,
+  chef_id: samuel_chef.id,
   price: rand(30..75)
   )
 samuel_two.photo.attach(io: file, filename: "nes34.png", content_type: 'image/png')
@@ -488,7 +484,7 @@ samuel_three = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'North African',
   cook_time: rand(30..90),
-  chef_id: samuel.id,
+  chef_id: samuel_chef.id,
   price: rand(30..75)
   )
 samuel_three.photo.attach(io: file, filename: "nes35.png", content_type: 'image/png')
@@ -500,7 +496,7 @@ samuel_four = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'North African',
   cook_time: rand(30..90),
-  chef_id: samuel.id,
+  chef_id: samuel_chef.id,
   price: rand(30..75)
   )
 samuel_four.photo.attach(io: file, filename: "nes36.png", content_type: 'image/png')
@@ -512,7 +508,7 @@ samuel_five = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'North African',
   cook_time: rand(30..90),
-  chef_id: samuel.id,
+  chef_id: samuel_chef.id,
   price: rand(30..75)
   )
 samuel_five.photo.attach(io: file, filename: "nes37.png", content_type: 'image/png')
@@ -524,20 +520,20 @@ samuel_six = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'North African',
   cook_time: rand(30..90),
-  chef_id: samuel.id,
+  chef_id: samuel_chef.id,
   price: rand(30..75)
   )
 samuel_six.photo.attach(io: file, filename: "nes38.png", content_type: 'image/png')
 samuel_six.save!
 
 # chef slavo recipes
-file = URI.open('https://www.missioneurovision.co.uk/wp-content/uploads/2016/03/serboa-cevapcici.jpg')
+file = URI.open('https://images.unsplash.com/photo-1585325701165-351af916e581?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=988&q=80')
 slavo_one = Recipe.new(
   name: 'Bosnian Cevapi',
   description: Faker::Food.description,
   cuisine: 'Balkan',
   cook_time: rand(30..90),
-  chef_id: slavo.id,
+  chef_id: slavo_chef.id,
   price: rand(30..75)
   )
 slavo_one.photo.attach(io: file, filename: "nes39.png", content_type: 'image/png')
@@ -549,10 +545,10 @@ slavo_two = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'Balkan',
   cook_time: rand(30..90),
-  chef_id: slavo.id,
+  chef_id: slavo_chef.id,
   price: rand(30..75)
   )
-slavo_two.photo.attach(io: file, filename: "nes10.png", content_type: 'image/png')
+slavo_two.photo.attach(io: file, filename: "nes40.png", content_type: 'image/png')
 slavo_two.save!
 
 file = URI.open('https://images.unsplash.com/photo-1613552496394-4e4b3f074e4f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTl8fHN0ZXd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
@@ -561,10 +557,10 @@ slavo_three = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'Balkan',
   cook_time: rand(30..90),
-  chef_id: slavo.id,
+  chef_id: slavo_chef.id,
   price: rand(30..75)
   )
-slavo_three.photo.attach(io: file, filename: "nes11.png", content_type: 'image/png')
+slavo_three.photo.attach(io: file, filename: "nes41.png", content_type: 'image/png')
 slavo_three.save!
 
 file = URI.open('https://images.unsplash.com/photo-1602873520153-ec56ca3c205b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YmFrZWQlMjBiZWFuc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
@@ -573,11 +569,13 @@ slavo_four = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'Balkan',
   cook_time: rand(30..90),
-  chef_id: slavo.id,
+  chef_id: slavo_chef.id,
   price: rand(30..75)
   )
-slavo_four.photo.attach(io: file, filename: "nes12.png", content_type: 'image/png')
+slavo_four.photo.attach(io: file, filename: "nes42.png", content_type: 'image/png')
 slavo_four.save!
+
+# need two more recieps for slavo
 
 # file = URI.open('')
 # slavo_five = Recipe.new(
@@ -588,7 +586,7 @@ slavo_four.save!
 #   chef_id: slavo.id,
 #   price: rand(30..75)
 #   )
-# slavo_five.photo.attach(io: file, filename: "nes13.png", content_type: 'image/png')
+# slavo_five.photo.attach(io: file, filename: "nes42.png", content_type: 'image/png')
 # slavo_five.save!
 
 # file = URI.open('')
@@ -600,7 +598,7 @@ slavo_four.save!
 #   chef_id: slavo.id,
 #   price: rand(30..75)
 #   )
-# slavo_six.photo.attach(io: file, filename: "nes14.png", content_type: 'image/png')
+# slavo_six.photo.attach(io: file, filename: "nes43.png", content_type: 'image/png')
 # slavo_six.save!
 
 puts "#{Recipe.count} recipes created"
