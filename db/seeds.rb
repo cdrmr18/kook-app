@@ -15,7 +15,8 @@ User.destroy_all
 
 puts 'Starting seed..'
 
-# -------- USERS  START ----------------
+# -------- USERS  START ---------------- -- -- -- --- -- -- -- -- -- --
+
 puts 'creating users...'
 file = URI.open('https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80')
 kathy = User.new(
@@ -128,7 +129,7 @@ slavo = User.new(
   email: slavo@mymail.com,
   password: 123456
   )
-slavo.photo.attach(io: file, filename: 'nes7.png', content_type: 'image/png')
+slavo.photo.attach(io: file, filename: 'nes8.png', content_type: 'image/png')
 slavo.save!
 
 puts "#{User.count} users created"
@@ -136,7 +137,7 @@ puts "#{User.count} users created"
  # -------- USERS  END ----------------
 
 
-# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- --
+# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- -- -- -- -- --- -- -- -- -- -- --
 
 
 # -------- CHEFS START ----------------
@@ -171,45 +172,171 @@ puts "#{Chef.count} chefs created"
 
 # -------- CHEFS END ----------------
 
-# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- --
+# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- -- -- -- -- --- -- -- -- -- -- --
 
 # -------- RECIPES START ----------------
 
 puts 'creating recipes...'
-5.times do |idx|
-  recipe_url = recipes[idx]
-  file = URI.open(recipe_url)
-  recipe = Recipe.new(
-    name: Faker::Food.dish,
-    description: Faker::Food.description,
-    cuisine: 'Mexican',
-    cook_time: rand(15..120),
-    chef_id: Chef.first.id,
-    price: rand(20..100)
-    )
-  recipe.photo.attach(io: file, filename: "nes#{idx}.png", content_type: 'image/png')
-  recipe.save!
-end
+    # chef bec recipes
+file = URI.open('https://images.unsplash.com/photo-1514944288352-fffac99f0bdf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJhd25zfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+bec_one = Recipe.new(
+  name: 'Prawns with Sweet Chilli Sauce',
+  description: Faker::Food.description,
+  cuisine: 'Thai',
+  cook_time: rand(30..90),
+  chef_id: bec.id,
+  price: rand(30..75)
+  )
+bec_one.photo.attach(io: file, filename: "nes9.png", content_type: 'image/png')
+bec_one.save!
 
-5.times do |idx|
-  recipe_url = recipes[idx+5]
-  file = URI.open(recipe_url)
-  recipe = Recipe.new(
-    name: Faker::Food.sushi,
-    description: Faker::Food.description,
-    cuisine: "Italian",
-    cook_time: rand(15..120),
-    chef_id: Chef.last.id,
-    price: rand(20..100)
-    )
-  recipe.photo.attach(io: file, filename: "nes#{idx}.png", content_type: 'image/png')
-  recipe.save!
-end
+file = URI.open('https://images.unsplash.com/photo-1612443016520-314f09b3d449?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hpY2tlbiUyMGZvb2R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+bec_two = Recipe.new(
+  name: 'Roast Chicken with Sauce Chasseur',
+  description: Faker::Food.description,
+  cuisine: 'Thai',
+  cook_time: rand(30..90),
+  chef_id: bec.id,
+  price: rand(30..75)
+  )
+bec_two.photo.attach(io: file, filename: "nes10.png", content_type: 'image/png')
+bec_two.save!
+
+file = URI.open('https://images.unsplash.com/photo-1595456982104-14cc660c4d22?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTJ8fHNhc2hpbWl8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+bec_three = Recipe.new(
+  name: 'Sashimi with Chilli-lime Dressing',
+  description: Faker::Food.description,
+  cuisine: 'Thai',
+  cook_time: rand(30..90),
+  chef_id: bec.id,
+  price: rand(30..75)
+  )
+bec_three.photo.attach(io: file, filename: "nes11.png", content_type: 'image/png')
+bec_three.save!
+
+file = URI.open('https://images.unsplash.com/photo-1601091745482-b2b5942e567e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDZ8fGZyaWVkJTIwYXNwYXJhZ3VzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+bec_four = Recipe.new(
+  name: 'Stir-fried Asparagus',
+  description: Faker::Food.description,
+  cuisine: 'Thai',
+  cook_time: rand(30..90),
+  chef_id: bec.id,
+  price: rand(30..75)
+  )
+bec_four.photo.attach(io: file, filename: "nes12.png", content_type: 'image/png')
+bec_four.save!
+
+file = URI.open('https://images.unsplash.com/photo-1603356887214-0441954124ae?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
+bec_five = Recipe.new(
+  name: 'Pork & Eggs',
+  description: Faker::Food.description,
+  cuisine: 'Thai',
+  cook_time: rand(30..90),
+  chef_id: bec.id,
+  price: rand(30..75)
+  )
+bec_five.photo.attach(io: file, filename: "nes13.png", content_type: 'image/png')
+bec_five.save!
+
+file = URI.open('https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c291cCUyMG5vb2RsZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+bec_six = Recipe.new(
+  name: 'Ginger Garlic Noodle Soup',
+  description: Faker::Food.description,
+  cuisine: 'Thai',
+  cook_time: rand(30..90),
+  chef_id: bec.id,
+  price: rand(30..75)
+  )
+bec_six.photo.attach(io: file, filename: "nes14.png", content_type: 'image/png')
+bec_six.save!
+
+   # chef chz recipes
+file = URI.open('https://images.unsplash.com/photo-1514944288352-fffac99f0bdf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJhd25zfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+bec_one = Recipe.new(
+  name: 'Prawns with Sweet Chilli Sauce',
+  description: Faker::Food.description,
+  cuisine: 'Thai',
+  cook_time: rand(30..90),
+  chef_id: bec.id,
+  price: rand(30..75)
+  )
+bec_one.photo.attach(io: file, filename: "nes9.png", content_type: 'image/png')
+bec_one.save!
+
+file = URI.open('https://images.unsplash.com/photo-1612443016520-314f09b3d449?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hpY2tlbiUyMGZvb2R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+bec_two = Recipe.new(
+  name: 'Roast Chicken with Sauce Chasseur',
+  description: Faker::Food.description,
+  cuisine: 'Thai',
+  cook_time: rand(30..90),
+  chef_id: bec.id,
+  price: rand(30..75)
+  )
+bec_two.photo.attach(io: file, filename: "nes10.png", content_type: 'image/png')
+bec_two.save!
+
+file = URI.open('https://images.unsplash.com/photo-1595456982104-14cc660c4d22?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTJ8fHNhc2hpbWl8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+bec_three = Recipe.new(
+  name: 'Sashimi with Chilli-lime Dressing',
+  description: Faker::Food.description,
+  cuisine: 'Thai',
+  cook_time: rand(30..90),
+  chef_id: bec.id,
+  price: rand(30..75)
+  )
+bec_three.photo.attach(io: file, filename: "nes11.png", content_type: 'image/png')
+bec_three.save!
+
+file = URI.open('https://images.unsplash.com/photo-1601091745482-b2b5942e567e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDZ8fGZyaWVkJTIwYXNwYXJhZ3VzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+bec_four = Recipe.new(
+  name: 'Stir-fried Asparagus',
+  description: Faker::Food.description,
+  cuisine: 'Thai',
+  cook_time: rand(30..90),
+  chef_id: bec.id,
+  price: rand(30..75)
+  )
+bec_four.photo.attach(io: file, filename: "nes12.png", content_type: 'image/png')
+bec_four.save!
+
+file = URI.open('https://images.unsplash.com/photo-1603356887214-0441954124ae?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
+bec_five = Recipe.new(
+  name: 'Pork & Eggs',
+  description: Faker::Food.description,
+  cuisine: 'Thai',
+  cook_time: rand(30..90),
+  chef_id: bec.id,
+  price: rand(30..75)
+  )
+bec_five.photo.attach(io: file, filename: "nes13.png", content_type: 'image/png')
+bec_five.save!
+
+file = URI.open('https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c291cCUyMG5vb2RsZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+bec_six = Recipe.new(
+  name: 'Ginger Garlic Noodle Soup',
+  description: Faker::Food.description,
+  cuisine: 'Thai',
+  cook_time: rand(30..90),
+  chef_id: bec.id,
+  price: rand(30..75)
+  )
+bec_six.photo.attach(io: file, filename: "nes14.png", content_type: 'image/png')
+bec_six.save!
+
 puts "#{Recipe.count} recipes created"
 
 # -------- RECIPES END ----------------
 
-# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- --
+# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- -- -- -- -- --- -- -- -- -- -- --
+
+
+# -------- INGREDIENTS START ----------------
+
+
+
+# -------- INGREDIENTS END ----------------
+
+# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- -- -- -- -- --- -- -- -- -- -- --
 
 # -------- BOOKINGS START ----------------
 
@@ -233,7 +360,7 @@ Booking.create!(
 puts "#{Booking.count} bookings created"
 # -------- BOOKINGS END ----------------
 
-# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- --
+# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- -- -- -- -- --- -- -- -- -- -- --
 
 # -------- CHEF REVIEWS START ----------------
 
@@ -253,7 +380,7 @@ ChefReview.create!(
 puts "#{ChefReview.count} chef reviews created"
 # -------- CHEF REVIEWS END ----------------
 
-# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- --
+# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- -- -- -- -- --- -- -- -- -- -- --
 
 # -------- RECIPE REVIEWS START ----------------
 
@@ -273,7 +400,7 @@ RecipeReview.create!(
 puts "#{RecipeReview.count} recipe reviews created"
 # -------- RECIPE REVIEWS END ----------------
 
-# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- --
+# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- -- -- -- -- --- -- -- -- -- -- --
 
 # -------- CHATS START ------------------
 
@@ -287,7 +414,7 @@ Chat.create!(
 puts "#{Chat.count} chats created"
  # -------- CHATS END ----------------
 
-# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- --
+# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- -- -- -- -- --- -- -- -- -- -- --
 
 # -------- MESSAGES START ----------------
 
@@ -307,4 +434,4 @@ puts "#{Message.count} messages created"
 puts "Seeding complete"
  # -------- MESSAGES END ----------------
 
-# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- --
+# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- -- -- -- -- --- -- -- -- -- -- --
