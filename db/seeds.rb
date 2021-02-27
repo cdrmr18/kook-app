@@ -163,6 +163,10 @@ slavo_chef = Chef.create!(
   cuisine: 'Balkan',
   user_id: slavo.id,
   )
+luis_chef = Chef.create!(
+  cuisine: 'Balkan',
+  user_id: luis.id,
+  )
 
 puts "#{Chef.count} chefs created"
 
