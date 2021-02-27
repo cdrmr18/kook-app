@@ -19,9 +19,6 @@
   grid-gap: 16px;
 }
 
-
-
-
 #form-cont-home{
  
   width: 800px;
@@ -39,6 +36,16 @@
   // overflow: hidden;
 }
 
+.home-links{
+  color:#290149;
+  font-weight: bold;
+  font-size: 15px;
+  text-align:right;
+
+  &:hover{
+    color: #A288E3;
+  }
+}
 
 
 

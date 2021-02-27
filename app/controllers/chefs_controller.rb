@@ -9,6 +9,10 @@ class ChefsController < ApplicationController
     # end
   end
 
+  def top
+    
+  end
+
   def create
   end
 
