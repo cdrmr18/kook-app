@@ -4,32 +4,14 @@
 
 
 
-
 .bg-main{
   background-image: url("https://source.unsplash.com/Orz90t6o0e4") ;
-  
   background-size: cover; 
   background-repeat: no-repeat;
-  border-top-right-radius: 1px;
-  border-top-left-radius: 1px;
   color:white;
   height: 80vh;
 }
 
-
-.bg-text{
-  justify-content: center;
-  align-items: center;
-  color:white;
-}
-
-
-h1 {
-  font-weight: 900;
-  color:#75CFB8;
-  margin-top:15px;
-  padding: 10px;
-}
 
 .recipe-cards {
   display: grid;
@@ -38,26 +20,31 @@ h1 {
 }
 
 
-.recipe-link {
-  color: white;
 
-  &:hover {
-    text-decoration: none;
-    color: #76CFB8;
-  }
-}
 
 #form-cont-home{
  
-  width: 600px;
+  width: 800px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   border: 1px solid #E7E7E7;
 }
 
 
-.home-h1{
-  color: white;
+.heading-1{
+  color:#290149;
 }
+
+.overflow-x{
+  overflow-x:scroll;
+  // overflow: hidden;
+}
+
+
+
+
+
+
+
 
 
 
@@ -67,21 +54,27 @@ h1 {
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   
+ 
+
+  .card-home{
+    width:300px;
+  }
 
   .bg-main{
     background-image: url("https://source.unsplash.com/Orz90t6o0e4") ;
     height: 50vh;
+  
   }
 
   #form-cont-home{
- 
-    width: 300px;
+    width: 200px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-
-  }
+    
   
   
 
 }
 
+
+}
