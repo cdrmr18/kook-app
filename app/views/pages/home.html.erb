@@ -17,11 +17,30 @@
   </div>
       
         
- 
+
 
 
 
 
 <div class="container">
-<%= render '/recipes/top', recipes:@top_recipes %>
+    <%= render '/recipes/top', recipes:@top_recipes %>
 </div>
+
+<div class="container">
+    <div class="col-6">
+        <%= link_to "See all recipes", recipes_path, class: "home-links" %>
+    </div>
+</div>
+<br>
+
+<br>
+
+<div class="container">
+    <%= render '/chefs/top', chefs:@top_chefs %>
+</div>
+<div class="container">
+    <div class="col-6">
+        <%= link_to "See all chefs", chefs_path, class: "home-links" %>
+    </div>
+</div>
+<br>
