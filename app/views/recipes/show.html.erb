@@ -18,6 +18,13 @@
     <p><%= humanized_money_with_symbol(@recipe.price) %></p>
   <!--  -->
   </div>
+
+  <!-- Booking Link -->
+  <div class="container text-center">
+  <%= link_to "Book Cooking Session", new_recipe_booking_path(params[:id]), class: "btn button" %>
+</div>
+  <!--  -->
+
   <!-- ingredients -->
   <div class="container mt-4">
     <h4>Ingredients</h4>
