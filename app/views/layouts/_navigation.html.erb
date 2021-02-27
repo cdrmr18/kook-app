@@ -16,14 +16,14 @@
       <% if controller.controller_name == 'chefs' && controller.action_name == 'index' || controller.controller_name == 'recipes' && controller.action_name == 'index'%>
           <div class="container-fluid">
             <a class="navbar-brand"></a>
-              <form class="d-flex">
-              <%= form_tag recipes_path method: :get do %>
+              <%= form_tag recipes_path, method: :get do %>
+              <div class="d-flex">
                 <%= text_field_tag :query, params[:query], class: "form-control me-2", id: "form-cont",
                     placeholder: "cuisine or recipe" %>
                     <%= submit_tag "search", class:"btn",  id: "search-btn" %>
-            </form>
+              </div>
+            <% end %>
           </div>
-        <% end %>
       <% end %>
     <!-- search bar end -->
 
@@ -34,19 +34,19 @@
 
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto navbar-fixed-top">
           <% if user_signed_in? %>
             <li class="nav-item dropdown">
               <%= image_tag "https://kitt.lewagon.com/placeholder/users/random", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
               <div class="col-md-12">
                 <div div class="dropdown-menu dropdown-menu-right" id="drpdown" aria-labelledby="navbarDropdown">
-                    <div class="inblk"><%= link_to "RECIPES", recipes_path, class: "dropdown-item text" %></div>
-                    <div class="inblk"><%= link_to "CHEFS", chefs_path, class: "dropdown-item text" %></div>
-                    <div class="inblk"><%= link_to "MESSAGES", chats_path, class: "dropdown-item text" %></div>
-                    <div class="inblk"><%= link_to "BOOKINGS", bookings_path, class: "dropdown-item text" %></div>
-                    <div class="inblk"><%= link_to "FAVOURITES", "#", class: "dropdown-item text" %></div>
-                    <div class="inblk"><%= link_to "PROFILE", chefs_path, class: "dropdown-item text" %></div>
-                    <div class="inblk"><%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "dropdown-item text" %></div>
+                    <div class="inblk"><%= link_to "Recipes", recipes_path, class: "dropdown-item text" %></div>
+                    <div class="inblk"><%= link_to "Chefs", chefs_path, class: "dropdown-item text" %></div>
+                    <div class="inblk"><%= link_to "Messages", chats_path, class: "dropdown-item text" %></div>
+                    <div class="inblk"><%= link_to "Bookings", bookings_path, class: "dropdown-item text" %></div>
+                    <div class="inblk"><%= link_to "Favourites", "#", class: "dropdown-item text" %></div>
+                    <div class="inblk"><%= link_to "Profile", chefs_path, class: "dropdown-item text" %></div>
+                    <div class="inblk"><%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item text" %></div>
                   </div>
                 </div>
               </div>

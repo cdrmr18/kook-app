@@ -86,19 +86,25 @@ h4 {
   background-color: white;
   opacity: 0.4;
 }
+
 .recipe-link {
   color: white;
+  font-size: 19px;
 
   &:hover {
-    text-decoration: none;
-    color: #76CFB8;
+    color:white;
   }
 }
+
+
+
+
+
 .chef-link a {
   color: black;
   &:hover {
     text-decoration: none;
-    color: #1f8769;
+    color: white;
     font-weight: bold;
   }
 }
