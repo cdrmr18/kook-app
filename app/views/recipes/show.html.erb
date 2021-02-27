@@ -28,8 +28,8 @@
     <p class="text-center">Add Ingredients and Measurements</p>
     <%= simple_form_for [@recipe, @measurement] do |f| %>
       <%= f.input :description, placeholder: '6 leaves' %>
-      <%= f.association :ingredient, as: :select %>
-      <%= f.button :submit, class: "btn button col-9" %>
+      <%= f.input :ingredient %>
+      <%= f.button :submit, "Add Ingredient", class: "btn button col-10" %>
     <% end %>
   </div>
   <!--  -->

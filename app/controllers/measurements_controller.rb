@@ -19,6 +19,6 @@ class MeasurementsController < ApplicationController
   private
 
   def measurement_params
-    params.require(:measurement).permit(:description, :ingredient_id)
+    params.require(:measurement).permit(:description, :ingredient)
   end
 end

@@ -301,7 +301,7 @@ chaz_five = Recipe.new(
   description: Faker::Food.description,
   cuisine: 'Modern Australian',
   cook_time: rand(30..90),
-  chef_id: chaz.id,
+  chef_id: chaz_chef.id,
   price: rand(30..75)
   )
 chaz_five.photo.attach(io: file, filename: "nes19.png", content_type: 'image/png')
@@ -607,17 +607,12 @@ puts "#{Recipe.count} recipes created"
 
 # --- ---- --- -- --- --- -- -- --- -- -- -- -- -- -- -- -- -- --- -- -- -- -- -- --
 
-
-# -------- INGREDIENTS START ----------------
-
-
-
-# -------- INGREDIENTS END ----------------
-
-# --- ---- --- -- --- --- -- -- --- -- -- -- -- -- -- -- -- -- --- -- -- -- -- -- --
 # -------- MEASUREMETNS START ----------------
-
-
+Measurement.new(
+  recipe_id: ,
+  description: ,
+  ingredient:
+  )
 
 # -------- MEASUREMETNS END ----------------
 
