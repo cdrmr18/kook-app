@@ -608,11 +608,11 @@ puts "#{Recipe.count} recipes created"
 # --- ---- --- -- --- --- -- -- --- -- -- -- -- -- -- -- -- -- --- -- -- -- -- -- --
 
 # -------- MEASUREMETNS START ----------------
-Measurement.new(
-  recipe_id: ,
-  description: ,
-  ingredient:
-  )
+# Measurement.new(
+#   recipe_id: ,
+#   description: ,
+#   ingredient:
+#   )
 
 # -------- MEASUREMETNS END ----------------
 
