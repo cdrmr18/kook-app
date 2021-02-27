@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-
+  get 'chef_dashboard', to: 'dashboards#chef_dashboard', as: :chef_dashboard
   # /bookings -- /bookings/:id -- /bookings/:id/edit
   resources :bookings, only: [ :index, :show, :destroy, :edit, :update] do
     # /bookings/:id/chef_reviews/new
