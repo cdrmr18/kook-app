@@ -1,2 +1,15 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+<!-- recipe image -->
+<div class="banner my-0" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(<%= cl_image_path @recipe.photo.key %>);">
+  <div class="container text-center">
+    <h1> <%= @recipe.name %> </h1>
+  </div>
+</div>
+<!--  -->
+<br>
+<h1>Booking Page</h1>
+ <%= simple_form_for [@recipe, @booking] do |f| %>
+    <%= f.input :date %>
+    <%= f.input :start_time %>
+    <%= f.input :end_time %>
+    <%= f.button :submit, class: "btn button col-12" %>
+<% end %>
