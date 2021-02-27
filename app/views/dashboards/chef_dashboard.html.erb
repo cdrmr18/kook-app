@@ -1,3 +1,6 @@
 <h1>Dashboards#chef_dashboard</h1>
 <p>Find me in app/views/dashboards/chef_dashboard.html.erb</p>
 
+<% @bookings.each do |booking| %>
+ <p><%="#{booking.recipe.chef.user.first_name + " " + booking.recipe.chef.user.last_name}"%></p> 
+<% end %>
