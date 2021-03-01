@@ -1,6 +1,9 @@
 <div class="container text-center">
   <!-- create recipe link -->
-  <%= link_to "Add Recipe", new_recipe_path, class: "btn button" %>
+  <% if policy(Recipe).create? %>
+    <%= link_to "Add Recipe", new_recipe_path, class: "btn button" %>
+  <% end %>
+
   <!--  -->
 </div>
 <!-- list of recipes -->
