@@ -1,7 +1,9 @@
 class RecipeReviewsController < ApplicationController
+  before_action :set_booking
+
   def new
-    @booking = Booking.find(params[:booking_id])
     @recipe_review =RecipeReview.new
+    authorize @recipe_review
 
     # recipe photo
     @recipe = @booking.recipe
@@ -9,13 +11,13 @@ class RecipeReviewsController < ApplicationController
   end
 
   def create
-      @booking = Booking.find(params[:booking_id])
       @recipe_review = RecipeReview.new(review_params)
 
       # link booking to recipe review
       @recipe_review.booking_id = @booking.id
       # link recipe to recipe review
       @recipe_review.recipe_id = @booking.recipe.id
+      authorize @recipe_review
 
       if @recipe_review.save
         redirect_to booking_path(@booking)
@@ -24,16 +26,13 @@ class RecipeReviewsController < ApplicationController
       end
   end
 
-
   private
+
+  def set_booking
+    @booking = Booking.find(params[:booking_id])
+  end
 
   def review_params
     params.require(:recipe_review).permit(:ratng, :content)
   end
-
-
-
-
-
-
 end

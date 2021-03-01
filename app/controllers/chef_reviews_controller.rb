@@ -1,8 +1,11 @@
 class ChefReviewsController < ApplicationController
+  before_action :set_booking
+
   def new
     @chef_review = ChefReview.new
     authorize @chef_review
-    @booking = Booking.find(params[:booking_id])
+
+    @chef = @booking.recipe.chef
 
     # booking chef name
     @chef_name = "#{@booking.recipe.chef.user.first_name + " " + @booking.recipe.chef.user.last_name}"
@@ -12,7 +15,6 @@ class ChefReviewsController < ApplicationController
 
   def create
       @chef_review = ChefReview.new(chef_review_params)
-      @booking = Booking.find(params[:booking_id])
 
       # linking book with chef review
       @chef_review.booking_id = @booking.id
@@ -28,6 +30,10 @@ class ChefReviewsController < ApplicationController
   end
 
   private
+
+  def set_booking
+    @booking = Booking.find(params[:booking_id])
+  end
 
   def chef_review_params
     params.require(:chef_review).permit(:ratng, :content)

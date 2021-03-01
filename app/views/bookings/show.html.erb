@@ -8,8 +8,8 @@
 <hr>
 
 <div class="container">
-  <p> <%= cl_image_tag @booking.recipe.chef.user.photo.key, width: 200, height: 200, crop: :fill %><%= link_to "Add Chef Review", new_booking_chef_review_path(@chef), class: "btn button ml-2" %> </p>
-  <p> <%= cl_image_tag @booking.recipe.photo.key, width: 200, height: 200, crop: :fill %><%= link_to "Add Recipe Review", new_booking_recipe_review_path(@recipe), class: "btn button ml-2" %> </p>
+  <p> <%= cl_image_tag @booking.recipe.chef.user.photo.key, width: 200, height: 200, crop: :fill %><%= link_to "Add Chef Review", new_booking_chef_review_path(@booking), class: "btn button ml-2" %> </p>
+  <p> <%= cl_image_tag @booking.recipe.photo.key, width: 200, height: 200, crop: :fill %><%= link_to "Add Recipe Review", new_booking_recipe_review_path(@booking), class: "btn button ml-2" %> </p>
 </div>
 
 
