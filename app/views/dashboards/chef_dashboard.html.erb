@@ -1,6 +1,10 @@
-<h1>Dashboards#chef_dashboard</h1>
-<p>Find me in app/views/dashboards/chef_dashboard.html.erb</p>
+<div class="container mt-4">
+  <h1>My Chef Dashboard</h1>
+  <% @bookings.each do |booking| %>
+   <h3>Booking #<%= booking.id %> | <%= booking.user.first_name %> <%= booking.user.last_name %></h3>
+  <% end %>
 
-<% @bookings.each do |booking| %>
- <p><%="#{booking.recipe.chef.user.first_name + " " + booking.recipe.chef.user.last_name}"%></p> 
-<% end %>
+<!-- create recipe link -->
+<%= link_to "Add Recipe", new_recipe_path, class: "btn button" %>
+<!--  -->
+</div>

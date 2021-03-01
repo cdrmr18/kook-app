@@ -1,11 +1,3 @@
-<div class="container text-center">
-  <!-- create recipe link -->
-  <% if policy(Recipe).create? %>
-    <%= link_to "Add Recipe", new_recipe_path, class: "btn button" %>
-  <% end %>
-
-  <!--  -->
-</div>
 <!-- list of recipes -->
 <div class="recipe-cards my-4">
   <% @recipes.each do | recipe | %>
