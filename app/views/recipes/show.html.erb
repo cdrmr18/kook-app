@@ -30,7 +30,7 @@
     <h4>Ingredients</h4>
     <% @recipe.measurements.each do |measurement| %>
       <p> <i class="fas fa-circle bullet"></i><%= measurement.description %> <%= measurement.ingredient %> </p>
-      <%= link_to "X", recipe_measurement_path(measurement), method: :delete, data: {confirm: "Are you sure?"} %>
+      <%= link_to "X", measurement_path(measurement), method: :delete, data: {confirm: "Are you sure?"} %>
     <% end %>
   </div>
 <!-- ADD INGREDIENTS -->

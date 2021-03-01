@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
 
     # recipes/:id/measurements/:id
-    resources :measurements, only: [:new, :create, :destroy]
+    resources :measurements, only: [:new, :create]
   end
 
   # /chats  -- /chats/:id
@@ -30,4 +30,5 @@ Rails.application.routes.draw do
 
   # /chefs/:id -- /chefs/new  -- /chefs
   resources :chefs, only: [:show, :new, :create, :index]
+  resources :measurements, only: [:destroy]
 end

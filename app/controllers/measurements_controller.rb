@@ -1,5 +1,5 @@
 class MeasurementsController < ApplicationController
-  before_action :set_recipe, only: [:new, :create, :edit, :update, :destroy]
+  before_action :set_recipe, only: [:new, :create, :edit, :update]
   before_action :set_measurement, only: [:edit, :update, :destroy]
 
   def new
@@ -29,6 +29,7 @@ class MeasurementsController < ApplicationController
 
   def destroy
     @measurement.destroy
+    @recipe = @measurement.recipe
     redirect_to recipe_path(@recipe)
   end
 
