@@ -1,6 +1,7 @@
 class ChefReviewsController < ApplicationController
   def new
     @chef_review = ChefReview.new
+    authorize @chef_review
     @booking = Booking.find(params[:booking_id])
 
     # booking chef name
@@ -17,6 +18,7 @@ class ChefReviewsController < ApplicationController
       @chef_review.booking_id = @booking.id
       # linking chef to review
       @chef_review.chef_id = @booking.recipe.chef_id
+      authorize @chef_review
 
       if @chef_review.save
         redirect_to booking_path(@booking)

@@ -5,7 +5,7 @@ class RecipeReviewsController < ApplicationController
 
     # recipe photo
     @recipe = @booking.recipe
-    @recipe_photo = @recipe.photos.first.key
+    @recipe_photo = @recipe.photo.key
   end
 
   def create
@@ -31,7 +31,7 @@ class RecipeReviewsController < ApplicationController
     params.require(:recipe_review).permit(:ratng, :content)
   end
 
- 
+
 
 
 

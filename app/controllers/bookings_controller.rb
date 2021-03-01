@@ -7,6 +7,9 @@ class BookingsController < ApplicationController
   end
 
   def show
+    # chef and recipe info need for review links
+    @chef = @booking.recipe.chef
+    @recipe = @booking.recipe
   end
 
   def edit
