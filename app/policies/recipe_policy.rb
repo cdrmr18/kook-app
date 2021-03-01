@@ -13,15 +13,14 @@ class RecipePolicy < ApplicationPolicy
     true
   end
 
-  def edit?
-    true
-  end
-
   def update?
-    true
+    user == record.user
   end
 
   def destroy?
-    true
+    user == record.user
   end
 end
+
+ # user = current_user
+ # record = @recipe

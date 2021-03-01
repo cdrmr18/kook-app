@@ -9,7 +9,7 @@ class RecipesController < ApplicationController
     if params[ :query ].present?
       @recipes = Recipe.search_by_cuisine_and_name(params[ :query ])
     else
-      @recipes = Recipe.all
+      @recipes = policy_scope(Recipe)
     end
   end
 
