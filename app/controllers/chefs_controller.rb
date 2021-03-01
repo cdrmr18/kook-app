@@ -1,6 +1,6 @@
 class ChefsController < ApplicationController
   def index
-    @chefs = Chef.all
+    @chefs = policy_scope(Chef)
 
     # if params[ :query ].present?
     #   @Chefs = User.search_by_first_name_and_last_name(params[ :query ])
@@ -10,16 +10,19 @@ class ChefsController < ApplicationController
   end
 
   def top
-    
+
   end
 
   def create
   end
 
   def new
+    @chef = Chef.new
+    authorize @chef
   end
 
   def show
     @chef = Chef.find(params[:id])
+    authorize @chef
   end
 end
