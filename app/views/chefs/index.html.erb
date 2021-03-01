@@ -1,11 +1,3 @@
-<div class="container text-center">
-  <!-- create recipe link -->
-  <% if policy(Chef).create? %>
-    <%= link_to "Become a chef", new_chef_path, class: "btn button" %>
-  <% end %>
-
-  <!--  -->
-</div>
 <div class="container mt-4">
   <div class="row">
     <% @chefs.each do |chef| %>

@@ -4,7 +4,17 @@
    <h3>Booking #<%= booking.id %> | <%= booking.user.first_name %> <%= booking.user.last_name %></h3>
   <% end %>
 
-<!-- create recipe link -->
-<%= link_to "Add Recipe", new_recipe_path, class: "btn button" %>
-<!--  -->
+  <div class="container mt-4">
+    <div class="container text-center">
+      <h2>My Recipes</h2>
+      <!-- create recipe link -->
+      <%= link_to "Add Recipe", new_recipe_path, class: "btn button mb-4" %>
+      <!--  -->
+    </div>
+      <% @recipes.each do |recipe| %>
+        <ul>
+          <h3><%= link_to recipe.name, recipe_path(recipe) %></h3>
+        </ul>
+      <% end %>
+  </div>
 </div>

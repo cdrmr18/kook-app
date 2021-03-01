@@ -33,7 +33,10 @@
       <%= link_to "X", measurement_path(measurement), method: :delete, data: {confirm: "Are you sure?"} %>
     <% end %>
   </div>
+  <!--     -->
+
 <!-- ADD INGREDIENTS -->
+<% if current_user == @recipe.chef.user %>
   <div class="container mt-4">
     <p class="text-center">Add Ingredients and Measurements</p>
     <%= simple_form_for [@recipe, @measurement] do |f| %>
@@ -42,6 +45,7 @@
       <%= f.button :submit, "Add Ingredient", class: "btn button col-10" %>
     <% end %>
   </div>
+<% end %>
   <!--  -->
 
   <!-- RECIPE reviews -->
