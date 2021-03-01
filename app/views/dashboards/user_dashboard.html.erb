@@ -1,0 +1,12 @@
+<div class="container mt-4">
+  <h1>Dashboard</h1>
+
+  <% @bookings.each do |booking| %>
+   <h3>Booking #<%= booking.id %> | Chef <%= booking.recipe.chef.user.first_name %> <%= booking.recipe.chef.user.last_name %></h3>
+  <% end %>
+  <!-- create recipe link -->
+  <% if current_user.chef == nil %>
+  <%= link_to "Become a chef", new_chef_path, class: "btn button mt-4" %>
+  <% end %>
+  <!--  -->
+</div>

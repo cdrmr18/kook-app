@@ -1,2 +1,7 @@
-<h1>Chefs#new</h1>
-<p>Find me in app/views/chefs/new.html.erb</p>
+<h1>Create your chef profile</h1>
+
+<%= simple_form_for @chef do |f| %>
+  <p>What is your cuisine?</p>
+  <%= f.input :cuisine %>
+  <%= f.button :submit, class: "btn button" %>
+<% end %>

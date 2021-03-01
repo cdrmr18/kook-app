@@ -1,10 +1,31 @@
 <h1>Booking #<%= @booking.id %></h1>
 <!-- booking details -->
 <div class="container">
-  <h2>
-  <p><%= pluralize @booking.chef_reviews.size, "chef review" %></p>
-  <p><%= pluralize @booking.recipe_reviews.size, "chef review" %></p>
-</h2>
+  <p> <%= link_to "Cancel Booking", booking_path(@booking), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-light" %> </p>
+  <p> <%= link_to "My Bookings", bookings_path, class: "btn button" %> </p>
+</div>
+
+<hr>
+
+<div class="container">
+    <p> <%= cl_image_tag @booking.recipe.chef.user.photo.key, width: 200, height: 200, crop: :fill %>
+  <% if @booking.chef_review.blank? %>
+      <%= link_to "Add Chef Review", new_booking_chef_review_path(@booking), class: "btn button ml-2" %> </p>
+  <% else %>
+    <p>Thanks for your review!</p>
+    <p>Rating: <%=  @booking.chef_review.rating %> Content: <%=  @booking.chef_review.content %></p>
+  <% end %>
+
+  <p> <%= cl_image_tag @booking.recipe.photo.key, width: 200, height: 200, crop: :fill %>
+    <% if @booking.recipe_review.blank? %>
+    <%= link_to "Add Recipe Review", new_booking_recipe_review_path(@booking), class: "btn button ml-2" %> </p>
+    <% else %>
+    <p>Thanks for your review!</p>
+    <p>Rating: <%=  @booking.recipe_review.rating %> Content: <%=  @booking.recipe_review.content %></p>
+    <% end %>
 </div>
 
 
+<!-- users reviews for current booking -->
+
+<!--  -->

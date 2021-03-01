@@ -1,6 +1,28 @@
-<h1>Dashboards#chef_dashboard</h1>
-<p>Find me in app/views/dashboards/chef_dashboard.html.erb</p>
+<div class="container mt-4">
+  <h1>Chef Dashboard</h1>
 
-<% @bookings.each do |booking| %>
- <p><%="#{booking.recipe.chef.user.first_name + " " + booking.recipe.chef.user.last_name}"%></p> 
-<% end %>
+  <% if @bookings.empty? %>
+    <h3>You have no bookings</h3>
+  <% else %>
+    <% @bookings.each do |booking| %>
+     <h3>Booking #<%= booking.id %> | <%= booking.user.first_name %> <%= booking.user.last_name %></h3>
+    <% end %>
+  <% end %>
+
+<%= link_to "Delete Chef Account",  chef_path(@chef), method: :delete%>
+
+  <div class="container mt-4">
+    <div class="container text-center">
+      <h2>My Recipes</h2>
+      <!-- create recipe link -->
+      <%= link_to "Add Recipe", new_recipe_path, class: "btn button mb-4" %>
+      <!--  -->
+    </div>
+      <% @recipes.each do |recipe| %>
+        <ul>
+          <h3><%= link_to recipe.name, recipe_path(recipe) %> <span><%= link_to "X", recipe_path(recipe), method: :delete, data: {confirm: "Are you sure?" } %></span></h3>
+
+        </ul>
+      <% end %>
+  </div>
+</div>
