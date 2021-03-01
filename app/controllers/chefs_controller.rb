@@ -5,12 +5,17 @@ class ChefsController < ApplicationController
     # if params[ :query ].present?
     #   @Chefs = User.search_by_first_name_and_last_name(params[ :query ])
     # else
-    #   @Chefs = User.all
+    #   @chefs = policy_scope(Chef)
     # end
   end
 
   def top
 
+  end
+
+  def new
+    @chef = Chef.new
+    authorize @chef
   end
 
   def create
@@ -23,11 +28,6 @@ class ChefsController < ApplicationController
     else
       render :new
     end
-  end
-
-  def new
-    @chef = Chef.new
-    authorize @chef
   end
 
   def show
