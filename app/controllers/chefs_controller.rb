@@ -1,4 +1,10 @@
 class ChefsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
+  def top
+
+  end
+
   def index
     @chefs = policy_scope(Chef)
 
@@ -9,8 +15,9 @@ class ChefsController < ApplicationController
     # end
   end
 
-  def top
-
+   def show
+    @chef = Chef.find(params[:id])
+    authorize @chef
   end
 
   def new
@@ -30,9 +37,11 @@ class ChefsController < ApplicationController
     end
   end
 
-  def show
+  def destroy
     @chef = Chef.find(params[:id])
     authorize @chef
+    @chef.destroy
+    redirect_to  root_path
   end
 
   private

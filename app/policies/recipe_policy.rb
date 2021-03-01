@@ -18,7 +18,7 @@ class RecipePolicy < ApplicationPolicy
   end
 
   def destroy?
-    user == record.user
+    user.chef == record.chef
   end
 end
 

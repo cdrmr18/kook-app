@@ -30,6 +30,6 @@ Rails.application.routes.draw do
   end
 
   # /chefs/:id -- /chefs/new  -- /chefs
-  resources :chefs, only: [:show, :new, :create, :index]
+  resources :chefs, only: [:show, :new, :create, :index, :destroy]
   resources :measurements, only: [:destroy]
 end

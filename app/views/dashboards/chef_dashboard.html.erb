@@ -1,8 +1,15 @@
 <div class="container mt-4">
-  <h1>My Chef Dashboard</h1>
-  <% @bookings.each do |booking| %>
-   <h3>Booking #<%= booking.id %> | <%= booking.user.first_name %> <%= booking.user.last_name %></h3>
+  <h1>Chef Dashboard</h1>
+
+  <% if @bookings.empty? %>
+    <h3>You have no bookings</h3>
+  <% else %>
+    <% @bookings.each do |booking| %>
+     <h3>Booking #<%= booking.id %> | <%= booking.user.first_name %> <%= booking.user.last_name %></h3>
+    <% end %>
   <% end %>
+
+<%= link_to "Delete Chef Account",  chef_path(@chef), method: :delete%>
 
   <div class="container mt-4">
     <div class="container text-center">
@@ -13,7 +20,8 @@
     </div>
       <% @recipes.each do |recipe| %>
         <ul>
-          <h3><%= link_to recipe.name, recipe_path(recipe) %></h3>
+          <h3><%= link_to recipe.name, recipe_path(recipe) %> <span><%= link_to "X", recipe_path(recipe), method: :delete, data: {confirm: "Are you sure?" } %></span></h3>
+
         </ul>
       <% end %>
   </div>

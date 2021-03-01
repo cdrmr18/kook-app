@@ -36,6 +36,6 @@ class ChefReviewsController < ApplicationController
   end
 
   def chef_review_params
-    params.require(:chef_review).permit(:ratng, :content)
+    params.require(:chef_review).permit(:rating, :content)
   end
 end

@@ -1,4 +1,5 @@
 class RecipesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_recipe, only: [:show, :update, :edit, :destroy]
 
   def top
@@ -26,11 +27,9 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @recipe = Recipe.new
-    @recipe = Recipe.create(recipe_params)
+    @recipe = Recipe.new(recipe_params)
     # creating chef instance to link recipe chef to new recipe by current user
-    chef = Chef.new(user_id: current_user.id, cuisine: @recipe.cuisine)
-    @recipe.chef = chef
+    @recipe.chef = current_user.chef
     authorize @recipe
 
     if @recipe.save
@@ -51,7 +50,7 @@ class RecipesController < ApplicationController
 
   def destroy
     @recipe.destroy
-    redirect_to recipes_path
+    redirect_to chef_dashboard_path(@recipe.chef)
   end
 
   private
