@@ -1,7 +1,7 @@
 <h1>Create your chef profile</h1>
 
-<%= simple_form_for @user do |f| %>
-  <%= f.input :username %>
-  <%= f.input :password %>
-  <%= f.button :submit %>
+<%= simple_form_for @chef do |f| %>
+  <p>What is your cuisine?</p>
+  <%= f.input :cuisine %>
+  <%= f.button :submit, class: "btn button" %>
 <% end %>
