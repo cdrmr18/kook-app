@@ -28,7 +28,10 @@
   <!-- ingredients -->
   <div class="container mt-4">
     <h4>Ingredients</h4>
-    <p> <i class="fas fa-circle bullet"></i> <%#= @recipe.ingredients %> </p>
+    <% @recipe.measurements.each do |measurement| %>
+      <p> <i class="fas fa-circle bullet"></i><%= measurement.description %> <%= measurement.ingredient %> </p>
+      <%= link_to "X", recipe_measurement_path(measurement), method: :delete %>
+    <% end %>
   </div>
 <!-- ADD INGREDIENTS -->
   <div class="container mt-4">
