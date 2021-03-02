@@ -1,5 +1,5 @@
 <!-- booking details -->
-<div class=" card container pt-3 mt-3">
+<div class=" card container pt-3">
     <h1>Booking #<%= @booking.id %></h1>
     <h2> Chef <%= @booking.recipe.chef.user.first_name %> <%= @booking.recipe.chef.user.last_name %></h2>
     <h3><%= @booking.date.strftime('%B %d, %Y') %></h3>
