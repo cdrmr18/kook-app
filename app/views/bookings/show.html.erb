@@ -1,7 +1,11 @@
-<h1>Booking #<%= @booking.id %></h1>
 <!-- booking details -->
 <div class="container">
-  <p> <%= link_to "Cancel Booking", booking_path(@booking), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-light" %> </p>
+  <h1>Booking #<%= @booking.id %></h1>
+  <div class="container">
+
+  </div>
+  <!-- booking links -->
+  <p> <%= link_to "Cancel Booking", booking_path(@booking), method: :delete, data: {confirm: "Are you sure?"}, class: "btn button-delete" %> </p>
   <p> <%= link_to "My Bookings", bookings_path, class: "btn button" %> </p>
 </div>
 
