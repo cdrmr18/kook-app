@@ -16,3 +16,23 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 import 'bootstrap';
+
+import "controllers"
+
+// import Flatpickr
+import Flatpickr from 'flatpickr'
+import Flatpickr from 'stimulus-flatpickr'
+
+// Import style for flatpickr
+// require("flatpickr/dist/flatpickr.css")
+
+// Manually register Flatpickr as a stimulus controller
+application.register('flatpickr', Flatpickr)
+
+document.addEventListner("turbolinks:load"), ( => {
+  flatpicker("[data-behavior='flatpicker']", {
+    altInput: true,
+    altFormat: "F j, Y",
+    dateFormat: "Y-m-d"
+  })
+})

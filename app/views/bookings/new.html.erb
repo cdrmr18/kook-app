@@ -6,10 +6,15 @@
 </div>
 <!--  -->
 <br>
-<h1>Booking Page</h1>
- <%= simple_form_for [@recipe, @booking] do |f| %>
-    <%= f.input :date %>
-    <%= f.input :start_time %>
-    <%= f.input :end_time %>
-    <%= f.button :submit, class: "btn button col-12" %>
-<% end %>
+<h1>New Booking</h1>
+<div id='recipe-booking-dates' data-unavailable="<%#= @recipe.unavailable_dates.to_json %>">
+   <% if current_user.id != @recipe.chef.user_id  %>
+     <%= simple_form_for [@recipe, @booking] do |f| %>
+          <h3>Booking Date</h3>
+        <%= f.text_field :date, data: { behavior: "flatpickr"} %>
+        <%= f.input :start_time %>
+        <%= f.input :end_time %>
+        <%= f.button :submit, class: "btn button col-12" %>
+      <% end %>
+   <% end %>
+</div>
