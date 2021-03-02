@@ -887,19 +887,87 @@ Measurement.create!(
 Measurement.create!(
   recipe_id: .id,
   description: "",
-  ingredient: ""
+  ingredient: "Parsley (curly or flat-leaf)"
+  
 )
-
-
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: "tomatoes"
+)
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: "scallions"
+)
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: "mint"
+)
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: "bulgar wheat (or quinoa)"
+)
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: "lemon"
+)
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: "olive oil"
+)
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: "salt"
+)
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: "cinnamon and allspice"
+)
 
 
 # --------- NEW RECIPE: JAMAL AL TAMIMI – Manakeesh -----------
 Measurement.create!(
   recipe_id: .id,
-  description: "",
-  ingredient: ""
+  description: "2 ¼ lb",
+  ingredient: "flour"
 )
-
+Measurement.create!(
+  recipe_id: .id,
+  description: "2 cups",
+  ingredient: "warm water"
+)
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: "Fresh zaater oil"
+)
+Measurement.create!(
+  recipe_id: .id,
+  description: "2 tbsp",
+  ingredient: "dry yeast"
+)
+Measurement.create!(
+  recipe_id: .id,
+  description: "4 tbsp",
+  ingredient: "olive oil"
+)
+Measurement.create!(
+  recipe_id: .id,
+  description: "1/3 cup",
+  ingredient: "grated akawi cheese"
+)
+Measurement.create!(
+  recipe_id: .id,
+  description: "1 tbsp",
+  ingredient: "salt"
+)
 
 
 # --------- NEW RECIPE: JAMAL AL TAMIMI – Kambsa -----------
@@ -908,7 +976,91 @@ Measurement.create!(
   description: "",
   ingredient: ""
 )
-
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: ""
+)
+•	1 kg chicken (cut into pieces)
+•	¼ cup vegetable oil
+•	2 sliced onion
+•	12 oz tomato puree
+•	2 medium chopped tomatoes
+•	4 chopped cloves of garlic
+•	2 grated carrot
+•	1 grated orange
+•	4 cloves
+•	4 Cardamom
+•	3 Cinnamon sticks
+•	Pepper and salt to taste
+•	1 kg rice
+•	¼ cup Raisins
+•	¼ cup sliced almonds
 
 
 
@@ -918,7 +1070,30 @@ Measurement.create!(
   description: "",
   ingredient: ""
 )
-
+•	1 lb of dry peeled fava beans*
+•	¾ lbs of of dried chickpeas (aka Garbanzo beans)
+•	1 bunch of Italian parsley (chop away the stems)
+•	2 bunches of green cilantro (chop away the stems)
+•	8-10 cloves of freshly peeled garlic, crushed
+•	1 large red or yellow onion
+•	1 bunch of green onions
+•	2 table spoons of salt
+•	A dash of black pepper
+•	2 table spoons of flour
+•	1 teaspoon of baking soda
+•	1 dash of red chilli pepper (optional, if spicy falafel is desired)
+•	1 teaspoon of cumin
+•	3 teaspoons of Coriander
+Falafel Tahini Sauce Ingredients
+•	2 Table spoons of Tahini Paste
+•	1 cup of freshly squeezed Lemon Juice
+•	3 gloves of garlic, crushed
+•	a dash of salt
+Optional Falafel Serving Sides
+•	Salty Lebanese Pickles (cucumbers, turnips, pickled chilli peppers)
+•	Tomatoes
+•	Chopped fresh Italian parsley
+•	Pita bread
 
 
 
