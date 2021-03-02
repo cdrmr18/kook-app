@@ -18,7 +18,8 @@ require("channels")
 require("flatpickr")
 // External imports
 import "bootstrap";
-require("flatpickr/dist/flatpickr.css")
+require("flatpickr/dist/themes/dark.css");
+
 
 
 // Adds calendar with dates  ----------------------------------
@@ -30,6 +31,7 @@ document.addEventListener('turbolinks:load', () => {
       altFormat: "F j, Y",
       minDate: "today",
       dateFormat: "Y-m-d",
+      disableMobile: "true"
     });
   };
 });
@@ -46,8 +48,8 @@ document.addEventListener('turbolinks:load', () => {
     flatpickr(startTimeInput, {
       enableTime: true,
       noCalendar: true,
-      dateFormat: "H:i",
-      maxTime: "22:30",
+      dateFormat: "h:i K",
+      disableMobile: "true"
       // disable: unavailableTimes,
     });
 
@@ -58,8 +60,8 @@ document.addEventListener('turbolinks:load', () => {
     flatpickr(endTimeInput, {
       enableTime: true,
       noCalendar: true,
-      dateFormat: "H:i",
-      maxTime: "22:30",
+      dateFormat: "h:i K",
+      disableMobile: "true"
       });
     // })
   };
