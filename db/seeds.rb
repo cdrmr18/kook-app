@@ -139,31 +139,52 @@ puts "#{User.count} users created"
 # -------- CHEFS START ----------------
 puts 'creating chefs...'
 bec_chef = Chef.create!(
+  restaurant: Faker::Restaurant.name,
+  job_title: "Sous Chef",
+  introduction: "To ensure that each guest receives prompt, professional, friendly and courteous service. To provide nutritional, well-prepared meals – using only quality ingredients.",
   cuisine: 'Thai',
   user_id: bec.id,
   )
 
 chaz_chef = Chef.create!(
+  restaurant: Faker::Restaurant.name,
+  job_title: "Executive Chef",
+  introduction: "I am committed to offer a locally differentiated cooking experience to its customers in each of its markets, to deliver superior value and to maintain high social, environmental and ethical standards.",
   cuisine: 'Modern Australian',
   user_id: chaz.id,
   )
 jamal_chef = Chef.create!(
+  restaurant: Faker::Restaurant.name,
+  job_title: "Head Chef",
+  introduction: " To consistently provide our customers with impeccable service by demonstrating warmth, graciousness, efficiency, knowledge, professionalism and integrity in our work. ",
   cuisine: 'Middle Eastern',
   user_id: jamal.id,
   )
 roger_chef = Chef.create!(
+  restaurant: Faker::Restaurant.name,
+  job_title: "Chef de Cuisine",
+  introduction: "To cook delicious and remarkable food. That the food we make together meets the highest standards of quality, freshness and seasonality and combines both modern-creative and traditional southern styles of cooking.",
   cuisine: 'French',
   user_id: roger.id,
   )
 samuel_chef = Chef.create!(
+  restaurant: Faker::Restaurant.name,
+  job_title: "Executive Chef ",
+  introduction: "My mission has been to help people achieve their health and wellness goals through delicious and well balanced North African cuisine.",
   cuisine: 'North African',
   user_id: samuel.id,
   )
 slavo_chef = Chef.create!(
+  restaurant: Faker::Restaurant.name,
+  job_title: "Head Chef",
+  introduction: "All our my recipes shall be of the highest quality, healthy, nutritious and provided with outstanding personal services. Creating the structure and systems needed to allow our users access to the majority of their away-from-home daily meals right at home .",
   cuisine: 'Balkan',
   user_id: slavo.id,
   )
 luis_chef = Chef.create!(
+  restaurant: Faker::Restaurant.name,
+  job_title: "Sous Chef",
+  introduction: "To provide an exceptional learning experience that satisfies our users grown-up tastes by being a Cut-Above in everything I do. Services shall be delivered consistently and measured one satisfied customer at a time.",
   cuisine: 'Balkan',
   user_id: luis.id,
   )
