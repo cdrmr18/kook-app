@@ -6,15 +6,28 @@
 </div>
 <!--  -->
 <br>
-<h1>New Booking</h1>
-<div id='recipe-booking-dates' data-unavailable="<%#= @recipe.unavailable_dates.to_json %>">
-   <%# if current_user.id != @recipe.chef.user_id  %>
-     <%= simple_form_for [@recipe, @booking] do |f| %>
+<div class="container my-4">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+      <div class="form-calendar">
+      <h1>New Booking</h1>
+        <div id='recipe-booking-dates' data-unavailable="<%#= @recipe.unavailable_dates.to_json %>">
           <h3>Booking Date</h3>
-        <%= f.text_field :date, data: { behavior: "flatpickr"}, id: "booking_start_date" %>
-        <%= f.text_field :start_time, data: { behavior: "flatpickr"}, id: "booking_start_time" %>
-        <%= f.text_field :end_time, data: { behavior: "flatpickr"}, id: "booking_end_time" %>
-        <%= f.button :submit, class: "btn button col-12" %>
-      <%# end %>
-   <% end %>
+           <% if current_user.id != @recipe.chef.user_id  %>
+             <%= simple_form_for [@recipe, @booking] do |f| %>
+              <div class="form-inputs">
+                <%= f.text_field :date, data: { behavior: "flatpickr"}, id: "booking_start_date", class: "mb-3" %>
+                <%= f.text_field :start_time, data: { behavior: "flatpickr"}, id: "booking_start_time" %>
+                <%= f.text_field :end_time, data: { behavior: "flatpickr"}, id: "booking_end_time" %>
+              </div>
+
+              <div class="form-action">
+                <%= f.button :submit, class: "btn button col-12" %>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
