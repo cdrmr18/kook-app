@@ -15,24 +15,53 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-import 'bootstrap';
+require("flatpickr")
+// External imports
+import "bootstrap";
+require("flatpickr/dist/flatpickr.css")
 
-import "controllers"
 
-// import Flatpickr
-import Flatpickr from 'flatpickr'
-import Flatpickr from 'stimulus-flatpickr'
+// Adds calendar with dates  ----------------------------------
+document.addEventListener('turbolinks:load', () => {
+  const startDateInput = document.getElementById('booking_start_date');
+  if (startDateInput) {
+    flatpickr(startDateInput, {
+      altInput: true,
+      altFormat: "F j, Y",
+      minDate: "today",
+      dateFormat: "Y-m-d",
+    });
+  };
+});
+// ------------------------------------------------------------------
 
-// Import style for flatpickr
-// require("flatpickr/dist/flatpickr.css")
+// start and end time
+document.addEventListener('turbolinks:load', () => {
+  const startDateInput = document.getElementById('booking_start_date');
+  // const endDateInput = document.getElementById('booking_end_date');
+  if (startDateInput) {
+    // const unavailableDates = JSON.parse(document.querySelector('#recipe-booking-dates').dataset.unavailable)
+    // endDateInput.disabled = true
 
-// Manually register Flatpickr as a stimulus controller
-application.register('flatpickr', Flatpickr)
+    flatpickr(startDateInput, {
+      altInput: true,
+      altFormat: "F j, Y",
+      minDate: "today",
+      // disable: unavailableDates,
+      dateFormat: "Y-m-d",
+    });
 
-document.addEventListner("turbolinks:load"), ( => {
-  flatpicker("[data-behavior='flatpicker']", {
-    altInput: true,
-    altFormat: "F j, Y",
-    dateFormat: "Y-m-d"
-  })
-})
+    // startDateInput.addEventListener("change", (e) => {
+    //   if (startDateInput != "") {
+    //     endDateInput.disabled = false
+    //   }
+    // flatpickr(endDateInput, {
+    //   altInput: true,
+    //   altFormat: "F j, Y",
+    //   minDate: e.target.value,
+    //   disable: unavailableDates,
+    //   dateFormat: "Y-m-d"
+    //   });
+    // })
+  };
+});
