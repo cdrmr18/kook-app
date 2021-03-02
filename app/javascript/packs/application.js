@@ -31,7 +31,8 @@ document.addEventListener('turbolinks:load', () => {
       altFormat: "F j, Y",
       minDate: "today",
       dateFormat: "Y-m-d",
-      disableMobile: "true"
+      disableMobile: "true",
+      defaultDate: "today"
     });
   };
 });
