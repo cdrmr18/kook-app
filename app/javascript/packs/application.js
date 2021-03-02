@@ -35,33 +35,32 @@ document.addEventListener('turbolinks:load', () => {
 });
 // ------------------------------------------------------------------
 
-// start and end time
+// start and end time ------------------------------------------------
 document.addEventListener('turbolinks:load', () => {
-  const startDateInput = document.getElementById('booking_start_date');
-  // const endDateInput = document.getElementById('booking_end_date');
-  if (startDateInput) {
-    // const unavailableDates = JSON.parse(document.querySelector('#recipe-booking-dates').dataset.unavailable)
-    // endDateInput.disabled = true
+  const startTimeInput = document.getElementById('booking_start_time');
+  const endTimeInput = document.getElementById('booking_end_time');
+  if (startTimeInput) {
+    // const unavailableTimes = JSON.parse(document.querySelector('#recipe-booking-times').dataset.unavailable)
+    // endTimeInput.disabled = true
 
-    flatpickr(startDateInput, {
-      altInput: true,
-      altFormat: "F j, Y",
-      minDate: "today",
-      // disable: unavailableDates,
-      dateFormat: "Y-m-d",
+    flatpickr(startTimeInput, {
+      enableTime: true,
+      noCalendar: true,
+      dateFormat: "H:i",
+      maxTime: "22:30",
+      // disable: unavailableTimes,
     });
 
-    // startDateInput.addEventListener("change", (e) => {
-    //   if (startDateInput != "") {
-    //     endDateInput.disabled = false
-    //   }
-    // flatpickr(endDateInput, {
-    //   altInput: true,
-    //   altFormat: "F j, Y",
-    //   minDate: e.target.value,
-    //   disable: unavailableDates,
-    //   dateFormat: "Y-m-d"
-    //   });
+    // startTimeInput.addEventListener("change", (e) => {
+      // if (startTimeInput != "") {
+      //   endTimeInput.disabled = false
+      // }
+    flatpickr(endTimeInput, {
+      enableTime: true,
+      noCalendar: true,
+      dateFormat: "H:i",
+      maxTime: "22:30",
+      });
     // })
   };
 });

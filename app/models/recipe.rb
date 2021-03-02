@@ -30,4 +30,10 @@ class Recipe < ApplicationRecord
         { from: range[0], to: range[1] }
       end
     end
+
+    def unavailable_times
+      recipes.pluck(:start_time, :end_time).map do |range|
+        { from: range[0], to: range[1] }
+      end
+    end
 end

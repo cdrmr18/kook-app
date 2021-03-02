@@ -12,8 +12,8 @@
      <%= simple_form_for [@recipe, @booking] do |f| %>
           <h3>Booking Date</h3>
         <%= f.text_field :date, data: { behavior: "flatpickr"}, id: "booking_start_date" %>
-        <%= f.input :start_time %>
-        <%= f.input :end_time %>
+        <%= f.text_field :start_time, data: { behavior: "flatpickr"}, id: "booking_start_time" %>
+        <%= f.text_field :end_time, data: { behavior: "flatpickr"}, id: "booking_end_time" %>
         <%= f.button :submit, class: "btn button col-12" %>
       <%# end %>
    <% end %>
