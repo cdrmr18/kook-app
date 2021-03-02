@@ -972,97 +972,80 @@ Measurement.create!(
 
 # --------- NEW RECIPE: JAMAL AL TAMIMI – Kambsa -----------
 Measurement.create!(
-  recipe_id: .id,
-  description: "",
-  ingredient: ""
+  recipe_id: jamal_four.id,
+  description: "1 kg",
+  ingredient: "chicken (cut into pieces)"
 )
 Measurement.create!(
-  recipe_id: .id,
-  description: "",
-  ingredient: ""
+  recipe_id: jamal_four.id,
+  description: "¼ ",
+  ingredient: "cup vegetable oil"
 )
 Measurement.create!(
-  recipe_id: .id,
-  description: "",
-  ingredient: ""
+  recipe_id: jamal_four.id,
+  description: "2",
+  ingredient: "sliced onion"
 )
 Measurement.create!(
-  recipe_id: .id,
-  description: "",
-  ingredient: ""
+  recipe_id: jamal_four.id,
+  description: "12 oz",
+  ingredient: "tomato puree"
 )
 Measurement.create!(
-  recipe_id: .id,
-  description: "",
-  ingredient: ""
+  recipe_id: jamal_four.id,
+  description: "2 medium",
+  ingredient: "chopped tomatoes"
 )
 Measurement.create!(
-  recipe_id: .id,
-  description: "",
-  ingredient: ""
+  recipe_id: jamal_four.id,
+  description: "4",
+  ingredient: "chopped cloves of garlic"
 )
 Measurement.create!(
-  recipe_id: .id,
-  description: "",
-  ingredient: ""
+  recipe_id: jamal_four.id,
+  description: "2",
+  ingredient: "grated carrot"
 )
 Measurement.create!(
-  recipe_id: .id,
-  description: "",
-  ingredient: ""
+  recipe_id: jamal_four.id,
+  description: "1",
+  ingredient: "grated orange"
 )
 Measurement.create!(
-  recipe_id: .id,
+  recipe_id: jamal_four.id,
   description: "",
-  ingredient: ""
+  ingredient: "4 cloves"
 )
 Measurement.create!(
-  recipe_id: .id,
-  description: "",
-  ingredient: ""
+  recipe_id: jamal_four.id,
+  description: "4",
+  ingredient: "Cardamom"
 )
 Measurement.create!(
-  recipe_id: .id,
-  description: "",
-  ingredient: ""
+  recipe_id: jamal_four.id,
+  description: "3",
+  ingredient: "Cinnamon sticks"
 )
 Measurement.create!(
-  recipe_id: .id,
+  recipe_id: jamal_four.id,
   description: "",
-  ingredient: ""
+  ingredient: "Pepper and salt to taste"
 )
 Measurement.create!(
-  recipe_id: .id,
-  description: "",
-  ingredient: ""
+  recipe_id: jamal_four.id,
+  description: "1 kg",
+  ingredient: "rice"
 )
 Measurement.create!(
-  recipe_id: .id,
-  description: "",
-  ingredient: ""
+  recipe_id: jamal_four.id,
+  description: "¼ cup",
+  ingredient: "Raisins" 
 )
 Measurement.create!(
-  recipe_id: .id,
-  description: "",
-  ingredient: ""
+  recipe_id: jamal_four.id,
+  description: "¼ cup",
+  ingredient: "sliced almonds"
 )
-•	1 kg chicken (cut into pieces)
-•	¼ cup vegetable oil
-•	2 sliced onion
-•	12 oz tomato puree
-•	2 medium chopped tomatoes
-•	4 chopped cloves of garlic
-•	2 grated carrot
-•	1 grated orange
-•	4 cloves
-•	4 Cardamom
-•	3 Cinnamon sticks
-•	Pepper and salt to taste
-•	1 kg rice
-•	¼ cup Raisins
-•	¼ cup sliced almonds
-
-
 
 # --------- NEW RECIPE: JAMAL AL TAMIMI – Falafel -----------
 Measurement.create!(
