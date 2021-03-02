@@ -15,4 +15,55 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-import 'bootstrap';
+require("flatpickr")
+// External imports
+import "bootstrap";
+require("flatpickr/dist/themes/dark.css");
+
+
+
+// Adds calendar with dates  ----------------------------------
+document.addEventListener('turbolinks:load', () => {
+  const startDateInput = document.getElementById('booking_start_date');
+  if (startDateInput) {
+    flatpickr(startDateInput, {
+      altInput: true,
+      altFormat: "F j, Y",
+      minDate: "today",
+      dateFormat: "Y-m-d",
+      disableMobile: "true",
+      defaultDate: "today"
+    });
+  };
+});
+// ------------------------------------------------------------------
+
+// start and end time ------------------------------------------------
+document.addEventListener('turbolinks:load', () => {
+  const startTimeInput = document.getElementById('booking_start_time');
+  const endTimeInput = document.getElementById('booking_end_time');
+  if (startTimeInput) {
+    // const unavailableTimes = JSON.parse(document.querySelector('#recipe-booking-times').dataset.unavailable)
+    // endTimeInput.disabled = true
+
+    flatpickr(startTimeInput, {
+      enableTime: true,
+      noCalendar: true,
+      dateFormat: "h:i K",
+      disableMobile: "true"
+      // disable: unavailableTimes,
+    });
+
+    // startTimeInput.addEventListener("change", (e) => {
+      // if (startTimeInput != "") {
+      //   endTimeInput.disabled = false
+      // }
+    flatpickr(endTimeInput, {
+      enableTime: true,
+      noCalendar: true,
+      dateFormat: "h:i K",
+      disableMobile: "true"
+      });
+    // })
+  };
+});
