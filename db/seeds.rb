@@ -612,11 +612,537 @@ puts "#{Recipe.count} recipes created"
 # --- ---- --- -- --- --- -- -- --- -- -- -- -- -- -- -- -- -- --- -- -- -- -- -- --
 
 # -------- MEASUREMETNS START ----------------
-# Measurement.new(
-#   recipe_id: ,
-#   description: ,
-#   ingredient:
-#   )
+
+# -------- Zuchini Fritters ----------------
+Measurement.create!(
+  recipe_id: chaz_one.id,
+  description: "2",
+  ingredient: "zuchinni"
+  )
+
+Measurement.create!(
+  recipe_id: chaz_one.id,
+  description: "1",
+  ingredient: "small carrot"
+  )
+
+Measurement.create!(
+  recipe_id: chaz_one.id,
+  description: "1",
+  ingredient: "small spanish onion"
+  )
+
+Measurement.create!(
+  recipe_id: chaz_one.id,
+  description: "2",
+  ingredient: "tablespoon toasted cumin seeds"
+  )
+    
+Measurement.create!(
+  recipe_id: chaz_one.id,
+  description: "3",
+  ingredient: "eggs seperated"
+  )
+    
+
+Measurement.create!(
+  recipe_id: chaz_one.id,
+  description: "50ml",
+  ingredient: "olive oil"
+)
+  
+
+# -------- Hiramasa Salmon ----------------
+
+Measurement.create!(
+  recipe_id: chaz_two.id,
+  description: "1",
+  ingredient: "salmon fillet"
+)
+
+Measurement.create!(
+  recipe_id: chaz_two.id,
+  description: "1",
+  ingredient: "mango"
+)
+
+Measurement.create!(
+  recipe_id: chaz_two.id,
+  description: "bunch",
+  ingredient: "baby red radish"
+)
+
+Measurement.create!(
+  recipe_id: chaz_two.id,
+  description: "1",
+  ingredient: "lesbian cucumber"
+)
+
+Measurement.create!(
+  recipe_id: chaz_two.id,
+  description: "1",
+  ingredient: "avocado"
+)
+
+
+Measurement.create!(
+  recipe_id: chaz_two.id,
+  description: "1",
+  ingredient: "lime"
+)
+
+Measurement.create!(
+  recipe_id: chaz_two.id,
+  description: "bunch",
+  ingredient: "green shallots"
+)
+
+Measurement.create!(
+  recipe_id: chaz_two.id,
+  description: "150ml",
+  ingredient: "grape seed oil"
+)
+
+Measurement.create!(
+  recipe_id: chaz_two.id,
+  description: "375ml",
+  ingredient: "kewpie mayonnaise"
+)
+
+Measurement.create!(
+  recipe_id: chaz_two.id,
+  description: "1",
+  ingredient: "micro coriander punnet"
+)
+
+Measurement.create!(
+  recipe_id: chaz_two.id,
+  description: "1",
+  ingredient: "lemon"
+)
+
+Measurement.create!(
+  recipe_id: chaz_two.id,
+  description: "1",
+  ingredient: "blow torch"
+)
+
+Measurement.create!(
+  recipe_id: chaz_two.id,
+  description: "1",
+  ingredient: "food processor"
+)
+
+
+# -------- Baked Passionfruit Tarts ----------------
+
+Measurement.create!(
+  recipe_id: chaz_three.id,
+  description: "3",
+  ingredient: "eggs"
+)
+
+Measurement.create!(
+  recipe_id: chaz_three.id,
+  description: "1",
+  ingredient: "egg yolk"
+)
+
+Measurement.create!(
+  recipe_id: chaz_three.id,
+  description: "150g",
+  ingredient: "caster sugar"
+)
+
+
+Measurement.create!(
+  recipe_id: chaz_three.id,
+  description: "150ml",
+  ingredient: "pouring cream"
+)
+
+Measurement.create!(
+  recipe_id: chaz_three.id,
+  description: "200ml",
+  ingredient: "strained passionfruit pulp"
+)
+
+Measurement.create!(
+  recipe_id: chaz_three.id,
+  description: "1",
+  ingredient: "sweet pastry"
+)
+
+
+Measurement.create!(
+  recipe_id: chaz_three.id,
+  description: "225g",
+  ingredient: "unsalted butter"
+)
+
+
+Measurement.create!(
+  recipe_id: chaz_three.id,
+  description: "100g",
+  ingredient: "icing sugar"
+)
+
+
+Measurement.create!(
+  recipe_id: chaz_three.id,
+  description: "375g",
+  ingredient: "plain flour"
+)
+
+# -------- Mushroom and Chestnut risotto ----------------
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "750g",
+  ingredient: "risotto"
+)
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "3.5L",
+  ingredient: "chicken stock"
+)
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "200g",
+  ingredient: "peeled chestnuts"
+)
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "150ml",
+  ingredient: "extra virgin olive oil"
+)
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "320g",
+  ingredient: "butter - coarsely chopped"
+)
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "half",
+  ingredient: "small onion finely chopped"
+)
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "1",
+  ingredient: "clove garlic finely chopped"
+)
+
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "750g",
+  ingredient: "carnaroli rice"
+)
+
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "100g",
+  ingredient: "finely grated Parmigiano-Reggiano"
+)
+
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "150g",
+  ingredient: "small shiitake mushrooms, stems trimmed"
+)
+
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "150g",
+  ingredient: "small Swiss brown mushrooms, stems trimmed"
+)
+
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "100g",
+  ingredient: "small pine mushrooms or wood blewits when available, stems trimmed
+  "
+)
+
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "150g",
+  ingredient: "baby spinach leaves, stalks trimmed"
+)
+
+
+
+# -------- Glazed Duck Drumsticks with chestnut puree baby fennel ----------------
+
+Measurement.create!(
+  recipe_id: chaz_five.id,
+  description: "4",
+  ingredient: "duck drumsticks"
+)
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "1 tablespoon",
+  ingredient: "corriander, fennel and black peppercorn seeds"
+)
+
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "1",
+  ingredient: "star anise"
+)
+
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "1",
+  ingredient: "cinnamon quill"
+)
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "4",
+  ingredient: "garlic cloves"
+)
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "1",
+  ingredient: "bunch of thyme"
+)
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "1",
+  ingredient: "lemon"
+)
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "150g",
+  ingredient: "baby fennel"
+)
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "250ml",
+  ingredient: "milk"
+)
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "50g",
+  ingredient: "butter"
+)
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "2kg",
+  ingredient: "duck bones"
+)
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "300ml",
+  ingredient: "red wine"
+)
+
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "2L",
+  ingredient: "water"
+)
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "2",
+  ingredient: "roasted carrots"
+)
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "1",
+  ingredient: "onion"
+)
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "2",
+  ingredient: "leeks"
+)
+
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "3",
+  ingredient: "sprigs thyme"
+)
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "3",
+  ingredient: "bay leaves"
+)
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "3",
+  ingredient: "pods of cardomom"
+)
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "1",
+  ingredient: "plum"
+)
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "30g",
+  ingredient: "raw sugar"
+)
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "300g",
+  ingredient: "raw chestnuts"
+)
+
+Measurement.create!(
+  recipe_id: chaz_four.id,
+  description: "170ml",
+  ingredient: "double cream"
+)
+
+
+# --------Lamb Karaage Sliders with Wasabi Mayo ----------------
+
+Measurement.create!(
+  recipe_id: chaz_five.id,
+  description: "1",
+  ingredient: "lamb backstrap s.create! removed"
+)
+
+Measurement.create!(
+  recipe_id: chaz_five.id,
+  description: "1 tablespoon",
+  ingredient: "fresh ginger grated"
+)
+
+Measurement.create!(
+  recipe_id: chaz_five.id,
+  description: "1",
+  ingredient: "garlic clove crushed"
+)
+
+
+Measurement.create!(
+  recipe_id: chaz_five.id,
+  description: "2 tablespoons",
+  ingredient: "soy sauce"
+)
+
+Measurement.create!(
+  recipe_id: chaz_five.id,
+  description: "1 tablespoon",
+  ingredient: "sake"
+)
+
+Measurement.create!(
+  recipe_id: chaz_five.id,
+  description: "2 teaspoon",
+  ingredient: "sugar"
+)
+
+Measurement.create!(
+  recipe_id: chaz_five.id,
+  description: "1 cup",
+  ingredient: "potato starch"
+)
+
+
+Measurement.create!(
+  recipe_id: chaz_five.id,
+  description: "enough",
+  ingredient: "vegetable oil for deep frying"
+)
+
+
+Measurement.create!(
+  recipe_id: chaz_five.id,
+  description: "1 cup",
+  ingredient: "fine shredded white cabbage"
+)
+
+
+Measurement.create!(
+  recipe_id: chaz_five.id,
+  description: "1 cup",
+  ingredient: "fine shredded purple cabbage"
+)
+
+Measurement.create!(
+  recipe_id: chaz_five.id,
+  description: "2",
+  ingredient: "shallots finely sliced"
+)
+
+Measurement.create!(
+  recipe_id: chaz_five.id,
+  description: "1 tablespoon",
+  ingredient: "wasabi paste, use to taste"
+)
+
+Measurement.create!(
+  recipe_id: chaz_five.id,
+  description: "1 cup",
+  ingredient: "mayonnaise"
+)
+
+
+Measurement.create!(
+  recipe_id: chaz_five.id,
+  description: "1",
+  ingredient: "lime juiced"
+)
+
+Measurement.create!(
+  recipe_id: chaz_five.id,
+  description: "to taste",
+  ingredient: "salt"
+)
+
+Measurement.create!(
+  recipe_id: chaz_five.id,
+  description: "2",
+  ingredient: "radish finely sliced"
+)
+
+Measurement.create!(
+  recipe_id: chaz_five.id,
+  description: "6",
+  ingredient: "slider buns cut in half"
+)
+
+
+
+
+
+
+
 
 # -------- MEASUREMETNS END ----------------
 
