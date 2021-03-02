@@ -611,6 +611,8 @@ puts "#{Recipe.count} recipes created"
 
 # --- ---- --- -- --- --- -- -- --- -- -- -- -- -- -- -- -- -- --- -- -- -- -- -- --
 
+puts "Creating ingredients & measurements"
+
 # -------- MEASUREMETNS START ----------------
 # Measurement.new(
 #   recipe_id: ,
@@ -629,8 +631,8 @@ Measurement.new(
 )
 Measurement.new(
   recipe_id: slavo_one.id,
-description: "3" 
-ingredient: "cloves of garlic. Minced."
+  description: "3", 
+  ingredient: "cloves of garlic (Minced)"
 )
 Measurement.new(
   recipe_id: slavo_one.id,
@@ -662,6 +664,156 @@ Measurement.new(
   description: nil,
   ingredient: "Ajvar (see the notes for the recipe)"
 )
+# ------------- NEW RECIPE --------------- 
+# 7 pound Pork Shoulder; Skin On Take Bone Out
+# •	1/2 pound Bacon, apple smoked
+# •	4 cups Kosher salt
+# •	2 cups Sugar ; Light Brown or Regular
+# •	1 cup Garlic ; chopped
+# •	2 ea Onion
+# •	2 tablespoon Paprika ; sweet or hot
+# •	3 galons Water
+# •	1 tablespoon Pepper Whole or Ground
+# Measurement.new(
+#   recipe_id: ,
+#   description: ,
+#   ingredient:
+#   )
+# Measurement.new(
+#   recipe_id: ,
+#   description: ,
+#   ingredient:
+#   )
+# Measurement.new(
+#   recipe_id: ,
+#   description: ,
+#   ingredient:
+#   )
+# Measurement.new(
+#   recipe_id: ,
+#   description: ,
+#   ingredient:
+#   )
+# Measurement.new(
+#   recipe_id: ,
+#   description: ,
+#   ingredient:
+#   )
+# Measurement.new(
+#   recipe_id: ,
+#   description: ,
+#   ingredient:
+#   )
+# Measurement.new(
+#   recipe_id: ,
+#   description: ,
+#   ingredient:
+#   )
+# Measurement.new(
+#   recipe_id: ,
+#   description: ,
+#   ingredient:
+#   )
+# Measurement.new(
+#   recipe_id: ,
+#   description: ,
+#   ingredient:
+#   )
+# Measurement.new(
+#   recipe_id: ,
+#   description: ,
+#   ingredient:
+#   )
+
+# ------------- NEW RECIPE: Slavo Bukich’s Bosnian pot --------------- 
+
+Measurement.new(
+  recipe_id: slavo_three.id,
+  description: "1 kg",
+  ingredient: "mixed meat (beef, pork, lamb)"
+)
+Measurement.new(
+  recipe_id: slavo_three.id,
+  description: "2 dl",
+  ingredient: "oil (or grease if preferred)" 
+)
+Measurement.new(
+  recipe_id: slavo_three.id,
+  description: "1",
+  ingredient: "big onion"
+)
+Measurement.new(
+  recipe_id: slavo_three.id,
+  description: "6 cloves",
+  ingredient: "garlic"
+)
+Measurement.new(
+  recipe_id: slavo_three.id,
+  description: "700 g",
+  ingredient: "potato chopped to larger cubes"
+)
+Measurement.new(
+  recipe_id: slavo_three.id,
+  description: "200 g",
+  ingredient: "carrot largely chopped to rings"
+)
+Measurement.new(
+  recipe_id: slavo_three.id,
+  description: "100 g",
+  ingredient: "greens (parsley, parsnip, celery) finely chopped"
+)
+Measurement.new(
+  recipe_id: slavo_three.id,
+  description: "150 g",
+  ingredient: "roughly cut cabbage"
+)
+Measurement.new(
+  recipe_id: slavo_three.id,
+  description: "100 g",
+  ingredient: "fresh paprika (yellow, green, red)"
+)
+Measurement.new(
+  recipe_id: slavo_three.id,
+  description: "100 g",
+  ingredient: "peas"
+)
+Measurement.new(
+  recipe_id: slavo_three.id,
+  description: "100 g",
+  ingredient: "pods"
+)
+Measurement.new(
+  recipe_id: slavo_three.id,
+  description: "100 g",
+  ingredient: "okra (if it’s dry first you have to cook it and if it is fresh or frozen put it directly into pot)"
+)
+Measurement.new(
+  recipe_id: slavo_three.id,
+  description: "150 g",
+  ingredient: "tomato or a few tiny pieces"
+)
+Measurement.new(
+  recipe_id: slavo_three.id,
+  description: "150 g",
+  ingredient: "largely cut zucchini"
+)
+Measurement.new(
+  recipe_id: slavo_three.id,
+  description: "2 dl",
+  ingredient: "vine"
+)
+Measurement.new(
+  recipe_id: slavo_three.id,
+  description: "2 litres",
+  ingredient: "hot water"
+)
+Measurement.new(
+  recipe_id: slavo_three.id,
+  description: nil,
+  ingredient: "Some salt and pepper"
+)
+puts "Added too many ingredients..."
+
 
 # -------- MEASUREMETNS END ----------------
 
