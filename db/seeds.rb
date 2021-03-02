@@ -847,6 +847,84 @@ Measurement.create!(
   ingredient: "seasonings – salt, pepper, parsley"
 )
 
+# --------- NEW RECIPE: JAMAL AL TAMIMI – Middle Eastern Cuisine -----------
+# --------- NEW RECIPE: JAMAL AL TAMIMI – hummus -----------
+Measurement.create!(
+  recipe_id: jamal_one.id,
+  description: "400 g",
+  ingredient: "can chickpeas, drained"
+)
+Measurement.create!(
+  recipe_id: jamal_one.id,
+  description: "80 ml",
+  ingredient: "extra virgin olive oil" 
+)
+Measurement.create!(
+  recipe_id: jamal_one.id,
+  description: "1-2",
+  ingredient: "fat garlic cloves, peeled and crushed"
+
+)
+Measurement.create!(
+  recipe_id: jamal_one.id,
+  description: "1",
+  ingredient: "lemon, juiced then ½ zested"
+)
+Measurement.create!(
+  recipe_id: jamal_one.id,
+  description: "3 tbsp",
+  ingredient: "tahini"
+  
+)
+Measurement.create!(
+  recipe_id: jamal_one.id,
+  description: "",
+  ingredient: "mixed crudités and toasted pitta bread, to serve (optional)"
+)
+
+
+# --------- NEW RECIPE: JAMAL AL TAMIMI – Tabbouleh -----------
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: ""
+)
+
+
+
+
+# --------- NEW RECIPE: JAMAL AL TAMIMI – Manakeesh -----------
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: ""
+)
+
+
+
+# --------- NEW RECIPE: JAMAL AL TAMIMI – Kambsa -----------
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: ""
+)
+
+
+
+
+# --------- NEW RECIPE: JAMAL AL TAMIMI – Falafel -----------
+Measurement.create!(
+  recipe_id: .id,
+  description: "",
+  ingredient: ""
+)
+
+
+
+
+
+
+
 # --------- NEW RECIPE: Samuel De Grasses Moroccan chicken rfissa -----------
 
 # 1.  Samuel De Grasses Moroccan chicken rfissa
