@@ -1,7 +1,23 @@
-<h1>Create your chef profile</h1>
 
-<%= simple_form_for @chef do |f| %>
-  <p>What is your cuisine?</p>
-  <%= f.input :cuisine %>
-  <%= f.button :submit, class: "btn button" %>
-<% end %>
+<!-- Create chef form -->
+<div class="container mt-4 mb-4">
+  <div class="row">
+    <div class="col-12 ">
+      <h2>Create your chef profile</h2>
+      <%= simple_form_for @chef do |f| %>
+        <%= f.input :restaurant %>
+        <%= f.input :job_title %>
+        <%= f.input :introduction %>
+        <%= f.input :cuisine %>
+        <%= f.button :submit, class: "btn button col-12" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
