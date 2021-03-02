@@ -813,56 +813,41 @@ Measurement.create!(
 
 Measurement.create!(
   recipe_id: slavo_four.id,
-  description: "",
-  ingredient: ""
-  •	white beans – around 1lb
+  description: "around 1lb",
+  ingredient: "white beans"
+)
+Measurement.create!(
+  recipe_id: slavo_four.id,
+  description: "1/5 lbs.",
+  ingredient: "onions"
 )
 Measurement.create!(
   recipe_id: slavo_four.id,
   description: "",
-  ingredient: ""
-  •	onions 1/5 lbs.
+  ingredient: "meat of your choice – generally people use bacon or sausages"
 )
 Measurement.create!(
   recipe_id: slavo_four.id,
   description: "",
-  ingredient: ""
-  •	meat of your choice – generally people use bacon or sausages
+  ingredient: "garlic"
 )
 Measurement.create!(
   recipe_id: slavo_four.id,
   description: "",
-  ingredient: ""
-  •	garlic
+  ingredient: "oil"
+)
+Measurement.create!(
+  recipe_id: slavo_four.id,
+  description: "3 spoons",
+  ingredient: "flour and paprika powder mixture"
 )
 Measurement.create!(
   recipe_id: slavo_four.id,
   description: "",
-  ingredient: ""
-  •	oil
-)
-Measurement.create!(
-  recipe_id: slavo_four.id,
-  description: "",
-  ingredient: ""
-  •	3 spoons of flour and paprika powder mixture
-)
-Measurement.create!(
-  recipe_id: slavo_four.id,
-  description: "",
-  ingredient: ""
-  •	seasonings – salt, pepper, parsley
+  ingredient: "seasonings – salt, pepper, parsley"
 )
 
-# ------------- NEW RECIPE: Slavo Bukich’s Baked Beans --------------- 
-
-Measurement.create!(
-  recipe_id: slavo_four.id,
-  description: "",
-  ingredient: ""
-  •	white beans – around 1lb
-
-
+# --------- NEW RECIPE: Samuel De Grasses Moroccan chicken rfissa -----------
 
 # 1.  Samuel De Grasses Moroccan chicken rfissa
 # For the Chicken:
