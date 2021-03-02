@@ -612,11 +612,404 @@ puts "#{Recipe.count} recipes created"
 # --- ---- --- -- --- --- -- -- --- -- -- -- -- -- -- -- -- -- --- -- -- -- -- -- --
 
 # -------- MEASUREMETNS START ----------------
-# Measurement.new(
-#   recipe_id: ,
-#   description: ,
-#   ingredient:
-#   )
+# 1.  Samuel De Grasses Moroccan chicken rfissa
+# For the Chicken:
+Measurement.new(
+  recipe_id: samuel_one.id,
+  description: '1',
+  ingredient: 'chicken (quartered or left whole)'
+)
+Measurement.new(
+  recipe_id: samuel_one.id,
+  description: '2 to 3',
+  ingredient: 'large onions (thinly sliced)'
+)
+Measurement.new(
+  recipe_id: samuel_one.id,
+  description: '1/3',
+  ingredient: 'cup olive oil'
+)
+Measurement.new(
+  recipe_id: samuel_one.id,
+  description: '2',
+  ingredient: 'teaspoons salt'
+)
+Measurement.new(
+  recipe_id: samuel_one.id,
+  description: '2',
+  ingredient: 'teaspoons blackpepper'
+)
+Measurement.new(
+  recipe_id: samuel_one.id,
+  description: '1',
+  ingredient: 'tablespoon ginger'
+)
+Measurement.new(
+  recipe_id: samuel_one.id,
+  description: '2',
+  ingredient: 'teaspoons ras el hanout'
+)
+Measurement.new(
+  recipe_id: samuel_one.id,
+  description: '1',
+  ingredient: 'teaspoon tumeric'
+)
+Measurement.new(
+  recipe_id: samuel_one.id,
+  description: '1',
+  ingredient: 'teaspoon saffron threads (heated gently and then crumbled)'
+)
+# For the Lentils:
+Measurement.new(
+  recipe_id: samuel_one.id,
+  description: '1/2',
+  ingredient: 'cup lentils (uncooked)'
+)
+Measurement.new(
+  recipe_id: samuel_one.id,
+  description: '2',
+  ingredient: 'tablespoons fenugreek seeds (soaked overnight and drained)'
+)
+Measurement.new(
+  recipe_id: samuel_one.id,
+  description: '1',
+  ingredient: 'teaspoon saffron threads (heated gently and then crumbled)'
+)
+Measurement.new(
+  recipe_id: samuel_one.id,
+  description: '1',
+  ingredient: 'small bunch cilantro (finely chopped)'
+)
+Measurement.new(
+  recipe_id: samuel_one.id,
+  description: '1',
+  ingredient: 'small bunch parsley (finely chopped)'
+)
+Measurement.new(
+  recipe_id: samuel_one.id,
+  description: '3',
+  ingredient: 'cups water'
+)
+Measurement.new(
+  recipe_id: samuel_one.id,
+  description: '1',
+  ingredient: 'teaspoon smen (Moroccan preserved butter)'
+)
+# For the Msemen or Trid
+Measurement.new(
+  recipe_id: samuel_one.id,
+  description: '1 to 1 1/2',
+  ingredient: 'batches msemen (or trid, cooked)'
+)
+# 2.  Samuel De Grasses Moroccan meatball soup
+
+Measurement.new(
+  recipe_id: samuel_two.id,
+  description: '1/2',
+  ingredient: 'cup (40g) flaked almonds2 1/2 tbs olive oil'
+)
+Measurement.new(
+  recipe_id: samuel_two.id,
+  description: '1',
+  ingredient: 'onion, finely chopped'
+)
+Measurement.new(
+  recipe_id: samuel_two.id,
+  description: '2',
+  ingredient: 'garlic cloves, crushed'
+)
+Measurement.new(
+  recipe_id: samuel_two.id,
+  description: '1',
+  ingredient: 'teaspoon each ground cinnamon and ground ginger'
+)
+Measurement.new(
+  recipe_id: samuel_two.id,
+  description: '2',
+  ingredient: 'teaspoons ground cumin'
+)
+Measurement.new(
+  recipe_id: samuel_two.id,
+  description: '1/2',
+  ingredient: 'bunch coriander, leaves picked, stems chopped'
+)
+Measurement.new(
+  recipe_id: samuel_two.id,
+  description: '1/2',
+  ingredient: 'teaspoon dried chilli flakes'
+)
+Measurement.new(
+  recipe_id: samuel_two.id,
+  description: '2',
+  ingredient: 'carrots, cut into 1cm pieces'
+)
+Measurement.new(
+  recipe_id: samuel_two.id,
+  description: '2',
+  ingredient: 'zucchinis, cut into 1cm pieces'
+)
+Measurement.new(
+  recipe_id: samuel_two.id,
+  description: '4',
+  ingredient: 'cups (1L) chicken stock or vegetable stock'
+)
+Measurement.new(
+  recipe_id: samuel_two.id,
+  description: '500g',
+  ingredient: 'beef mince'
+)
+Measurement.new(
+  recipe_id: samuel_two.id,
+  description: '1',
+  ingredient: 'egg, lightly beaten'
+)
+Measurement.new(
+  recipe_id: samuel_two.id,
+  description: '2/3',
+  ingredient: 'cup (50g) fresh breadcrumbs'
+)
+Measurement.new(
+  recipe_id: samuel_two.id,
+  description: '1',
+  ingredient: 'cup (200g) pearl (Israeli) couscous'
+)
+
+# 3.  Samuel De Grasses aromatic lamb with dates
+
+Measurement.new(
+  recipe_id: samuel_three.id,
+  description: '1',
+  ingredient: 'tablespoon olive oil'
+)
+Measurement.new(
+  recipe_id: samuel_three.id,
+  description: '1',
+  ingredient: 'onion, finely chopped'
+)
+Measurement.new(
+  recipe_id: samuel_three.id,
+  description: '500g',
+  ingredient: 'diced boneless lean lamb , preferably from the leg'
+)
+Measurement.new(
+  recipe_id: samuel_three.id,
+  description: '300g',
+  ingredient: 'sweet potatoes , cut into small chunks'
+)
+Measurement.new(
+  recipe_id: samuel_three.id,
+  description: '2',
+  ingredient: 'teaspoons ground coriander'
+)
+Measurement.new(
+  recipe_id: samuel_three.id,
+  description: '2',
+  ingredient: 'teaspoons ground coriander'
+)
+Measurement.new(
+  recipe_id: samuel_three.id,
+  description: '1',
+  ingredient: 'tablespoon tomato purée'
+)
+Measurement.new(
+  recipe_id: samuel_three.id,
+  description: '50g',
+  ingredient: 'pitted dates'
+)
+Measurement.new(
+  recipe_id: samuel_three.id,
+  description: '2',
+  ingredient: 'tablespoons coriander , roughly chopped'
+)
+
+# 4.  Samuel De Grasses Morrocan roast lamb
+
+Measurement.new(
+  recipe_id: samuel_four.id,
+  description: '1/2',
+  ingredient: 'leg of lamb , around 800g'
+)
+Measurement.new(
+  recipe_id: samuel_four.id,
+  description: '2',
+  ingredient: 'red onions , cut into wedges'
+)
+Measurement.new(
+  recipe_id: samuel_four.id,
+  description: '1',
+  ingredient: 'butternut squash , skin left on, cut into wedges'
+  )
+Measurement.new(
+  recipe_id: samuel_four.id,
+  description: '1',
+  ingredient: 'celeriac, peeled and cut into wedges'
+)
+Measurement.new(
+  recipe_id: samuel_four.id,
+  description: '2 1/2',
+  ingredient: 'tablespoons cold pressed rapeseed oil'
+)
+Measurement.new(
+  recipe_id: samuel_four.id,
+  description: '2',
+  ingredient: 'tablespoons ras el hanout'
+)
+Measurement.new(
+  recipe_id: samuel_four.id,
+  description: '8',
+  ingredient: 'garlic cloves , skin on'
+)
+Measurement.new(
+  recipe_id: samuel_four.id,
+  description: '1',
+  ingredient: 'small bunch coriander'
+)
+Measurement.new(
+  recipe_id: samuel_four.id,
+  description: '1',
+  ingredient: 'teaspoon cumin seeds'
+)
+Measurement.new(
+  recipe_id: samuel_four.id,
+  description: '1',
+  ingredient: 'lemon , zested and juiced'
+)
+Measurement.new(
+  recipe_id: samuel_four.id,
+  description: '1/2',
+  ingredient: 'green chilli , deseeded'
+)
+
+# 5.  Samuel De Grasses chicken tagine
+
+Measurement.new(
+  recipe_id: samuel_five.id,
+  description: '2',
+  ingredient: 'tablespoons olive oil'
+)
+Measurement.new(
+  recipe_id: samuel_five.id,
+  description: '8',
+  ingredient: 'skinless boneless chicken thighs, halved if large'
+)
+Measurement.new(
+  recipe_id: samuel_five.id,
+  description: '1',
+  ingredient: 'onion, chopped'
+)
+Measurement.new(
+  recipe_id: samuel_five.id,
+  description: '2',
+  ingredient: 'teaspoons grated fresh root ginger'
+)
+Measurement.new(
+  recipe_id: samuel_five.id,
+  description: 'pinch',
+  ingredient: 'saffron or tumeric'
+)
+Measurement.new(
+  recipe_id: samuel_five.id,
+  description: '1',
+  ingredient: 'tablespoon honey'
+)
+Measurement.new(
+  recipe_id: samuel_five.id,
+  description: '400g',
+  ingredient: 'carrot, cut into sticks'
+)
+Measurement.new(
+  recipe_id: samuel_five.id,
+  description: 'small',
+  ingredient: 'bunch parsley, roughly chopped'
+)
+Measurement.new(
+  recipe_id: samuel_five.id,
+  description: 'lemon wedges',
+  ingredient: 'to serve'
+)
+
+# 6.  Samuel De Grasses Mixed-grain paella with lamb
+
+Measurement.new(
+  recipe_id: samuel_six.id,
+  description: '2',
+  ingredient: 'tablespoons extra virgin olive oil'
+)
+Measurement.new(
+  recipe_id: samuel_six.id,
+  description: '12',
+  ingredient: 'lamb cutlets'
+)
+Measurement.new(
+  recipe_id: samuel_six.id,
+  description: '1',
+  ingredient: 'large red onion, thinly sliced'
+)
+Measurement.new(
+  recipe_id: samuel_six.id,
+  description: '3',
+  ingredient: 'garlic cloves, chopped'
+)
+Measurement.new(
+  recipe_id: samuel_six.id,
+  description: '1',
+  ingredient: 'tablespoon ras el hanout or Moroccan spice mix'
+)
+Measurement.new(
+  recipe_id: samuel_six.id,
+  description: '140g',
+  ingredient: '(2/3 cup) brown basmati rice'
+)
+Measurement.new(
+  recipe_id: samuel_six.id,
+  description: '75g',
+  ingredient: '(1/3 cup) pearl barley'
+)
+Measurement.new(
+  recipe_id: samuel_six.id,
+  description: '70g',
+  ingredient: '(1/3 cup) quinoa or burghul'
+)
+Measurement.new(
+  recipe_id: samuel_six.id,
+  description: '125ml',
+  ingredient: '(1/2 cup) tomato passata'
+)
+Measurement.new(
+  recipe_id: samuel_six.id,
+  description: '1',
+  ingredient: 'tablespoon harissa paste or hot chilli sauce, or to taste'
+)
+Measurement.new(
+  recipe_id: samuel_six.id,
+  description: '1L',
+  ingredient: '(4 cups) Massel chicken style liquid stock'
+)
+Measurement.new(
+  recipe_id: samuel_six.id,
+  description: '80g',
+  ingredient: '(1/2 cup) currants'
+)
+Measurement.new(
+  recipe_id: samuel_six.id,
+  description: '1 1/2',
+  ingredient: 'tablespoons chopped fresh mint, plus extra leaves, to serve'
+)
+Measurement.new(
+  recipe_id: samuel_six.id,
+  description: '1 1/2',
+  ingredient: 'tablespoons chopped fresh dill, plus extra leaves, to serve'
+)
+Measurement.new(
+  recipe_id: samuel_six.id,
+  description: 'tub',
+  ingredient: 'Greek-style yoghurt, to serve'
+)
+Measurement.new(
+  recipe_id: samuel_six.id,
+  description: 'handfull',
+  ingredient: 'Pomegranate seeds, to serve (optional)'
+)
 
 # -------- MEASUREMETNS END ----------------
 
