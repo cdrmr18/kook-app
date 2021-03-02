@@ -617,6 +617,51 @@ puts "#{Recipe.count} recipes created"
 #   description: ,
 #   ingredient:
 #   )
+Measurement.new(
+  recipe_id: slavo_one.id,
+  description: "600 g",
+  ingredient: "finely minced beef"
+)
+Measurement.new(
+  recipe_id: slavo_one.id,
+  description: "300g (10 oz) ",
+  ingredient: "finely minced lamb (or pork mince if you prefer)"
+)
+Measurement.new(
+  recipe_id: slavo_one.id,
+description: "3" 
+ingredient: "cloves of garlic. Minced."
+)
+Measurement.new(
+  recipe_id: slavo_one.id,
+  description: "1 teaspoon",
+  ingredient: "fine salt"
+)
+Measurement.new(
+  recipe_id: slavo_one.id,
+  description: "1 teaspoon",
+  ingredient: "black pepper"
+)
+Measurement.new(
+  recipe_id: slavo_one.id,
+  description: nil,
+  ingredient: "Slavo Bukich’s roast pork shoulder"
+)
+Measurement.new(
+  recipe_id: slavo_one.id,
+  description: nil,
+  ingredient: "Turkish-style Flatbread"
+)
+Measurement.new(
+  recipe_id: slavo_one.id,
+  description: nil,
+  ingredient: "Chopped raw onions"
+)
+Measurement.new(
+  recipe_id: slavo_one.id,
+  description: nil,
+  ingredient: "Ajvar (see the notes for the recipe)"
+)
 
 # -------- MEASUREMETNS END ----------------
 
