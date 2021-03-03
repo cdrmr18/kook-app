@@ -70,7 +70,6 @@
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
-  font-weight: bold;
 }
 
 .banner p {
@@ -111,10 +110,13 @@ h4 {
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
+  opacity: 0;
 
 
   &:hover{
-    color: #A288E3;
+    color: white;
+    font-weight: 500;
+    opacity: 1;
   }
 }
 
@@ -136,5 +138,18 @@ h4 {
   -webkit-box-shadow: 0 10px 6px -6px #777;
      -moz-box-shadow: 0 10px 6px -6px #777;
           box-shadow: 0 10px 6px -6px #777;
+}
+
+
+
+.recipe-head{
+ 
+  color: #290149;
+  margin-bottom: 0px;
+  padding: 20px;
+}
+
+.head-container{
+  background-color: white;
 }
 
