@@ -621,7 +621,7 @@ Measurement.create!(
 )
 Measurement.create!(
   recipe_id: slavo_one.id,
-  description: "300g (10 oz) ",
+  description: "300g (10 oz)",
   ingredient: "finely minced lamb (or pork mince if you prefer)"
 )
 Measurement.create!(
@@ -885,48 +885,48 @@ Measurement.create!(
 
 # --------- NEW RECIPE: JAMAL AL TAMIMI – Tabbouleh -----------
 Measurement.create!(
-  recipe_id: .id,
+  recipe_id: jamal_two.id,
   description: "",
   ingredient: "Parsley (curly or flat-leaf)"
   
 )
 Measurement.create!(
-  recipe_id: .id,
+  recipe_id: jamal_two.id,
   description: "",
   ingredient: "tomatoes"
 )
 Measurement.create!(
-  recipe_id: .id,
+  recipe_id: jamal_two.id,
   description: "",
   ingredient: "scallions"
 )
 Measurement.create!(
-  recipe_id: .id,
+  recipe_id: jamal_two.id,
   description: "",
   ingredient: "mint"
 )
 Measurement.create!(
-  recipe_id: .id,
+  recipe_id: jamal_two.id,
   description: "",
   ingredient: "bulgar wheat (or quinoa)"
 )
 Measurement.create!(
-  recipe_id: .id,
+  recipe_id: jamal_two.id,
   description: "",
   ingredient: "lemon"
 )
 Measurement.create!(
-  recipe_id: .id,
+  recipe_id: jamal_two.id,
   description: "",
   ingredient: "olive oil"
 )
 Measurement.create!(
-  recipe_id: .id,
+  recipe_id: jamal_two.id,
   description: "",
   ingredient: "salt"
 )
 Measurement.create!(
-  recipe_id: .id,
+  recipe_id: jamal_two.id,
   description: "",
   ingredient: "cinnamon and allspice"
 )
@@ -934,37 +934,37 @@ Measurement.create!(
 
 # --------- NEW RECIPE: JAMAL AL TAMIMI – Manakeesh -----------
 Measurement.create!(
-  recipe_id: .id,
+  recipe_id: jamal_three.id,
   description: "2 ¼ lb",
   ingredient: "flour"
 )
 Measurement.create!(
-  recipe_id: .id,
+  recipe_id: jamal_three.id,
   description: "2 cups",
   ingredient: "warm water"
 )
 Measurement.create!(
-  recipe_id: .id,
+  recipe_id: jamal_three.id,
   description: "",
   ingredient: "Fresh zaater oil"
 )
 Measurement.create!(
-  recipe_id: .id,
+  recipe_id: jamal_three.id,
   description: "2 tbsp",
   ingredient: "dry yeast"
 )
 Measurement.create!(
-  recipe_id: .id,
+  recipe_id: jamal_three.id,
   description: "4 tbsp",
   ingredient: "olive oil"
 )
 Measurement.create!(
-  recipe_id: .id,
+  recipe_id: jamal_three.id,
   description: "1/3 cup",
   ingredient: "grated akawi cheese"
 )
 Measurement.create!(
-  recipe_id: .id,
+  recipe_id: jamal_three.id,
   description: "1 tbsp",
   ingredient: "salt"
 )
@@ -1049,39 +1049,125 @@ Measurement.create!(
 
 # --------- NEW RECIPE: JAMAL AL TAMIMI – Falafel -----------
 Measurement.create!(
-  recipe_id: .id,
-  description: "",
-  ingredient: ""
+  recipe_id: jamal_five.id,
+  description: "1 lb",
+  ingredient: "dry peeled fava beans"
 )
-•	1 lb of dry peeled fava beans*
-•	¾ lbs of of dried chickpeas (aka Garbanzo beans)
-•	1 bunch of Italian parsley (chop away the stems)
-•	2 bunches of green cilantro (chop away the stems)
-•	8-10 cloves of freshly peeled garlic, crushed
-•	1 large red or yellow onion
-•	1 bunch of green onions
-•	2 table spoons of salt
-•	A dash of black pepper
-•	2 table spoons of flour
-•	1 teaspoon of baking soda
-•	1 dash of red chilli pepper (optional, if spicy falafel is desired)
-•	1 teaspoon of cumin
-•	3 teaspoons of Coriander
-Falafel Tahini Sauce Ingredients
-•	2 Table spoons of Tahini Paste
-•	1 cup of freshly squeezed Lemon Juice
-•	3 gloves of garlic, crushed
-•	a dash of salt
-Optional Falafel Serving Sides
-•	Salty Lebanese Pickles (cucumbers, turnips, pickled chilli peppers)
-•	Tomatoes
-•	Chopped fresh Italian parsley
-•	Pita bread
-
-
-
-
-
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "¾ lbs",
+  ingredient: "dried chickpeas (aka Garbanzo beans)"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "1 bunch",
+  ingredient: "Italian parsley (chop away the stems)"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "2 bunches",
+  ingredient: "green cilantro (chop away the stems)"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "8-10 cloves",
+  ingredient: "freshly peeled garlic, crushed"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "1",
+  ingredient: "large red or yellow onion"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "1 bunch",
+  ingredient: "green onions"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "2 table spoons",
+  ingredient: "salt"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "A dash",
+  ingredient: "black pepper"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "2 table spoons",
+  ingredient: "flour"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "1 teaspoon",
+  ingredient: "baking soda"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "1 teaspoon",
+  ingredient: "cumin"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "3 teaspoons",
+  ingredient: "Coriander"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "",
+  ingredient: "Falafel Tahini Sauce Ingredients"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "1 dash",
+  ingredient: "red chilli pepper (optional, if spicy falafel is desired)"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "2 table spoons",
+  ingredient: "Tahini Paste"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "1 cup",
+  ingredient: "freshly squeezed Lemon Juice"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "3 cloves",
+  ingredient: "garlic, crushed"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "",
+  ingredient: "a dash of salt"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "",
+  ingredient: "(Optional) Falafel Serving Sides"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "",
+  ingredient: "Salty Lebanese Pickles (cucumbers, turnips, pickled chilli peppers)" 
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "",
+  ingredient: "Tomatoes"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "",
+  ingredient: "Chopped fresh Italian parsley"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "",
+  ingredient: "Pita bread"
+)
 
 # --------- NEW RECIPE: Samuel De Grasses Moroccan chicken rfissa -----------
 
