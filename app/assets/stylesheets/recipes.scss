@@ -15,9 +15,20 @@
   font-size: 24px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 0 10px;
 }
+
+
+
+.card-body{
+  margin: 0 10px;
+}
+
+
+
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
@@ -85,6 +96,10 @@ h4 {
 .recipe-info {
   background-color: white;
   opacity: 0.4;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-top: 0px;
+  padding:30px;
 }
 
 .recipe-link {
@@ -92,10 +107,14 @@ h4 {
   font-size: 30px;
   padding: 5px;
   text-align: center;
+  margin-top:0;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
 
 
-  &:hover {
-    color:white;
+  &:hover{
+    color: #A288E3;
   }
 }
 
@@ -110,5 +129,12 @@ h4 {
     color: white;
     font-weight: bold;
   }
+}
+
+
+.effect1{
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+     -moz-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 10px 6px -6px #777;
 }
 
