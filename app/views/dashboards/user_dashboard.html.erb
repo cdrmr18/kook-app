@@ -1,18 +1,25 @@
 <div class="container mt-4">
-  <div class="container">
-    <h1>Dashboard</h1>
-
-
-    <!-- create recipe link -->
-    <% if current_user.chef == nil %>
-    <%= link_to "Become a chef", new_chef_path, class: "btn button mt-4" %>
-    <% end %>
+  <div class="container text-center card py-3">
+    <div class="row">
+      <div class="col-12">
+        <h1>Dashboard</h1>
+        <%= cl_image_tag current_user.photo.key, width: 175, height: 175,  crop: :fill, class: "chef-avatar mb-4"  %>
+       </div>
+       <div class="col-12">
+          <!-- create chef link -->
+        <% if current_user.chef == nil %>
+        <%= link_to "Become a chef", new_chef_path, class: "btn button mt-4" %>
+        <% end %>
+      </div>
+    </div>
   </div>
+
+
 
 <!-- collapse menu -->
 
-  <div id="accordion">
-  <div class="card mt-4">
+  <div id="accordion" class="my-4">
+  <div class="card">
     <div class="card-header" id="headingOne">
       <h5 class="mb-0 text-center">
         <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
