@@ -1,15 +1,37 @@
 <!-- recipe image -->
 <div class="banner my-0" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(<%= cl_image_path @recipe.photo.key %>);">
-  <div class="container text-center">
+  <div class="container text-center booking-recipe">
     <h1> <%= @recipe.name %> </h1>
   </div>
 </div>
 <!--  -->
 <br>
-<h1>Booking Page</h1>
- <%= simple_form_for [@recipe, @booking] do |f| %>
-    <%= f.input :date %>
-    <%= f.input :start_time %>
-    <%= f.input :end_time %>
-    <%= f.button :submit, class: "btn button col-12" %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+
+        <div class="form-calendar" id='recipe-booking-dates' data-unavailable="<%#= @recipe.unavailable_dates.to_json %>">
+          <h3>Session Booking</h3>
+          <h4>Chef <%= @recipe.chef.user.first_name%> <%= @recipe.chef.user.last_name%></h4>
+          <h5><%= humanized_money_with_symbol(@recipe.price)  %> / hour</h5>
+           <% if current_user.id != @recipe.chef.user_id  %>
+             <%= simple_form_for [@recipe, @booking] do |f| %>
+              <div class="form-inputs">
+                <label>Session Date</label>
+                <%= f.text_field :date, data: { behavior: "flatpickr"}, id: "booking_start_date", class: "mb-1" %>
+                <label>Start Time: </label>
+                <%= f.text_field :start_time, data: { behavior: "flatpickr"}, id: "booking_start_time", class: "col-9" %>
+                <label>End Time: </label>
+                <%= f.text_field :end_time, data: { behavior: "flatpickr"}, id: "booking_end_time", class: "mb-4 col-9" %>
+              </div>
+
+              <div class="form-action">
+                <%= f.button :submit, "Book", class: "btn button" %>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+
+    </div>
+  </div>
+</div>

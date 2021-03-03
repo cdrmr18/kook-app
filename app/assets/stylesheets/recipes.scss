@@ -12,12 +12,24 @@
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 24px;
-  font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 0 10px;
+  border: solid 0.2em;
+
 }
+
+
+
+.card-body{
+  margin: 0 10px;
+  
+}
+
+
+
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
@@ -58,7 +70,7 @@
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  font-size: 24px;
   font-weight: bold;
 }
 
@@ -84,21 +96,31 @@ h4 {
 // recipe index page style
 .recipe-info {
   background-color: white;
-  opacity: 0.4;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-top: 0px;
+  padding:30px;
+  border-bottom: white solid 0.9em;
 }
 
 .recipe-link {
   color: white;
-  font-size: 19px;
+  font-size: 30px;
+  padding: 5px;
+  text-align: center;
+  margin-top:0;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  opacity: 0;
 
-  &:hover {
-    color:white;
+
+  &:hover{
+    color: white;
+    font-weight: 200;
+    opacity: 1;
   }
 }
-
-
-
-
 
 .chef-link a {
   color: black;
@@ -107,5 +129,30 @@ h4 {
     color: white;
     font-weight: bold;
   }
+}
+
+
+.effect1{
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+     -moz-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 10px 6px -6px #777;
+}
+
+.effect2{
+  -webkit-box-shadow: 0 6px 4px -6px rgb(173, 173, 173);
+     -moz-box-shadow: 0 6px 4px -6px rgb(173, 173, 173);
+          box-shadow: 0 6px 4px -6px rgb(173, 173, 173);
+}
+
+
+.recipe-head{
+ 
+  color: #290149;
+  margin-bottom: 0px;
+  padding: 20px;
+}
+
+.head-container{
+  background-color: white;
 }
 

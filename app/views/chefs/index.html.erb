@@ -7,7 +7,7 @@
         <div class="card-body">
           <h5 class="card-title"><%= chef.user.first_name %> <%= chef.user.last_name %></h5>
           <p class="mt-3"><%= chef.cuisine %> <span class="mr-4"></span><%=  chef.chef_reviews.blank? ? "0 reviews" : "⭐️" * chef.chef_reviews.average(:rating).round(2) %> </p>
-          <p class="card-text my-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text my-3"><%= chef.introduction %></p>
         </div>
       </div>
     </div>

@@ -1,12 +1,100 @@
 <div class="container mt-4">
-  <h1>Dashboard</h1>
+  <div class="container text-center card py-3 shadow-sm ">
+    <div class="row">
+      <div class="col-12">
+        <%= cl_image_tag current_user.photo.key, width: 175, height: 175,  crop: :fill, class: "chef-avatar mb-4"  %>
+       </div>
+       <div class="col-12">
+        <h1 class="user-dash-name" ><%= current_user.first_name %> <%= current_user.last_name %></h1>
+          <!-- create chef link -->
+        <% if current_user.chef == nil %>
+        <%= link_to "Become a chef", new_chef_path, class: "btn btn-light mt-2 shadow-sm " %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-  <% @bookings.each do |booking| %>
-   <h3>Booking #<%= booking.id %> | Chef <%= booking.recipe.chef.user.first_name %> <%= booking.recipe.chef.user.last_name %></h3>
-  <% end %>
-  <!-- create recipe link -->
-  <% if current_user.chef == nil %>
-  <%= link_to "Become a chef", new_chef_path, class: "btn button mt-4" %>
-  <% end %>
-  <!--  -->
+<!-- booking confirmation -->
+<div class="container shadow-sm ">
+  <div class="row booking-confirm mt-4 text-center">
+    <div class="col-12 card card-body pb-2 pt-3">
+      <h4>Booking #<%= @bookings[-1].id %></h4>
+      <h5><%= @bookings[-1].recipe.name %></h5>
+        <p><%= @bookings[-1].date.strftime("%B %e, %Y") %> <%= @bookings[-1].start_time.strftime("%I:%M%p") %> - <%= @bookings[-1].start_time.strftime("%I:%M%p") %></p>
+    </div>
+    <div class="col-6 card card-body pb-1 pt-2">
+      <p><%= link_to "Accept" %></p>
+    </div>
+    <div class="col-6 card card-body pb-1 pt-2">
+      <p><%= link_to "Decline" %></p>
+    </div>
+  </div>
 </div>
+
+<!-- collapse menu -->
+
+  <div id="accordion" class="my-4 shadow-sm">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0 text-center">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Booking History
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        <div class="conatiner" >
+          <%= link_to "My Bookings", bookings_path, class: "btn btn-light mb-4 shadow-sm " %>
+        </div>
+       <!-- booking history -->
+        <% @bookings.each do |booking| %>
+         <p>Booking #<%= booking.id %> | Chef <%= booking.recipe.chef.user.first_name %> <%= booking.recipe.chef.user.last_name %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0 text-center">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          My Chef Reviews
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        <% current_user.chef_reviews.each do |chef_review|
+          %>
+            <h5 class="mb-0">Chef <%= chef_review.chef.user.first_name %> <%= chef_review.chef.user.last_name %></h5 >
+            <p>Rating: <%= chef_review.rating %> |  <%= chef_review.content %></p>
+            <hr>
+          <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0 text-center">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          My Recipe Reviews
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        <% current_user.recipe_reviews.each do |recipe_review|
+          %>
+            <h5 class="mb-0"><%= recipe_review.recipe.name %></h5 >
+            <p>Rating: <%= recipe_review.rating %> |  <%= recipe_review.content %></p>
+            <hr>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+

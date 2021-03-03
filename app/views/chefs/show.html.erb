@@ -2,20 +2,20 @@
 <div class="container  px-3 py-3 chef-info">
   <div class="container">
     <div class="row align-items-end justify-content-between">
-      <div class="col-6 col-md-8 text-center">
+      <div class="col-6 col-md-8 text-center mt-3">
         <h1><%= @chef.user.first_name %> <%= @chef.user.last_name %></h1>
-        <p>chef job title (need column)</p>
-        <p>chef restaurant name (need column)</p>
+        <h4><%= @chef.job_title %></h4>
+        <h5> <%= @chef.restaurant%></h5>
         <p>⭐️⭐️⭐️⭐️⭐️</p>
       </div>
       <div class="col-6 col-md-4">
-        <%= cl_image_tag @chef.user.photo.key, width: 200, height: 200,  crop: :fill, class: "chef-avatar"  %>
+        <%= cl_image_tag @chef.user.photo.key, width: 175, height: 175,  crop: :fill, class: "chef-avatar mb-4"  %>
       </div>
     </div>
   </div>
 
   <div class="container mt-3 col-12">
-    <p>(need column) Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Quaerat dolore repellendus corrupti sapiente recusandae fugiat accusamus, vero, quo deserunt nemo, cupiditate, dolorum nihil libero similique laborum sint aperiam iusto accusantium.</p>
+    <p><%= @chef.introduction %></p>
   </div>
 </div>
 
@@ -23,8 +23,11 @@
 <!-- intro video / using animage as placeholdher until we can add a video-->
 <div class="container">
   <h3 class="text-center">Chef intro</h3>
-  <iframe class="chef-video" width="80%" height="400" src= "https://youtu.be/8V-R4f1QXds" frameborder="0" allowfullscreen></iframe>
+  <img width=100%  src="https://images.pexels.com/photos/3771106/pexels-photo-3771106.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+  <%# <iframe class="chef-video" width="80%" height="400" src= "https://youtu.be/8V-R4f1QXds" frameborder="0" allowfullscreen></iframe> %>
 </div>
+
+
 
 <hr>
 <!-- chef recipes -->
@@ -41,7 +44,7 @@
           <div class="container mt-2">
             <div class="row">
               <div class="col-6 pl-0"><p><span class="mr-3"><%= recipe.cuisine %></span> ⭐️⭐️⭐️⭐️</p></div>
-              <div class="col-6"><span>Cook time: <%= recipe.cook_time %> mins</span></div>
+              <div class="col-6"><span>Est cook time: <%= recipe.cook_time %> mins</span></div>
             </div>
           </div>
 
@@ -61,7 +64,7 @@
     <%= cl_image_tag review.booking.user.photo.key, class: "avatar-large" %>
     <div class="notification-content">
       <p class="my-0"><strong><%= review.booking.user.first_name %> <%= review.booking.user.last_name %></strong></p>
-      <p><span><%= review.created_at.strftime("%B %e, %Y") %> |</span>  <%= review.rating.blank? ? "0 reviews" : "⭐️" * review.rating %></p>
+      <p><span><%= review.created_at.strftime("%B %e, %Y") %> |</span>  <%= review.rating.blank? ? "" : "⭐️" * review.rating %></p>
       <p><%= review.content %></p>
     </div>
   </div>
