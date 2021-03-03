@@ -2,19 +2,32 @@
   <div class="container text-center card py-3">
     <div class="row">
       <div class="col-12">
-        <h1>Dashboard</h1>
         <%= cl_image_tag current_user.photo.key, width: 175, height: 175,  crop: :fill, class: "chef-avatar mb-4"  %>
        </div>
        <div class="col-12">
+        <h1 class="user-dash-name" ><%= current_user.first_name %> <%= current_user.last_name %></h1>
           <!-- create chef link -->
         <% if current_user.chef == nil %>
-        <%= link_to "Become a chef", new_chef_path, class: "btn button mt-4" %>
+        <%= link_to "Become a chef", new_chef_path, class: "btn btn-light mt-2" %>
         <% end %>
       </div>
     </div>
   </div>
 
+<!-- booking confirmation -->
+<div class="container">
+  <div class="row">
+    <div class="col-4">
 
+    </div>
+    <div class="col-4">
+
+    </div>
+    <div class="col-4">
+
+    </div>
+  </div>
+</div>
 
 <!-- collapse menu -->
 
@@ -30,8 +43,8 @@
 
     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
       <div class="card-body">
-        <div class="conatiner text-center">
-          <%= link_to "My Bookings", bookings_path, class: "btn button mb-4" %>
+        <div class="conatiner" >
+          <%= link_to "My Bookings", bookings_path, class: "btn btn-light mb-4" %>
         </div>
        <!-- booking history -->
         <% @bookings.each do |booking| %>
