@@ -14,3 +14,11 @@ body {
   background-color: #290149;
 }
 
+
+.footer-links a{
+  color: #A288E3;
+
+  &:hover{
+    color:white;
+  }
+}

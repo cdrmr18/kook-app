@@ -4,11 +4,11 @@
       <div class="container">
         <div class="card-category recipe-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path recipe.photo.key%>)"><%= link_to recipe.name, recipe_path(recipe),class: "recipe-link" %>
         </div>
-        <div class="recipe-info card-body pb-0">
+        <div class="recipe-info card-body pb-0 effect1">
           <div class="row">
               <div class="col-6">
                 <p><%= recipe.cuisine %></p>
-                <p><%= recipe.cook_time %> mins</p>
+                <p><i class="far fa-clock "></i> <%= recipe.cook_time %> mins</p>
               </div>
               <div class="col-6">
                 <p><%= recipe.recipe_reviews.blank? ? "✩ 0 reviews" : "⭐️" * recipe.recipe_reviews.average(:rating).round(2) %> </p>
@@ -20,3 +20,5 @@
   <% end %>
 </div>
 <!--  -->
+
+
