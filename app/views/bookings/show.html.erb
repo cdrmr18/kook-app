@@ -1,7 +1,7 @@
 <!-- booking details -->
 <div class=" card container pt-3">
     <h1>Booking #<%= @booking.id %></h1>
-    <h2> Chef <%= @booking.recipe.chef.user.first_name %> <%= @booking.recipe.chef.user.last_name %></h2>
+    <h3> Chef <%= @booking.recipe.chef.user.first_name %> <%= @booking.recipe.chef.user.last_name %></h3>
     <h3><%= @booking.date.strftime('%B %d, %Y') %></h3>
     <h5 class="card-text mb-0">Start Time: <%= @booking.start_time.strftime("%I:%M%p") %></h5>
               <h5>End Time: <%= @booking.end_time.strftime("%I:%M%p") %></h5>
@@ -17,16 +17,21 @@
   <% if @booking.chef_review.blank? %>
       <%= link_to "Add Chef Review", new_booking_chef_review_path(@booking), class: "btn button ml-2" %> </p>
   <% else %>
-    <p>Thanks for your review!</p>
-    <p>Rating: <%=  @booking.chef_review.rating %> Content: <%=  @booking.chef_review.content %></p>
+    <div class="container card mb-4 px-2 py-2">
+        <h5>Thanks for your review!</h5>
+        <h5 class="mb-0"><%= @booking.chef_review.created_at.strftime("%B %e, %Y") %></h5>
+        <p><strong>Rating: </strong> <%=  @booking.chef_review.rating %> | <strong>Content: </strong> <%=  @booking.chef_review.content %></p>
+    </div>
   <% end %>
-
   <p> <%= cl_image_tag @booking.recipe.photo.key, width: 200, height: 200, crop: :fill %>
     <% if @booking.recipe_review.blank? %>
     <%= link_to "Add Recipe Review", new_booking_recipe_review_path(@booking), class: "btn button ml-2" %> </p>
     <% else %>
-    <p>Thanks for your review!</p>
-    <p>Rating: <%=  @booking.recipe_review.rating %> Content: <%=  @booking.recipe_review.content %></p>
+      <div class="container card mb-4 px-2 py-2">
+        <h5>Thanks for your review!</h5>
+        <h5 class="mb-0"><%= @booking.chef_review.created_at.strftime("%B %e, %Y") %></h5>
+        <p><strong>Rating: </strong> <%=  @booking.recipe_review.rating %> | <strong>Content: </strong>  <%=  @booking.recipe_review.content %></p>
+      </div>
     <% end %>
 </div>
 
