@@ -13,7 +13,7 @@
   <div id="accordion">
   <div class="card mt-4">
     <div class="card-header" id="headingOne">
-      <h5 class="mb-0">
+      <h5 class="mb-0 text-center">
         <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           Booking History
         </button>
@@ -22,7 +22,9 @@
 
     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
       <div class="card-body">
-        <%= link_to "My Bookings", bookings_path, class: "btn button mb-4" %>
+        <div class="conatiner text-center">
+          <%= link_to "My Bookings", bookings_path, class: "btn button mb-4" %>
+        </div>
        <!-- booking history -->
         <% @bookings.each do |booking| %>
          <p>Booking #<%= booking.id %> | Chef <%= booking.recipe.chef.user.first_name %> <%= booking.recipe.chef.user.last_name %></p>
@@ -32,25 +34,28 @@
   </div>
   <div class="card">
     <div class="card-header" id="headingTwo">
-      <h5 class="mb-0">
+      <h5 class="mb-0 text-center">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          My Reviews
+          My Chef Reviews
         </button>
       </h5>
     </div>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
       <div class="card-body">
-
-
-
+        <% current_user.chef_reviews.each do |chef_review|
+          %>
+            <h5 class="mb-0">Chef <%= chef_review.chef.user.first_name %> <%= chef_review.chef.user.last_name %></h5 >
+            <p><%= chef_review.rating %> |  <%= chef_review.content %></p>
+            <hr>
+          <% end %>
       </div>
     </div>
   </div>
   <div class="card">
     <div class="card-header" id="headingThree">
-      <h5 class="mb-0">
+      <h5 class="mb-0 text-center">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Favourites
+          My Recipe Reviews
         </button>
       </h5>
     </div>
