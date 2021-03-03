@@ -1,12 +1,13 @@
 <div class="container mt-4">
-  <h1>Dashboard</h1>
+  <div class="container">
+    <h1>Dashboard</h1>
 
 
-  <!-- create recipe link -->
-  <% if current_user.chef == nil %>
-  <%= link_to "Become a chef", new_chef_path, class: "btn button mt-4" %>
-  <% end %>
-
+    <!-- create recipe link -->
+    <% if current_user.chef == nil %>
+    <%= link_to "Become a chef", new_chef_path, class: "btn button mt-4" %>
+    <% end %>
+  </div>
 
 <!-- collapse menu -->
 
@@ -45,7 +46,7 @@
         <% current_user.chef_reviews.each do |chef_review|
           %>
             <h5 class="mb-0">Chef <%= chef_review.chef.user.first_name %> <%= chef_review.chef.user.last_name %></h5 >
-            <p><%= chef_review.rating %> |  <%= chef_review.content %></p>
+            <p>Rating: <%= chef_review.rating %> |  <%= chef_review.content %></p>
             <hr>
           <% end %>
       </div>
@@ -61,9 +62,12 @@
     </div>
     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
       <div class="card-body">
-
-
-
+        <% current_user.recipe_reviews.each do |recipe_review|
+          %>
+            <h5 class="mb-0"><%= recipe_review.recipe.name %></h5 >
+            <p>Rating: <%= recipe_review.rating %> |  <%= recipe_review.content %></p>
+            <hr>
+          <% end %>
       </div>
     </div>
   </div>
