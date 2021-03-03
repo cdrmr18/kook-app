@@ -642,7 +642,7 @@ Measurement.create!(
 )
 Measurement.create!(
   recipe_id: slavo_one.id,
-  description: "300g (10 oz) ",
+  description: "300g (10 oz)",
   ingredient: "finely minced lamb (or pork mince if you prefer)"
 )
 Measurement.create!(
@@ -829,6 +829,368 @@ Measurement.create!(
   ingredient: "Some salt and pepper"
 )
 
+
+# ------------- NEW RECIPE: Slavo Bukich’s Baked Beans --------------- 
+
+Measurement.create!(
+  recipe_id: slavo_four.id,
+  description: "around 1lb",
+  ingredient: "white beans"
+)
+Measurement.create!(
+  recipe_id: slavo_four.id,
+  description: "1/5 lbs.",
+  ingredient: "onions"
+)
+Measurement.create!(
+  recipe_id: slavo_four.id,
+  description: "",
+  ingredient: "meat of your choice – generally people use bacon or sausages"
+)
+Measurement.create!(
+  recipe_id: slavo_four.id,
+  description: "",
+  ingredient: "garlic"
+)
+Measurement.create!(
+  recipe_id: slavo_four.id,
+  description: "",
+  ingredient: "oil"
+)
+Measurement.create!(
+  recipe_id: slavo_four.id,
+  description: "3 spoons",
+  ingredient: "flour and paprika powder mixture"
+)
+Measurement.create!(
+  recipe_id: slavo_four.id,
+  description: "",
+  ingredient: "seasonings – salt, pepper, parsley"
+)
+
+# --------- NEW RECIPE: JAMAL AL TAMIMI – Middle Eastern Cuisine -----------
+# --------- NEW RECIPE: JAMAL AL TAMIMI – hummus -----------
+Measurement.create!(
+  recipe_id: jamal_one.id,
+  description: "400 g",
+  ingredient: "can chickpeas, drained"
+)
+Measurement.create!(
+  recipe_id: jamal_one.id,
+  description: "80 ml",
+  ingredient: "extra virgin olive oil" 
+)
+Measurement.create!(
+  recipe_id: jamal_one.id,
+  description: "1-2",
+  ingredient: "fat garlic cloves, peeled and crushed"
+
+)
+Measurement.create!(
+  recipe_id: jamal_one.id,
+  description: "1",
+  ingredient: "lemon, juiced then ½ zested"
+)
+Measurement.create!(
+  recipe_id: jamal_one.id,
+  description: "3 tbsp",
+  ingredient: "tahini"
+  
+)
+Measurement.create!(
+  recipe_id: jamal_one.id,
+  description: "",
+  ingredient: "mixed crudités and toasted pitta bread, to serve (optional)"
+)
+
+
+# --------- NEW RECIPE: JAMAL AL TAMIMI – Tabbouleh -----------
+Measurement.create!(
+  recipe_id: jamal_two.id,
+  description: "",
+  ingredient: "Parsley (curly or flat-leaf)"
+  
+)
+Measurement.create!(
+  recipe_id: jamal_two.id,
+  description: "",
+  ingredient: "tomatoes"
+)
+Measurement.create!(
+  recipe_id: jamal_two.id,
+  description: "",
+  ingredient: "scallions"
+)
+Measurement.create!(
+  recipe_id: jamal_two.id,
+  description: "",
+  ingredient: "mint"
+)
+Measurement.create!(
+  recipe_id: jamal_two.id,
+  description: "",
+  ingredient: "bulgar wheat (or quinoa)"
+)
+Measurement.create!(
+  recipe_id: jamal_two.id,
+  description: "",
+  ingredient: "lemon"
+)
+Measurement.create!(
+  recipe_id: jamal_two.id,
+  description: "",
+  ingredient: "olive oil"
+)
+Measurement.create!(
+  recipe_id: jamal_two.id,
+  description: "",
+  ingredient: "salt"
+)
+Measurement.create!(
+  recipe_id: jamal_two.id,
+  description: "",
+  ingredient: "cinnamon and allspice"
+)
+
+
+# --------- NEW RECIPE: JAMAL AL TAMIMI – Manakeesh -----------
+Measurement.create!(
+  recipe_id: jamal_three.id,
+  description: "2 ¼ lb",
+  ingredient: "flour"
+)
+Measurement.create!(
+  recipe_id: jamal_three.id,
+  description: "2 cups",
+  ingredient: "warm water"
+)
+Measurement.create!(
+  recipe_id: jamal_three.id,
+  description: "",
+  ingredient: "Fresh zaater oil"
+)
+Measurement.create!(
+  recipe_id: jamal_three.id,
+  description: "2 tbsp",
+  ingredient: "dry yeast"
+)
+Measurement.create!(
+  recipe_id: jamal_three.id,
+  description: "4 tbsp",
+  ingredient: "olive oil"
+)
+Measurement.create!(
+  recipe_id: jamal_three.id,
+  description: "1/3 cup",
+  ingredient: "grated akawi cheese"
+)
+Measurement.create!(
+  recipe_id: jamal_three.id,
+  description: "1 tbsp",
+  ingredient: "salt"
+)
+
+
+# --------- NEW RECIPE: JAMAL AL TAMIMI – Kambsa -----------
+Measurement.create!(
+  recipe_id: jamal_four.id,
+  description: "1 kg",
+  ingredient: "chicken (cut into pieces)"
+)
+Measurement.create!(
+  recipe_id: jamal_four.id,
+  description: "¼ ",
+  ingredient: "cup vegetable oil"
+)
+Measurement.create!(
+  recipe_id: jamal_four.id,
+  description: "2",
+  ingredient: "sliced onion"
+)
+Measurement.create!(
+  recipe_id: jamal_four.id,
+  description: "12 oz",
+  ingredient: "tomato puree"
+)
+Measurement.create!(
+  recipe_id: jamal_four.id,
+  description: "2 medium",
+  ingredient: "chopped tomatoes"
+)
+Measurement.create!(
+  recipe_id: jamal_four.id,
+  description: "4",
+  ingredient: "chopped cloves of garlic"
+)
+Measurement.create!(
+  recipe_id: jamal_four.id,
+  description: "2",
+  ingredient: "grated carrot"
+)
+Measurement.create!(
+  recipe_id: jamal_four.id,
+  description: "1",
+  ingredient: "grated orange"
+)
+Measurement.create!(
+  recipe_id: jamal_four.id,
+  description: "",
+  ingredient: "4 cloves"
+)
+Measurement.create!(
+  recipe_id: jamal_four.id,
+  description: "4",
+  ingredient: "Cardamom"
+)
+Measurement.create!(
+  recipe_id: jamal_four.id,
+  description: "3",
+  ingredient: "Cinnamon sticks"
+)
+Measurement.create!(
+  recipe_id: jamal_four.id,
+  description: "",
+  ingredient: "Pepper and salt to taste"
+)
+Measurement.create!(
+  recipe_id: jamal_four.id,
+  description: "1 kg",
+  ingredient: "rice"
+)
+Measurement.create!(
+  recipe_id: jamal_four.id,
+  description: "¼ cup",
+  ingredient: "Raisins" 
+)
+Measurement.create!(
+  recipe_id: jamal_four.id,
+  description: "¼ cup",
+  ingredient: "sliced almonds"
+)
+
+# --------- NEW RECIPE: JAMAL AL TAMIMI – Falafel -----------
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "1 lb",
+  ingredient: "dry peeled fava beans"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "¾ lbs",
+  ingredient: "dried chickpeas (aka Garbanzo beans)"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "1 bunch",
+  ingredient: "Italian parsley (chop away the stems)"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "2 bunches",
+  ingredient: "green cilantro (chop away the stems)"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "8-10 cloves",
+  ingredient: "freshly peeled garlic, crushed"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "1",
+  ingredient: "large red or yellow onion"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "1 bunch",
+  ingredient: "green onions"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "2 table spoons",
+  ingredient: "salt"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "A dash",
+  ingredient: "black pepper"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "2 table spoons",
+  ingredient: "flour"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "1 teaspoon",
+  ingredient: "baking soda"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "1 teaspoon",
+  ingredient: "cumin"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "3 teaspoons",
+  ingredient: "Coriander"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "",
+  ingredient: "Falafel Tahini Sauce Ingredients"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "1 dash",
+  ingredient: "red chilli pepper (optional, if spicy falafel is desired)"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "2 table spoons",
+  ingredient: "Tahini Paste"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "1 cup",
+  ingredient: "freshly squeezed Lemon Juice"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "3 cloves",
+  ingredient: "garlic, crushed"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "",
+  ingredient: "a dash of salt"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "",
+  ingredient: "(Optional) Falafel Serving Sides"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "",
+  ingredient: "Salty Lebanese Pickles (cucumbers, turnips, pickled chilli peppers)" 
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "",
+  ingredient: "Tomatoes"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "",
+  ingredient: "Chopped fresh Italian parsley"
+)
+Measurement.create!(
+  recipe_id: jamal_five.id,
+  description: "",
+  ingredient: "Pita bread"
+)
+
+# --------- NEW RECIPE: Samuel De Grasses Moroccan chicken rfissa -----------
 
 # 1.  Samuel De Grasses Moroccan chicken rfissa
 # For the Chicken:
@@ -1508,137 +1870,137 @@ Measurement.create!(
 )
 
 Measurement.create!(
-  recipe_id: chaz_four.id,
+  recipe_id: chaz_five.id,
   description: "1 tablespoon",
   ingredient: "corriander, fennel and black peppercorn seeds"
 )
 
 
 Measurement.create!(
-  recipe_id: chaz_four.id,
+  recipe_id: chaz_five.id,
   description: "1",
   ingredient: "star anise"
 )
 
 
 Measurement.create!(
-  recipe_id: chaz_four.id,
+  recipe_id: chaz_five.id,
   description: "1",
   ingredient: "cinnamon quill"
 )
 
 Measurement.create!(
-  recipe_id: chaz_four.id,
+  recipe_id: chaz_five.id,
   description: "4",
   ingredient: "garlic cloves"
 )
 
 Measurement.create!(
-  recipe_id: chaz_four.id,
+  recipe_id: chaz_five.id,
   description: "1",
   ingredient: "bunch of thyme"
 )
 
 Measurement.create!(
-  recipe_id: chaz_four.id,
+  recipe_id: chaz_five.id,
   description: "1",
   ingredient: "lemon"
 )
 
 Measurement.create!(
-  recipe_id: chaz_four.id,
+  recipe_id: chaz_five.id,
   description: "150g",
   ingredient: "baby fennel"
 )
 
 Measurement.create!(
-  recipe_id: chaz_four.id,
+  recipe_id: chaz_five.id,
   description: "250ml",
   ingredient: "milk"
 )
 
 Measurement.create!(
-  recipe_id: chaz_four.id,
+  recipe_id: chaz_five.id,
   description: "50g",
   ingredient: "butter"
 )
 
 Measurement.create!(
-  recipe_id: chaz_four.id,
+  recipe_id: chaz_five.id,
   description: "2kg",
   ingredient: "duck bones"
 )
 
 Measurement.create!(
-  recipe_id: chaz_four.id,
+  recipe_id: chaz_five.id,
   description: "300ml",
   ingredient: "red wine"
 )
 
 
 Measurement.create!(
-  recipe_id: chaz_four.id,
+  recipe_id: chaz_five.id,
   description: "2L",
   ingredient: "water"
 )
 
 Measurement.create!(
-  recipe_id: chaz_four.id,
+  recipe_id: chaz_five.id,
   description: "2",
   ingredient: "roasted carrots"
 )
 
 Measurement.create!(
-  recipe_id: chaz_four.id,
+  recipe_id: chaz_five.id,
   description: "1",
   ingredient: "onion"
 )
 
 Measurement.create!(
-  recipe_id: chaz_four.id,
+  recipe_id: chaz_five.id,
   description: "2",
   ingredient: "leeks"
 )
 
 
 Measurement.create!(
-  recipe_id: chaz_four.id,
+  recipe_id: chaz_five.id,
   description: "3",
   ingredient: "sprigs thyme"
 )
 
 Measurement.create!(
-  recipe_id: chaz_four.id,
+  recipe_id: chaz_five.id,
   description: "3",
   ingredient: "bay leaves"
 )
 
 Measurement.create!(
-  recipe_id: chaz_four.id,
+  recipe_id: chaz_five.id,
   description: "3",
   ingredient: "pods of cardomom"
 )
 
 Measurement.create!(
-  recipe_id: chaz_four.id,
+  recipe_id: chaz_five.id,
   description: "1",
   ingredient: "plum"
 )
 
 Measurement.create!(
-  recipe_id: chaz_four.id,
+  recipe_id: chaz_five.id,
   description: "30g",
   ingredient: "raw sugar"
 )
 
 Measurement.create!(
-  recipe_id: chaz_four.id,
+  recipe_id: chaz_five.id,
   description: "300g",
   ingredient: "raw chestnuts"
 )
 
 Measurement.create!(
-  recipe_id: chaz_four.id,
+  recipe_id: chaz_five.id,
   description: "170ml",
   ingredient: "double cream"
 )
@@ -1647,108 +2009,108 @@ Measurement.create!(
 # --------Lamb Karaage Sliders with Wasabi Mayo ----------------
 
 Measurement.create!(
-  recipe_id: chaz_five.id,
+  recipe_id: chaz_six.id,
   description: "1",
   ingredient: "lamb backstrap s.create! removed"
 )
 
 Measurement.create!(
-  recipe_id: chaz_five.id,
+  recipe_id: chaz_six.id,
   description: "1 tablespoon",
   ingredient: "fresh ginger grated"
 )
 
 Measurement.create!(
-  recipe_id: chaz_five.id,
+  recipe_id: chaz_six.id,
   description: "1",
   ingredient: "garlic clove crushed"
 )
 
 
 Measurement.create!(
-  recipe_id: chaz_five.id,
+  recipe_id: chaz_six.id,
   description: "2 tablespoons",
   ingredient: "soy sauce"
 )
 
 Measurement.create!(
-  recipe_id: chaz_five.id,
+  recipe_id: chaz_six.id,
   description: "1 tablespoon",
   ingredient: "sake"
 )
 
 Measurement.create!(
-  recipe_id: chaz_five.id,
+  recipe_id: chaz_six.id,
   description: "2 teaspoon",
   ingredient: "sugar"
 )
 
 Measurement.create!(
-  recipe_id: chaz_five.id,
+  recipe_id: chaz_six.id,
   description: "1 cup",
   ingredient: "potato starch"
 )
 
 
 Measurement.create!(
-  recipe_id: chaz_five.id,
+  recipe_id: chaz_six.id,
   description: "enough",
   ingredient: "vegetable oil for deep frying"
 )
 
 
 Measurement.create!(
-  recipe_id: chaz_five.id,
+  recipe_id: chaz_six.id,
   description: "1 cup",
   ingredient: "fine shredded white cabbage"
 )
 
 
 Measurement.create!(
-  recipe_id: chaz_five.id,
+  recipe_id: chaz_six.id,
   description: "1 cup",
   ingredient: "fine shredded purple cabbage"
 )
 
 Measurement.create!(
-  recipe_id: chaz_five.id,
+  recipe_id: chaz_six.id,
   description: "2",
   ingredient: "shallots finely sliced"
 )
 
 Measurement.create!(
-  recipe_id: chaz_five.id,
+  recipe_id: chaz_six.id,
   description: "1 tablespoon",
   ingredient: "wasabi paste, use to taste"
 )
 
 Measurement.create!(
-  recipe_id: chaz_five.id,
+  recipe_id: chaz_six.id,
   description: "1 cup",
   ingredient: "mayonnaise"
 )
 
 
 Measurement.create!(
-  recipe_id: chaz_five.id,
+  recipe_id: chaz_six.id,
   description: "1",
   ingredient: "lime juiced"
 )
 
 Measurement.create!(
-  recipe_id: chaz_five.id,
+  recipe_id: chaz_six.id,
   description: "to taste",
   ingredient: "salt"
 )
 
 Measurement.create!(
-  recipe_id: chaz_five.id,
+  recipe_id: chaz_six.id,
   description: "2",
   ingredient: "radish finely sliced"
 )
 
 Measurement.create!(
-  recipe_id: chaz_five.id,
+  recipe_id: chaz_six.id,
   description: "6",
   ingredient: "slider buns cut in half"
 )
