@@ -9,7 +9,18 @@
     transition-delay: .08s;
   }
 }
+.button-delete {
+  background-color: #fc494c;
+  opacity: 0.8;
+  color: white;
 
+  &:hover {
+    background-color: #fc494c;
+    color: white;
+    transition-timing-function: linear;
+    transition-delay: .08s;
+  }
+}
 
 #search-btn{
   background-color: #A288E3;
@@ -18,6 +29,7 @@
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+
 
 .button-book{
   border-radius: 20px;

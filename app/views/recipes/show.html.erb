@@ -1,7 +1,6 @@
 <!-- recipe image -->
 <div class="banner my-0" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(<%= cl_image_path @recipe.photo.key %>);">
   <div class="container">
-  
   </div>
 </div>
 <!--  -->
@@ -15,7 +14,7 @@
 <!-- recipe details -->
 <div class="container recipe-details">
   <h4> Recipe Courtesy of <%=  link_to @chef_name, chef_path(@recipe.chef) %></h4>
-  <p class="text-center"><%= link_to "Favorite"%></p>
+  <p class="text-center"><%= link_to "♥️"%></p>
   <p class="text-center"><%= @recipe.recipe_reviews.blank? ? "" : "⭐️" * @recipe.recipe_reviews.average(:rating).round(2) %></p>
   <div class="container">
     <p><i class="far fa-clock "></i> <strong>Cook time:</strong> <%= @recipe.cook_time %> mins</p>

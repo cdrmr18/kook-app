@@ -139,31 +139,52 @@ puts "#{User.count} users created"
 # -------- CHEFS START ----------------
 puts 'creating chefs...'
 bec_chef = Chef.create!(
+  restaurant: Faker::Restaurant.name,
+  job_title: "Sous Chef",
+  introduction: "To ensure that each guest receives prompt, professional, friendly and courteous service. To provide nutritional, well-prepared meals – using only quality ingredients.",
   cuisine: 'Thai',
   user_id: bec.id,
   )
 
 chaz_chef = Chef.create!(
+  restaurant: Faker::Restaurant.name,
+  job_title: "Executive Chef",
+  introduction: "I am committed to offer a locally differentiated cooking experience to its customers in each of its markets, to deliver superior value and to maintain high social, environmental and ethical standards.",
   cuisine: 'Modern Australian',
   user_id: chaz.id,
   )
 jamal_chef = Chef.create!(
+  restaurant: Faker::Restaurant.name,
+  job_title: "Head Chef",
+  introduction: " To consistently provide our customers with impeccable service by demonstrating warmth, graciousness, efficiency, knowledge, professionalism and integrity in our work. ",
   cuisine: 'Middle Eastern',
   user_id: jamal.id,
   )
 roger_chef = Chef.create!(
+  restaurant: Faker::Restaurant.name,
+  job_title: "Chef de Cuisine",
+  introduction: "To cook delicious and remarkable food. That the food we make together meets the highest standards of quality, freshness and seasonality and combines both modern-creative and traditional southern styles of cooking.",
   cuisine: 'French',
   user_id: roger.id,
   )
 samuel_chef = Chef.create!(
+  restaurant: Faker::Restaurant.name,
+  job_title: "Executive Chef ",
+  introduction: "My mission has been to help people achieve their health and wellness goals through delicious and well balanced North African cuisine.",
   cuisine: 'North African',
   user_id: samuel.id,
   )
 slavo_chef = Chef.create!(
+  restaurant: Faker::Restaurant.name,
+  job_title: "Head Chef",
+  introduction: "All our my recipes shall be of the highest quality, healthy, nutritious and provided with outstanding personal services. Creating the structure and systems needed to allow our users access to the majority of their away-from-home daily meals right at home .",
   cuisine: 'Balkan',
   user_id: slavo.id,
   )
 luis_chef = Chef.create!(
+  restaurant: Faker::Restaurant.name,
+  job_title: "Sous Chef",
+  introduction: "To provide an exceptional learning experience that satisfies our users grown-up tastes by being a Cut-Above in everything I do. Services shall be delivered consistently and measured one satisfied customer at a time.",
   cuisine: 'Balkan',
   user_id: luis.id,
   )
@@ -611,7 +632,602 @@ puts "#{Recipe.count} recipes created"
 
 # --- ---- --- -- --- --- -- -- --- -- -- -- -- -- -- -- -- -- --- -- -- -- -- -- --
 
+puts "Creating ingredients & measurements"
+
 # -------- MEASUREMETNS START ----------------
+Measurement.create!(
+  recipe_id: slavo_one.id,
+  description: "600 g",
+  ingredient: "finely minced beef"
+)
+Measurement.create!(
+  recipe_id: slavo_one.id,
+  description: "300g (10 oz) ",
+  ingredient: "finely minced lamb (or pork mince if you prefer)"
+)
+Measurement.create!(
+  recipe_id: slavo_one.id,
+  description: "3",
+  ingredient: "cloves of garlic (Minced)"
+)
+Measurement.create!(
+  recipe_id: slavo_one.id,
+  description: "1 teaspoon",
+  ingredient: "fine salt"
+)
+Measurement.create!(
+  recipe_id: slavo_one.id,
+  description: "1 teaspoon",
+  ingredient: "black pepper"
+)
+Measurement.create!(
+  recipe_id: slavo_one.id,
+  description: "1",
+  ingredient: "Slavo Bukich’s roast pork shoulder"
+)
+Measurement.create!(
+  recipe_id: slavo_one.id,
+  description: "1",
+  ingredient: "Turkish-style Flatbread"
+)
+Measurement.create!(
+  recipe_id: slavo_one.id,
+  description: "1",
+  ingredient: "Chopped raw onions"
+)
+Measurement.create!(
+  recipe_id: slavo_one.id,
+  description: "4 oz",
+  ingredient: "Ajvar (see the notes for the recipe)"
+)
+# ------------- NEW RECIPE ---------------
+# 7 pound Pork Shoulder; Skin On Take Bone Out
+# •	1/2 pound Bacon, apple smoked
+# •	4 cups Kosher salt
+# •	2 cups Sugar ; Light Brown or Regular
+# •	1 cup Garlic ; chopped
+# •	2 ea Onion
+# •	2 tablespoon Paprika ; sweet or hot
+# •	3 galons Water
+# •	1 tablespoon Pepper Whole or Ground
+# Measurement.create!(
+#   recipe_id: ,
+#   description: ,
+#   ingredient:
+#   )
+# Measurement.create!(
+#   recipe_id: ,
+#   description: ,
+#   ingredient:
+#   )
+# Measurement.create!(
+#   recipe_id: ,
+#   description: ,
+#   ingredient:
+#   )
+# Measurement.create!(
+#   recipe_id: ,
+#   description: ,
+#   ingredient:
+#   )
+# Measurement.create!(
+#   recipe_id: ,
+#   description: ,
+#   ingredient:
+#   )
+# Measurement.create!(
+#   recipe_id: ,
+#   description: ,
+#   ingredient:
+#   )
+# Measurement.create!(
+#   recipe_id: ,
+#   description: ,
+#   ingredient:
+#   )
+# Measurement.create!(
+#   recipe_id: ,
+#   description: ,
+#   ingredient:
+#   )
+# Measurement.create!(
+#   recipe_id: ,
+#   description: ,
+#   ingredient:
+#   )
+# Measurement.create!(
+#   recipe_id: ,
+#   description: ,
+#   ingredient:
+#   )
+
+# ------------- NEW RECIPE: Slavo Bukich’s Bosnian pot ---------------
+
+Measurement.create!(
+  recipe_id: slavo_three.id,
+  description: "1 kg",
+  ingredient: "mixed meat (beef, pork, lamb)"
+)
+Measurement.create!(
+  recipe_id: slavo_three.id,
+  description: "2 dl",
+  ingredient: "oil (or grease if preferred)"
+)
+Measurement.create!(
+  recipe_id: slavo_three.id,
+  description: "1",
+  ingredient: "big onion"
+)
+Measurement.create!(
+  recipe_id: slavo_three.id,
+  description: "6 cloves",
+  ingredient: "garlic"
+)
+Measurement.create!(
+  recipe_id: slavo_three.id,
+  description: "700 g",
+  ingredient: "potato chopped to larger cubes"
+)
+Measurement.create!(
+  recipe_id: slavo_three.id,
+  description: "200 g",
+  ingredient: "carrot largely chopped to rings"
+)
+Measurement.create!(
+  recipe_id: slavo_three.id,
+  description: "100 g",
+  ingredient: "greens (parsley, parsnip, celery) finely chopped"
+)
+Measurement.create!(
+  recipe_id: slavo_three.id,
+  description: "150 g",
+  ingredient: "roughly cut cabbage"
+)
+Measurement.create!(
+  recipe_id: slavo_three.id,
+  description: "100 g",
+  ingredient: "fresh paprika (yellow, green, red)"
+)
+Measurement.create!(
+  recipe_id: slavo_three.id,
+  description: "100 g",
+  ingredient: "peas"
+)
+Measurement.create!(
+  recipe_id: slavo_three.id,
+  description: "100 g",
+  ingredient: "pods"
+)
+Measurement.create!(
+  recipe_id: slavo_three.id,
+  description: "100 g",
+  ingredient: "okra (if it’s dry first you have to cook it and if it is fresh or frozen put it directly into pot)"
+)
+Measurement.create!(
+  recipe_id: slavo_three.id,
+  description: "150 g",
+  ingredient: "tomato or a few tiny pieces"
+)
+Measurement.create!(
+  recipe_id: slavo_three.id,
+  description: "150 g",
+  ingredient: "largely cut zucchini"
+)
+Measurement.create!(
+  recipe_id: slavo_three.id,
+  description: "2 dl",
+  ingredient: "vine"
+)
+Measurement.create!(
+  recipe_id: slavo_three.id,
+  description: "2 litres",
+  ingredient: "hot water"
+)
+Measurement.create!(
+  recipe_id: slavo_three.id,
+  description: "Pinch",
+  ingredient: "Some salt and pepper"
+)
+
+
+# 1.  Samuel De Grasses Moroccan chicken rfissa
+# For the Chicken:
+Measurement.create!(
+  recipe_id: samuel_one.id,
+  description: '1',
+  ingredient: 'chicken (quartered or left whole)'
+)
+Measurement.create!(
+  recipe_id: samuel_one.id,
+  description: '2 to 3',
+  ingredient: 'large onions (thinly sliced)'
+)
+Measurement.create!(
+  recipe_id: samuel_one.id,
+  description: '1/3',
+  ingredient: 'cup olive oil'
+)
+Measurement.create!(
+  recipe_id: samuel_one.id,
+  description: '2',
+  ingredient: 'teaspoons salt'
+)
+Measurement.create!(
+  recipe_id: samuel_one.id,
+  description: '2',
+  ingredient: 'teaspoons blackpepper'
+)
+Measurement.create!(
+  recipe_id: samuel_one.id,
+  description: '1',
+  ingredient: 'tablespoon ginger'
+)
+Measurement.create!(
+  recipe_id: samuel_one.id,
+  description: '2',
+  ingredient: 'teaspoons ras el hanout'
+)
+Measurement.create!(
+  recipe_id: samuel_one.id,
+  description: '1',
+  ingredient: 'teaspoon tumeric'
+)
+Measurement.create!(
+  recipe_id: samuel_one.id,
+  description: '1',
+  ingredient: 'teaspoon saffron threads (heated gently and then crumbled)'
+)
+# For the Lentils:
+Measurement.create!(
+  recipe_id: samuel_one.id,
+  description: '1/2',
+  ingredient: 'cup lentils (uncooked)'
+)
+Measurement.create!(
+  recipe_id: samuel_one.id,
+  description: '2',
+  ingredient: 'tablespoons fenugreek seeds (soaked overnight and drained)'
+)
+Measurement.create!(
+  recipe_id: samuel_one.id,
+  description: '1',
+  ingredient: 'teaspoon saffron threads (heated gently and then crumbled)'
+)
+Measurement.create!(
+  recipe_id: samuel_one.id,
+  description: '1',
+  ingredient: 'small bunch cilantro (finely chopped)'
+)
+Measurement.create!(
+  recipe_id: samuel_one.id,
+  description: '1',
+  ingredient: 'small bunch parsley (finely chopped)'
+)
+Measurement.create!(
+  recipe_id: samuel_one.id,
+  description: '3',
+  ingredient: 'cups water'
+)
+Measurement.create!(
+  recipe_id: samuel_one.id,
+  description: '1',
+  ingredient: 'teaspoon smen (Moroccan preserved butter)'
+)
+# For the Msemen or Trid
+Measurement.create!(
+  recipe_id: samuel_one.id,
+  description: '1 to 1 1/2',
+  ingredient: 'batches msemen (or trid, cooked)'
+)
+# 2.  Samuel De Grasses Moroccan meatball soup
+
+Measurement.create!(
+  recipe_id: samuel_two.id,
+  description: '1/2',
+  ingredient: 'cup (40g) flaked almonds2 1/2 tbs olive oil'
+)
+Measurement.create!(
+  recipe_id: samuel_two.id,
+  description: '1',
+  ingredient: 'onion, finely chopped'
+)
+Measurement.create!(
+  recipe_id: samuel_two.id,
+  description: '2',
+  ingredient: 'garlic cloves, crushed'
+)
+Measurement.create!(
+  recipe_id: samuel_two.id,
+  description: '1',
+  ingredient: 'teaspoon each ground cinnamon and ground ginger'
+)
+Measurement.create!(
+  recipe_id: samuel_two.id,
+  description: '2',
+  ingredient: 'teaspoons ground cumin'
+)
+Measurement.create!(
+  recipe_id: samuel_two.id,
+  description: '1/2',
+  ingredient: 'bunch coriander, leaves picked, stems chopped'
+)
+Measurement.create!(
+  recipe_id: samuel_two.id,
+  description: '1/2',
+  ingredient: 'teaspoon dried chilli flakes'
+)
+Measurement.create!(
+  recipe_id: samuel_two.id,
+  description: '2',
+  ingredient: 'carrots, cut into 1cm pieces'
+)
+Measurement.create!(
+  recipe_id: samuel_two.id,
+  description: '2',
+  ingredient: 'zucchinis, cut into 1cm pieces'
+)
+Measurement.create!(
+  recipe_id: samuel_two.id,
+  description: '4',
+  ingredient: 'cups (1L) chicken stock or vegetable stock'
+)
+Measurement.create!(
+  recipe_id: samuel_two.id,
+  description: '500g',
+  ingredient: 'beef mince'
+)
+Measurement.create!(
+  recipe_id: samuel_two.id,
+  description: '1',
+  ingredient: 'egg, lightly beaten'
+)
+Measurement.create!(
+  recipe_id: samuel_two.id,
+  description: '2/3',
+  ingredient: 'cup (50g) fresh breadcrumbs'
+)
+Measurement.create!(
+  recipe_id: samuel_two.id,
+  description: '1',
+  ingredient: 'cup (200g) pearl (Israeli) couscous'
+)
+
+# 3.  Samuel De Grasses aromatic lamb with dates
+
+Measurement.create!(
+  recipe_id: samuel_three.id,
+  description: '1',
+  ingredient: 'tablespoon olive oil'
+)
+Measurement.create!(
+  recipe_id: samuel_three.id,
+  description: '1',
+  ingredient: 'onion, finely chopped'
+)
+Measurement.create!(
+  recipe_id: samuel_three.id,
+  description: '500g',
+  ingredient: 'diced boneless lean lamb , preferably from the leg'
+)
+Measurement.create!(
+  recipe_id: samuel_three.id,
+  description: '300g',
+  ingredient: 'sweet potatoes , cut into small chunks'
+)
+Measurement.create!(
+  recipe_id: samuel_three.id,
+  description: '2',
+  ingredient: 'teaspoons ground coriander'
+)
+Measurement.create!(
+  recipe_id: samuel_three.id,
+  description: '2',
+  ingredient: 'teaspoons ground coriander'
+)
+Measurement.create!(
+  recipe_id: samuel_three.id,
+  description: '1',
+  ingredient: 'tablespoon tomato purée'
+)
+Measurement.create!(
+  recipe_id: samuel_three.id,
+  description: '50g',
+  ingredient: 'pitted dates'
+)
+Measurement.create!(
+  recipe_id: samuel_three.id,
+  description: '2',
+  ingredient: 'tablespoons coriander , roughly chopped'
+)
+
+# 4.  Samuel De Grasses Morrocan roast lamb
+
+Measurement.create!(
+  recipe_id: samuel_four.id,
+  description: '1/2',
+  ingredient: 'leg of lamb , around 800g'
+)
+Measurement.create!(
+  recipe_id: samuel_four.id,
+  description: '2',
+  ingredient: 'red onions , cut into wedges'
+)
+Measurement.create!(
+  recipe_id: samuel_four.id,
+  description: '1',
+  ingredient: 'butternut squash , skin left on, cut into wedges'
+  )
+Measurement.create!(
+  recipe_id: samuel_four.id,
+  description: '1',
+  ingredient: 'celeriac, peeled and cut into wedges'
+)
+Measurement.create!(
+  recipe_id: samuel_four.id,
+  description: '2 1/2',
+  ingredient: 'tablespoons cold pressed rapeseed oil'
+)
+Measurement.create!(
+  recipe_id: samuel_four.id,
+  description: '2',
+  ingredient: 'tablespoons ras el hanout'
+)
+Measurement.create!(
+  recipe_id: samuel_four.id,
+  description: '8',
+  ingredient: 'garlic cloves , skin on'
+)
+Measurement.create!(
+  recipe_id: samuel_four.id,
+  description: '1',
+  ingredient: 'small bunch coriander'
+)
+Measurement.create!(
+  recipe_id: samuel_four.id,
+  description: '1',
+  ingredient: 'teaspoon cumin seeds'
+)
+Measurement.create!(
+  recipe_id: samuel_four.id,
+  description: '1',
+  ingredient: 'lemon , zested and juiced'
+)
+Measurement.create!(
+  recipe_id: samuel_four.id,
+  description: '1/2',
+  ingredient: 'green chilli , deseeded'
+)
+
+# 5.  Samuel De Grasses chicken tagine
+
+Measurement.create!(
+  recipe_id: samuel_five.id,
+  description: '2',
+  ingredient: 'tablespoons olive oil'
+)
+Measurement.create!(
+  recipe_id: samuel_five.id,
+  description: '8',
+  ingredient: 'skinless boneless chicken thighs, halved if large'
+)
+Measurement.create!(
+  recipe_id: samuel_five.id,
+  description: '1',
+  ingredient: 'onion, chopped'
+)
+Measurement.create!(
+  recipe_id: samuel_five.id,
+  description: '2',
+  ingredient: 'teaspoons grated fresh root ginger'
+)
+Measurement.create!(
+  recipe_id: samuel_five.id,
+  description: 'pinch',
+  ingredient: 'saffron or tumeric'
+)
+Measurement.create!(
+  recipe_id: samuel_five.id,
+  description: '1',
+  ingredient: 'tablespoon honey'
+)
+Measurement.create!(
+  recipe_id: samuel_five.id,
+  description: '400g',
+  ingredient: 'carrot, cut into sticks'
+)
+Measurement.create!(
+  recipe_id: samuel_five.id,
+  description: 'small',
+  ingredient: 'bunch parsley, roughly chopped'
+)
+Measurement.create!(
+  recipe_id: samuel_five.id,
+  description: 'lemon wedges',
+  ingredient: 'to serve'
+)
+
+# 6.  Samuel De Grasses Mixed-grain paella with lamb
+
+Measurement.create!(
+  recipe_id: samuel_six.id,
+  description: '2',
+  ingredient: 'tablespoons extra virgin olive oil'
+)
+Measurement.create!(
+  recipe_id: samuel_six.id,
+  description: '12',
+  ingredient: 'lamb cutlets'
+)
+Measurement.create!(
+  recipe_id: samuel_six.id,
+  description: '1',
+  ingredient: 'large red onion, thinly sliced'
+)
+Measurement.create!(
+  recipe_id: samuel_six.id,
+  description: '3',
+  ingredient: 'garlic cloves, chopped'
+)
+Measurement.create!(
+  recipe_id: samuel_six.id,
+  description: '1',
+  ingredient: 'tablespoon ras el hanout or Moroccan spice mix'
+)
+Measurement.create!(
+  recipe_id: samuel_six.id,
+  description: '140g',
+  ingredient: '(2/3 cup) brown basmati rice'
+)
+Measurement.create!(
+  recipe_id: samuel_six.id,
+  description: '75g',
+  ingredient: '(1/3 cup) pearl barley'
+)
+Measurement.create!(
+  recipe_id: samuel_six.id,
+  description: '70g',
+  ingredient: '(1/3 cup) quinoa or burghul'
+)
+Measurement.create!(
+  recipe_id: samuel_six.id,
+  description: '125ml',
+  ingredient: '(1/2 cup) tomato passata'
+)
+Measurement.create!(
+  recipe_id: samuel_six.id,
+  description: '1',
+  ingredient: 'tablespoon harissa paste or hot chilli sauce, or to taste'
+)
+Measurement.create!(
+  recipe_id: samuel_six.id,
+  description: '1L',
+  ingredient: '(4 cups) Massel chicken style liquid stock'
+)
+Measurement.create!(
+  recipe_id: samuel_six.id,
+  description: '80g',
+  ingredient: '(1/2 cup) currants'
+)
+Measurement.create!(
+  recipe_id: samuel_six.id,
+  description: '1 1/2',
+  ingredient: 'tablespoons chopped fresh mint, plus extra leaves, to serve'
+)
+Measurement.create!(
+  recipe_id: samuel_six.id,
+  description: '1 1/2',
+  ingredient: 'tablespoons chopped fresh dill, plus extra leaves, to serve'
+)
+Measurement.create!(
+  recipe_id: samuel_six.id,
+  description: 'tub',
+  ingredient: 'Greek-style yoghurt, to serve'
+)
+Measurement.create!(
+  recipe_id: samuel_six.id,
+  description: 'handfull',
+  ingredient: 'Pomegranate seeds, to serve (optional)'
+)
 
 # -------- Zuchini Fritters ----------------
 Measurement.create!(
@@ -637,20 +1253,20 @@ Measurement.create!(
   description: "2",
   ingredient: "tablespoon toasted cumin seeds"
   )
-    
+
 Measurement.create!(
   recipe_id: chaz_one.id,
   description: "3",
   ingredient: "eggs seperated"
   )
-    
+
 
 Measurement.create!(
   recipe_id: chaz_one.id,
   description: "50ml",
   ingredient: "olive oil"
 )
-  
+
 
 # -------- Hiramasa Salmon ----------------
 
@@ -1136,13 +1752,6 @@ Measurement.create!(
   description: "6",
   ingredient: "slider buns cut in half"
 )
-
-
-
-
-
-
-
 
 # -------- MEASUREMETNS END ----------------
 

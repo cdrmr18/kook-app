@@ -8,7 +8,7 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
-
+@import 'flatpickr/dist/flatpickr.css';
 // Your CSS partials
 @import "components/index";
 @import "pages";
@@ -16,10 +16,10 @@
 @import "registrations";
 @import "chefs";
 @import "recipes";
-
+@import "bookings";
 // general page styling
 body {
-  background-color: #eff4f2;
+  background-color: #f7f7f7;
 }
 
 // search scss
@@ -37,13 +37,13 @@ body {
   height: 2.5rem;
   width:340px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  border: 1px solid #E7E7E7;
+  border: 1px solid #ebe6ed;
   margin-top: 15px;
 
 }
 
 .search-form-control .form-control:focus {
-  border: 1px solid #75CFB8;
+  border: 1px solid #ebe6ed;
   outline: none !important;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
@@ -56,7 +56,7 @@ body {
 }
 
 #form-cont:focus {
-  border-color: #28a745;
+  border-color: #ebe6ed;
   box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
 }
 
