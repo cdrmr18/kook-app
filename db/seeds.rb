@@ -680,66 +680,54 @@ Measurement.create!(
   description: "4 oz",
   ingredient: "Ajvar (see the notes for the recipe)"
 )
-# ------------- NEW RECIPE ---------------
-# 7 pound Pork Shoulder; Skin On Take Bone Out
-# •	1/2 pound Bacon, apple smoked
-# •	4 cups Kosher salt
-# •	2 cups Sugar ; Light Brown or Regular
-# •	1 cup Garlic ; chopped
-# •	2 ea Onion
-# •	2 tablespoon Paprika ; sweet or hot
-# •	3 galons Water
-# •	1 tablespoon Pepper Whole or Ground
-# Measurement.create!(
-#   recipe_id: ,
-#   description: ,
-#   ingredient:
-#   )
-# Measurement.create!(
-#   recipe_id: ,
-#   description: ,
-#   ingredient:
-#   )
-# Measurement.create!(
-#   recipe_id: ,
-#   description: ,
-#   ingredient:
-#   )
-# Measurement.create!(
-#   recipe_id: ,
-#   description: ,
-#   ingredient:
-#   )
-# Measurement.create!(
-#   recipe_id: ,
-#   description: ,
-#   ingredient:
-#   )
-# Measurement.create!(
-#   recipe_id: ,
-#   description: ,
-#   ingredient:
-#   )
-# Measurement.create!(
-#   recipe_id: ,
-#   description: ,
-#   ingredient:
-#   )
-# Measurement.create!(
-#   recipe_id: ,
-#   description: ,
-#   ingredient:
-#   )
-# Measurement.create!(
-#   recipe_id: ,
-#   description: ,
-#   ingredient:
-#   )
-# Measurement.create!(
-#   recipe_id: ,
-#   description: ,
-#   ingredient:
-#   )
+
+
+# ------------- NEW RECIPE: Slavo Bukich’s Roast Pork Shoulder ---------------
+Measurement.create!(
+  recipe_id: slavo_two.id,
+  description: "7 pound",
+  ingredient: "Pork Shoulder; Skin On Take Bone Out"
+  )
+Measurement.create!(
+  recipe_id: slavo_two.id,
+  description: "1/2",
+  ingredient: "pound Bacon, apple smoked"
+  )
+Measurement.create!(
+  recipe_id: slavo_two.id,
+  description: "4 cups",
+  ingredient: "Kosher salt"
+  )
+Measurement.create!(
+  recipe_id: slavo_two.id,
+  description: "2 cups Sugar",
+  ingredient: "Light Brown or Regular" 
+  )
+Measurement.create!(
+  recipe_id: slavo_two.id,
+  description: "1 cup",
+  ingredient: "Garlic (chopped)"
+  )
+Measurement.create!(
+  recipe_id: slavo_two.id,
+  description: "2",
+  ingredient: "Onion"
+  )
+Measurement.create!(
+  recipe_id: slavo_two.id,
+  description: "2 tablespoon ",
+  ingredient: "Paprika ; sweet or hot"
+  )
+Measurement.create!(
+  recipe_id: slavo_two.id,
+  description: "3 galons",
+  ingredient: "Water"
+  )
+Measurement.create!(
+  recipe_id: slavo_two.id,
+  description: "1 tablespoon",
+  ingredient: "Pepper Whole or Ground"
+  )
 
 # ------------- NEW RECIPE: Slavo Bukich’s Bosnian pot ---------------
 
