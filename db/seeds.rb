@@ -2185,124 +2185,108 @@ Measurement.create!(
 # --------- cassoulet ------------
 Measurement.create!(
   recipe_id: roger_two.id,
-  description: "",
-  ingredient: ""
-  140g pork rind
+  description: "140g",
+  ingredient: "pork rind"
+)
+Measurement.create!(
+  recipe_id: roger_two.id,
+  description: "140g",
+  ingredient: "smoked streaky bacon"
 )
 Measurement.create!(
   recipe_id: roger_two.id,
   description: "",
   ingredient: ""
-  •	140g smoked streaky bacon
+300g garlic sausage
 )
 Measurement.create!(
   recipe_id: roger_two.id,
-  description: "",
-  ingredient: ""
-  •	300g garlic sausage
+  description: "600g",
+  ingredient: "dried haricot bean, soaked overnight in 3 times their volume of water"
 )
 Measurement.create!(
   recipe_id: roger_two.id,
-  description: "",
-  ingredient: ""
-  •	600g dried haricot bean, soaked overnight in 3 times their volume of water
+  description: "1",
+  ingredient: "celery stick"
 )
 Measurement.create!(
   recipe_id: roger_two.id,
-  description: "",
-  ingredient: ""
-  •	1 celery stick
-)
-Measurement.create!(
-  recipe_id: roger_two.id,
-  description: "",
-  ingredient: ""
-    •	1 small onion, preferably a white skinned mild one
+  description: "1",
+  ingredient: "small onion, preferably a white skinned mild one"
   )
 Measurement.create!(
   recipe_id: roger_two.id,
-  description: "",
-  ingredient: ""
-  •	1 large carrot
+  description: "1",
+  ingredient: "large carrot"
 )
 Measurement.create!(
   recipe_id: roger_two.id,
-  description: "",
-  ingredient: ""
-    •	6 garlic cloves
+  description: "6",
+  ingredient: "garlic cloves"
 )
 Measurement.create!(
   recipe_id: roger_two.id,
-  description: "",
-  ingredient: ""
-  •	2 ripe plum tomatoes
+  description: "2",
+  ingredient: "ripe plum tomatoes"
 )
 Measurement.create!(
   recipe_id: roger_two.id,
-  description: "",
-  ingredient: ""
-  •	25g goose fat or 2 tbsp olive oil
+  description: "25g or 2tbsp",
+  ingredient: "goose fat / olive oil"
 )
 Measurement.create!(
   recipe_id: roger_two.id,
-  description: "",
-  ingredient: ""
-    •	1 bouquet garni
+  description: "1",
+  ingredient: "bouquet garni"
 )
 Measurement.create!(
   recipe_id: roger_two.id,
-  description: "",
-  ingredient: ""
-  •	8 pinches of sea salt
+  description: "8 pinches",
+  ingredient: "sea salt"
+
 )
 Measurement.create!(
   recipe_id: roger_two.id,
-  description: "",
-  ingredient: ""
-  •	2 pinches of freshly ground black pepper
+  description: "2 pinches",
+  ingredient: "freshly ground black pepper"
 )
 Measurement.create!(
   recipe_id: roger_two.id,
-  description: "",
-  ingredient: ""
-  •	1 clove, lightly crushed
+  description: "1",
+  ingredient: "garlic clove, lightly crushed"
 )
 Measurement.create!(
   recipe_id: roger_two.id,
-  description: "",
-  ingredient: ""
-  •	2 tsp lemon juice
+  description: "2 tsp",
+  ingredient: "lemon juice"
+)
+
+# To finish
+
+Measurement.create!(
+  recipe_id: roger_two.id,
+  description: "4",
+  ingredient: "confit ducks legs"
 )
 Measurement.create!(
   recipe_id: roger_two.id,
-  description: "",
-  ingredient: ""
-  •	To finish
-  •	4 confit ducks legs
+  description: "60g or 2 tbsp",
+  ingredient: "goose fat or olive oil"
 )
 Measurement.create!(
   recipe_id: roger_two.id,
-  description: "",
-  ingredient: ""
-  •	60g goose fat or 2 tbsp olive oil
+  description: "400 g",
+  ingredient: "dried breadcrumb"
 )
 Measurement.create!(
   recipe_id: roger_two.id,
-  description: "",
-  ingredient: ""
-  •	40g dried breadcrumb
+  description: "1",
+  ingredient: "garlic clove, finely chopped"
 )
 Measurement.create!(
   recipe_id: roger_two.id,
-  description: "",
-  ingredient: ""
-  •	1 garlic clove, finely chopped
-)
-Measurement.create!(
-  recipe_id: roger_two.id,
-  description: "",
-  ingredient: ""
-    •	a handful of fresh flatleaf parsley, coarsely chopped
+  description: "a handful",
+  ingredient: "fresh flatleaf parsley, coarsely chopped"
   )
   
   # --------- chorizo & egg breakfast pizza ------------
@@ -2310,230 +2294,230 @@ Measurement.create!(
     recipe_id: roger_three.id,
     description: "",
     ingredient: ""
+    1 refrigerated thin pizza crust
   )
   Measurement.create!(
     recipe_id: roger_three.id,
     description: "",
     ingredient: ""
+  3 tablespoons of olive oil
   )
   Measurement.create!(
     recipe_id: roger_three.id,
     description: "",
     ingredient: ""
+  Ground pepper, to taste
   )
   Measurement.create!(
     recipe_id: roger_three.id,
     description: "",
     ingredient: ""
+  1 cup finely chopped onion
   )
   Measurement.create!(
     recipe_id: roger_three.id,
     description: "",
     ingredient: ""
+  1 cup green pepper, diced
   )
   Measurement.create!(
     recipe_id: roger_three.id,
     description: "",
     ingredient: ""
+  2 small chorizos, skinless and cut into small pieces
   )
   Measurement.create!(
     recipe_id: roger_three.id,
     description: "",
     ingredient: ""
+  6 eggs, whipped
   )
   Measurement.create!(
     recipe_id: roger_three.id,
     description: "",
     ingredient: ""
+  2 tablespoons of milk
   )
   Measurement.create!(
     recipe_id: roger_three.id,
     description: "",
     ingredient: ""
+  Salt to taste
   )
   Measurement.create!(
     recipe_id: roger_three.id,
     description: "",
     ingredient: ""
+  2 cups shredded cheddar cheese
   )
   Measurement.create!(
     recipe_id: roger_three.id,
     description: "",
     ingredient: ""
+  ½ cup grated Parmesan cheese
   )
-  1 refrigerated thin pizza crust
-  •	3 tablespoons of olive oil
-  •	Ground pepper, to taste
-	•	1 cup finely chopped onion
-	•	1 cup green pepper, diced
-	•	2 small chorizos, skinless and cut into small pieces
-	•	6 eggs, whipped
-	•	2 tablespoons of milk
-	•	Salt to taste
-	•	2 cups shredded cheddar cheese
-	•	½ cup grated Parmesan cheese
   
   # ---------  pecan pie ------------
   Measurement.create!(
     recipe_id: roger_four.id,
     description: "",
     ingredient: ""
+    Crust:
+  1 cup all purpose flour
   )
   Measurement.create!(
     recipe_id: roger_four.id,
     description: "",
     ingredient: ""
+  1 Tbsp white granulated sugar
   )
   Measurement.create!(
     recipe_id: roger_four.id,
     description: "",
     ingredient: ""
+  1/2 teaspoon salt
   )
   Measurement.create!(
     recipe_id: roger_four.id,
     description: "",
     ingredient: ""
+  1/2 cup chilled butter (4 ounces, 1 stick), cut into cubes
   )
   Measurement.create!(
     recipe_id: roger_four.id,
     description: "",
     ingredient: ""
+  1 Tbsp ice water
   )
   Measurement.create!(
     recipe_id: roger_four.id,
     description: "",
     ingredient: ""
+    Filling:
+  1/2 cup unsalted butter, softened
   )
   Measurement.create!(
     recipe_id: roger_four.id,
     description: "",
     ingredient: ""
+  1 1/2 cups dark brown sugar
   )
   Measurement.create!(
     recipe_id: roger_four.id,
     description: "",
     ingredient: ""
+  1 large egg
   )
   Measurement.create!(
     recipe_id: roger_four.id,
     description: "",
     ingredient: ""
+  1/2 teaspoon vanilla extract
   )
   Measurement.create!(
     recipe_id: roger_four.id,
     description: "",
     ingredient: ""
+  Pinch of salt
   )
   Measurement.create!(
     recipe_id: roger_four.id,
     description: "",
     ingredient: ""
+  2 cups of whole pecans
   )
   Measurement.create!(
     recipe_id: roger_four.id,
     description: "",
     ingredient: ""
+    Equipment needed:
+  One 9-inch by 1-inch tart pan with a removable bottom
   )
   Measurement.create!(
     recipe_id: roger_four.id,
     description: "",
     ingredient: ""
+  Food processor to make the tart dough
   )
-  Crust:
-  •	1 cup all purpose flour
-  •	1 Tbsp white granulated sugar
-	•	1/2 teaspoon salt
-	•	1/2 cup chilled butter (4 ounces, 1 stick), cut into cubes
-	•	1 Tbsp ice water
-  Filling:
-	•	1/2 cup unsalted butter, softened
-	•	1 1/2 cups dark brown sugar
-	•	1 large egg
-	•	1/2 teaspoon vanilla extract
-	•	Pinch of salt
-	•	2 cups of whole pecans
-  Equipment needed:
-	•	One 9-inch by 1-inch tart pan with a removable bottom
-	•	Food processor to make the tart dough
   
   # --------- le burger du poulet ------------
   Measurement.create!(
     recipe_id: roger_five.id,
     description: "",
     ingredient: ""
-    •	98% fat-free uncooked ground chicken breast
+  98% fat-free uncooked ground chicken breast
   )
   Measurement.create!(
     recipe_id: roger_five.id,
     description: "",
     ingredient: ""
-    •	1 pound(s) Dried plain breadcrumbs
+  1 pound(s) Dried plain breadcrumbs
   )
   Measurement.create!(
     recipe_id: roger_five.id,
     description: "",
     ingredient: ""
-    •	2 Tbsp, plain variety Dijon Mustard
+  2 Tbsp, plain variety Dijon Mustard
   )
   Measurement.create!(
     recipe_id: roger_five.id,
     description: "",
     ingredient: ""
-    •	2 Tbsp Uncooked shallot(s)
+  2 Tbsp Uncooked shallot(s)
   )
   Measurement.create!(
     recipe_id: roger_five.id,
     description: "",
     ingredient: ""
-    •	1 medium, chopped Dried tarragon
+  1 medium, chopped Dried tarragon
   )
   Measurement.create!(
     recipe_id: roger_five.id,
     description: "",
     ingredient: ""
-    •	1 tsp Herbes de Provence
+  1 tsp Herbes de Provence
   )
   Measurement.create!(
     recipe_id: roger_five.id,
     description: "",
     ingredient: ""
-    •	½ tspTable salt
+  ½ tspTable salt
   )
   Measurement.create!(
     recipe_id: roger_five.id,
     description: "",
     ingredient: ""
-    •	½ tspBlack pepper
+  ½ tspBlack pepper
   )
   Measurement.create!(
     recipe_id: roger_five.id,
     description: "",
     ingredient: ""
-    •	¼ tsp, freshly ground
+  ¼ tsp, freshly ground
   )
   Measurement.create!(
     recipe_id: roger_five.id,
     description: "",
     ingredient: ""
-  •	French bun
+French bun
   )
   Measurement.create!(
     recipe_id: roger_five.id,
     description: "",
     ingredient: ""
-  •	2 slice(s), (4 1⁄2-inch-long) each, halved horizontally
+2 slice(s), (4 1⁄2-inch-long) each, halved horizontally
   )
   Measurement.create!(
     recipe_id: roger_five.id,
     description: "",
     ingredient: ""
-  •	Olive oil2 tsp
+Olive oil2 tsp
   )
   Measurement.create!(
     recipe_id: roger_five.id,
     description: "",
     ingredient: ""
-  •	Garlic clove(s) - 1 medium clove(s), halved lengthwise
+Garlic clove(s) - 1 medium clove(s), halved lengthwise
   )
 
 # ---------  duck confit ------------
@@ -2541,67 +2525,67 @@ Measurement.create!(
   recipe_id: roger_six.id,
   description: "",
   ingredient: ""
-  •	8 skin-on, bone-in duck legs
+8 skin-on, bone-in duck legs
 )
 Measurement.create!(
   recipe_id: roger_six.id,
   description: "",
   ingredient: ""
-  •	4 garlic cloves, thinly sliced
+4 garlic cloves, thinly sliced
 )
 Measurement.create!(
   recipe_id: roger_six.id,
   description: "",
   ingredient: ""
-  •	1 teaspoon freshly ground black pepper plus more freshly cracked
+1 teaspoon freshly ground black pepper plus more freshly cracked
 )
 Measurement.create!(
   recipe_id: roger_six.id,
   description: "",
   ingredient: ""
-  •	2 tablespoons plus 1 teaspoon kosher salt
+2 tablespoons plus 1 teaspoon kosher salt
 )
 Measurement.create!(
   recipe_id: roger_six.id,
   description: "",
   ingredient: ""
-  •	9 sprigs thyme, divided
+9 sprigs thyme, divided
 )
 Measurement.create!(
   recipe_id: roger_six.id,
   description: "",
   ingredient: ""
-  •	6 dried chiles de árbol, crushed, or 1 ½ tsp. crushed red pepper flakes, divided
+6 dried chiles de árbol, crushed, or 1 ½ tsp. crushed red pepper flakes, divided
 )
 Measurement.create!(
   recipe_id: roger_six.id,
   description: "",
   ingredient: ""
-  •	½ cup white wine vinegar
+½ cup white wine vinegar
 )
 Measurement.create!(
   recipe_id: roger_six.id,
   description: "",
   ingredient: ""
-  •	¼ cup sugar
+¼ cup sugar
 )
 Measurement.create!(
   recipe_id: roger_six.id,
   description: "",
   ingredient: ""
-  •	2 teaspoons brown mustard seeds
+2 teaspoons brown mustard seeds
 )
 Measurement.create!(
   recipe_id: roger_six.id,
   description: "",
   ingredient: ""
-  •	1 sprig rosemary
+1 sprig rosemary
 )
 Measurement.create!(
   recipe_id: roger_six.id,
   description: "",
   ingredient: ""
-  •	1½ cups golden raisins
+1½ cups golden raisins
 )
 
 
