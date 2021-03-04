@@ -27,8 +27,8 @@
 </div>
 
 <div class="container">
-    <div class="col-6">
-        <%= link_to "See all recipes", recipes_path, class: "home-links" %>
+    <div class="col-6  px-5">
+        <%= link_to "All recipes", recipes_path, class: "home-links" %>
     </div>
 </div>
 <br>
@@ -38,9 +38,9 @@
 <div class="container">
     <%= render '/chefs/top', chefs:@top_chefs %>
 </div>
-<div class="container ma">
-    <div class="col-6">
-        <%= link_to "See all chefs", chefs_path, class: "home-links text-right" %>
+<div class="container">
+    <div class="col-6 px-5">
+        <%= link_to "All chefs", chefs_path, class: "home-links text-right" %>
     </div>
 </div>
 <br>

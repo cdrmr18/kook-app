@@ -3,7 +3,7 @@ class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :update, :edit, :destroy]
 
   def top
-    @recipes = Recipe.joins(:recipe_reviews).where(recipe_reviews:{rating: 1})
+    @recipes = Recipe.joins(:recipe_reviews).where(recipe_reviews:{rating: 5})
   end
 
   def index
