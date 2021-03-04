@@ -2108,31 +2108,91 @@ Measurement.create!(
 # --------- duck liver parfait with pork jelly ------------
 Measurement.create!(
   recipe_id: roger_one.id,
+  description: "½ tsp",
+  ingredient: "olive oil"
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "2",
+  ingredient: "small golden shallots, thinly sliced"
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "¼ bunch",
+  ingredient: "thyme"
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "1",
+  ingredient: "small bay leaf"
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "½ sprig",
+  ingredient: "rosemary"
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "50 ml",
+  ingredient: "Madeira wine"
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "50 ml",
+  ingredient: "sherry"
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "250 ml",
+  ingredient: "port"
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "140 g",
+  ingredient: "foie gras"
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "115 g",
+  ingredient: "duck liver"
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "1 tsp",
+  ingredient: "fine salt"
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "½ tsp",
+  ingredient: "white pepper"
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "190 ml",
+  ingredient: "clarified butter "
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "2",
+  ingredient: "eggs"
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "1 sheet",
+  ingredient: "gelatine, softened in cold water"
+)
+
+# --------- cassoulet ------------
+Measurement.create!(
+  recipe_id: roger_two.id,
   description: "",
   ingredient: ""
 )
-½ tsp olive oil
-•	2 small golden shallots, thinly sliced
-•	¼ bunch thyme
-•	1 small bay leaf
-•	½ sprig rosemary
-•	50 ml Madeira wine
-•	50 ml sherry
-•	250 ml port
-•	140 g foie gras
-•	115 g duck liver 
-•	1 tsp fine salt 
-•	½ tsp white pepper
-•	190 ml clarified butter 
-•	2 eggs 
-•	1 sheet gelatine, softened in cold water
-
-# --------- cassoulet ------------
 140g pork rind
-	•	140g smoked streaky bacon
-	•	300g garlic sausage
-	•	600g dried haricot bean, soaked overnight in 3 times their volume of water
-	•	1 celery stick
+•	140g smoked streaky bacon
+•	300g garlic sausage
+•	600g dried haricot bean, soaked overnight in 3 times their volume of water
+•	1 celery stick
 	•	1 small onion, preferably a white skinned mild one
 	•	1 large carrot
 	•	6 garlic cloves
@@ -2149,11 +2209,16 @@ Measurement.create!(
 	•	40g dried breadcrumb
 	•	1 garlic clove, finely chopped
 	•	a handful of fresh flatleaf parsley, coarsely chopped
-
-# --------- chorizo & egg breakfast pizza ------------
-1 refrigerated thin pizza crust
-	•	3 tablespoons of olive oil
-	•	Ground pepper, to taste
+  
+  # --------- chorizo & egg breakfast pizza ------------
+  Measurement.create!(
+    recipe_id: roger_three.id,
+    description: "",
+    ingredient: ""
+  )
+  1 refrigerated thin pizza crust
+  •	3 tablespoons of olive oil
+  •	Ground pepper, to taste
 	•	1 cup finely chopped onion
 	•	1 cup green pepper, diced
 	•	2 small chorizos, skinless and cut into small pieces
@@ -2162,41 +2227,56 @@ Measurement.create!(
 	•	Salt to taste
 	•	2 cups shredded cheddar cheese
 	•	½ cup grated Parmesan cheese
-
-# ---------  pecan pie ------------
-Crust:
-	•	1 cup all purpose flour
-	•	1 Tbsp white granulated sugar
+  
+  # ---------  pecan pie ------------
+  Measurement.create!(
+    recipe_id: roger_four.id,
+    description: "",
+    ingredient: ""
+  )
+  Crust:
+  •	1 cup all purpose flour
+  •	1 Tbsp white granulated sugar
 	•	1/2 teaspoon salt
 	•	1/2 cup chilled butter (4 ounces, 1 stick), cut into cubes
 	•	1 Tbsp ice water
-Filling:
+  Filling:
 	•	1/2 cup unsalted butter, softened
 	•	1 1/2 cups dark brown sugar
 	•	1 large egg
 	•	1/2 teaspoon vanilla extract
 	•	Pinch of salt
 	•	2 cups of whole pecans
- Equipment needed:
+  Equipment needed:
 	•	One 9-inch by 1-inch tart pan with a removable bottom
 	•	Food processor to make the tart dough
-
-# --------- le burger du poulet ------------
-•	98% fat-free uncooked ground chicken breast
-•	1 pound(s) Dried plain breadcrumbs
-•	2 Tbsp, plain variety Dijon Mustard
-•	2 Tbsp Uncooked shallot(s)
-•	1 medium, chopped Dried tarragon
-•	1 tsp Herbes de Provence
-•	½ tspTable salt
-•	½ tspBlack pepper
-•	¼ tsp, freshly ground
+  
+  # --------- le burger du poulet ------------
+  Measurement.create!(
+    recipe_id: roger_five.id,
+    description: "",
+    ingredient: ""
+  )
+  •	98% fat-free uncooked ground chicken breast
+  •	1 pound(s) Dried plain breadcrumbs
+  •	2 Tbsp, plain variety Dijon Mustard
+  •	2 Tbsp Uncooked shallot(s)
+  •	1 medium, chopped Dried tarragon
+  •	1 tsp Herbes de Provence
+  •	½ tspTable salt
+  •	½ tspBlack pepper
+  •	¼ tsp, freshly ground
 •	French bun
 •	2 slice(s), (4 1⁄2-inch-long) each, halved horizontally
 •	Olive oil2 tsp
 •	Garlic clove(s) - 1 medium clove(s), halved lengthwise
 
 # ---------  duck confit ------------
+Measurement.create!(
+  recipe_id: roger_six.id,
+  description: "",
+  ingredient: ""
+)
 •	8 skin-on, bone-in duck legs
 •	4 garlic cloves, thinly sliced
 •	1 teaspoon freshly ground black pepper plus more freshly cracked
