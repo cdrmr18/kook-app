@@ -680,66 +680,54 @@ Measurement.create!(
   description: "4 oz",
   ingredient: "Ajvar (see the notes for the recipe)"
 )
-# ------------- NEW RECIPE ---------------
-# 7 pound Pork Shoulder; Skin On Take Bone Out
-# •	1/2 pound Bacon, apple smoked
-# •	4 cups Kosher salt
-# •	2 cups Sugar ; Light Brown or Regular
-# •	1 cup Garlic ; chopped
-# •	2 ea Onion
-# •	2 tablespoon Paprika ; sweet or hot
-# •	3 galons Water
-# •	1 tablespoon Pepper Whole or Ground
-# Measurement.create!(
-#   recipe_id: ,
-#   description: ,
-#   ingredient:
-#   )
-# Measurement.create!(
-#   recipe_id: ,
-#   description: ,
-#   ingredient:
-#   )
-# Measurement.create!(
-#   recipe_id: ,
-#   description: ,
-#   ingredient:
-#   )
-# Measurement.create!(
-#   recipe_id: ,
-#   description: ,
-#   ingredient:
-#   )
-# Measurement.create!(
-#   recipe_id: ,
-#   description: ,
-#   ingredient:
-#   )
-# Measurement.create!(
-#   recipe_id: ,
-#   description: ,
-#   ingredient:
-#   )
-# Measurement.create!(
-#   recipe_id: ,
-#   description: ,
-#   ingredient:
-#   )
-# Measurement.create!(
-#   recipe_id: ,
-#   description: ,
-#   ingredient:
-#   )
-# Measurement.create!(
-#   recipe_id: ,
-#   description: ,
-#   ingredient:
-#   )
-# Measurement.create!(
-#   recipe_id: ,
-#   description: ,
-#   ingredient:
-#   )
+
+
+# ------------- NEW RECIPE: Slavo Bukich’s Roast Pork Shoulder ---------------
+Measurement.create!(
+  recipe_id: slavo_two.id,
+  description: "7 pound",
+  ingredient: "Pork Shoulder; Skin On Take Bone Out"
+  )
+Measurement.create!(
+  recipe_id: slavo_two.id,
+  description: "1/2",
+  ingredient: "pound Bacon, apple smoked"
+  )
+Measurement.create!(
+  recipe_id: slavo_two.id,
+  description: "4 cups",
+  ingredient: "Kosher salt"
+  )
+Measurement.create!(
+  recipe_id: slavo_two.id,
+  description: "2 cups Sugar",
+  ingredient: "Light Brown or Regular" 
+  )
+Measurement.create!(
+  recipe_id: slavo_two.id,
+  description: "1 cup",
+  ingredient: "Garlic (chopped)"
+  )
+Measurement.create!(
+  recipe_id: slavo_two.id,
+  description: "2",
+  ingredient: "Onion"
+  )
+Measurement.create!(
+  recipe_id: slavo_two.id,
+  description: "2 tablespoon ",
+  ingredient: "Paprika ; sweet or hot"
+  )
+Measurement.create!(
+  recipe_id: slavo_two.id,
+  description: "3 galons",
+  ingredient: "Water"
+  )
+Measurement.create!(
+  recipe_id: slavo_two.id,
+  description: "1 tablespoon",
+  ingredient: "Pepper Whole or Ground"
+  )
 
 # ------------- NEW RECIPE: Slavo Bukich’s Bosnian pot ---------------
 
@@ -2114,6 +2102,451 @@ Measurement.create!(
   description: "6",
   ingredient: "slider buns cut in half"
 )
+
+# --------- ROGER D'ANGELINE's RECIPES -------------
+
+# --------- duck liver parfait with pork jelly ------------
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "½ tsp",
+  ingredient: "olive oil"
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "2",
+  ingredient: "small golden shallots, thinly sliced"
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "¼ bunch",
+  ingredient: "thyme"
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "1",
+  ingredient: "small bay leaf"
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "½ sprig",
+  ingredient: "rosemary"
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "50 ml",
+  ingredient: "Madeira wine"
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "50 ml",
+  ingredient: "sherry"
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "250 ml",
+  ingredient: "port"
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "140 g",
+  ingredient: "foie gras"
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "115 g",
+  ingredient: "duck liver"
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "1 tsp",
+  ingredient: "fine salt"
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "½ tsp",
+  ingredient: "white pepper"
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "190 ml",
+  ingredient: "clarified butter "
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "2",
+  ingredient: "eggs"
+)
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "1 sheet",
+  ingredient: "gelatine, softened in cold water"
+)
+
+# --------- cassoulet ------------
+Measurement.create!(
+  recipe_id: roger_two.id,
+  description: "140g",
+  ingredient: "pork rind"
+)
+Measurement.create!(
+  recipe_id: roger_two.id,
+  description: "140g",
+  ingredient: "smoked streaky bacon"
+)
+Measurement.create!(
+  recipe_id: roger_two.id,
+  description: "300g",
+  ingredient: "garlic sausage"
+)
+Measurement.create!(
+  recipe_id: roger_two.id,
+  description: "600g",
+  ingredient: "dried haricot bean, soaked overnight in 3 times their volume of water"
+)
+Measurement.create!(
+  recipe_id: roger_two.id,
+  description: "1",
+  ingredient: "celery stick"
+)
+Measurement.create!(
+  recipe_id: roger_two.id,
+  description: "1",
+  ingredient: "small onion, preferably a white skinned mild one"
+  )
+Measurement.create!(
+  recipe_id: roger_two.id,
+  description: "1",
+  ingredient: "large carrot"
+)
+Measurement.create!(
+  recipe_id: roger_two.id,
+  description: "6",
+  ingredient: "garlic cloves"
+)
+Measurement.create!(
+  recipe_id: roger_two.id,
+  description: "2",
+  ingredient: "ripe plum tomatoes"
+)
+Measurement.create!(
+  recipe_id: roger_two.id,
+  description: "25g or 2tbsp",
+  ingredient: "goose fat / olive oil"
+)
+Measurement.create!(
+  recipe_id: roger_two.id,
+  description: "1",
+  ingredient: "bouquet garni"
+)
+Measurement.create!(
+  recipe_id: roger_two.id,
+  description: "8 pinches",
+  ingredient: "sea salt"
+
+)
+Measurement.create!(
+  recipe_id: roger_two.id,
+  description: "2 pinches",
+  ingredient: "freshly ground black pepper"
+)
+Measurement.create!(
+  recipe_id: roger_two.id,
+  description: "1",
+  ingredient: "garlic clove, lightly crushed"
+)
+Measurement.create!(
+  recipe_id: roger_two.id,
+  description: "2 tsp",
+  ingredient: "lemon juice"
+)
+
+# To finish
+
+Measurement.create!(
+  recipe_id: roger_two.id,
+  description: "4",
+  ingredient: "confit ducks legs"
+)
+Measurement.create!(
+  recipe_id: roger_two.id,
+  description: "60g or 2 tbsp",
+  ingredient: "goose fat or olive oil"
+)
+Measurement.create!(
+  recipe_id: roger_two.id,
+  description: "400 g",
+  ingredient: "dried breadcrumb"
+)
+Measurement.create!(
+  recipe_id: roger_two.id,
+  description: "1",
+  ingredient: "garlic clove, finely chopped"
+)
+Measurement.create!(
+  recipe_id: roger_two.id,
+  description: "a handful",
+  ingredient: "fresh flatleaf parsley, coarsely chopped"
+  )
+  
+  # --------- chorizo & egg breakfast pizza ------------
+  Measurement.create!(
+    recipe_id: roger_three.id,
+    description: "1",
+    ingredient: "refrigerated thin pizza crust"    
+  )
+  Measurement.create!(
+    recipe_id: roger_three.id,
+    description: "3 tablespoons",
+    ingredient: "olive oil"
+  )
+  Measurement.create!(
+    recipe_id: roger_three.id,
+    description: "",
+    ingredient: "Ground pepper, to taste"
+  )
+  Measurement.create!(
+    recipe_id: roger_three.id,
+    description: "1 cup",
+    ingredient: "finely chopped onion"
+  )
+  Measurement.create!(
+    recipe_id: roger_three.id,
+    description: "1 cup",
+    ingredient: "green pepper, diced"
+  )
+  Measurement.create!(
+    recipe_id: roger_three.id,
+    description: "2",
+    ingredient: "small chorizos, skinless and cut into small pieces"
+  )
+  Measurement.create!(
+    recipe_id: roger_three.id,
+    description: "6",
+    ingredient: "eggs, whipped"
+  )
+  Measurement.create!(
+    recipe_id: roger_three.id,
+    description: "2 tablespoons",
+    ingredient: "milk"
+  )
+  Measurement.create!(
+    recipe_id: roger_three.id,
+    description: "",
+    ingredient: "Salt to taste"
+  )
+  Measurement.create!(
+    recipe_id: roger_three.id,
+    description: "2 cups",
+    ingredient: "shredded cheddar cheese"
+  )
+  Measurement.create!(
+    recipe_id: roger_three.id,
+    description: "½ cup",
+    ingredient: "grated Parmesan cheese"
+  )
+  
+  # ---------  pecan pie ------------
+  #Crust:
+
+  Measurement.create!(
+    recipe_id: roger_four.id,
+    description: "1 cup",
+    ingredient: "all purpose flour"
+  )
+  Measurement.create!(
+    recipe_id: roger_four.id,
+    description: "1 Tbsp",
+    ingredient: "white granulated sugar"
+  )
+  Measurement.create!(
+    recipe_id: roger_four.id,
+    description: "1/2 teaspoon",
+    ingredient: "salt"
+  )
+  Measurement.create!(
+    recipe_id: roger_four.id,
+    description: "1/2 cup",
+    ingredient: "chilled butter (4 ounces, 1 stick), cut into cubes"
+  )
+  Measurement.create!(
+    recipe_id: roger_four.id,
+    description: "1 Tbsp",
+    ingredient: "ice water"
+  )
+  
+  #Filling:
+  
+  Measurement.create!(
+    recipe_id: roger_four.id,
+    description: "1/2 cup ",
+    ingredient: "unsalted butter, softened"
+  )
+  Measurement.create!(
+    recipe_id: roger_four.id,
+    description: "1 1/2 cups",
+    ingredient: "dark brown sugar"
+  )
+  Measurement.create!(
+    recipe_id: roger_four.id,
+    description: "1",
+    ingredient: "large egg"
+  )
+  Measurement.create!(
+    recipe_id: roger_four.id,
+    description: "1/2 teaspoon",
+    ingredient: "vanilla extract"
+  )
+  Measurement.create!(
+    recipe_id: roger_four.id,
+    description: "",
+    ingredient: "Pinch of salt"
+  )
+  Measurement.create!(
+    recipe_id: roger_four.id,
+    description: "whole pecans",
+    ingredient: "2 cups"
+  )
+  
+  #Equipment needed: 
+  
+  Measurement.create!(
+    recipe_id: roger_four.id,
+    description: "One 9-inch by 1-inch",
+    ingredient: "tart pan with a removable bottom"
+  )
+  Measurement.create!(
+    recipe_id: roger_four.id,
+    description: "",
+    ingredient: "Food processor to make the tart dough"
+  )
+  
+  # --------- le burger du poulet ------------
+  Measurement.create!(
+    recipe_id: roger_five.id,
+    description: "",
+    ingredient: "98% fat-free uncooked ground chicken breast"
+  )
+  Measurement.create!(
+    recipe_id: roger_five.id,
+    description: "1 pound(s)",
+    ingredient: "Dried plain breadcrumbs"
+  )
+  Measurement.create!(
+    recipe_id: roger_five.id,
+    description: "2 Tbsp",
+    ingredient: "plain variety Dijon Mustard"
+  )
+  Measurement.create!(
+    recipe_id: roger_five.id,
+    description: "2 Tbsp",
+    ingredient: "Uncooked shallot(s)"
+  )
+  Measurement.create!(
+    recipe_id: roger_five.id,
+    description: "1",
+    ingredient: "medium chopped Dried tarragon"
+  )
+  Measurement.create!(
+    recipe_id: roger_five.id,
+    description: "1 tsp",
+    ingredient: "Herbes de Provence"
+  )
+  Measurement.create!(
+    recipe_id: roger_five.id,
+    description: "½ tsp",
+    ingredient: "Table salt"
+  )
+  Measurement.create!(
+    recipe_id: roger_five.id,
+    description: "½ tsp",
+    ingredient: "Black pepper"
+  )
+  Measurement.create!(
+    recipe_id: roger_five.id,
+    description: "¼ tsp",
+    ingredient: "freshly ground"
+  )
+  Measurement.create!(
+    recipe_id: roger_five.id,
+    description: "",
+    ingredient: "French bun"
+  )
+  Measurement.create!(
+    recipe_id: roger_five.id,
+    description: "2 slice(s)",
+    ingredient: "(4 1⁄2-inch-long) each, halved horizontally"
+  )
+  Measurement.create!(
+    recipe_id: roger_five.id,
+    description: "2 tsp",
+    ingredient: "Olive oil"
+  )
+  Measurement.create!(
+    recipe_id: roger_five.id,
+    description: "1",
+    ingredient: "Garlic clove(s) - medium clove(s), halved lengthwise"
+  )
+
+# ---------  duck confit ------------
+Measurement.create!(
+  recipe_id: roger_six.id,
+  description: "8",
+  ingredient: "skin-on, bone-in duck legs"
+)
+Measurement.create!(
+  recipe_id: roger_six.id,
+  description: "4",
+  ingredient: "garlic cloves, thinly sliced"
+)
+Measurement.create!(
+  recipe_id: roger_six.id,
+  description: "1 teaspoon",
+  ingredient: "freshly ground black pepper plus more freshly cracked"
+)
+Measurement.create!(
+  recipe_id: roger_six.id,
+  description: "2 tablespoons plus 1 teaspoon",
+  ingredient: "kosher salt"
+)
+Measurement.create!(
+  recipe_id: roger_six.id,
+  description: "9 sprigs",
+  ingredient: "thyme, divided"
+)
+Measurement.create!(
+  recipe_id: roger_six.id,
+  description: "6  or 1 ½ tsp.",
+  ingredient: "dried chiles de árbol, crushed or crushed red pepper flakes, divided"
+)
+Measurement.create!(
+  recipe_id: roger_six.id,
+  description: "½ cup",
+  ingredient: "white wine vinegar"
+)
+Measurement.create!(
+  recipe_id: roger_six.id,
+  description: "¼ cup",
+  ingredient: "sugar"
+)
+Measurement.create!(
+  recipe_id: roger_six.id,
+  description: "2 teaspoons",
+  ingredient: "brown mustard seeds"
+)
+Measurement.create!(
+  recipe_id: roger_six.id,
+  description: "1 sprig ",
+  ingredient: "rosemary"
+)
+Measurement.create!(
+  recipe_id: roger_six.id,
+  description: "1½ cups",
+  ingredient: "golden raisins"
+)
+
+
+puts "Jeez! That was a lot of data entry..."
+
 
 # -------- MEASUREMETNS END ----------------
 
