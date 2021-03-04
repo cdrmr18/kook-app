@@ -7,20 +7,36 @@
 .card-category {
   background-size: cover;
   background-position: center;
-  height: 180px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-radius:20px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 0 10px;
   border: solid 0.2em;
 
 }
 
+
+#recipe-card-style{
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    margin: 0 10px;
+    border: solid 0.2em;
+  
+  }
 
 
 .card-body{
@@ -77,7 +93,7 @@
 .banner p {
   font-size: 20px;
   color: white;
-  opacity: .7;
+  opacity: 1;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 h4 {
@@ -99,25 +115,25 @@ h4 {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   margin-top: 0px;
-  padding:30px;
+  padding:0 20px;
   border-bottom: white solid 0.9em;
 }
 
 .recipe-link {
-  color: white;
-  font-size: 30px;
+  color:#290149;
+  font-size: 20px;
   padding: 5px;
   text-align: center;
   margin-top:0;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  opacity: 0;
+  font-weight: 500;
+  opacity: 1;
 
 
   &:hover{
-    color: white;
-    font-weight: 200;
+    color: #A288E3;
+    font-weight: 500;
     opacity: 1;
   }
 }
@@ -156,3 +172,8 @@ h4 {
   background-color: white;
 }
 
+
+
+.recipe-link-hidden{
+  opacity:0;
+}
