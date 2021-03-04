@@ -2103,7 +2103,7 @@ Measurement.create!(
   ingredient: "slider buns cut in half"
 )
 
-# --------- ROGER D'ANGELINE's RECIPES ------------
+# --------- ROGER D'ANGELINE's RECIPES -------------
 
 # --------- duck liver parfait with pork jelly ------------
 Measurement.create!(
