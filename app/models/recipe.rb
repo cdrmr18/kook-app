@@ -16,10 +16,7 @@ class Recipe < ApplicationRecord
   monetize :price_cents
 
   include PgSearch::Model
-    multisearchable against: [:name, :cuisine, :description]
-
-
-  pg_search_scope :search_by_cuisine_and_name,
+  pg_search_scope :global_search,
     against: [ :cuisine, :name, :description ],
     using: {
       tsearch: { prefix: true }
