@@ -2103,6 +2103,116 @@ Measurement.create!(
   ingredient: "slider buns cut in half"
 )
 
+# --------- ROGER D'ANGELINE's RECIPES ------------
+
+# --------- duck liver parfait with pork jelly ------------
+Measurement.create!(
+  recipe_id: roger_one.id,
+  description: "",
+  ingredient: ""
+)
+½ tsp olive oil
+•	2 small golden shallots, thinly sliced
+•	¼ bunch thyme
+•	1 small bay leaf
+•	½ sprig rosemary
+•	50 ml Madeira wine
+•	50 ml sherry
+•	250 ml port
+•	140 g foie gras
+•	115 g duck liver 
+•	1 tsp fine salt 
+•	½ tsp white pepper
+•	190 ml clarified butter 
+•	2 eggs 
+•	1 sheet gelatine, softened in cold water
+
+# --------- cassoulet ------------
+140g pork rind
+	•	140g smoked streaky bacon
+	•	300g garlic sausage
+	•	600g dried haricot bean, soaked overnight in 3 times their volume of water
+	•	1 celery stick
+	•	1 small onion, preferably a white skinned mild one
+	•	1 large carrot
+	•	6 garlic cloves
+	•	2 ripe plum tomatoes
+	•	25g goose fat or 2 tbsp olive oil
+	•	1 bouquet garni
+	•	8 pinches of sea salt
+	•	2 pinches of freshly ground black pepper
+	•	1 clove, lightly crushed
+	•	2 tsp lemon juice
+	•	To finish
+	•	4 confit ducks legs
+	•	60g goose fat or 2 tbsp olive oil
+	•	40g dried breadcrumb
+	•	1 garlic clove, finely chopped
+	•	a handful of fresh flatleaf parsley, coarsely chopped
+
+# --------- chorizo & egg breakfast pizza ------------
+1 refrigerated thin pizza crust
+	•	3 tablespoons of olive oil
+	•	Ground pepper, to taste
+	•	1 cup finely chopped onion
+	•	1 cup green pepper, diced
+	•	2 small chorizos, skinless and cut into small pieces
+	•	6 eggs, whipped
+	•	2 tablespoons of milk
+	•	Salt to taste
+	•	2 cups shredded cheddar cheese
+	•	½ cup grated Parmesan cheese
+
+# ---------  pecan pie ------------
+Crust:
+	•	1 cup all purpose flour
+	•	1 Tbsp white granulated sugar
+	•	1/2 teaspoon salt
+	•	1/2 cup chilled butter (4 ounces, 1 stick), cut into cubes
+	•	1 Tbsp ice water
+Filling:
+	•	1/2 cup unsalted butter, softened
+	•	1 1/2 cups dark brown sugar
+	•	1 large egg
+	•	1/2 teaspoon vanilla extract
+	•	Pinch of salt
+	•	2 cups of whole pecans
+ Equipment needed:
+	•	One 9-inch by 1-inch tart pan with a removable bottom
+	•	Food processor to make the tart dough
+
+# --------- le burger du poulet ------------
+•	98% fat-free uncooked ground chicken breast
+•	1 pound(s) Dried plain breadcrumbs
+•	2 Tbsp, plain variety Dijon Mustard
+•	2 Tbsp Uncooked shallot(s)
+•	1 medium, chopped Dried tarragon
+•	1 tsp Herbes de Provence
+•	½ tspTable salt
+•	½ tspBlack pepper
+•	¼ tsp, freshly ground
+•	French bun
+•	2 slice(s), (4 1⁄2-inch-long) each, halved horizontally
+•	Olive oil2 tsp
+•	Garlic clove(s) - 1 medium clove(s), halved lengthwise
+
+# ---------  duck confit ------------
+•	8 skin-on, bone-in duck legs
+•	4 garlic cloves, thinly sliced
+•	1 teaspoon freshly ground black pepper plus more freshly cracked
+•	2 tablespoons plus 1 teaspoon kosher salt
+•	9 sprigs thyme, divided
+•	6 dried chiles de árbol, crushed, or 1 ½ tsp. crushed red pepper flakes, divided
+•	½ cup white wine vinegar
+•	¼ cup sugar
+•	2 teaspoons brown mustard seeds
+•	1 sprig rosemary
+•	1½ cups golden raisins
+
+
+
+
+
 # -------- MEASUREMETNS END ----------------
 
 # --- ---- --- -- --- --- -- -- --- -- -- -- -- -- -- -- -- -- --- -- -- -- -- -- --
