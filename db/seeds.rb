@@ -2195,9 +2195,8 @@ Measurement.create!(
 )
 Measurement.create!(
   recipe_id: roger_two.id,
-  description: "",
-  ingredient: ""
-300g garlic sausage
+  description: "300g",
+  ingredient: "garlic sausage"
 )
 Measurement.create!(
   recipe_id: roger_two.id,
