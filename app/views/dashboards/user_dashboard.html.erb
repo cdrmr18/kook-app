@@ -18,17 +18,10 @@
 <div class="container shadow-sm ">
   <div class="row booking-confirm mt-4 text-center">
     <div class="col-12 card card-body pb-2 pt-3">
-      <h4>Booking #<%= @bookings[-1].id %></h4>
+      <h4>Next Session</h4>
       <h5><%= @bookings[-1].recipe.name %></h5>
         <p><%= @bookings[-1].date.strftime("%B %e, %Y") %> <%= @bookings[-1].start_time.strftime("%I:%M%p") %> - <%= @bookings[-1].start_time.strftime("%I:%M%p") %></p>
     </div>
-    <div class="col-6 card card-body pb-1 pt-2">
-      <p><%= link_to "Accept" %></p>
-    </div>
-    <div class="col-6 card card-body pb-1 pt-2">
-      <p><%= link_to "Decline" %></p>
-    </div>
-  </div>
 </div>
 
 <!-- collapse menu -->

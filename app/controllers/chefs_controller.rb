@@ -8,11 +8,11 @@ class ChefsController < ApplicationController
   def index
     @chefs = policy_scope(Chef)
 
-    # if params[ :query ].present?
-    #   @Chefs = User.search_by_first_name_and_last_name(params[ :query ])
-    # else
-    #   @chefs = policy_scope(Chef)
-    # end
+    if params[ :query ].present?
+      @chefs = Chef.global_search(params[ :query ])
+    else
+      @chefs = policy_scope(Chef)
+    end
   end
 
    def show

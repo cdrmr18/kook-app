@@ -8,7 +8,7 @@ class RecipesController < ApplicationController
 
   def index
     if params[ :query ].present?
-      @recipes = Recipe.search_by_cuisine_and_name(params[ :query ])
+      @recipes = policy_scope(Recipe).global_search(params[ :query ])
     else
       @recipes = policy_scope(Recipe)
     end

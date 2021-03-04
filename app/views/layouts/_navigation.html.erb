@@ -13,8 +13,19 @@
 
 
     <!-- search bar -->
-      <% if controller.controller_name == 'chefs' && controller.action_name == 'index' || controller.controller_name == 'recipes' && controller.action_name == 'index'%>
+     <% if controller.controller_name == 'chefs' && controller.action_name == 'index'%>
           <div class="container-fluid">
+            <a class="navbar-brand"></a>
+              <%= form_tag chefs_path, method: :get do %>
+              <div class="d-flex">
+                <%= text_field_tag :query, params[:query], class: "form-control me-2", id: "form-cont",
+                    placeholder: "cuisine or chef" %>
+                    <%= submit_tag "search", class:"btn",  id: "search-btn" %>
+              </div>
+            <% end %>
+          </div>
+     <% elsif controller.controller_name == 'recipes' && controller.action_name == 'index' %>
+        <div class="container-fluid">
             <a class="navbar-brand"></a>
               <%= form_tag recipes_path, method: :get do %>
               <div class="d-flex">
@@ -24,14 +35,8 @@
               </div>
             <% end %>
           </div>
-      <% end %>
+     <% end %>
     <!-- search bar end -->
-
-
-
-
-
-
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto navbar-fixed-top">
