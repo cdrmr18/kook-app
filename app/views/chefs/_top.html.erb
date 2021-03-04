@@ -7,6 +7,7 @@
   <% chefs.each do | chef | %>
       <div class="container">
         <div class="card-category card-home  effect1" style="background-image:url(<%= cl_image_path chef.user.photo.key%>)">
+        <%= link_to chef.user.first_name, chef_path(chef),class: "recipe-link-hidden" %>
         </div>
         <div class=" card-body pb-0 text-center">
         <%= link_to chef.user.first_name, chef_path(chef),class: "recipe-link" %>

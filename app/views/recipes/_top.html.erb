@@ -5,23 +5,19 @@
 </div>
 
 <div class="my-3 d-flex overflow-x">
-  <% recipes.each do | recipe | %>
+      <% recipes.each do | recipe | %>
       <div class="container"> 
-
-        <div class="card-category card-home  effect1" style="background-image: url(<%= cl_image_path recipe.photo.key%>)"> <%= link_to recipe.name, recipe_path(recipe),class: "recipe-link-hidden" %>
-
+        <div class="card-category card-home  effect1" style="background-image: url(<%=    cl_image_path recipe.photo.key%>)"><%= link_to recipe.name, recipe_path(recipe),class: "recipe-link-hidden" %>      
         </div>
-        <div class="container my-3 p-1 text-center">
-          <%= link_to recipe.name, recipe_path(recipe),class: "recipe-link" %>
-        </div>
+      <div class="container my-3 p-1 text-center">
+        <%= link_to recipe.name, recipe_path(recipe),class: "recipe-link" %>
+      </div>
         <div class=" card-body pb-0">
-              <% recipe.recipe_reviews.each do |review| %>
-               <%# <em><%= review.content %>
+            <% recipe.recipe_reviews.each do |review| %>
+          <% end %>
         </div>
       </div>
     <% end %>
-  <% end %>
-  
 </div>
 
 
