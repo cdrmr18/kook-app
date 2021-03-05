@@ -33,6 +33,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
 gem 'money-rails'
 gem 'pundit'
+gem 'acts-as-taggable-on', '~> 7.0'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

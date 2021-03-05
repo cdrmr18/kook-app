@@ -6,15 +6,23 @@ class RecipesController < ApplicationController
     @recipes = Recipe.joins(:recipe_reviews).where(recipe_reviews:{rating: 5})
   end
 
+  
+
+
   def index
     if params[ :query ].present?
-      @recipes = policy_scope(Recipe).global_search(params[ :query ])
+    @recipes = policy_scope(Recipe).global_search(params[ :query ])
+    elsif params[:tag].present?
+      @recipes = policy_scope(Recipe).tagged_with(params[:tag])
     else
       @recipes = policy_scope(Recipe)
     end
   end
 
   def show
+    # @recipes = Recipe.find(params[:id])
+    # @related_recipes = @recipes.find_related_tags
+
     # needed to add ingredient and measurements in recipe show page
     @measurement = Measurement.new
     # chef name to display link to chef
@@ -62,6 +70,6 @@ class RecipesController < ApplicationController
   end
 
   def recipe_params
-    params.require(:recipe).permit(:name, :description, :cuisine, :cook_time, :price, :photo)
+    params.require(:recipe).permit(:name, :description, :cuisine, :cook_time, :price, :photo, :tag_list)
   end
 end

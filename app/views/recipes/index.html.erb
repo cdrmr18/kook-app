@@ -1,3 +1,15 @@
+<!-- Tagged list for quick access -->
+
+<div class="container">
+  <% @recipes.each do |r| %>
+    <% r.tag_list.each do |tag| %>
+      <%= link_to tag, recipes_path(tag: tag) %>
+    <% end %>
+  <% end %>
+</div>
+
+
+
 <!-- list of recipes -->
 <div class="recipe-cards my-4">
   <% @recipes.each do | recipe | %>
@@ -5,10 +17,8 @@
         <div class="recipe-index" id="recipe-card-style" style="background-image: url(<%= cl_image_path recipe.photo.key%>)"><%= link_to recipe.name, recipe_path(recipe),class: "recipe-link-hidden" %>
         </div>
         <div class="recipe-info card-body pb-0 effect2">
-          <div class="row justify-content-center">
-          
-                  <%= link_to recipe.name, recipe_path(recipe),class: "recipe-link" %>
-
+          <div class="row justify-content-center"> 
+            <%= link_to recipe.name, recipe_path(recipe),class: "recipe-link" %>
           </div>
 
 
