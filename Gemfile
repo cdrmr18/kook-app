@@ -33,8 +33,12 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
 gem 'money-rails'
 gem 'pundit'
+<<<<<<< HEAD
 gem 'stripe'
 gem 'stripe_event'
+=======
+gem 'acts-as-taggable-on', '~> 7.0'
+>>>>>>> master
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

@@ -22,14 +22,14 @@
 #form-cont-home{
  
   width: 800px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  border: 1px solid #E7E7E7;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 
 .heading-1{
   color:#290149;
-  padding-left: 10px;
+  
 }
 
 .overflow-x{
@@ -38,17 +38,24 @@
 }
 
 .home-links{
-  color:#290149;
-  font-weight: bold;
-  font-size: 15px;
+  color:#A288E3;
+  font-family: 'Nunito Sans', sans-serif;
+ font-size: 15px;
   text-align:right;
+  padding: 5px;
+  border: 2px solid #A288E3;
+  border-radius: 5px;
+  
 
   &:hover{
-    color: #A288E3;
+    color: black;
   }
 }
 
+.banner-header{
+  font-family: 'Courgette', cursive;
 
+}
 
 
 
@@ -76,13 +83,9 @@
 
   #form-cont-home{
     width: 270px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    
-  
-  
-
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
 }
 
 
-}

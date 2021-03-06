@@ -3,8 +3,10 @@ Rails.application.routes.draw do
   
   devise_for :users
   root to: 'pages#home'
+  get '/tagged', to: "recipes#tagged", as: :tagged
   get 'chef_dashboard', to: 'dashboards#chef_dashboard', as: :chef_dashboard
   get 'user_dashboard', to: 'dashboards#user_dashboard', as: :user_dashboard
+
   # /bookings -- /bookings/:id -- /bookings/:id/edit
   resources :bookings, only: [ :index, :show, :destroy, :edit, :update] do
     # /bookings/:id/chef_reviews/new

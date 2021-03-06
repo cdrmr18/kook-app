@@ -11,14 +11,27 @@
     margin-bottom: 8px;
     text-align: center;
   }
-  h5 {
-    text-align: center;
-  }
+
   .btn {
     width: 100%;
     margin-bottom: 20px
   }
 }
-.booking-recipe h1 {
-  font-family: caveat;
+
+
+.cost{;
+  border:1px solid;
+  font-weight: 800;
+  border-radius: 5px;
+}
+
+
+.form-inputs{
+  padding: 10px;
+}
+
+#bookbutton{
+ 
+  font-family: 'Nunito Sans', sans-serif;
+  border-radius: 5px;
 }
