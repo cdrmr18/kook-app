@@ -6,6 +6,8 @@ class Recipe < ApplicationRecord
   has_many :ingredients, through: :measurements
   has_one_attached :photo
 
+  acts_as_taggable_on :tags
+
   validates :name, presence: true, uniqueness: true
   validates :description, presence: true
   validates :cuisine, presence: true
@@ -14,6 +16,8 @@ class Recipe < ApplicationRecord
   validates :price, presence: true, format: { with: /\A\d+(?:\.\d{2})?\z/ }, numericality: { greater_than: 0, less_than: 1000000 }
 
   monetize :price_cents
+
+
 
   include PgSearch::Model
   pg_search_scope :global_search,

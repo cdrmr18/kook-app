@@ -1,3 +1,29 @@
+<!-- Tagged list for quick access -->
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Filter
+    <%= image_tag "filter.svg" %> </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <div class="container">
+    <div class="d-flex flex-wrap tag-cloud my-6">
+      <%# <li class="tag-cloud"> %>
+      <% @recipes.each do |r| %>
+          <% r.tag_list.each do |tag| %>
+            <small class="my-2"><%= link_to tag, recipes_path(tag: tag)%></small>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of Tagged list for quick access -->
+
+
+
+
+
+
 <!-- list of recipes -->
 <div class="recipe-cards my-4">
   <% @recipes.each do | recipe | %>
@@ -5,10 +31,8 @@
         <div class="recipe-index" id="recipe-card-style" style="background-image: url(<%= cl_image_path recipe.photo.key%>)"><%= link_to recipe.name, recipe_path(recipe),class: "recipe-link-hidden" %>
         </div>
         <div class="recipe-info card-body pb-0 effect2">
-          <div class="row justify-content-center">
-          
-                  <%= link_to recipe.name, recipe_path(recipe),class: "recipe-link" %>
-
+          <div class="row justify-content-center"> 
+            <%= link_to recipe.name, recipe_path(recipe),class: "recipe-link" %>
           </div>
 
 
