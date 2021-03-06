@@ -1,2 +1,0 @@
-class CheckoutSession < ApplicationRecord
-end
