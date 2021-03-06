@@ -28,8 +28,24 @@ class BookingsController < ApplicationController
     @booking.recipe = @recipe
     authorize @booking
 
+  
+    session = Stripe::Checkout::Session.create(
+      payment_method_types: ['card'],
+      line_items: [{
+        name: @recipe.name,
+        images: [@recipe.photo.key],
+        amount: @recipe.price_cents,
+        currency: 'aud',
+        quantity: 1
+      }],
+      success_url: root_url,
+      cancel_url: root_url
+    )
+  
+    
     if @booking.save
-      redirect_to booking_path(@booking)
+      @booking.update(checkout_session_id: session.id)
+      redirect_to new_booking_checkout_session_path(@booking)
     else
       render :new
     end
