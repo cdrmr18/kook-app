@@ -55,7 +55,7 @@
       <h2 class="text-center mb-4">My Recipes</h2>
       <% @recipes.each do |recipe| %>
         <ul>
-          <p><%= link_to recipe.name, recipe_path(recipe) %> <span><%= link_to "X", recipe_path(recipe), method: :delete, data: {confirm: "Are you sure?" } %></span></p>
+          <p><%= link_to recipe.name, recipe_path(recipe) %> | <span><%= link_to "remove", recipe_path(recipe), method: :delete, data: {confirm: "Are you sure?" } %></span></p>
         </ul>
       <% end %>
     </div>
