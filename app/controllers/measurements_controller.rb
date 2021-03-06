@@ -13,7 +13,7 @@ class MeasurementsController < ApplicationController
     authorize @measurement
 
     if @measurement.save
-      redirect_to recipe_path(@recipe)
+      redirect_to recipe_path(@recipe, anchor: "measurement-#{@measurement.id}")
     else
       render 'recipes/show'
     end
@@ -30,7 +30,7 @@ class MeasurementsController < ApplicationController
   def destroy
     @measurement.destroy
     @recipe = @measurement.recipe
-    redirect_to recipe_path(@recipe)
+    redirect_to recipe_path(@recipe, anchor: "add-measurement")
   end
 
   private
