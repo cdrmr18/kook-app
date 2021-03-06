@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  racipe: MyString
+  chef: MyString
+  unit_amount: 1
+  price: 1
+  currency: MyString
+  images: 
+
+two:
+  racipe: MyString
+  chef: MyString
+  unit_amount: 1
+  price: 1
+  currency: MyString
+  images: 

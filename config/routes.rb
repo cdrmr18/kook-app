@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount StripeEvent::Engine, at: '/stripe-webhooks'
+  
   devise_for :users
   root to: 'pages#home'
   get '/tagged', to: "recipes#tagged", as: :tagged
@@ -34,4 +36,9 @@ Rails.application.routes.draw do
   # /chefs/:id -- /chefs/new  -- /chefs
   resources :chefs, only: [:show, :new, :create, :index, :destroy]
   resources :measurements, only: [:destroy]
+
+  # checkout
+  resources :bookings, only: [] do
+    resources :checkout_sessions, only: [:new]
+  end
 end
