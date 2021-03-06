@@ -16,13 +16,12 @@
 <!-- recipe details -->
 <div class="container recipe-details">
   <h4> Recipe Courtesy of <%=  link_to @chef_name, chef_path(@recipe.chef) %></h4>
-  <p class="text-center"><%= link_to "♥️"%></p>
   <p class="text-center"><%= @recipe.recipe_reviews.blank? ? "" : "⭐️" * @recipe.recipe_reviews.average(:rating).round(2) %></p>
   <div class="container">
     <p><i class="far fa-clock "></i> <strong>Cook time:</strong> <%= @recipe.cook_time %> mins</p>
     <p><%= @recipe.description %></p>
   <!-- price -->
-    <p><%= humanized_money_with_symbol(@recipe.price) %></p>
+    <p><%= humanized_money_with_symbol(@recipe.price) %> / hr</p>
   <!--  -->
   </div>
 
@@ -55,8 +54,13 @@
       <%= f.input :ingredient %>
       <%= f.button :submit, "Add Ingredient", class: "btn button col-10" %>
     <% end %>
+
+    <!-- delete recipe -->
+  <%= link_to "Delete Recipe", recipe_path(@recipe), method: :delete, data: {confirm: "Are you sure?" }, remote: true, class: "btn btn-warning mt-4 col-10" %>
+  <!--  -->
   </div>
 <% end %>
+
   <!--  -->
 
   <!-- RECIPE reviews -->
