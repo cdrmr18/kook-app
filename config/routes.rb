@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   mount StripeEvent::Engine, at: '/stripe-webhooks'
-  
+
   devise_for :users
   root to: 'pages#home'
   get '/tagged', to: "recipes#tagged", as: :tagged

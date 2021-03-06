@@ -16,13 +16,12 @@
 <!-- recipe details -->
 <div class="container recipe-details">
   <h4> Recipe Courtesy of <%=  link_to @chef_name, chef_path(@recipe.chef) %></h4>
-  <p class="text-center"><%= link_to "♥️"%></p>
   <p class="text-center"><%= @recipe.recipe_reviews.blank? ? "" : "⭐️" * @recipe.recipe_reviews.average(:rating).round(2) %></p>
   <div class="container">
     <p><i class="far fa-clock "></i> <strong>Cook time:</strong> <%= @recipe.cook_time %> mins</p>
     <p><%= @recipe.description %></p>
   <!-- price -->
-    <p><%= humanized_money_with_symbol(@recipe.price) %></p>
+    <p><%= humanized_money_with_symbol(@recipe.price) %> / hr</p>
   <!--  -->
   </div>
 
@@ -38,9 +37,9 @@
   <div class="container mt-4">
     <h4>Ingredients</h4>
     <% @recipe.measurements.each do |measurement| %>
-      <p> <i class="fas fa-square-full fa-xs"> </i>     <%= measurement.description %> <%= measurement.ingredient %> </p>
-      <% if current_user ==  measurement.recipe.chef.user %>
-      <%= link_to "X", measurement_path(measurement), method: :delete, data: {confirm: "Are you sure?"} %>
+      <p id="measurement-<%= measurement.id %>"> <i class="fas fa-square-full fa-xs mr-2"> </i>     <%= measurement.description %> <%= measurement.ingredient.capitalize %>
+      <% if current_user ==  measurement.recipe.chef.user %> |
+      <%= link_to "remove", measurement_path(measurement), method: :delete, remote: true %></p>
       <% end %>
     <% end %>
   </div>
@@ -48,28 +47,36 @@
 
 <!-- ADD INGREDIENTS -->
 <% if current_user == @recipe.chef.user %>
-  <div class="container mt-4">
-    <p class="text-center">Add Ingredients and Measurements</p>
-    <%= simple_form_for [@recipe, @measurement] do |f| %>
+  <div class="container mt-4" id="add-measurement">
+    <p class="text-center">Add Ingredient
+    <%= simple_form_for([@recipe, @measurement], remote: true) do |f| %>
       <%= f.input :description, placeholder: '6 leaves' %>
       <%= f.input :ingredient %>
       <%= f.button :submit, "Add Ingredient", class: "btn button col-10" %>
     <% end %>
+
+    <!-- add new recipe -->
+    <%= link_to "Add Recipe", new_recipe_path, class: "btn button col-10 shadow-sm mt-2" %>
+    <!--  -->
+    <%= link_to "Chef Dashboard", chef_dashboard_path(@chef), class: "btn btn-light col-10 shadow-sm mt-2" %>
   </div>
 <% end %>
+
   <!--  -->
 
   <!-- RECIPE reviews -->
-<% @recipe.recipe_reviews.each do |review| %>
-  <div class="notification mt-4">
-    <%= cl_image_tag review.booking.user.photo.key, class: "avatar-large" %>
-    <div class="notification-content">
-      <p class="my-0"><strong><%= review.booking.user.first_name %> <%= review.booking.user.last_name %></strong></p>
-      <p><span><%= review.created_at.strftime("%B %e, %Y") %> |</span>  <%= "⭐️" * review.rating %></p>
-      <p><%= review.content %></p>
-    </div>
+  <div class="comtainer">
+    <% @recipe.recipe_reviews.each do |review| %>
+      <div class="notification mt-4">
+        <%= cl_image_tag review.booking.user.photo.key, class: "avatar-large" %>
+        <div class="notification-content">
+          <p class="my-0"><strong><%= review.booking.user.first_name %> <%= review.booking.user.last_name %></strong></p>
+          <p><span><%= review.created_at.strftime("%B %e, %Y") %> |</span>  <%= "⭐️" * review.rating %></p>
+          <p><%= review.content %></p>
+        </div>
+      </div>
+    <% end %>
   </div>
-<% end %>
 </div>
 
 

@@ -1,5 +1,5 @@
 class MeasurementsController < ApplicationController
-  before_action :set_recipe, only: [:new, :create, :edit, :update]
+  before_action :set_recipe, only: [:new, :create]
   before_action :set_measurement, only: [:edit, :update, :destroy]
 
   def new
@@ -13,24 +13,16 @@ class MeasurementsController < ApplicationController
     authorize @measurement
 
     if @measurement.save
-      redirect_to recipe_path(@recipe)
+      redirect_to recipe_path(@recipe, anchor: "measurement-#{@measurement.id}")
     else
       render 'recipes/show'
     end
   end
 
-  def edit
-  end
-
-  def update
-    @measurement.update(measurement_params)
-    redirect_to recipe_path(@recipe)
-  end
-
   def destroy
     @measurement.destroy
     @recipe = @measurement.recipe
-    redirect_to recipe_path(@recipe)
+    redirect_to recipe_path(@recipe, anchor: "add-measurement")
   end
 
   private
