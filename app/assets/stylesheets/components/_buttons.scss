@@ -34,3 +34,15 @@
 .button-book{
   border-radius: 20px;
 }
+
+
+#dropdownMenuButton{
+  padding: 5px;
+  color:black;
+  background-color: white;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}

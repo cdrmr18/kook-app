@@ -17,7 +17,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 0 10px;
   border: solid 0.2em;
-
+  
 }
 
 
@@ -44,36 +44,6 @@
   
 }
 
-
-
-
-// Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
-  .recipe-cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .recipe-cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .recipe-cards {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .recipe-cards {
-    grid-template-columns: 1fr 1fr 1fr;
-    }
-  }
 
 // recipe show page style
 .banner {
@@ -172,8 +142,67 @@ h4 {
   background-color: white;
 }
 
-
-
 .recipe-link-hidden{
   opacity:0;
 }
+
+
+.tag-cloud a{
+  background-color:#efe1fa;
+  color:#c076f8;;
+  // border-radius: 20px;
+  font-size: 18px;
+  padding: 2px 5px;
+  margin: 20px 2px;
+  text-shadow: 0 0px 0 rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+  font-family: 'Nunito Sans', sans-serif;
+  border: solid 1px #c076f8;
+}
+
+
+#dropdownMenuButton{
+  border: none;
+  background: transparent;
+  margin-left: 25px;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+// LEAVE CODE BELOW FOR FUTURE RESPONSIVE FIXES
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .recipe-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .recipe-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .recipe-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .recipe-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+    }
+  }

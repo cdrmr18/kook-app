@@ -11,7 +11,7 @@ class RecipesController < ApplicationController
 
   def index
     if params[ :query ].present?
-    @recipes = policy_scope(Recipe).global_search(params[ :query ])
+      @recipes = policy_scope(Recipe).global_search(params[ :query ])
     elsif params[:tag].present?
       @recipes = policy_scope(Recipe).tagged_with(params[:tag])
     else
