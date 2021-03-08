@@ -1,12 +1,15 @@
 class RecipesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
-  before_action :set_recipe, only: [:show, :update, :edit, :destroy]
+  before_action :set_recipe, only: [:show, :update, :edit, :destroy, :toggle_favorite]
 
   def top
     @recipes = Recipe.joins(:recipe_reviews).where(recipe_reviews:{rating: 5})
   end
 
-  
+  def toggle_favorite
+    @recipe = Recipe.find_by(id: params[:id])
+    current_user.favorited?(@recipe)  ? current_user.unfavorite(@recipe) : current_user.favorite(@recipe)
+  end
 
 
   def index
