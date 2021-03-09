@@ -38,7 +38,7 @@ document.addEventListener('turbolinks:load', () => {
 });
 // ------------------------------------------------------------------
 
-// start and end time calendar------------------------------------------------
+// start and end time ------------------------------------------------
 document.addEventListener('turbolinks:load', () => {
   const startTimeInput = document.getElementById('booking_start_time');
   const endTimeInput = document.getElementById('booking_end_time');
@@ -51,19 +51,19 @@ document.addEventListener('turbolinks:load', () => {
       noCalendar: true,
       dateFormat: "h:i K",
       disableMobile: "true"
-      // disable: unavailableTimes,
+      disable: unavailableTimes,
     });
 
-    // startTimeInput.addEventListener("change", (e) => {
-      // if (startTimeInput != "") {
-      //   endTimeInput.disabled = false
-      // }
+    startTimeInput.addEventListener("change", (e) => {
+      if (startTimeInput != "") {
+        endTimeInput.disabled = false
+      }
     flatpickr(endTimeInput, {
       enableTime: true,
       noCalendar: true,
       dateFormat: "h:i K",
       disableMobile: "true"
       });
-    // })
+    })
   };
 });

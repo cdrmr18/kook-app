@@ -10,7 +10,7 @@
   <div class="row">
     <div class="col-xs-12 col-sm-4 col-sm-offset-4">
 
-        <div class="form-calendar" id='recipe-booking-dates' data-unavailable="<%#= @recipe.unavailable_dates.to_json %>">
+        <div class="form-calendar" id='recipe-booking-dates' data-unavailable="<%= @recipe.unavailable_times.to_json %>">
           <h4>Session Booking</h4>
           <hr>
           <h2 class="text-center">Chef <%= @recipe.chef.user.first_name%> <%= @recipe.chef.user.last_name%></h2>

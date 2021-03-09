@@ -26,12 +26,12 @@ class Recipe < ApplicationRecord
       tsearch: { prefix: true }
     }
 
-    def unavailable_dates
-      recipes.pluck(:start_date)
-    end
+    # def unavailable_dates
+    #   bookings.pluck(:date)
+    # end
 
     def unavailable_times
-      recipes.pluck(:start_time, :end_time).map do |range|
+      bookings.pluck(:start_time, :end_time).map do |range|
         { from: range[0], to: range[1] }
       end
     end
