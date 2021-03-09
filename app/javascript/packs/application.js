@@ -38,13 +38,13 @@ document.addEventListener('turbolinks:load', () => {
 });
 // ------------------------------------------------------------------
 
-// start and end time ------------------------------------------------
+// start and end time calendar------------------------------------------------
 document.addEventListener('turbolinks:load', () => {
   const startTimeInput = document.getElementById('booking_start_time');
   const endTimeInput = document.getElementById('booking_end_time');
   if (startTimeInput) {
-    // const unavailableTimes = JSON.parse(document.querySelector('#recipe-booking-times').dataset.unavailable)
-    // endTimeInput.disabled = true
+    const unavailableTimes = JSON.parse(document.querySelector('#recipe-booking-times').dataset.unavailable)
+    endTimeInput.disabled = true
 
     flatpickr(startTimeInput, {
       enableTime: true,

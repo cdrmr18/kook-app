@@ -27,9 +27,7 @@ class Recipe < ApplicationRecord
     }
 
     def unavailable_dates
-      recipes.pluck(:start_date).map do |range|
-        { from: range[0], to: range[1] }
-      end
+      recipes.pluck(:start_date)
     end
 
     def unavailable_times
