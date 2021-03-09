@@ -30,9 +30,9 @@ class Recipe < ApplicationRecord
     #   bookings.pluck(:date)
     # end
 
-    def unavailable_times
-      bookings.pluck(:start_time, :end_time).map do |range|
-        { from: range[0], to: range[1] }
-      end
-    end
+    # def unavailable_times
+    #   bookings.pluck(:start_time, :end_time).map do |range|
+    #     { from: range[0], to: range[1] }
+    #   end
+    # end
 end
