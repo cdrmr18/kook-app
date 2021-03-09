@@ -42,7 +42,7 @@ document.addEventListener('turbolinks:load', () => {
 document.addEventListener('turbolinks:load', () => {
   const startTimeInput = document.getElementById('booking_start_time');
   const endTimeInput = document.getElementById('booking_end_time');
-  if (startTimeInput) {
+  // if (startTimeInput) {
     // const unavailableTimes = JSON.parse(document.querySelector('#recipe-booking-times').dataset.unavailable)
     // endTimeInput.disabled = true
 
@@ -54,16 +54,16 @@ document.addEventListener('turbolinks:load', () => {
       // disable: unavailableTimes,
     });
 
-    // startTimeInput.addEventListener("change", (e) => {
-      // if (startTimeInput != "") {
-      //   endTimeInput.disabled = false
-      // }
+//     // startTimeInput.addEventListener("change", (e) => {
+//       // if (startTimeInput != "") {
+//       //   endTimeInput.disabled = false
+//       // }
     flatpickr(endTimeInput, {
       enableTime: true,
       noCalendar: true,
       dateFormat: "h:i K",
       disableMobile: "true"
       });
-    // })
-  };
+//     // })
+//   };
 });
