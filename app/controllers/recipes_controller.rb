@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:show, :index]
   before_action :set_recipe, only: [:show, :update, :edit, :destroy, :toggle_favorite]
 
   def top

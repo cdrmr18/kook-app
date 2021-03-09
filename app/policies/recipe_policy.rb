@@ -13,6 +13,10 @@ class RecipePolicy < ApplicationPolicy
     true
   end
 
+  def toggle_favorite?
+    true
+  end
+
   def update?
     user == record.user
   end

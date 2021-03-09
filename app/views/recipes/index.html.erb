@@ -1,10 +1,5 @@
-<% @recipes.each do | recipe | %>
-    
-        <% end %>
 
 
-
-  
 
 <!-- Tagged list for quick access -->
 
@@ -42,7 +37,11 @@
         <div class="recipe-info card-body pb-0 effect2">
           <div class="row justify-content-center"> 
             <%= link_to recipe.name, recipe_path(recipe),class: "recipe-link" %>
-              <%= link_to "like", toggle_favorite_recipe_path(recipe), remote: true, method: :post %>
+            <% if user_signed_in? %>
+              <%= link_to toggle_favorite_recipe_path(recipe), remote: true, method: :post do %>              
+                <%= render 'recipes/like_button', recipe: recipe %>  
+              <% end %>
+            <% end %>
 
           </div>
 
