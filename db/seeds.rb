@@ -701,7 +701,7 @@ Measurement.create!(
 Measurement.create!(
   recipe_id: slavo_two.id,
   description: "2 cups Sugar",
-  ingredient: "Light Brown or Regular" 
+  ingredient: "Light Brown or Regular"
   )
 Measurement.create!(
   recipe_id: slavo_two.id,
@@ -818,7 +818,7 @@ Measurement.create!(
 )
 
 
-# ------------- NEW RECIPE: Slavo Bukich’s Baked Beans --------------- 
+# ------------- NEW RECIPE: Slavo Bukich’s Baked Beans ---------------
 
 Measurement.create!(
   recipe_id: slavo_four.id,
@@ -866,7 +866,7 @@ Measurement.create!(
 Measurement.create!(
   recipe_id: jamal_one.id,
   description: "80 ml",
-  ingredient: "extra virgin olive oil" 
+  ingredient: "extra virgin olive oil"
 )
 Measurement.create!(
   recipe_id: jamal_one.id,
@@ -883,7 +883,7 @@ Measurement.create!(
   recipe_id: jamal_one.id,
   description: "3 tbsp",
   ingredient: "tahini"
-  
+
 )
 Measurement.create!(
   recipe_id: jamal_one.id,
@@ -897,7 +897,7 @@ Measurement.create!(
   recipe_id: jamal_two.id,
   description: "",
   ingredient: "Parsley (curly or flat-leaf)"
-  
+
 )
 Measurement.create!(
   recipe_id: jamal_two.id,
@@ -1048,7 +1048,7 @@ Measurement.create!(
 Measurement.create!(
   recipe_id: jamal_four.id,
   description: "¼ cup",
-  ingredient: "Raisins" 
+  ingredient: "Raisins"
 )
 Measurement.create!(
   recipe_id: jamal_four.id,
@@ -1160,7 +1160,7 @@ Measurement.create!(
 Measurement.create!(
   recipe_id: jamal_five.id,
   description: "",
-  ingredient: "Salty Lebanese Pickles (cucumbers, turnips, pickled chilli peppers)" 
+  ingredient: "Salty Lebanese Pickles (cucumbers, turnips, pickled chilli peppers)"
 )
 Measurement.create!(
   recipe_id: jamal_five.id,
@@ -2287,12 +2287,12 @@ Measurement.create!(
   description: "a handful",
   ingredient: "fresh flatleaf parsley, coarsely chopped"
   )
-  
+
   # --------- chorizo & egg breakfast pizza ------------
   Measurement.create!(
     recipe_id: roger_three.id,
     description: "1",
-    ingredient: "refrigerated thin pizza crust"    
+    ingredient: "refrigerated thin pizza crust"
   )
   Measurement.create!(
     recipe_id: roger_three.id,
@@ -2344,7 +2344,7 @@ Measurement.create!(
     description: "½ cup",
     ingredient: "grated Parmesan cheese"
   )
-  
+
   # ---------  pecan pie ------------
   #Crust:
 
@@ -2373,9 +2373,9 @@ Measurement.create!(
     description: "1 Tbsp",
     ingredient: "ice water"
   )
-  
+
   #Filling:
-  
+
   Measurement.create!(
     recipe_id: roger_four.id,
     description: "1/2 cup ",
@@ -2406,9 +2406,9 @@ Measurement.create!(
     description: "whole pecans",
     ingredient: "2 cups"
   )
-  
-  #Equipment needed: 
-  
+
+  #Equipment needed:
+
   Measurement.create!(
     recipe_id: roger_four.id,
     description: "One 9-inch by 1-inch",
@@ -2419,7 +2419,7 @@ Measurement.create!(
     description: "",
     ingredient: "Food processor to make the tart dough"
   )
-  
+
   # --------- le burger du poulet ------------
   Measurement.create!(
     recipe_id: roger_five.id,
@@ -2543,9 +2543,6 @@ Measurement.create!(
   description: "1½ cups",
   ingredient: "golden raisins"
 )
-
-
-puts "Jeez! That was a lot of data entry..."
 
 
 # -------- MEASUREMETNS END ----------------
