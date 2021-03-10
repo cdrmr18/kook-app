@@ -5,3 +5,24 @@
 .booking-confirm p {
   font-size: px;
 }
+
+.link-user-dash{
+    color:#290149;
+    font-size: 15px;
+    padding: 5px;
+    text-align: center;
+    margin-top:0;
+    text-decoration: none;
+    font-family: 'Nutino Sans', sans-serif;
+    opacity: 1;
+   letter-spacing: 1px;
+  
+  
+    &:hover{
+      color: #A288E3;
+      font-weight: 500;
+      opacity: 1;
+    }
+  }
+
+

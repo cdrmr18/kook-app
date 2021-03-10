@@ -10,7 +10,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find_by(id: params[:id])
     current_user.favorited?(@recipe)  ? current_user.unfavorite(@recipe) : current_user.favorite(@recipe)
   end
-
+ 
 
   def index
     if params[ :query ].present?
