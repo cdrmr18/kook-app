@@ -2639,44 +2639,46 @@ Measurement.create!(
 )
 Measurement.create!(
   recipe_id: bec_two.id,
-  description: "",
-  ingredient: ""
+  description: "25g",
+  ingredient: "unsalted butter"
 )
 Measurement.create!(
   recipe_id: bec_two.id,
-  description: "",
-  ingredient: ""
+  description: "6",
+  ingredient: "Swiss brown mushrooms, stalks removed, sliced"
 )
 Measurement.create!(
   recipe_id: bec_two.id,
-  description: "",
-  ingredient: ""
+  description: "1",
+  ingredient: "golden shallot, finely chopped"
+)
+Measurement.create!(
+  recipe_id: bec_one.id,
+  description: "1",
+  ingredient: "roma tomato, peeled, seeded and diced"
+)
+Measurement.create!(
+  recipe_id: bec_one.id,
+  description: "75 ml",
+  ingredient: "dry white wine"
+)
+Measurement.create!(
+  recipe_id: bec_one.id,
+  description: "175 ml",
+  ingredient: "chicken jus"
+)
+Measurement.create!(
+  recipe_id: bec_one.id,
+  description: "1 small",
+  ingredient: "sprig tarragon (leaves only)"
 )
 Measurement.create!(
   recipe_id: bec_one.id,
   description: "",
-  ingredient: ""
+  ingredient: "freshly ground white pepper"
 )
-Measurement.create!(
-  recipe_id: bec_one.id,
-  description: "",
-  ingredient: ""
-)
-Measurement.create!(
-  recipe_id: bec_one.id,
-  description: "",
-  ingredient: ""
-)
-Measurement.create!(
-  recipe_id: bec_one.id,
-  description: "",
-  ingredient: ""
-)
-Measurement.create!(
-  recipe_id: bec_one.id,
-  description: "",
-  ingredient: ""
-)
+
+  # bec recipe three - sashimi with chilli-lime dressing
 Measurement.create!(
   recipe_id: bec_one.id,
   description: "",
