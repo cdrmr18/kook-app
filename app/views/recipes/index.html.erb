@@ -1,3 +1,6 @@
+
+
+
 <!-- Tagged list for quick access -->
 
 <div class="dropdown">
@@ -11,6 +14,7 @@
       <% @recipes.each do |r| %>
           <% r.tag_list.each do |tag| %>
             <small class="my-2"><%= link_to tag, recipes_path(tag: tag)%></small>
+
           <% end %>
         <% end %>
       </div>
@@ -27,13 +31,27 @@
 <!-- list of recipes -->
 <div class="recipe-cards my-4">
   <% @recipes.each do | recipe | %>
+   <%= link_to recipe_path(recipe) do  %>
       <div class="container">
-        <div class="recipe-index" id="recipe-card-style" style="background-image: url(<%= cl_image_path recipe.photo.key%>)"><%= link_to recipe.name, recipe_path(recipe),class: "recipe-link-hidden" %>
+        <div class="recipe-index" id="recipe-card-style" style="background-image: url(<%= cl_image_path recipe.photo.key%>)">
         </div>
         <div class="recipe-info card-body pb-0 effect2">
           <div class="row justify-content-center"> 
             <%= link_to recipe.name, recipe_path(recipe),class: "recipe-link" %>
-          </div>
+            <!-- like button -->
+            <div class="container">
+              <div class="recipe-link" id="like-heart">
+              <% if user_signed_in? %>
+                <%= link_to toggle_favorite_recipe_path(recipe), remote: true, method: :post do %>              
+                  <p><%= render 'recipes/like_button', recipe: recipe %> </p>
+                <% end %>
+              <% end %>
+              </div>
+            </div>
+          <% end %>
+      </div>
+
+
 
 
 
@@ -55,3 +73,4 @@
 <!--  -->
 
 
+ 

@@ -10,7 +10,7 @@ class DashboardsController < ApplicationController
   def user_dashboard
     @user = current_user
     @bookings = @user.bookings
-
+    @favorite_recipes = current_user.favorited_by_type('Recipe')
     skip_authorization
   end
 end

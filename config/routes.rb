@@ -17,6 +17,9 @@ Rails.application.routes.draw do
 
  # All CRUD actions for recipes
   resources :recipes do
+    member do 
+      post 'toggle_favorite', to: "recipes#toggle_favorite"
+    end
     collection do
       get :top
     end

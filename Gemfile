@@ -37,6 +37,8 @@ gem 'pundit'
 gem 'stripe'
 gem 'stripe_event'
 gem 'acts-as-taggable-on', '~> 7.0'
+gem 'acts_as_favoritor'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
