@@ -2680,6 +2680,188 @@ Measurement.create!(
 
   # bec recipe three - sashimi with chilli-lime dressing
 Measurement.create!(
+  recipe_id: bec_three.id,
+  description: "3 tsp",
+  ingredient: "light soy sauce"
+)
+Measurement.create!(
+  recipe_id: bec_three.id,
+  description: "2 tsp",
+  ingredient: "grapeseed oil or peanut oil"
+)
+Measurement.create!(
+  recipe_id: bec_three.id,
+  description: "1 tsp ",
+  ingredient: "caster sugar"
+)
+Measurement.create!(
+  recipe_id: bec_three.id,
+  description: "1 tsp",
+  ingredient: "dried chilli flakes"
+)
+Measurement.create!(
+  recipe_id: bec_three.id,
+  description: "1/2 tsp",
+  ingredient: "sesame oil"
+)
+Measurement.create!(
+  recipe_id: bec_three.id,
+  description: "juice of 1",
+  ingredient: "lime"
+)
+Measurement.create!(
+  recipe_id: bec_three.id,
+  description: "300g ",
+  ingredient: "skinless sashimi-grade snapper fillet, pin-boned"
+)
+Measurement.create!(
+  recipe_id: bec_three.id,
+  description: "2",
+  ingredient: "spring onions, thinly sliced on an angle"
+)
+   # bec recipe four - stir-fried asparagus
+Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "2tbs",
+  ingredient: "Peanut oil, to deep-fry, plus extra "
+)
+Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "80g",
+  ingredient: "ginger, shredded"
+)
+Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "500g",
+  ingredient: "asparagus, trimmed"
+)Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "1 bunch",
+  ingredient: "spring onions "
+)Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "2tbs",
+  ingredient: "Chinese rice wine"
+)Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "1tbs",
+  ingredient: "light soy sauce"
+)Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "2 tsp ",
+  ingredient: "malt vinegar"
+)Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "1tsp",
+  ingredient: "brown sugar"
+)Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "1/3 cup",
+  ingredient: "chicken stock"
+)
+Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "1/2tsp",
+  ingredient: "sesame oil"
+)
+Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "",
+  ingredient: "Toasted white sesame seeds, to serve"
+)
+ # bec recipe four - pork & egg
+
+Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "",
+  ingredient: ""
+)Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "",
+  ingredient: ""
+)Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: bec_four.id,
+  description: "",
+  ingredient: ""
+)
+
+  # bec recipe five - ginger garlic noodle soup
+Measurement.create!(
   recipe_id: bec_one.id,
   description: "",
   ingredient: ""
@@ -2691,12 +2873,6 @@ Measurement.create!(
 )
 
 
-
-Measurement.create!(
-  recipe_id: bec_one.id,
-  description: "",
-  ingredient: ""
-)
 # -------- MEASUREMETNS END ----------------
 
 # --- ---- --- -- --- --- -- -- --- -- -- -- -- -- -- -- -- -- --- -- -- -- -- -- --
