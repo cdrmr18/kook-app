@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'booking_confirmation/show'
   mount StripeEvent::Engine, at: '/stripe-webhooks'
 
   devise_for :users
@@ -40,5 +41,6 @@ Rails.application.routes.draw do
   # checkout
   resources :bookings, only: [] do
     resources :checkout_sessions, only: [:new]
+    resources :booking_confirmations, only: [:new]
   end
 end

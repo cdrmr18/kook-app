@@ -8,4 +8,6 @@ class CheckoutSessionPolicy < ApplicationPolicy
   def new?
     record.present?
   end
+
+  
 end
