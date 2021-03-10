@@ -2543,8 +2543,158 @@ Measurement.create!(
   description: "1½ cups",
   ingredient: "golden raisins"
 )
+# -------- Bec Brown recips ------------
+  # recipe one - prawns with sweet chilli sauce
+Measurement.create!(
+  recipe_id: bec_one.id,
+  description: "",
+  ingredient: "Sunflower oil, to deep-fry"
+)
+Measurement.create!(
+  recipe_id: bec_one.id,
+  description: "2 tbs",
+  ingredient: "plain flour"
+)
+Measurement.create!(
+  recipe_id: bec_one.id,
+  description: "1kg",
+  ingredient: "1kg large green prawns, peeled (tails intact), deveined, butterflied"
+)
+Measurement.create!(
+  recipe_id: bec_one.id,
+  description: "1 tbs",
+  ingredient: "Sichuan peppercorns "
+)
+Measurement.create!(
+  recipe_id: bec_one.id,
+  description: "1/4 cup",
+  ingredient: "salt flakes"
+)
+Measurement.create!(
+  recipe_id: bec_one.id,
+  description: "2 cups",
+  ingredient: "rice vinegar"
+)
+Measurement.create!(
+  recipe_id: bec_one.id,
+  description: "1 1/2 cups",
+  ingredient: "caster sugar"
+)
+Measurement.create!(
+  recipe_id: bec_one.id,
+  description: "1/3 cupe",
+  ingredient: "fish sauce"
+)
+Measurement.create!(
+  recipe_id: bec_one.id,
+  description: "3",
+  ingredient: "long red chillies, finely chopped"
+)
+Measurement.create!(
+  recipe_id: bec_one.id,
+  description: "1 cup",
+  ingredient: "cold beer"
+)
+Measurement.create!(
+  recipe_id: bec_one.id,
+  description: "1 cup",
+  ingredient: "plain flour, plus extra to dust"
+)
+Measurement.create!(
+  recipe_id: bec_one.id,
+  description: "1 cup",
+  ingredient: "ice"
+)
+
+  # recipe two -  roast chicken with sauce chasseur
+Measurement.create!(
+  recipe_id: bec_two.id,
+  description: "2",
+  ingredient: "3large bay leaves"
+)
+Measurement.create!(
+  recipe_id: bec_two.id,
+  description: "1/2 bunch",
+  ingredient: "thyme"
+)
+Measurement.create!(
+  recipe_id: bec_two.id,
+  description: "1",
+  ingredient: "head garlic, halved crossways"
+)
+Measurement.create!(
+  recipe_id: bec_two.id,
+  description: "1.6 kg",
+  ingredient: "Barossa Valley chicken"
+)
+Measurement.create!(
+  recipe_id: bec_two.id,
+  description: "50 ml",
+  ingredient: "olive oil"
+)
+Measurement.create!(
+  recipe_id: bec_two.id,
+  description: "",
+  ingredient: "sea salt and freshly ground white pepper"
+)
+Measurement.create!(
+  recipe_id: bec_two.id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: bec_two.id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: bec_two.id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: bec_one.id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: bec_one.id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: bec_one.id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: bec_one.id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: bec_one.id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: bec_one.id,
+  description: "",
+  ingredient: ""
+)
+Measurement.create!(
+  recipe_id: bec_one.id,
+  description: "",
+  ingredient: ""
+)
 
 
+
+Measurement.create!(
+  recipe_id: bec_one.id,
+  description: "",
+  ingredient: ""
+)
 # -------- MEASUREMETNS END ----------------
 
 # --- ---- --- -- --- --- -- -- --- -- -- -- -- -- -- -- -- -- --- -- -- -- -- -- --
