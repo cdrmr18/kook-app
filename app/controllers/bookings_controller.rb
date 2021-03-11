@@ -30,7 +30,6 @@ class BookingsController < ApplicationController
     authorize @booking
 
     if @booking.save
-      byebug
       session = Stripe::Checkout::Session.create(
         payment_method_types: ['card'],
         line_items: [{

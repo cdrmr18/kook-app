@@ -1,5 +1,7 @@
 <div class="container mt-4">
   <div class="container text-center card py-3 shadow-sm ">
+    <h1 class="recipe-head"> User Dashboard</h1>
+
     <div class="row">
       <div class="col-12">
         <%= cl_image_tag current_user.photo.key, width: 175, height: 175,  crop: :fill, class: "chef-avatar mb-4"  %>
@@ -7,8 +9,8 @@
        <div class="col-12">
         <h1 class="user-dash-name" ><%= current_user.first_name %> <%= current_user.last_name %></h1>
           <!-- create chef link -->
-        <% if current_user.chef == nil %>
-        <%= link_to "Become a chef", new_chef_path, class: "btn btn-light mt-2 shadow-sm " %>
+        <% if !current_user.chef.present? %>
+          <%= link_to "Become a chef", new_chef_path, class: "btn btn-light mt-2 shadow-sm " %>
         <% end %>
       </div>
     </div>
@@ -26,11 +28,11 @@
 
 <!-- collapse menu -->
 
-  <div id="accordion" class="my-4 shadow-sm">
+  <div id="accordion" class="mt-4 shadow-sm">
   <div class="card">
     <div class="card-header" id="headingOne">
       <h5 class="mb-0 text-center">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <button class="btn btn-link link-user-dash" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           Booking History
         </button>
       </h5>
@@ -51,7 +53,7 @@
   <div class="card">
     <div class="card-header" id="headingTwo">
       <h5 class="mb-0 text-center">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <button class="btn btn-link link-user-dash collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
           My Chef Reviews
         </button>
       </h5>
@@ -70,12 +72,12 @@
   <div class="card">
     <div class="card-header" id="headingThree">
       <h5 class="mb-0 text-center">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        <button class="btn btn-link link-user-dash collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
           My Recipe Reviews
         </button>
       </h5>
     </div>
-    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+    <div id="collapseThree" class="collapse " aria-labelledby="headingThree" data-parent="#accordion">
       <div class="card-body">
         <% current_user.recipe_reviews.each do |recipe_review|
           %>
@@ -88,6 +90,30 @@
   </div>
 </div>
 
+  <div class="card mb-4">
+    <div class="card-header" id="headingFour">
+      <h5 class="mb-0 text-center">
+        <button class="btn btn-link link-user-dash collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Favourites  <i class="fas fa-heart red"></i>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+      <div class="card-body">
+        <% @favorite_recipes.each do |recipe| %>
+          <%= link_to recipe.name, recipe_path(recipe),class: "link-user-dash" %>
+          <hr>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
 
+
+
+
+
+
+</div>
+</div>
 

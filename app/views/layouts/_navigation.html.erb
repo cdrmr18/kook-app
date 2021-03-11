@@ -1,12 +1,14 @@
 
     <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
         <%= link_to "/", class: "navbar-brand" do %>
-        <%= image_tag "LOGO.svg" %>
+          <%= image_tag "LOGO.svg" %>
         <% end %>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon "> </span></span>
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/random", class: "avatar dropdown-toggle", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% if user_signed_in? %>
+            <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% end %>
         </button>
 
 
@@ -42,7 +44,9 @@
         <ul class="navbar-nav mr-auto navbar-fixed-top">
           <% if user_signed_in? %>
             <li class="nav-item dropdown">
-              <%= image_tag "https://kitt.lewagon.com/placeholder/users/random", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <% if user_signed_in? %>
+                <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <% end %>
               <div class="col-md-12">
                 <div div class="dropdown-menu dropdown-menu-right" id="drpdown" aria-labelledby="navbarDropdown">
                     <div class="inblk"><%= link_to "Recipes", recipes_path, class: "dropdown-item text" %></div>
