@@ -223,6 +223,7 @@ bec_two = Recipe.new(
   )
 bec_two.photo.attach(io: file, filename: "nes10.png", content_type: 'image/png')
 bec_two.save!
+bec_two.tag_list.add("thai", "chicken", "sauce")
 
 file = URI.open('https://images.unsplash.com/photo-1595456982104-14cc660c4d22?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTJ8fHNhc2hpbWl8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 bec_three = Recipe.new(
@@ -235,6 +236,7 @@ bec_three = Recipe.new(
   )
 bec_three.photo.attach(io: file, filename: "nes11.png", content_type: 'image/png')
 bec_three.save!
+bec_three.tag_list.add("thai", "seafood", "chilli", "lime")
 
 file = URI.open('https://images.unsplash.com/photo-1601091745482-b2b5942e567e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDZ8fGZyaWVkJTIwYXNwYXJhZ3VzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 bec_four = Recipe.new(
@@ -247,6 +249,7 @@ bec_four = Recipe.new(
   )
 bec_four.photo.attach(io: file, filename: "nes12.png", content_type: 'image/png')
 bec_four.save!
+bec_four.tag_list.add("thai", "asparagus", "stir-fried")
 
 file = URI.open('https://images.unsplash.com/photo-1603356887214-0441954124ae?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
 bec_five = Recipe.new(
@@ -259,6 +262,7 @@ bec_five = Recipe.new(
   )
 bec_five.photo.attach(io: file, filename: "nes13.png", content_type: 'image/png')
 bec_five.save!
+bec_five.tag_list.add("thai", "pork", "eggs")
 
 file = URI.open('https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c291cCUyMG5vb2RsZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 bec_six = Recipe.new(
@@ -271,6 +275,7 @@ bec_six = Recipe.new(
   )
 bec_six.photo.attach(io: file, filename: "nes14.png", content_type: 'image/png')
 bec_six.save!
+bec_six.tag_list.add("thai", "ginger", "soup")
 
    # chef chaz recipes
 file = URI.open('https://images.unsplash.com/photo-1471253387723-35c53c9f97ca?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fGZyaXR0ZXJzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
