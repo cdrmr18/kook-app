@@ -569,6 +569,7 @@ slavo_one = Recipe.new(
   )
 slavo_one.photo.attach(io: file, filename: "nes39.png", content_type: 'image/png')
 slavo_one.save!
+slavo_one.tag_list.add("balkan", "Cevapi")
 
 file = URI.open('https://images.unsplash.com/photo-1580476262843-d5e9b687d4d4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8cm9hc3R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 slavo_two = Recipe.new(
@@ -581,6 +582,7 @@ slavo_two = Recipe.new(
   )
 slavo_two.photo.attach(io: file, filename: "nes40.png", content_type: 'image/png')
 slavo_two.save!
+slavo_two.tag_list.add("balkan", "pork", "roast")
 
 file = URI.open('https://images.unsplash.com/photo-1613552496394-4e4b3f074e4f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTl8fHN0ZXd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 slavo_three = Recipe.new(
@@ -593,6 +595,7 @@ slavo_three = Recipe.new(
   )
 slavo_three.photo.attach(io: file, filename: "nes41.png", content_type: 'image/png')
 slavo_three.save!
+slavo_three.tag_list.add("balkan", "bosnian", "pot")
 
 file = URI.open('https://images.unsplash.com/photo-1602873520153-ec56ca3c205b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YmFrZWQlMjBiZWFuc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 slavo_four = Recipe.new(
@@ -605,6 +608,7 @@ slavo_four = Recipe.new(
   )
 slavo_four.photo.attach(io: file, filename: "nes42.png", content_type: 'image/png')
 slavo_four.save!
+slavo_four.tag_list.add("balkan", "baked beans", "beans")
 
 puts "#{Recipe.count} recipes created"
 
