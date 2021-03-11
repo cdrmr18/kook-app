@@ -2734,27 +2734,33 @@ Measurement.create!(
   recipe_id: bec_four.id,
   description: "500g",
   ingredient: "asparagus, trimmed"
-)Measurement.create!(
+)
+Measurement.create!(
   recipe_id: bec_four.id,
   description: "1 bunch",
   ingredient: "spring onions "
-)Measurement.create!(
+)
+Measurement.create!(
   recipe_id: bec_four.id,
   description: "2tbs",
   ingredient: "Chinese rice wine"
-)Measurement.create!(
+)
+Measurement.create!(
   recipe_id: bec_four.id,
   description: "1tbs",
   ingredient: "light soy sauce"
-)Measurement.create!(
+)
+Measurement.create!(
   recipe_id: bec_four.id,
   description: "2 tsp ",
   ingredient: "malt vinegar"
-)Measurement.create!(
+)
+Measurement.create!(
   recipe_id: bec_four.id,
   description: "1tsp",
   ingredient: "brown sugar"
-)Measurement.create!(
+)
+Measurement.create!(
   recipe_id: bec_four.id,
   description: "1/3 cup",
   ingredient: "chicken stock"
@@ -2769,110 +2775,139 @@ Measurement.create!(
   description: "",
   ingredient: "Toasted white sesame seeds, to serve"
 )
- # bec recipe four - pork & egg
+ # bec recipe five - pork & egg
 
 Measurement.create!(
-  recipe_id: bec_four.id,
-  description: "",
-  ingredient: ""
+  recipe_id: bec_five.id,
+  description: "2 tbsp ",
+  ingredient: "vegetable oil"
 )
 Measurement.create!(
-  recipe_id: bec_four.id,
-  description: "",
-  ingredient: ""
+  recipe_id: bec_five.id,
+  description: "1kg",
+  ingredient: "boneless pork belly or rashers, cut into 3cm cubes"
 )
 Measurement.create!(
-  recipe_id: bec_four.id,
-  description: "",
-  ingredient: ""
+  recipe_id: bec_five.id,
+  description: "3cm",
+  ingredient: "piece ginger, finely chopped"
 )
 Measurement.create!(
-  recipe_id: bec_four.id,
-  description: "",
-  ingredient: ""
+  recipe_id: bec_five.id,
+  description: "2",
+  ingredient: "cloves garlic, finely chopped"
 )
 Measurement.create!(
-  recipe_id: bec_four.id,
-  description: "",
-  ingredient: ""
+  recipe_id: bec_five.id,
+  description: "6",
+  ingredient: "shallots, finely chopped"
 )
 Measurement.create!(
-  recipe_id: bec_four.id,
-  description: "",
-  ingredient: ""
+  recipe_id: bec_five.id,
+  description: "2tbsp",
+  ingredient: "Chinese cooking wine or dry sherry"
 )
 Measurement.create!(
-  recipe_id: bec_four.id,
-  description: "",
-  ingredient: ""
+  recipe_id: bec_five.id,
+  description: "2tbsp",
+  ingredient: "dark soy sauce"
 )
 Measurement.create!(
-  recipe_id: bec_four.id,
-  description: "",
-  ingredient: ""
+  recipe_id: bec_five.id,
+  description: "1tbs",
+  ingredient: "light soy sauce"
 )
 Measurement.create!(
-  recipe_id: bec_four.id,
-  description: "",
-  ingredient: ""
+  recipe_id: bec_five.id,
+  description: "1tbs",
+  ingredient: "fish sauce"
 )
 Measurement.create!(
-  recipe_id: bec_four.id,
-  description: "",
-  ingredient: ""
+  recipe_id: bec_five.id,
+  description: "1/4 cup ",
+  ingredient: "brown sugar"
 )
 Measurement.create!(
-  recipe_id: bec_four.id,
-  description: "",
-  ingredient: ""
+  recipe_id: bec_five.id,
+  description: "1tsp",
+  ingredient: "Chinese five spice powder"
 )
 Measurement.create!(
-  recipe_id: bec_four.id,
-  description: "",
-  ingredient: ""
+  recipe_id: bec_five.id,
+  description: "2",
+  ingredient: "star anise"
 )Measurement.create!(
-  recipe_id: bec_four.id,
-  description: "",
-  ingredient: ""
+  recipe_id: bec_five.id,
+  description: "2",
+  ingredient: "bay leaves"
 )
 Measurement.create!(
-  recipe_id: bec_four.id,
-  description: "",
-  ingredient: ""
+  recipe_id: bec_five.id,
+  description: "2",
+  ingredient: "eggs"
 )
 Measurement.create!(
-  recipe_id: bec_four.id,
+  recipe_id: bec_five.id,
   description: "",
-  ingredient: ""
-)Measurement.create!(
-  recipe_id: bec_four.id,
-  description: "",
-  ingredient: ""
+  ingredient: "Water to cover the pork belly"
 )
 Measurement.create!(
-  recipe_id: bec_four.id,
+  recipe_id: bec_five.id,
   description: "",
-  ingredient: ""
-)
-Measurement.create!(
-  recipe_id: bec_four.id,
-  description: "",
-  ingredient: ""
+  ingredient: "steamed rice to serve"
 )
 
   # bec recipe five - ginger garlic noodle soup
 Measurement.create!(
-  recipe_id: bec_one.id,
-  description: "",
-  ingredient: ""
+  recipe_id: bec_six.id,
+  description: "1",
+  ingredient: "Shallots and green onions "
 )
 Measurement.create!(
-  recipe_id: bec_one.id,
-  description: "",
-  ingredient: ""
+  recipe_id: bec_six.id,
+  description: "1",
+  ingredient: "Ginger"
 )
-
-
+Measurement.create!(
+  recipe_id: bec_six.id,
+  description: "1",
+  ingredient: "Garlic"
+)
+Measurement.create!(
+  recipe_id: bec_six.id,
+  description: "2",
+  ingredient: "Shallots"
+)
+Measurement.create!(
+  recipe_id: bec_six.id,
+  description: "2 cups",
+  ingredient: "Low-sodium chicken broth (or veggie broth/water to keep it vegan)"
+)
+Measurement.create!(
+  recipe_id: bec_six.id,
+  description: "2tbs",
+  ingredient: "Soy sauce"
+)
+Measurement.create!(
+  recipe_id: bec_six.id,
+  description: "3",
+  ingredient: "Bok Choy"
+)
+Measurement.create!(
+  recipe_id: bec_six.id,
+  description: "6 oz",
+  ingredient: "Tuna"
+)
+Measurement.create!(
+  recipe_id: bec_six.id,
+  description: "2oz",
+  ingredient: "rice noodles"
+)
+Measurement.create!(
+  recipe_id: bec_six.id,
+  description: "1",
+  ingredient: "Star Anise"
+)
 # -------- MEASUREMETNS END ----------------
 
 # --- ---- --- -- --- --- -- -- --- -- -- -- -- -- -- -- -- -- --- -- -- -- -- -- --
