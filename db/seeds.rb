@@ -423,6 +423,7 @@ roger_one = Recipe.new(
   )
 roger_one.photo.attach(io: file, filename: "nes27.png", content_type: 'image/png')
 roger_one.save!
+roger_one.tag_list.add("French", "duck", "liver")
 
 file = URI.open('https://images.unsplash.com/photo-1591386767153-987783380885?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YmVhbiUyMHN0ZXd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 roger_two = Recipe.new(
@@ -435,6 +436,7 @@ roger_two = Recipe.new(
   )
 roger_two.photo.attach(io: file, filename: "nes28.png", content_type: 'image/png')
 roger_two.save!
+roger_two.tag_list.add("French")
 
 file = URI.open('https://images.unsplash.com/photo-1605591099585-087b3d54cd45?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1342&q=80')
 roger_three = Recipe.new(
@@ -447,6 +449,7 @@ roger_three = Recipe.new(
   )
 roger_three.photo.attach(io: file, filename: "nes29.png", content_type: 'image/png')
 roger_three.save!
+roger_three.tag_list.add("French", "chorizo", "egg", "pizza")
 
 file = URI.open('https://images.unsplash.com/photo-1535920527002-b35e96722eb9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80')
 roger_four = Recipe.new(
@@ -459,6 +462,7 @@ roger_four = Recipe.new(
   )
 roger_four.photo.attach(io: file, filename: "nes30.png", content_type: 'image/png')
 roger_four.save!
+roger_four.tag_list.add("French", "pecan", "pie")
 
 file = URI.open('https://images.unsplash.com/photo-1481070555726-e2fe8357725c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjJ8fHxlbnwwfHx8&auto=format&fit=crop&w=800&q=60')
 roger_five = Recipe.new(
@@ -471,6 +475,7 @@ roger_five = Recipe.new(
   )
 roger_five.photo.attach(io: file, filename: "nes31.png", content_type: 'image/png')
 roger_five.save!
+roger_five.tag_list.add("French", "burger", "chicken")
 
 file = URI.open('https://images.unsplash.com/photo-1513623954575-263b061498a3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')
 roger_six = Recipe.new(
@@ -483,6 +488,7 @@ roger_six = Recipe.new(
   )
 roger_six.photo.attach(io: file, filename: "nes32.png", content_type: 'image/png')
 roger_six.save!
+roger_six.tag_list.add("French", "duck")
 
 # chef samuel recipes
 file = URI.open('https://images.unsplash.com/photo-1611712142269-12b7433e28e9?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTV8fGFmcmljYW4lMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
