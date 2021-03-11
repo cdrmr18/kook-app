@@ -496,6 +496,7 @@ samuel_one = Recipe.new(
   )
 samuel_one.photo.attach(io: file, filename: "ne33.png", content_type: 'image/png')
 samuel_one.save!
+samuel_one.tag_list.add("north african", "chicken")
 
 file = URI.open('https://images.unsplash.com/photo-1576577445504-6af96477db52?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTgyfHxtZWF0YmFsbCUyMHNvdXB8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 samuel_two = Recipe.new(
@@ -508,6 +509,7 @@ samuel_two = Recipe.new(
   )
 samuel_two.photo.attach(io: file, filename: "nes34.png", content_type: 'image/png')
 samuel_two.save!
+samuel_two.tag_list.add("north african", "meatball", "soup")
 
 file = URI.open('https://images.unsplash.com/photo-1532636875304-0c89119d9b4d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')
 samuel_three = Recipe.new(
@@ -520,6 +522,7 @@ samuel_three = Recipe.new(
   )
 samuel_three.photo.attach(io: file, filename: "nes35.png", content_type: 'image/png')
 samuel_three.save!
+samuel_three.tag_list.add("north african", "lamb", "dates")
 
 file = URI.open('https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTl8fHJvYXN0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 samuel_four = Recipe.new(
@@ -532,6 +535,7 @@ samuel_four = Recipe.new(
   )
 samuel_four.photo.attach(io: file, filename: "nes36.png", content_type: 'image/png')
 samuel_four.save!
+samuel_four.tag_list.add("north african", "lamb", "roast")
 
 file = URI.open('https://images.unsplash.com/photo-1519624014191-508652cbd7b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80')
 samuel_five = Recipe.new(
@@ -544,6 +548,7 @@ samuel_five = Recipe.new(
   )
 samuel_five.photo.attach(io: file, filename: "nes37.png", content_type: 'image/png')
 samuel_five.save!
+samuel_five.tag_list.add("north african", "chicken")
 
 file = URI.open('https://images.unsplash.com/photo-1512058556646-c4da40fba323?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8cGFuJTIwZnJ5fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 samuel_six = Recipe.new(
@@ -556,6 +561,7 @@ samuel_six = Recipe.new(
   )
 samuel_six.photo.attach(io: file, filename: "nes38.png", content_type: 'image/png')
 samuel_six.save!
+samuel_six.tag_list.add("north african", "lamb", "paella")
 
 # chef slavo recipes
 file = URI.open('https://images.unsplash.com/photo-1585325701165-351af916e581?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=988&q=80')
