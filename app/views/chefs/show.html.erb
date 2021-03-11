@@ -2,7 +2,7 @@
 <div class="container card px-3 py-3 chef-info shadow">
   <div class="container">
     <div class="row align-items-end justify-content-between">
-      <div class="col-6 col-md-8 text-center mt-3">
+      <div class="col-6 col-md-8 text-center mt-3 ">
         <h1><%= @chef.user.first_name %> <%= @chef.user.last_name %></h1>
         <h4><%= @chef.job_title %></h4>
         <h5> <%= @chef.restaurant%></h5>
@@ -57,12 +57,12 @@
 
 <!-- chef reviews -->
 <% @chef.chef_reviews.each do |review| %>
-  <div class="notification">
+  <div class="notification mb-0">
     <%= cl_image_tag review.booking.user.photo.key, class: "avatar-large" %>
     <div class="notification-content">
       <p class="my-0"><strong><%= review.booking.user.first_name %> <%= review.booking.user.last_name %></strong></p>
       <p><span><%= review.created_at.strftime("%B %e, %Y") %> |</span>  <%= review.rating.blank? ? "" : "⭐️" * review.rating %></p>
-      <p><%= review.content %></p>
+      <p>"<%= review.content %>"</p>
     </div>
   </div>
 <% end %>
