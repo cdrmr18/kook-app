@@ -6,7 +6,7 @@
         <h1><%= @chef.user.first_name %> <%= @chef.user.last_name %></h1>
         <h4><%= @chef.job_title %></h4>
         <h5> <%= @chef.restaurant%></h5>
-        <p>⭐️⭐️⭐️⭐️⭐️</p>
+        <p> <%= @chef.chef_reviews.blank? ? "" : "⭐️ " * @chef.chef_reviews.average(:rating).round(2) %> </p>
       </div>
       <div class="col-6 col-md-4">
         <%= cl_image_tag @chef.user.photo.key, width: 175, height: 175,  crop: :fill, class: "chef-avatar mb-4"  %>
@@ -40,7 +40,7 @@
 
           <div class="container mt-2">
             <div class="row">
-              <div class="col-6 pl-0"><p><span class="mr-3"><%= recipe.cuisine %></span> ⭐️⭐️⭐️⭐️</p></div>
+              <div class="col-6 pl-0"><p><span class="mr-3"><%= recipe.cuisine %></span> <%= recipe.recipe_reviews.blank? ? "✩ 0 reviews" : "⭐️ " * recipe.recipe_reviews.average(:rating).round(2) %></p></div>
               <div class="col-6"><span>Est cook time: <%= recipe.cook_time %> mins</span></div>
             </div>
           </div>

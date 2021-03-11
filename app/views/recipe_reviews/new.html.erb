@@ -8,7 +8,7 @@
 
       <%= simple_form_for [@booking, @recipe_review] do |f| %>
         <div class="container text-center">
-          <%= f.input :rating, collection: (1..5).to_a, label: "Rate your experience" %>
+          <%= f.input :rating, as: :radio_buttons, collection: (1..5).to_a, label: "Rate your experience" %>
         </div>
         <%= f.input :content, label: "How was the recipe?" %>
         <%= f.submit "Send your review", class: "btn button col-12" %>
