@@ -289,6 +289,7 @@ chaz_one = Recipe.new(
   )
 chaz_one.photo.attach(io: file, filename: "nes15.png", content_type: 'image/png')
 chaz_one.save!
+chaz_one.tag_list.add("Modern Australian", "zucchini")
 
 file = URI.open('https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OTV8fGZpc2glMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 chaz_two = Recipe.new(
@@ -301,6 +302,7 @@ chaz_two = Recipe.new(
   )
 chaz_two.photo.attach(io: file, filename: "nes16.png", content_type: 'image/png')
 chaz_two.save!
+chaz_two.tag_list.add("Modern Australian", "salmon", "seafood")
 
 file = URI.open('https://images.unsplash.com/photo-1591107576521-87091dc07797?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fHRhcnQlMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 chaz_three = Recipe.new(
@@ -313,6 +315,7 @@ chaz_three = Recipe.new(
   )
 chaz_three.photo.attach(io: file, filename: "nes17.png", content_type: 'image/png')
 chaz_three.save!
+chaz_three.tag_list.add("Modern Australian", "tart", "dessert")
 
 file = URI.open('https://images.unsplash.com/photo-1609770424775-39ec362f2d94?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8cmlzb3R0b3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 chaz_four = Recipe.new(
@@ -325,6 +328,7 @@ chaz_four = Recipe.new(
   )
 chaz_four.photo.attach(io: file, filename: "nes18.png", content_type: 'image/png')
 chaz_four.save!
+chaz_four.tag_list.add("Modern Australian", "mushroom", "rice")
 
 file = URI.open('https://images.unsplash.com/photo-1513623954575-263b061498a3?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8ZHVjayUyMGZvb2R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 chaz_five = Recipe.new(
@@ -337,6 +341,7 @@ chaz_five = Recipe.new(
   )
 chaz_five.photo.attach(io: file, filename: "nes19.png", content_type: 'image/png')
 chaz_five.save!
+chaz_five.tag_list.add("Modern Australian", "duck")
 
 file = URI.open('https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTR8fGJ1cmdlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 chaz_six = Recipe.new(
@@ -349,6 +354,7 @@ chaz_six = Recipe.new(
   )
 chaz_six.photo.attach(io: file, filename: "nes20.png", content_type: 'image/png')
 chaz_six.save!
+chaz_six.tag_list.add("Modern Australian", "lamb", "burger")
 
 # chef jamal recipes
 file = URI.open('https://images.unsplash.com/photo-1598683386906-71ef9caef177?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8&auto=format&fit=crop&w=800&q=60')
