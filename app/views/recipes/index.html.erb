@@ -5,7 +5,7 @@
 
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Filter
+    Quick Tags
     <%= image_tag "filter.svg" %> </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <div class="container">
@@ -40,7 +40,8 @@
             <%= link_to recipe.name, recipe_path(recipe),class: "recipe-link" %>
             <!-- like button -->
             <div class="container">
-              <div class="recipe-link" id="like-heart">
+              <p class="tinytext text-center mt-2 mb-0">add to favourites</p>
+              <div class="text-center" id="like-heart">
               <% if user_signed_in? %>
                 <%= link_to toggle_favorite_recipe_path(recipe), remote: true, method: :post do %>              
                   <p><%= render 'recipes/like_button', recipe: recipe %> </p>
