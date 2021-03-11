@@ -15,7 +15,7 @@ class ChefReviewsController < ApplicationController
 
   def create
       @chef_review = ChefReview.new(chef_review_params)
-
+      @chef_review.user = current_user
       # linking book with chef review
       @chef_review.booking_id = @booking.id
       # linking chef to review
@@ -25,6 +25,7 @@ class ChefReviewsController < ApplicationController
       if @chef_review.save
         redirect_to booking_path(@booking)
       else
+        flash[:alert] = "Something went wrong."
         render :new
       end
   end
