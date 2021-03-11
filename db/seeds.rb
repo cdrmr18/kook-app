@@ -2844,7 +2844,8 @@ Measurement.create!(
   recipe_id: bec_five.id,
   description: "2",
   ingredient: "star anise"
-)Measurement.create!(
+)
+Measurement.create!(
   recipe_id: bec_five.id,
   description: "2",
   ingredient: "bay leaves"
