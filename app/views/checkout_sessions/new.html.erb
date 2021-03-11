@@ -1,32 +1,36 @@
 <div class="container card text-center">
-  <div class="row py-4">
-    <div class="col-md-3"><%= cl_image_tag @booking.recipe.photo.key, width: '50%' %></div>
-    <div class="col">
-      <h1>Checkout summary</h1>
-      <p>Purchase of <strong><%= @booking.recipe.name %></strong> for <strong><%= humanized_money_with_symbol @booking.recipe.price %></strong></p>
-           <!-- booking details -->
-      <div class=" card container pt-3 text-center mb-5 shadow">
+  <div class="row p-4">
+    <div class="card container pt-3 text-center mb-5 shadow">
+      <div class="col-md-3 mt-4"><%= cl_image_tag @booking.recipe.photo.key, width: '80%', class: "img-thumbnail" %>
+      </div>
+        <div class="col p-5">
+          <!-- booking details -->
+          <h1>Checkout Summary</h1>
+          <p>Purchase of <strong><%= @booking.recipe.name %></strong></p>
           <h5> <strong>Chef <%= @booking.recipe.chef.user.first_name %> <%= @booking.recipe.chef.user.last_name %></strong></h5>
           <h5><%= @booking.date.strftime('%B %d, %Y') %></h5>
           <h5 class="card-text mb-3"><%= @booking.start_time.strftime("%I:%M%p") %> -
-                    <%= @booking.end_time.strftime("%I:%M%p") %></h5>
-      </div>
-      <button id="pay" class="btn btn-primary">Pay</button>
+                        <%= @booking.end_time.strftime("%I:%M%p") %></h5>
+          <h5>Total <strong><%= humanized_money_with_symbol @booking.recipe.price %></strong></h5>
+          <!--  -->
 
-      <script src="https://js.stripe.com/v3/"></script>
-      <script>
-        const paymentButton = document.getElementById('pay');
-        paymentButton.addEventListener('click', () => {
-          const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
-          stripe.redirectToCheckout({
-            sessionId: '<%= @booking.checkout_session_id %>'
-          });
-        });
-      </script>
+          <!-- pay button -->
+          <button id="pay" class="btn button my-3 col-8">Pay</button>
+
+          <script src="https://js.stripe.com/v3/"></script>
+          <script>
+            const paymentButton = document.getElementById('pay');
+            paymentButton.addEventListener('click', () => {
+              const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+              stripe.redirectToCheckout({
+                sessionId: '<%= @booking.checkout_session_id %>'
+              });
+            });
+          </script>
+          <!--  -->
+        </div>
     </div>
   </div>
-
-
 </div>
 
 
