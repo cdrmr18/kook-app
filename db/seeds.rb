@@ -362,6 +362,7 @@ jamal_one = Recipe.new(
   )
 jamal_one.photo.attach(io: file, filename: "nes21.png", content_type: 'image/png')
 jamal_one.save!
+jamal_one.tag_list.add("Middle Eastern", "hummus")
 
 file = URI.open('https://images.unsplash.com/photo-1594040815645-5442fb6d48f6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dGFib3VsaXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 jamal_two = Recipe.new(
@@ -374,6 +375,7 @@ jamal_two = Recipe.new(
   )
 jamal_two.photo.attach(io: file, filename: "nes22.png", content_type: 'image/png')
 jamal_two.save!
+jamal_two.tag_list.add("Middle Eastern", "grain")
 
 file = URI.open('https://images.unsplash.com/photo-1573821662905-00f8c205c148?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80')
 jamal_three = Recipe.new(
@@ -386,6 +388,7 @@ jamal_three = Recipe.new(
   )
 jamal_three.photo.attach(io: file, filename: "nes23.png", content_type: 'image/png')
 jamal_three.save!
+jamal_three.tag_list.add("Middle Eastern")
 
 file = URI.open('https://images.unsplash.com/photo-1603496987674-79600a000f55?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjl8fGNoaWNrZW4lMjBmb29kJTIwcmljZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 jamal_four = Recipe.new(
@@ -398,6 +401,7 @@ jamal_four = Recipe.new(
   )
 jamal_four.photo.attach(io: file, filename: "nes24.png", content_type: 'image/png')
 jamal_four.save!
+jamal_four.tag_list.add("Middle Eastern")
 
 file = URI.open('https://images.unsplash.com/photo-1593001872095-7d5b3868fb1d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8ZmFsYWZlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=800&q=60')
 jamal_five = Recipe.new(
@@ -410,6 +414,7 @@ jamal_five = Recipe.new(
   )
 jamal_five.photo.attach(io: file, filename: "nes25.png", content_type: 'image/png')
 jamal_five.save!
+jamal_five.tag_list.add("Middle Eastern", "falafel")
 
 # chef roger recipes
 file = URI.open('https://images.unsplash.com/photo-1605992728160-8d119bf2b5db?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cGF0ZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
