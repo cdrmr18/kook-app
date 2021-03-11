@@ -1,14 +1,17 @@
 <!-- chef review form and chef image-->
-<div class="container card mb-4" style="width: 100%;">
+<div class="container card mb-4 text-center" style="width: 100%;">
   <div class="card-body row justify-content-center">
     <div class="col-12 col-md-8 ">
-      <%= cl_image_tag @chef_photo, width: 250, height: 250, crop: :fill, class: "avatar-square"  %>
-      <h3>Add a review for Chef <%= @chef_name %> </h3>
+      <%= cl_image_tag @chef_photo, width: 200, height: 200, crop: :fill, class: "avatar-square shadow rounded"  %>
+      <h3 class="mt-4 text-center mb-0">Add Review</h3>
+      <h2 class="text-center"> Chef <%= @chef_name %> </h2>
 
       <%= simple_form_for [@booking, @chef_review] do |f| %>
-        <%= f.input :rating, as: :radio_buttons, collection: 1..5%>
-        <%= f.input :content %>
-        <%= f.button :submit, class: "btn button col-12" %>
+        <div class="container text-center">
+          <%= f.input :rating, as: :radio_buttons, collection: 1..5, selected: 5, label: "Rate your experience" %>
+        </div>
+        <%= f.input :content, label: "How amazing was your chef?" %>
+        <%= f.submit "Send your review", class: "btn button col-12" %>
       <% end %>
     </div>
   </div>

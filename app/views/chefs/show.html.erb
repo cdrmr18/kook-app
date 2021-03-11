@@ -62,7 +62,7 @@
       <div class="mx-1">
         <%= cl_image_tag review.booking.user.photo.key, class: "avatar-large" %>
       </div>
-      <div class="notification-content ml-3">
+      <div class="notification-content">
         <p class="my-0"><strong><%= review.booking.user.first_name %> <%= review.booking.user.last_name %></strong></p>
         <p><span><%= review.created_at.strftime("%B %e, %Y") %> |</span>  <%= review.rating.blank? ? "" : "⭐️" * review.rating %></p>
         <p>"<%= review.content %>"</p>

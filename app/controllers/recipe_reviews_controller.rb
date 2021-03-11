@@ -12,7 +12,7 @@ class RecipeReviewsController < ApplicationController
 
   def create
       @recipe_review = RecipeReview.new(review_params)
-      @recipe_review.user = current_user
+
       # link booking to recipe review
       @recipe_review.booking_id = @booking.id
       # link recipe to recipe review
