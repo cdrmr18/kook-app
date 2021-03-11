@@ -1,6 +1,6 @@
 <div class="container mt-4">
   <div class="container text-center card py-3 shadow-sm ">
-    <h1>Chef Dashboard</h1>
+    <h1 class="recipe-head"> Chef Dashboard</h1>
     <div class="row">
       <div class="col-12">
         <%= cl_image_tag current_user.photo.key, width: 175, height: 175,  crop: :fill, class: "chef-avatar mb-4"  %>
@@ -23,12 +23,14 @@
             <p><%= @bookings[-1].date.strftime("%B %e, %Y") %> <%= @bookings[-1].start_time.strftime("%I:%M%p") %> - <%= @bookings[-1].start_time.strftime("%I:%M%p") %></p>
           <% end %>
       </div>
-    <div class="col-5 card card-body pb-1 pt-2">
-      <p><%= link_to "Accept" %></p>
-    </div>
-    <div class="col-5 card card-body pb-1 pt-2">
-      <p><%= link_to "Decline" %></p>
-    </div>
+
+  
+      <div class="col card card-body pb-1 pt-2 d-inline-flex p-2">
+        <p class="link-user-dash" ><%= link_to "Accept "%><i class="far fa-check-square"></i></p>
+      </div>
+      <div class="col card card-body pb-1 pt-2">
+        <p class="link-user-dash"><%= link_to "Decline  " %><i class="fas fa-ban"></i></p>
+      </div>
   </div>
 </div>
 
@@ -46,8 +48,8 @@
 
     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
       <div class="card-body">
-        <div class="conatiner" >
-          <%= link_to "Add Recipe", new_recipe_path, class: "btn btn-light shadow-sm mb-4" %>
+        <div class="container" >
+          <%= link_to "Add Recipe", new_recipe_path, class: "btn btn-light shadow-sm mb-4", id:"chef-btn" %>
         </div>
          <!-- booking history -->
           <div class="container mt-4">
@@ -55,7 +57,7 @@
       <h2 class="text-center mb-4">My Recipes</h2>
       <% @recipes.each do |recipe| %>
         <ul>
-          <p><%= link_to recipe.name, recipe_path(recipe) %> | <span><%= link_to "remove", recipe_path(recipe), method: :delete, data: {confirm: "Are you sure?" } %></span></p>
+          <p class="link-user-dash"><%= link_to recipe.name, recipe_path(recipe) %> | <span><%= link_to "remove", recipe_path(recipe), method: :delete, data: {confirm: "Are you sure?" } %></span></p>
         </ul>
       <% end %>
     </div>

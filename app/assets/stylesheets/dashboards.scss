@@ -6,7 +6,7 @@
   font-size: px;
 }
 
-.link-user-dash{
+.link-user-dash a{
     color:#290149;
     font-size: 15px;
     padding: 5px;
@@ -24,5 +24,12 @@
       opacity: 1;
     }
   }
+
+
+#chef-btn{
+  border-radius:5px;
+  background-color: #290149;
+  color: #A288E3;
+}
 
 
