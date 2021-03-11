@@ -206,10 +206,11 @@ bec_one = Recipe.new(
   cuisine: 'Thai',
   cook_time: rand(30..90),
   chef_id: bec_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
   )
 bec_one.photo.attach(io: file, filename: "nes9.png", content_type: 'image/png')
 bec_one.save!
+bec_one.tag_list.add("thai", "fresh", "prawns", "seafood", "chilli")
 
 file = URI.open('https://images.unsplash.com/photo-1612443016520-314f09b3d449?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hpY2tlbiUyMGZvb2R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 bec_two = Recipe.new(
@@ -600,32 +601,6 @@ slavo_four = Recipe.new(
 slavo_four.photo.attach(io: file, filename: "nes42.png", content_type: 'image/png')
 slavo_four.save!
 
-# need two more recieps for slavo
-
-# file = URI.open('')
-# slavo_five = Recipe.new(
-#   name: 'Pork & Eggs',
-#   description: Faker::Food.description,
-#   cuisine: 'Balkan',
-#   cook_time: rand(30..90),
-#   chef_id: slavo.id,
-#   price: rand(30..75)
-#   )
-# slavo_five.photo.attach(io: file, filename: "nes42.png", content_type: 'image/png')
-# slavo_five.save!
-
-# file = URI.open('')
-# slavo_six = Recipe.new(
-#   name: 'Ginger Garlic Noodle Soup',
-#   description: Faker::Food.description,
-#   cuisine: 'Balkan',
-#   cook_time: rand(30..90),
-#   chef_id: slavo.id,
-#   price: rand(30..75)
-#   )
-# slavo_six.photo.attach(io: file, filename: "nes43.png", content_type: 'image/png')
-# slavo_six.save!
-
 puts "#{Recipe.count} recipes created"
 
 # -------- RECIPES END ----------------
@@ -635,6 +610,7 @@ puts "#{Recipe.count} recipes created"
 puts "Creating ingredients & measurements"
 
 # -------- MEASUREMETNS START ----------------
+# -------- slavo recipe one ----------------
 Measurement.create!(
   recipe_id: slavo_one.id,
   description: "600 g",
