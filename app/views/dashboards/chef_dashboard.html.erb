@@ -21,16 +21,17 @@
           <h4>Booking #<%= @bookings[-1].id %></h4>
           <h5><%= @bookings[-1].recipe.name %></h5>
             <p><%= @bookings[-1].date.strftime("%B %e, %Y") %> <%= @bookings[-1].start_time.strftime("%I:%M%p") %> - <%= @bookings[-1].start_time.strftime("%I:%M%p") %></p>
+            <div class="col card card-body pb-1 pt-2 d-inline-flex p-2">
+              <p class="link-user-dash" ><%= link_to "Accept "%><i class="far fa-check-square"></i></p>
+            </div>
+            <div class="col card card-body pb-1 pt-2">
+              <p class="link-user-dash"><%= link_to "Decline  " %><i class="fas fa-ban"></i></p>
+            </div>
           <% end %>
       </div>
 
-  
-      <div class="col card card-body pb-1 pt-2 d-inline-flex p-2">
-        <p class="link-user-dash" ><%= link_to "Accept "%><i class="far fa-check-square"></i></p>
-      </div>
-      <div class="col card card-body pb-1 pt-2">
-        <p class="link-user-dash"><%= link_to "Decline  " %><i class="fas fa-ban"></i></p>
-      </div>
+
+
   </div>
 </div>
 
@@ -48,19 +49,19 @@
 
     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
       <div class="card-body">
-        <div class="container" >
-          <%= link_to "Add Recipe", new_recipe_path, class: "btn btn-light shadow-sm mb-4", id:"chef-btn" %>
-        </div>
          <!-- booking history -->
-          <div class="container mt-4">
-    <div class="container">
-      <h2 class="text-center mb-4">My Recipes</h2>
-      <% @recipes.each do |recipe| %>
-        <ul>
-          <p class="link-user-dash"><%= link_to recipe.name, recipe_path(recipe) %> | <span><%= link_to "remove", recipe_path(recipe), method: :delete, data: {confirm: "Are you sure?" } %></span></p>
-        </ul>
-      <% end %>
-    </div>
+        <div class="container mt-4">
+          <div class="container">
+            <h2 class="text-center mb-4">My Recipes</h2>
+            <div class="container text-center" >
+              <%= link_to "Add Recipe", new_recipe_path, class: "btn btn-light shadow-sm mb-4", id:"chef-btn" %>
+            </div>
+            <% @recipes.each do |recipe| %>
+              <ul>
+                <p class="link-user-dash"><%= link_to recipe.name, recipe_path(recipe) %> | <span><%= link_to "remove", recipe_path(recipe), method: :delete, data: {confirm: "Are you sure?" } %></span></p>
+              </ul>
+            <% end %>
+          </div>
 
         </div>
       </div>
@@ -98,7 +99,7 @@
   </div>
 <!-- account cancellation -->
   <div class="container text-center mb-4">
-    <p><%= link_to "Delete Chef Account",  chef_path(@chef), method: :delete, class: "mt-4 btn btn-warning mb-4" %></p>
+    <p><%= link_to "Delete Chef Account",  chef_path(@chef), method: :delete, class: "mt-4 btn btn-light mb-4 shadow" %></p>
   </div>
 </div>
 
