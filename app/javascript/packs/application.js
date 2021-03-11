@@ -15,12 +15,6 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-import { initStarRating } from '../plugins/init_star_rating';
-
-initStarRating();
-
-
-
 require("flatpickr")
 // External imports
 import "bootstrap";
