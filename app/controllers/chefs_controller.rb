@@ -30,7 +30,7 @@ class ChefsController < ApplicationController
     authorize @chef
 
     if @chef.save
-      redirect_to chef_path(@chef)
+      redirect_to chef_dashboard_path(@chef)
     else
       render :new
     end
