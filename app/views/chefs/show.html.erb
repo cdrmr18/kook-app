@@ -70,8 +70,15 @@
     </div>
   <% end %>
 <% end %>
-<div class="container text-center my-2">
-  <%= link_to "Back to all chefs", chefs_path, class: "btn button" %>
+<div class="container text-center my-2 justify-content-between">
+  <div class="d-flex justify-content-between row">
+    <div class="mr-auto px-2">
+      <%= link_to "All Chefs", chefs_path, class: "btn button shadow" %>
+    </div>
+    <div class="px-2">
+      <%= link_to "Top", chef_path(@chef), class: "btn btn-light shadow" %>
+    </div>
+  </div>
 </div>
 
 
