@@ -7,8 +7,8 @@
        <div class="col-12">
         <h1 class="user-dash-name" ><%= current_user.first_name %> <%= current_user.last_name %></h1>
           <!-- create chef link -->
-        <% if current_user.chef == nil %>
-        <%= link_to "Become a chef", new_chef_path, class: "btn btn-light mt-2 shadow-sm " %>
+        <% if !current_user.chef.present? %>
+          <%= link_to "Become a chef", new_chef_path, class: "btn btn-light mt-2 shadow-sm " %>
         <% end %>
       </div>
     </div>
@@ -98,9 +98,9 @@
     </div>
     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
       <div class="card-body">
-        <% @favorite_recipes.each do |recipe| %>          
+        <% @favorite_recipes.each do |recipe| %>
           <%= link_to recipe.name, recipe_path(recipe),class: "link-user-dash" %>
-          <hr> 
+          <hr>
         <% end %>
       </div>
     </div>
