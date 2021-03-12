@@ -1,6 +1,6 @@
+<h1 class="chef-dash-header text-center">Chef Dashboard</h1>
 <div class="container mt-4">
-  <div class="container text-center card py-3 shadow-sm ">
-    <h1 class="recipe-head"> Chef Dashboard</h1>
+  <div class="container text-center card py-3 shadow-sm container-dash">
     <div class="row">
       <div class="col-12">
         <%= cl_image_tag current_user.photo.key, width: 175, height: 175,  crop: :fill, class: "chef-avatar mb-4"  %>
@@ -41,7 +41,7 @@
   <div class="card">
     <div class="card-header" id="headingOne">
       <h5 class="mb-0 text-center">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <button class="btn btn-link link-user-dash" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           My Recipes
         </button>
       </h5>
@@ -54,7 +54,7 @@
           <div class="container">
             <h2 class="text-center mb-4">My Recipes</h2>
             <div class="container text-center" >
-              <%= link_to "Add Recipe", new_recipe_path, class: "btn btn-light shadow-sm mb-4", id:"chef-btn" %>
+              <%= link_to "Add Recipe", new_recipe_path, class: "btn btn-light shadow-sm mb-4 d-flex justify-content-center", id:"chef-btn" %>
             </div>
             <% if !@recipes.empty? %>
               <% @recipes.each do |recipe| %>
@@ -72,7 +72,7 @@
     <div class="card">
       <div class="card-header" id="headingTwo">
         <h5 class="mb-0 text-center">
-          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <button class="link-user-dash btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
             My Chef Reviews
           </button>
         </h5>
@@ -87,7 +87,7 @@
     <div class="card">
       <div class="card-header" id="headingThree">
         <h5 class="mb-0 text-center">
-          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <button class="link-user-dash btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
             My Recipe Reviews
           </button>
         </h5>
@@ -101,7 +101,7 @@
   </div>
 <!-- account cancellation -->
   <div class="container text-center mb-4">
-    <p><%= link_to "Delete Chef Account",  chef_path(@chef), method: :delete, class: "mt-4 btn btn-light mb-4 shadow" %></p>
+    <p><%= link_to "Delete Chef Account",  chef_path(@chef), method: :delete, class: "mt-4 btn btn-light mb-4 shadow del-chef" %></p>
   </div>
 </div>
 
