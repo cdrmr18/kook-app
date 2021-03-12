@@ -1,6 +1,8 @@
+<h1 class="chef-dash-header text-center">User dashboard</h1>
 <div class="container mt-4">
-  <div class="container text-center card py-3 shadow-sm ">
-    <h1 class="recipe-head"> User Dashboard</h1>
+  <div class="container text-center card py-3 shadow-sm  container-dash ">
+
+    
 
     <div class="row">
       <div class="col-12">
@@ -10,7 +12,7 @@
         <h1 class="user-dash-name" ><%= current_user.first_name %> <%= current_user.last_name %></h1>
           <!-- create chef link -->
         <% if !current_user.chef.present? %>
-          <%= link_to "Become a chef", new_chef_path, class: "btn btn-light mt-2 shadow-sm " %>
+          <%= link_to "Become a chef", new_chef_path, class: "btn btn-light mt-2 shadow-sm", id: "chef-btn" %>
         <% end %>
       </div>
     </div>
@@ -19,11 +21,13 @@
 <!-- booking confirmation -->
 <div class="container shadow-sm ">
   <div class="row booking-confirm mt-4 text-center">
-    <div class="col-12 card card-body pb-2 pt-3">
-      <h4>Next Session</h4>
+    <div class="col-12 card card-body pb-2 pt-3 container-dash">
+      <h5>Next Session</h5>
+      <p></p>
       <% if !@bookings.empty? %>
-        <h5><%= @bookings[-1].recipe.name %></h5>
-        <p><%= @bookings[-1].date.strftime("%B %e, %Y") %> <%= @bookings[-1].start_time.strftime("%I:%M%p") %> - <%= @bookings[-1].start_time.strftime("%I:%M%p") %></p>
+        <h2 class="recipe-link"><%= @bookings[-1].recipe.name %></h2>
+        <p></p>
+        <p id="booking-times"><%= @bookings[-1].date.strftime("%B %e, %Y") %> <br> <%= @bookings[-1].start_time.strftime("%I:%M%p") %> - <%= @bookings[-1].start_time.strftime("%I:%M%p") %>
       <% end %>
     </div>
 </div>
@@ -43,7 +47,7 @@
     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
       <div class="card-body">
         <div class="conatiner" >
-          <%= link_to "My Bookings", bookings_path, class: "btn btn-light mb-4 shadow-sm " %>
+          <%= link_to "My Bookings", bookings_path, class: "btn btn-light mb-4 shadow-sm d-flex justify-content-center", id:"chef-btn" %>
         </div>
        <!-- booking history -->
        <% if !@bookings.empty? %>
@@ -102,7 +106,7 @@
     <div class="card-header" id="headingFour">
       <h5 class="mb-0 text-center">
         <button class="btn btn-link link-user-dash collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-          Favourites  <i class="fas fa-heart red"></i>
+          Favourites
         </button>
       </h5>
     </div>
