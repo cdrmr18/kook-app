@@ -56,10 +56,12 @@
             <div class="container text-center" >
               <%= link_to "Add Recipe", new_recipe_path, class: "btn btn-light shadow-sm mb-4", id:"chef-btn" %>
             </div>
-            <% @recipes.each do |recipe| %>
-              <ul>
-                <p class="link-user-dash"><%= link_to recipe.name, recipe_path(recipe) %> | <span><%= link_to "remove", recipe_path(recipe), method: :delete, data: {confirm: "Are you sure?" } %></span></p>
-              </ul>
+            <% if !@recipes.empty? %>
+              <% @recipes.each do |recipe| %>
+                <ul>
+                  <p class="link-user-dash"><%= link_to recipe.name, recipe_path(recipe) %> | <span><%= link_to "remove", recipe_path(recipe), method: :delete, data: {confirm: "Are you sure?" } %></span></p>
+                </ul>
+              <% end %>
             <% end %>
           </div>
 
