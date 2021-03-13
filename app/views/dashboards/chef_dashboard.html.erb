@@ -42,7 +42,7 @@
   <div class="card">
     <div class="card-header" id="headingOne">
       <h5 class="mb-0 text-center">
-        <button class="btn btn-link link-user-dash" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <button class="text-decoration-none btn btn-link link-user-dash" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           My Recipes
         </button>
       </h5>
@@ -65,19 +65,15 @@
                       <%= link_to cl_image_tag recipe.photo.key, class: "avatar-large",  crop: :fill %>
                     </div>
                     <div class="col-9">
-                     <h5><%= link_to recipe.name, recipe_path(recipe),class: "link-recipe-dash text-decoration-none font-weight-bold" %> | <span><%= link_to "remove", recipe_path(recipe), class:"text-secondary", method: :delete, data: {confirm: "Are you sure?" } %></span></h5>
+                     <div class="row justify-content-center">
+                       <h5 class="col-8 pl-2 pr-0"><%= link_to recipe.name, recipe_path(recipe),class: "link-recipe-dash text-decoration-none font-weight-bold" %></h5>
+                     <p class="col-1 pl-1 mt-0"><%= link_to "X", recipe_path(recipe), class:"text-secondary text-decoration-none font-weight-bold", method: :delete, data: {confirm: "Are you sure?" } %><p>
+                     </div>
+
                     </div>
                   </div>
               </div>
-            <hr>
-
-
-
-
-
-
-
-
+              <hr>
               <% end %>
             <% end %>
           </div>
@@ -89,14 +85,30 @@
     <div class="card">
       <div class="card-header" id="headingTwo">
         <h5 class="mb-0 text-center">
-          <button class="link-user-dash btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <button class="text-decoration-none link-user-dash btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
             My Chef Reviews
           </button>
         </h5>
       </div>
       <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
         <div class="card-body">
+          <% if !@bookings.empty? %>
+            <% @bookings.each do |booking|
+            %>
+            <div class="container mt-3">
+              <div class="row">
+                <div class="col-3">
+                  <%= link_to cl_image_tag booking.recipe.chef.user.photo.key, class: "avatar-large",  crop: :fill %>
+                </div>
+                <div class="col-9">
+                  <h5 class="mb-0"><%= link_to "Chef  #{booking.recipe.chef.user.first_name} #{booking.recipe.chef.user.last_name} ", chef_path(booking.recipe.chef),class: "link-recipe-dash text-decoration-none font-weight-bold" %></h5 >
 
+                </div>
+              </div>
+            </div>
+            <hr>
+            <% end %>
+          <% end %>
         </div>
       </div>
     </div>
@@ -104,7 +116,7 @@
     <div class="card">
       <div class="card-header" id="headingThree">
         <h5 class="mb-0 text-center">
-          <button class="link-user-dash btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <button class="text-decoration-none link-user-dash btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
             My Recipe Reviews
           </button>
         </h5>
@@ -118,7 +130,7 @@
   </div>
 <!-- account cancellation -->
   <div class="container text-center mb-4">
-    <p><%= link_to "Delete Chef Account",  chef_path(@chef), method: :delete, class: "mt-4 btn btn-light mb-4 shadow del-chef" %></p>
+    <p><%= link_to "Delete Chef Account",  chef_path(@chef), method: :delete, class: "text-decoration-none mt-4 btn btn-light mb-4 shadow del-chef" %></p>
   </div>
 </div>
 
