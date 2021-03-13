@@ -40,8 +40,8 @@
         <h2 class="text-center mb-3 mt-3">Past Sessions</h2>
         <% if @bookings.present? %>
           <% @bookings[0...-1].each do |booking| %>
-            <div class="card-product">
-              <%= cl_image_tag booking.recipe.photo.key %>
+            <div class="card-product mb-4">
+              <%= cl_image_tag booking.recipe.photo.key, class:"card-product" %>
               <div class="card-product-infos">
                 <h2><%= booking.recipe.name %></h2>
                 <p>Chef <%= booking.recipe.chef.user.first_name %> <%= booking.recipe.chef.user.last_name %></p>
@@ -53,17 +53,16 @@
           <% end %>
           <!--  -->
           <% if !@last_booking.recipe_review.nil? || !@last_booking.chef_review.nil?%>
-
-          <div class="card-product">
-            <%= cl_image_tag @last_booking.recipe.photo.key %>
-            <div class="card-product-infos">
-              <h2><%= @last_booking.recipe.name %></h2>
-              <p>Chef <%= @last_booking.recipe.chef.user.first_name %> <%= @last_booking.recipe.chef.user.last_name %></p>
-              <p class="card-text mb-0">Start Time: <%= @last_booking.start_time.strftime("%I:%M%p") %></p>
-                  <p>End Time: <%= @last_booking.end_time.strftime("%I:%M%p") %></p>
+            <div class="card-product mb-4">
+              <%= cl_image_tag @last_booking.recipe.photo.key, class:"card-product" %>
+              <div class="card-product-infos">
+                <h2><%= @last_booking.recipe.name %></h2>
+                <p>Chef <%= @last_booking.recipe.chef.user.first_name %> <%= @last_booking.recipe.chef.user.last_name %></p>
+                <p class="card-text mb-0">Start Time: <%= @last_booking.start_time.strftime("%I:%M%p") %></p>
+                    <p>End Time: <%= @last_booking.end_time.strftime("%I:%M%p") %></p>
+              </div>
+              <%= link_to "Session Details", booking_path(@last_booking) %>
             </div>
-            <%= link_to "Session Details", booking_path(@last_booking) %>
-          </div>
             <% end %>
           <% end %>
       </div>
