@@ -168,6 +168,64 @@ h4 {
   margin-top: 20px;
 }
 
+  .red{
+    color: rgb(209, 209, 209);
+  }
+
+
+  #like-heart a{
+    color: #c076f8;
+
+  }
+
+  .tinytext{
+    color: rgb(209, 209, 209);
+    text-decoration: none;
+    font-size: 13px;
+    font-family: 'Nutino Sans', sans-serif;
+  }
+
+  .chef-recipe-name {
+    font-family: caveat;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 2.5rem;
+    color:#290149;
+  }
+
+
+
+  .chef-recipe-header4{
+      font-family: 'Nunito Sans', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      text-transform: uppercase;
+      color:rgb(161, 161, 161);
+      letter-spacing: 2px;
+      }
+  
+      #cost-recipe{
+        font-weight: 800;
+        font-size:1.3em;
+        border-radius: 5px;
+        padding:5px;
+        justify-content: center;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -205,23 +263,4 @@ h4 {
   .recipe-cards {
     grid-template-columns: 1fr 1fr 1fr;
     }
-  }
-
-
-  .red{
-    color: rgb(209, 209, 209);
-  }
-
-
-  #like-heart a{
-    color: #c076f8;
-
-  }
-
-  .tinytext{
-    color: rgb(209, 209, 209);
-    text-decoration: none;
-    font-size: 13px;
-    font-family: 'Nutino Sans', sans-serif;
-
   }
