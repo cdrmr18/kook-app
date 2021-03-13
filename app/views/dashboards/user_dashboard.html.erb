@@ -54,7 +54,17 @@
        <!-- booking history -->
        <% if !@bookings.empty? %>
         <% @bookings.each do |booking| %>
-         <p>Booking #<%= booking.id %> | Chef <%= booking.recipe.chef.user.first_name %> <%= booking.recipe.chef.user.last_name %></p>
+        <div class="container">
+          <div class="row">
+            <div class="col-3">
+              <%= link_to cl_image_tag booking.recipe.photo.key, class: "avatar",  crop: :fill %>
+            </div>
+            <div class="col-9">
+            <p>Booking #<%= booking.id %> | Chef <%= booking.recipe.chef.user.first_name %> <%= booking.recipe.chef.user.last_name %></p>
+          </div>
+         </div>
+         </div>
+         <hr>
         <% end %>
        <% end %>
       </div>
@@ -116,8 +126,17 @@
       <div class="card-body">
         <% if !@favorite_recipes.empty? %>
           <% @favorite_recipes.each do |recipe| %>
-            <%= link_to recipe.name, recipe_path(recipe),class: "link-recipe-dash text-decoration-none" %>
-            <hr>
+          <div class="container">
+            <div class="row">
+              <div class="col-3">
+                <%= link_to cl_image_tag recipe.photo.key, class: "avatar",  crop: :fill %>
+              </div>
+              <div class="col-9">
+               <%= link_to recipe.name, recipe_path(recipe),class: "link-recipe-dash text-decoration-none" %>
+              </div>
+            </div>
+          </div>
+          <hr>
           <% end %>
         <% end %>
       </div>
@@ -127,4 +146,6 @@
 
 </div>
 </div>
+
+
 
