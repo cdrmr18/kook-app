@@ -17,13 +17,13 @@
 <div class="container recipe-details">
   <h4 class="chef-recipe-header4"> Recipe Courtesy of</h4><%=  link_to @chef_name, chef_path(@recipe.chef), class: "d-flex justify-content-center chef-recipe-name" %>
   <p class="text-center"><%= @recipe.recipe_reviews.blank? ? "" : "⭐️ " * @recipe.recipe_reviews.average(:rating).round(2) %></p>
-  <div class="container">
+  <div class="container m-3">
   <hr>
   <br>
     <p><i class="far fa-clock "></i> <strong>Cook time:</strong> <%= @recipe.cook_time %> mins</p>
     <p><%= @recipe.description %></p>
   <!-- price -->
-    <p id="cost-recipe"><%= humanized_money_with_symbol(@recipe.price) %> / hour</p>
+    <p id="cost-recipe" class="text-center"><%= humanized_money_with_symbol(@recipe.price) %> / hour</p>
   <!--  -->
   </div>
 <br>
@@ -35,17 +35,22 @@
   <% end %>
   <!--  -->
 <br>
-  <!-- ingredients -->
-  <div class="container mt-4">
-    <h4 class="mb-4">Ingredients</h4>
-    <% @recipe.measurements.each do |measurement| %>
-      <p id="measurement-<%= measurement.id %>"> <i class="fas fa-square fa-xs"></i>  
+  <!-- ingredients/ SHOPPING LIST -->
+  <div class="container">
+    <h4 class="text-center recipe-link mb-0">Shopping List</h4>
+    <h5 class="text-center recipe-link mt-0"> <%= @recipe.name %> </h5>
+    <div class="container mx-5 mb-4" id="shopping-list">
+      <div class="container  mt-4">
+      <% @recipe.measurements.each do |measurement| %>
+        <p id="measurement-<%= measurement.id %>"> <i class="fas fa-square fa-xs"></i>
 
-      <%= measurement.description %> <%= measurement.ingredient.capitalize %>
-      <% if current_user ==  measurement.recipe.chef.user %> |
-      <%= link_to "remove", measurement_path(measurement), method: :delete, remote: true %></p>
+        <%= measurement.description %> <%= measurement.ingredient.capitalize %>
+        <% if current_user ==  measurement.recipe.chef.user %> |
+        <%= link_to "remove", measurement_path(measurement), method: :delete, remote: true %></p>
+        <% end %>
       <% end %>
-    <% end %>
+      </div>
+    </div>
   </div>
   <!--     -->
 
@@ -93,7 +98,7 @@
     <div class="px-2">
      <%# <i class="fas fa-arrow-circle-up"></i> %>
       <%= link_to "Top", recipe_path(@recipe), class: "btn btn-light shadow" %>
-          
+
 
     </div>
   </div>
