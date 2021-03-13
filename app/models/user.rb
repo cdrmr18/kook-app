@@ -11,11 +11,16 @@ class User < ApplicationRecord
   has_many :chef_reviews, through: :bookings
   has_many :recipe_reviews, through: :bookings
 
+  after_create :send_welcome_email
+
   def owns?(item)
     item.user==self
   end
 
 
+private 
 
-
+def send_welcome_email
+  UserMailer.with(user: self:).welcome_email.deliver.now
+end
 end
