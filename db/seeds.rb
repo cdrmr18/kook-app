@@ -589,7 +589,7 @@ slavo_one = Recipe.new(
   cook_time: rand(30..90),
   chef_id: slavo_chef.id,
   price: rand(30..75),
-  tag_list: [("balkan", "Cevapi")]
+  tag_list: ["balkan", "Cevapi"]
   )
 slavo_one.photo.attach(io: file, filename: "nes39.png", content_type: 'image/png')
 slavo_one.save!
