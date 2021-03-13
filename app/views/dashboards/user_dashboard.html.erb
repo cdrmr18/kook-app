@@ -26,7 +26,7 @@
         <% else %>
           <h2 class="recipe-link"><%= @bookings[-1].recipe.name %></h2>
           <p></p>
-          <p id="booking-times"><%= @bookings[-1].date.strftime("%B %e, %Y") %> <br> <%= @bookings[-1].start_time.strftime("%I:%M%p") %> - <%= @bookings[-1].start_time.strftime("%I:%M%p") %>
+          <p id="booking-times"><%= @bookings[-1].date.strftime("%B %e, %Y") %> <br> <%= @bookings[-1].start_time.strftime("%I:%M%p") %> - <%= @bookings[-1].end_time.strftime("%I:%M%p") %>
         <% end %>
       </div>
     </div>
@@ -118,8 +118,8 @@
                 </div>
                 <div class="col-9">
                   <h5 class="mb-0"><%= link_to recipe_review.recipe.name, recipe_path(recipe_review.recipe),class: "link-recipe-dash text-decoration-none font-weight-bold" %></h5 >
-                  <p class="p-1 mb-0"><strong>Rating:</strong> <%= recipe_review.rating %> </p>
-                  <p class="p-1 mt-0"><strong>Content:</strong> <%= recipe_review.content %></p>
+                  <p class="pl-1 mb-0"><strong>Rating:</strong> <%= recipe_review.rating %> </p>
+                  <p class="pl-1 mt-0"><strong>Content:</strong> <%= recipe_review.content %></p>
                 </div>
               </div>
             </div>
@@ -134,7 +134,7 @@
         <div class="card-header" id="headingFour">
           <h5 class="mb-0 text-center">
             <button class="text-decoration-none btn btn-link link-user-dash collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-              Favourites
+              Favourite Recipes
             </button>
           </h5>
         </div>
