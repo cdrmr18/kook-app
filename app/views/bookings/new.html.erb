@@ -1,7 +1,7 @@
 <!-- recipe image -->
 <div class="banner my-0" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(<%= cl_image_path @recipe.photo.key %>);">
-  <div class="container text-center booking-recipe">
-    <h1> <%= @recipe.name %></h1>
+  <div class="container">
+    <h1 class="text-center recipe-head"> <%= @recipe.name %></h1>
   </div>
 </div>
 <!--  -->
@@ -11,7 +11,7 @@
     <div class="col-xs-12 col-sm-4 col-sm-offset-4">
 
         <div class="form-calendar" id='recipe-booking-dates' data-unavailable="<%#= @recipe.unavailable_dates.to_json %>">
-          <h4>Session Booking</h4>
+          <h4 class="chef-dash-header text-center">Session Booking</h4>
           <hr>
           <h2 class="text-center">Chef <%= @recipe.chef.user.first_name%> <%= @recipe.chef.user.last_name%></h2>
           <h5 class="py-2 cost text-center" ><%= humanized_money_with_symbol(@recipe.price)  %> / hour</h5>
