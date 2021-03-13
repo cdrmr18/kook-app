@@ -55,7 +55,7 @@ letter-spacing: 2px;
 
 
 .link-user-dash{
-  color:#290149;
+  color:white;
   font-size: 15px;
   padding: 5px;
   text-align: center;
@@ -67,7 +67,7 @@ letter-spacing: 2px;
 
 
   &:hover{
-    color: #A288E3;
+    color: rgb(185, 184, 184);
     font-weight: 500;
     opacity: 1;
   }
@@ -77,4 +77,20 @@ letter-spacing: 2px;
   background:#c90000;
   color:white;
   border-radius: 5px;
+}
+
+#headingOne{
+  background-color:#290149;
+}
+
+#headingTwo{
+  background-color:#290149;
+}
+
+#headingThree{
+  background-color:#290149;
+}
+
+#headingFour{
+  background-color:#290149;
 }

@@ -39,7 +39,9 @@
   <div class="container mt-4">
     <h4 class="mb-4">Ingredients</h4>
     <% @recipe.measurements.each do |measurement| %>
-      <p id="measurement-<%= measurement.id %>"> <i class="fas fa-caret-right"></i>   <%= measurement.description %> <%= measurement.ingredient.capitalize %>
+      <p id="measurement-<%= measurement.id %>"> <i class="fas fa-square fa-xs"></i>  
+
+      <%= measurement.description %> <%= measurement.ingredient.capitalize %>
       <% if current_user ==  measurement.recipe.chef.user %> |
       <%= link_to "remove", measurement_path(measurement), method: :delete, remote: true %></p>
       <% end %>
