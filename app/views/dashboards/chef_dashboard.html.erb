@@ -52,7 +52,7 @@
 
     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
       <div class="card-body">
-         <!-- booking history -->
+         <!-- My Recipes -->
         <div class="container mt-4">
           <div class="container">
             <h2 class="text-center mb-4">My Recipes</h2>
@@ -97,18 +97,19 @@
           <% if !@bookings.empty? %>
             <% @bookings.each do |booking|
             %>
-            <div class="container mt-3">
-              <div class="row">
-                <div class="col-3">
-                  <%= link_to cl_image_tag booking.recipe.chef.user.photo.key, class: "avatar-large",  crop: :fill %>
-                </div>
-                <div class="col-9">
-                  <h5 class="mb-0"><%= link_to "Chef  #{booking.recipe.chef.user.first_name} #{booking.recipe.chef.user.last_name} ", chef_path(booking.recipe.chef),class: "link-recipe-dash text-decoration-none font-weight-bold" %></h5 >
-
+              <% if !booking.chef_review.nil? %>
+              <div class="container mt-3">
+                <div class="row">
+                  <div class="col-3">
+                    <%= link_to cl_image_tag booking.user.photo.key, class: "avatar-large",  crop: :fill %>
+                  </div>
+                  <div class="col-9">
+                    <h5 class="mb-0"><%="#{booking.user.first_name} #{booking.user.last_name} " %></h5 >
+                  </div>
                 </div>
               </div>
-            </div>
-            <hr>
+              <hr>
+              <% end %>
             <% end %>
           <% end %>
         </div>
