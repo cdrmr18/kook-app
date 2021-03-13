@@ -1,7 +1,7 @@
 Rails.configuration.stripe = {
-  publishable_key: ENV['pk_test_51IMDvuEcgMPG6ZFCjoAgyRGl9esC4QHiHrQkk1kuhi4Lx93UH4JvTAocaq15IzvyH9d2iTBALLWxvJxlZbdpPCHV00GQ5c9JdU'],
-  secret_key:      ENV['sk_test_51IMDvuEcgMPG6ZFCDRe4dPOwq1RXU3zPdmseMBtyQIpMb5ZF7Rbi2h62DivNtSbEDi6ZQy88uXNG4STpBFwtTLnf00tlBQvvpy'],  
-  signing_secret:  ENV['whsec_qpaOYxLazmxh0MPKNuhcREOkE9zJhdHR']
+  publishable_key: ENV['STRIPE_PUBLISHABLE_KEY'],
+  secret_key:      ENV['STRIPE_SECRET_KEY'],  
+  signing_secret:  ENV['STRIPE_WEBHOOK_SECRET_KEY']
 }
 
 Stripe.api_key = Rails.configuration.stripe[:secret_key]
