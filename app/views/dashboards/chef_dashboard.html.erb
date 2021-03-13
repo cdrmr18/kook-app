@@ -59,9 +59,25 @@
             </div>
             <% if !@recipes.empty? %>
               <% @recipes.each do |recipe| %>
-                <ul>
-                  <p class="link-user-dash"><%= link_to recipe.name, recipe_path(recipe) %> | <span><%= link_to "remove", recipe_path(recipe), method: :delete, data: {confirm: "Are you sure?" } %></span></p>
-                </ul>
+                <div class="container mt-3">
+                  <div class="row">
+                    <div class="col-3">
+                      <%= link_to cl_image_tag recipe.photo.key, class: "avatar-large",  crop: :fill %>
+                    </div>
+                    <div class="col-9">
+                     <h5><%= link_to recipe.name, recipe_path(recipe),class: "link-recipe-dash text-decoration-none font-weight-bold" %> | <span><%= link_to "remove", recipe_path(recipe), class:"text-secondary", method: :delete, data: {confirm: "Are you sure?" } %></span></h5>
+                    </div>
+                  </div>
+              </div>
+            <hr>
+
+
+
+
+
+
+
+
               <% end %>
             <% end %>
           </div>
