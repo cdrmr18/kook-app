@@ -1,35 +1,80 @@
 .user-dash-name {
   font-family: caveat;
-  margin-bottom: 0;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 3rem;
 }
 .booking-confirm p {
   font-size: px;
 }
 
-.link-user-dash a{
-    color:#290149;
-    font-size: 15px;
-    padding: 5px;
-    text-align: center;
-    margin-top:0;
-    text-decoration: none;
-    font-family: 'Nutino Sans', sans-serif;
-    opacity: 1;
-   letter-spacing: 1px;
-  
-  
-    &:hover{
-      color: #A288E3;
-      font-weight: 500;
-      opacity: 1;
-    }
-  }
+
 
 
 #chef-btn{
   border-radius:5px;
-  background-color: #290149;
-  color: #A288E3;
+  background-color: #A288E3;
+  color:white;
+
+  &:hover{
+    background: #290149;
+    color:white;
+  }
+
 }
 
 
+
+.container-dash{
+  border-radius: 10px;
+}
+
+.chef-dash-header{
+font-family: 'Nunito Sans', sans-serif;
+font-weight: 600;
+font-size: 15px;
+text-transform: uppercase;
+padding: 10px;
+margin: 20px;
+color:rgb(161, 161, 161);
+letter-spacing: 2px;
+}
+
+.chef-avatar{
+  border-radius:20px;
+  padding: 5px;
+  border-color:#e2d7ff;
+}
+
+
+#booking-times{
+  color:#a0004b;
+  font-size: 2em;
+  font-weight: 800;
+}
+
+
+.link-user-dash{
+  color:#290149;
+  font-size: 15px;
+  padding: 5px;
+  text-align: center;
+  margin-top:0;
+  text-decoration: none;
+  font-family: 'Nutino Sans', sans-serif;
+  opacity: 1;
+ letter-spacing: 1px;
+
+
+  &:hover{
+    color: #A288E3;
+    font-weight: 500;
+    opacity: 1;
+  }
+}
+
+.del-chef{
+  background:#c90000;
+  color:white;
+  border-radius: 5px;
+}

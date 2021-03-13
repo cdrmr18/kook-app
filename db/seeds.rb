@@ -298,7 +298,7 @@ chaz_two = Recipe.new(
   cuisine: 'Modern Australian',
   cook_time: rand(30..90),
   chef_id: chaz_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
   )
 chaz_two.photo.attach(io: file, filename: "nes16.png", content_type: 'image/png')
 chaz_two.save!

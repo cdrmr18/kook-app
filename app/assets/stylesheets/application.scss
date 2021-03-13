@@ -8,6 +8,7 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import 'flatpickr/dist/flatpickr.css';
+
 // Your CSS partials
 @import "components/index";
 @import "pages";
@@ -19,7 +20,7 @@
 @import "dashboards";
 // general page styling
 body {
-  background-color: #f7f7f7;
+  background-color: #f9f7f9;
 }
 
 h1{

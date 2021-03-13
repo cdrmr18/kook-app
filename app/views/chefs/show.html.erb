@@ -1,12 +1,12 @@
 <!-- chef info -->
-<div class="container  px-3 py-3 chef-info">
+<div class="container card px-3 py-3 chef-info shadow">
   <div class="container">
     <div class="row align-items-end justify-content-between">
-      <div class="col-6 col-md-8 text-center mt-3">
+      <div class="col-6 col-md-8 text-center mt-3 ">
         <h1><%= @chef.user.first_name %> <%= @chef.user.last_name %></h1>
         <h4><%= @chef.job_title %></h4>
         <h5> <%= @chef.restaurant%></h5>
-        <p>⭐️⭐️⭐️⭐️⭐️</p>
+        <p> <%= @chef.chef_reviews.blank? ? "" : "⭐️ " * @chef.chef_reviews.average(:rating).round(2) %> </p>
       </div>
       <div class="col-6 col-md-4">
         <%= cl_image_tag @chef.user.photo.key, width: 175, height: 175,  crop: :fill, class: "chef-avatar mb-4"  %>
@@ -19,17 +19,14 @@
   </div>
 </div>
 
-<hr>
+
 <!-- intro video / using animage as placeholdher until we can add a video-->
-<div class="container">
+<!-- <div class="container">
   <h3 class="text-center">Chef intro</h3>
   <img width=100%  src="https://images.pexels.com/photos/3771106/pexels-photo-3771106.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
   <%# <iframe class="chef-video" width="80%" height="400" src= "https://youtu.be/8V-R4f1QXds" frameborder="0" allowfullscreen></iframe> %>
-</div>
+</div> -->
 
-
-
-<hr>
 <!-- chef recipes -->
 <div class="container mt-4">
   <div class="row">
@@ -43,7 +40,7 @@
 
           <div class="container mt-2">
             <div class="row">
-              <div class="col-6 pl-0"><p><span class="mr-3"><%= recipe.cuisine %></span> ⭐️⭐️⭐️⭐️</p></div>
+              <div class="col-6 pl-0"><p><span class="mr-3"><%= recipe.cuisine %></span> <%= recipe.recipe_reviews.blank? ? "✩ 0 reviews" : "⭐️ " * recipe.recipe_reviews.average(:rating).round(2) %></p></div>
               <div class="col-6"><span>Est cook time: <%= recipe.cook_time %> mins</span></div>
             </div>
           </div>
@@ -58,19 +55,31 @@
   </div>
 </div>
 
-<!-- chef reviews -->
-<% @chef.chef_reviews.each do |review| %>
-  <div class="notification">
-    <%= cl_image_tag review.booking.user.photo.key, class: "avatar-large" %>
-    <div class="notification-content">
-      <p class="my-0"><strong><%= review.booking.user.first_name %> <%= review.booking.user.last_name %></strong></p>
-      <p><span><%= review.created_at.strftime("%B %e, %Y") %> |</span>  <%= review.rating.blank? ? "" : "⭐️" * review.rating %></p>
-      <p><%= review.content %></p>
+<% if  !@chef.chef_reviews.empty? %>
+  <!-- chef reviews -->
+  <% @chef.chef_reviews.each do |review| %>
+    <div class="notification mb-0 bg-white">
+      <div class="mx-1">
+        <%= cl_image_tag review.booking.user.photo.key, class: "avatar-large" %>
+      </div>
+      <div class="notification-content">
+        <p class="my-0"><strong><%= review.booking.user.first_name %> <%= review.booking.user.last_name %></strong></p>
+        <p><span><%= review.created_at.strftime("%B %e, %Y") %> |</span>  <%= review.rating.blank? ? "" : "⭐️" * review.rating %></p>
+        <p>"<%= review.content %>"</p>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+<div class="container text-center my-2 justify-content-between">
+  <div class="d-flex justify-content-between row">
+    <div class="mr-auto px-2">
+      <%= link_to "All Chefs", chefs_path, class: "btn button shadow" %>
+    </div>
+    <div class="px-2">
+      <%= link_to "Top", chef_path(@chef), class: "btn btn-light shadow" %>
     </div>
   </div>
-<% end %>
-
-
+</div>
 
 
 
