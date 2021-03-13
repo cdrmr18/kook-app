@@ -207,10 +207,10 @@ bec_one = Recipe.new(
   cook_time: rand(30..90),
   chef_id: bec_chef.id,
   price: rand(30..75),
+  tag_list: ["thai", "fresh", "prawns", "seafood", "chilli"]
   )
 bec_one.photo.attach(io: file, filename: "nes9.png", content_type: 'image/png')
 bec_one.save!
-bec_one.tag_list.add("thai", "fresh", "prawns", "seafood", "chilli")
 
 file = URI.open('https://images.unsplash.com/photo-1612443016520-314f09b3d449?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hpY2tlbiUyMGZvb2R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 bec_two = Recipe.new(
@@ -219,11 +219,11 @@ bec_two = Recipe.new(
   cuisine: 'Thai',
   cook_time: rand(30..90),
   chef_id: bec_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["thai", "chicken", "sauce"]
   )
 bec_two.photo.attach(io: file, filename: "nes10.png", content_type: 'image/png')
 bec_two.save!
-bec_two.tag_list.add("thai", "chicken", "sauce")
 
 file = URI.open('https://images.unsplash.com/photo-1595456982104-14cc660c4d22?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTJ8fHNhc2hpbWl8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 bec_three = Recipe.new(
@@ -232,11 +232,11 @@ bec_three = Recipe.new(
   cuisine: 'Thai',
   cook_time: rand(30..90),
   chef_id: bec_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["thai", "seafood", "chilli", "lime"]
   )
 bec_three.photo.attach(io: file, filename: "nes11.png", content_type: 'image/png')
 bec_three.save!
-bec_three.tag_list.add("thai", "seafood", "chilli", "lime")
 
 file = URI.open('https://images.unsplash.com/photo-1601091745482-b2b5942e567e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDZ8fGZyaWVkJTIwYXNwYXJhZ3VzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 bec_four = Recipe.new(
@@ -245,11 +245,11 @@ bec_four = Recipe.new(
   cuisine: 'Thai',
   cook_time: rand(30..90),
   chef_id: bec_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["thai", "asparagus", "stir-fried"]
   )
 bec_four.photo.attach(io: file, filename: "nes12.png", content_type: 'image/png')
 bec_four.save!
-bec_four.tag_list.add("thai", "asparagus", "stir-fried")
 
 file = URI.open('https://images.unsplash.com/photo-1603356887214-0441954124ae?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
 bec_five = Recipe.new(
@@ -258,11 +258,11 @@ bec_five = Recipe.new(
   cuisine: 'Thai',
   cook_time: rand(30..90),
   chef_id: bec_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["thai", "pork", "eggs"]
   )
 bec_five.photo.attach(io: file, filename: "nes13.png", content_type: 'image/png')
 bec_five.save!
-bec_five.tag_list.add("thai", "pork", "eggs")
 
 file = URI.open('https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c291cCUyMG5vb2RsZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 bec_six = Recipe.new(
@@ -271,11 +271,11 @@ bec_six = Recipe.new(
   cuisine: 'Thai',
   cook_time: rand(30..90),
   chef_id: bec_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["thai", "ginger", "soup"]
   )
 bec_six.photo.attach(io: file, filename: "nes14.png", content_type: 'image/png')
 bec_six.save!
-bec_six.tag_list.add("thai", "ginger", "soup")
 
    # chef chaz recipes
 file = URI.open('https://images.unsplash.com/photo-1471253387723-35c53c9f97ca?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fGZyaXR0ZXJzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
@@ -285,11 +285,11 @@ chaz_one = Recipe.new(
   cuisine: 'Modern Australian',
   cook_time: rand(30..90),
   chef_id: chaz_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["Modern Australian", "zucchini"]
   )
 chaz_one.photo.attach(io: file, filename: "nes15.png", content_type: 'image/png')
 chaz_one.save!
-chaz_one.tag_list.add("Modern Australian", "zucchini")
 
 file = URI.open('https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OTV8fGZpc2glMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 chaz_two = Recipe.new(
@@ -299,10 +299,10 @@ chaz_two = Recipe.new(
   cook_time: rand(30..90),
   chef_id: chaz_chef.id,
   price: rand(30..75),
+  tag_list: ["Modern Australian", "salmon", "seafood"]
   )
 chaz_two.photo.attach(io: file, filename: "nes16.png", content_type: 'image/png')
 chaz_two.save!
-chaz_two.tag_list.add("Modern Australian", "salmon", "seafood")
 
 file = URI.open('https://images.unsplash.com/photo-1591107576521-87091dc07797?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fHRhcnQlMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 chaz_three = Recipe.new(
@@ -311,11 +311,11 @@ chaz_three = Recipe.new(
   cuisine: 'Modern Australian',
   cook_time: rand(30..90),
   chef_id: chaz_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["Modern Australian", "tart", "dessert"]
   )
 chaz_three.photo.attach(io: file, filename: "nes17.png", content_type: 'image/png')
 chaz_three.save!
-chaz_three.tag_list.add("Modern Australian", "tart", "dessert")
 
 file = URI.open('https://images.unsplash.com/photo-1609770424775-39ec362f2d94?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8cmlzb3R0b3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 chaz_four = Recipe.new(
@@ -324,11 +324,11 @@ chaz_four = Recipe.new(
   cuisine: 'Modern Australian',
   cook_time: rand(30..90),
   chef_id: chaz_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["Modern Australian", "mushroom", "rice"]
   )
 chaz_four.photo.attach(io: file, filename: "nes18.png", content_type: 'image/png')
 chaz_four.save!
-chaz_four.tag_list.add("Modern Australian", "mushroom", "rice")
 
 file = URI.open('https://images.unsplash.com/photo-1513623954575-263b061498a3?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8ZHVjayUyMGZvb2R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 chaz_five = Recipe.new(
@@ -337,11 +337,11 @@ chaz_five = Recipe.new(
   cuisine: 'Modern Australian',
   cook_time: rand(30..90),
   chef_id: chaz_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["Modern Australian", "duck"]
   )
 chaz_five.photo.attach(io: file, filename: "nes19.png", content_type: 'image/png')
 chaz_five.save!
-chaz_five.tag_list.add("Modern Australian", "duck")
 
 file = URI.open('https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTR8fGJ1cmdlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 chaz_six = Recipe.new(
@@ -350,11 +350,11 @@ chaz_six = Recipe.new(
   cuisine: 'Modern Australian',
   cook_time: rand(30..90),
   chef_id: chaz_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["Modern Australian", "lamb", "burger"]
   )
 chaz_six.photo.attach(io: file, filename: "nes20.png", content_type: 'image/png')
 chaz_six.save!
-chaz_six.tag_list.add("Modern Australian", "lamb", "burger")
 
 # chef jamal recipes
 file = URI.open('https://images.unsplash.com/photo-1598683386906-71ef9caef177?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8&auto=format&fit=crop&w=800&q=60')
@@ -364,11 +364,11 @@ jamal_one = Recipe.new(
   cuisine: 'Middle Eastern',
   cook_time: rand(30..90),
   chef_id: jamal_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["Middle Eastern", "hummus"]
   )
 jamal_one.photo.attach(io: file, filename: "nes21.png", content_type: 'image/png')
 jamal_one.save!
-jamal_one.tag_list.add("Middle Eastern", "hummus")
 
 file = URI.open('https://images.unsplash.com/photo-1594040815645-5442fb6d48f6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dGFib3VsaXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 jamal_two = Recipe.new(
@@ -377,11 +377,11 @@ jamal_two = Recipe.new(
   cuisine: 'Middle Eastern',
   cook_time: rand(30..90),
   chef_id: jamal_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["Middle Eastern", "grain"]
   )
 jamal_two.photo.attach(io: file, filename: "nes22.png", content_type: 'image/png')
 jamal_two.save!
-jamal_two.tag_list.add("Middle Eastern", "grain")
 
 file = URI.open('https://images.unsplash.com/photo-1573821662905-00f8c205c148?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80')
 jamal_three = Recipe.new(
@@ -390,11 +390,11 @@ jamal_three = Recipe.new(
   cuisine: 'Middle Eastern',
   cook_time: rand(30..90),
   chef_id: jamal_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["Middle Eastern"]
   )
 jamal_three.photo.attach(io: file, filename: "nes23.png", content_type: 'image/png')
 jamal_three.save!
-jamal_three.tag_list.add("Middle Eastern")
 
 file = URI.open('https://images.unsplash.com/photo-1603496987674-79600a000f55?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjl8fGNoaWNrZW4lMjBmb29kJTIwcmljZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 jamal_four = Recipe.new(
@@ -403,11 +403,11 @@ jamal_four = Recipe.new(
   cuisine: 'Middle Eastern',
   cook_time: rand(30..90),
   chef_id: jamal_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["Middle Eastern"]
   )
 jamal_four.photo.attach(io: file, filename: "nes24.png", content_type: 'image/png')
 jamal_four.save!
-jamal_four.tag_list.add("Middle Eastern")
 
 file = URI.open('https://images.unsplash.com/photo-1593001872095-7d5b3868fb1d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8ZmFsYWZlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=800&q=60')
 jamal_five = Recipe.new(
@@ -416,11 +416,11 @@ jamal_five = Recipe.new(
   cuisine: 'Middle Eastern',
   cook_time: rand(30..90),
   chef_id: jamal_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["Middle Eastern", "falafel"]
   )
 jamal_five.photo.attach(io: file, filename: "nes25.png", content_type: 'image/png')
 jamal_five.save!
-jamal_five.tag_list.add("Middle Eastern", "falafel")
 
 # chef roger recipes
 file = URI.open('https://images.unsplash.com/photo-1605992728160-8d119bf2b5db?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cGF0ZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
@@ -430,11 +430,11 @@ roger_one = Recipe.new(
   cuisine: 'French',
   cook_time: rand(30..90),
   chef_id: roger_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["French", "duck", "liver"]
   )
 roger_one.photo.attach(io: file, filename: "nes27.png", content_type: 'image/png')
 roger_one.save!
-roger_one.tag_list.add("French", "duck", "liver")
 
 file = URI.open('https://images.unsplash.com/photo-1591386767153-987783380885?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YmVhbiUyMHN0ZXd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 roger_two = Recipe.new(
@@ -443,11 +443,11 @@ roger_two = Recipe.new(
   cuisine: 'French',
   cook_time: rand(30..90),
   chef_id: roger_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["French"]
   )
 roger_two.photo.attach(io: file, filename: "nes28.png", content_type: 'image/png')
 roger_two.save!
-roger_two.tag_list.add("French")
 
 file = URI.open('https://images.unsplash.com/photo-1605591099585-087b3d54cd45?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1342&q=80')
 roger_three = Recipe.new(
@@ -456,11 +456,11 @@ roger_three = Recipe.new(
   cuisine: 'French',
   cook_time: rand(30..90),
   chef_id: roger_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["French", "chorizo", "egg", "pizza"]
   )
 roger_three.photo.attach(io: file, filename: "nes29.png", content_type: 'image/png')
 roger_three.save!
-roger_three.tag_list.add("French", "chorizo", "egg", "pizza")
 
 file = URI.open('https://images.unsplash.com/photo-1535920527002-b35e96722eb9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80')
 roger_four = Recipe.new(
@@ -469,11 +469,11 @@ roger_four = Recipe.new(
   cuisine: 'French',
   cook_time: rand(30..90),
   chef_id: roger_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["French", "pecan", "pie"]
   )
 roger_four.photo.attach(io: file, filename: "nes30.png", content_type: 'image/png')
 roger_four.save!
-roger_four.tag_list.add("French", "pecan", "pie")
 
 file = URI.open('https://images.unsplash.com/photo-1481070555726-e2fe8357725c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjJ8fHxlbnwwfHx8&auto=format&fit=crop&w=800&q=60')
 roger_five = Recipe.new(
@@ -482,11 +482,11 @@ roger_five = Recipe.new(
   cuisine: 'French',
   cook_time: rand(30..90),
   chef_id: roger_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["French", "burger", "chicken"]
   )
 roger_five.photo.attach(io: file, filename: "nes31.png", content_type: 'image/png')
 roger_five.save!
-roger_five.tag_list.add("French", "burger", "chicken")
 
 file = URI.open('https://images.unsplash.com/photo-1513623954575-263b061498a3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')
 roger_six = Recipe.new(
@@ -495,11 +495,11 @@ roger_six = Recipe.new(
   cuisine: 'French',
   cook_time: rand(30..90),
   chef_id: roger_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["French", "duck"]
   )
 roger_six.photo.attach(io: file, filename: "nes32.png", content_type: 'image/png')
 roger_six.save!
-roger_six.tag_list.add("French", "duck")
 
 # chef samuel recipes
 file = URI.open('https://images.unsplash.com/photo-1611712142269-12b7433e28e9?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTV8fGFmcmljYW4lMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
@@ -509,11 +509,11 @@ samuel_one = Recipe.new(
   cuisine: 'North African',
   cook_time: rand(30..90),
   chef_id: samuel_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["north african", "chicken"]
   )
 samuel_one.photo.attach(io: file, filename: "ne33.png", content_type: 'image/png')
 samuel_one.save!
-samuel_one.tag_list.add("north african", "chicken")
 
 file = URI.open('https://images.unsplash.com/photo-1576577445504-6af96477db52?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTgyfHxtZWF0YmFsbCUyMHNvdXB8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 samuel_two = Recipe.new(
@@ -522,11 +522,11 @@ samuel_two = Recipe.new(
   cuisine: 'North African',
   cook_time: rand(30..90),
   chef_id: samuel_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["north african", "meatball", "soup"]
   )
 samuel_two.photo.attach(io: file, filename: "nes34.png", content_type: 'image/png')
 samuel_two.save!
-samuel_two.tag_list.add("north african", "meatball", "soup")
 
 file = URI.open('https://images.unsplash.com/photo-1532636875304-0c89119d9b4d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')
 samuel_three = Recipe.new(
@@ -535,11 +535,11 @@ samuel_three = Recipe.new(
   cuisine: 'North African',
   cook_time: rand(30..90),
   chef_id: samuel_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["north african", "lamb", "dates"]
   )
 samuel_three.photo.attach(io: file, filename: "nes35.png", content_type: 'image/png')
 samuel_three.save!
-samuel_three.tag_list.add("north african", "lamb", "dates")
 
 file = URI.open('https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTl8fHJvYXN0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 samuel_four = Recipe.new(
@@ -548,11 +548,11 @@ samuel_four = Recipe.new(
   cuisine: 'North African',
   cook_time: rand(30..90),
   chef_id: samuel_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["north african", "lamb", "roast"]
   )
 samuel_four.photo.attach(io: file, filename: "nes36.png", content_type: 'image/png')
 samuel_four.save!
-samuel_four.tag_list.add("north african", "lamb", "roast")
 
 file = URI.open('https://images.unsplash.com/photo-1519624014191-508652cbd7b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80')
 samuel_five = Recipe.new(
@@ -561,11 +561,11 @@ samuel_five = Recipe.new(
   cuisine: 'North African',
   cook_time: rand(30..90),
   chef_id: samuel_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["north african", "chicken"]
   )
 samuel_five.photo.attach(io: file, filename: "nes37.png", content_type: 'image/png')
 samuel_five.save!
-samuel_five.tag_list.add("north african", "chicken")
 
 file = URI.open('https://images.unsplash.com/photo-1512058556646-c4da40fba323?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8cGFuJTIwZnJ5fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 samuel_six = Recipe.new(
@@ -574,11 +574,11 @@ samuel_six = Recipe.new(
   cuisine: 'North African',
   cook_time: rand(30..90),
   chef_id: samuel_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["north african", "lamb", "paella"]
   )
 samuel_six.photo.attach(io: file, filename: "nes38.png", content_type: 'image/png')
 samuel_six.save!
-samuel_six.tag_list.add("north african", "lamb", "paella")
 
 # chef slavo recipes
 file = URI.open('https://images.unsplash.com/photo-1585325701165-351af916e581?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=988&q=80')
@@ -588,11 +588,11 @@ slavo_one = Recipe.new(
   cuisine: 'Balkan',
   cook_time: rand(30..90),
   chef_id: slavo_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: [("balkan", "Cevapi")]
   )
 slavo_one.photo.attach(io: file, filename: "nes39.png", content_type: 'image/png')
 slavo_one.save!
-slavo_one.tag_list.add("balkan", "Cevapi")
 
 file = URI.open('https://images.unsplash.com/photo-1580476262843-d5e9b687d4d4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8cm9hc3R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 slavo_two = Recipe.new(
@@ -601,11 +601,11 @@ slavo_two = Recipe.new(
   cuisine: 'Balkan',
   cook_time: rand(30..90),
   chef_id: slavo_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["balkan", "pork", "roast"]
   )
 slavo_two.photo.attach(io: file, filename: "nes40.png", content_type: 'image/png')
 slavo_two.save!
-slavo_two.tag_list.add("balkan", "pork", "roast")
 
 file = URI.open('https://images.unsplash.com/photo-1613552496394-4e4b3f074e4f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTl8fHN0ZXd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 slavo_three = Recipe.new(
@@ -614,11 +614,11 @@ slavo_three = Recipe.new(
   cuisine: 'Balkan',
   cook_time: rand(30..90),
   chef_id: slavo_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["balkan", "bosnian", "pot"]
   )
 slavo_three.photo.attach(io: file, filename: "nes41.png", content_type: 'image/png')
 slavo_three.save!
-slavo_three.tag_list.add("balkan", "bosnian", "pot")
 
 file = URI.open('https://images.unsplash.com/photo-1602873520153-ec56ca3c205b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YmFrZWQlMjBiZWFuc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 slavo_four = Recipe.new(
@@ -627,11 +627,11 @@ slavo_four = Recipe.new(
   cuisine: 'Balkan',
   cook_time: rand(30..90),
   chef_id: slavo_chef.id,
-  price: rand(30..75)
+  price: rand(30..75),
+  tag_list: ["balkan", "baked beans", "beans"]
   )
 slavo_four.photo.attach(io: file, filename: "nes42.png", content_type: 'image/png')
 slavo_four.save!
-slavo_four.tag_list.add("balkan", "baked beans", "beans")
 
 puts "#{Recipe.count} recipes created"
 
