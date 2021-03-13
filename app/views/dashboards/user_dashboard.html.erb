@@ -1,17 +1,14 @@
-<h1 class="chef-dash-header text-center">User dashboard</h1>
 <div class="container mt-4">
-  <div class="container text-center card py-3 shadow-sm  container-dash ">
-
-    
-
+  <h1 class="chef-dash-header text-center">User dashboard</h1>
+  <div class="container text-center card py-3 shadow-sm  container-dash">
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 ">
         <%= cl_image_tag current_user.photo.key, width: 175, height: 175,  crop: :fill, class: "chef-avatar mb-4"  %>
        </div>
        <div class="col-12">
-        <h1 class="user-dash-name" ><%= current_user.first_name %> <%= current_user.last_name %></h1>
+        <h2 class="user-dash-name" ><%= current_user.first_name %> <%= current_user.last_name %></h2>
           <!-- create chef link -->
-        <% if !current_user.chef.present? %>
+        <% unless current_user.chef.present? %>
           <%= link_to "Become a chef", new_chef_path, class: "btn btn-light mt-2 shadow-sm", id: "chef-btn" %>
         <% end %>
       </div>
@@ -19,110 +16,151 @@
   </div>
 
 <!-- booking confirmation -->
-<div class="container shadow-sm ">
-  <div class="row booking-confirm mt-4 text-center">
-    <div class="col-12 card card-body pb-2 pt-3 container-dash">
-      <h5>Next Session</h5>
-      <p></p>
-      <% if !@bookings.empty? %>
-        <h2 class="recipe-link"><%= @bookings[-1].recipe.name %></h2>
+  <div class="container">
+    <div class="row booking-confirm mt-4 text-center">
+      <div class="col-12 card card-body pb-2 pt-3 container-dash shadow-sm">
+        <h5>Next Session</h5>
         <p></p>
-        <p id="booking-times"><%= @bookings[-1].date.strftime("%B %e, %Y") %> <br> <%= @bookings[-1].start_time.strftime("%I:%M%p") %> - <%= @bookings[-1].start_time.strftime("%I:%M%p") %>
-      <% end %>
+        <% if @bookings.empty? || !@bookings[-1].chef_review.blank? ||  !@bookings[-1].recipe_review.blank? %>
+          <h4>Book your next session <%= link_to "Recipes", recipes_path, class:"text-uppercase link-recipe-dash font-weight-bold text-decoration-none" %></h4>
+        <% else %>
+          <h2 class="recipe-link"><%= @bookings[-1].recipe.name %></h2>
+          <p></p>
+          <p id="booking-times"><%= @bookings[-1].date.strftime("%B %e, %Y") %> <br> <%= @bookings[-1].start_time.strftime("%I:%M%p") %> - <%= @bookings[-1].end_time.strftime("%I:%M%p") %>
+        <% end %>
+      </div>
     </div>
-</div>
+  </div>
 
 <!-- collapse menu -->
-
   <div id="accordion" class="mt-4 shadow-sm">
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h5 class="mb-0 text-center">
-        <button class="btn btn-link link-user-dash" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Booking History
-        </button>
-      </h5>
-    </div>
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0 text-center">
+          <button class="text-decoration-none btn btn-link link-user-dash" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Booking History
+          </button>
+        </h5>
+      </div>
 
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-      <div class="card-body">
-        <div class="conatiner" >
-          <%= link_to "My Bookings", bookings_path, class: "btn btn-light mb-4 shadow-sm d-flex justify-content-center", id:"chef-btn" %>
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body">
+         <!-- booking history -->
+         <% if !@bookings.empty? %>
+          <% @bookings.each do |booking| %>
+          <div class="container mt-3">
+            <div class="row">
+              <div class="col-3">
+                <%= link_to cl_image_tag booking.recipe.photo.key, class: "avatar-large",  crop: :fill %>
+              </div>
+              <div class="col-9">
+                <p class="mb-0"><%= link_to "Booking # #{booking.id}", booking_path(booking),class: "link-recipe-dash text-decoration-none font-weight-bold" %></p>
+                <p class="mb-0 pl-1"> Chef <%= booking.recipe.chef.user.first_name %> <%= booking.recipe.chef.user.last_name %></p>
+                <p class="mt-0 pl-1"><%= booking.recipe.name %></p>
+             </div>
+            </div>
+           </div>
+           <hr>
+          <% end %>
+         <% end %>
         </div>
-       <!-- booking history -->
-       <% if !@bookings.empty? %>
-        <% @bookings.each do |booking| %>
-         <p>Booking #<%= booking.id %> | Chef <%= booking.recipe.chef.user.first_name %> <%= booking.recipe.chef.user.last_name %></p>
-        <% end %>
-       <% end %>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h5 class="mb-0 text-center">
+          <button class="text-decoration-none btn btn-link link-user-dash collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            My Chef Reviews
+          </button>
+        </h5>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+        <div class="card-body">
+          <% if !current_user.chef_reviews.empty? %>
+            <% current_user.chef_reviews.each do |chef_review|
+            %>
+            <div class="container mt-3">
+              <div class="row">
+                <div class="col-3">
+                  <%= link_to cl_image_tag chef_review.chef.user.photo.key, class: "avatar-large",  crop: :fill %>
+                </div>
+                <div class="col-9">
+                  <h5 class="mb-0"><%= link_to "Chef  #{chef_review.chef.user.first_name} #{chef_review.chef.user.last_name} ", chef_path(chef_review.chef),class: "link-recipe-dash text-decoration-none font-weight-bold" %></h5 >
+                   <p class="p-1 mb-0"><strong>Rating:</strong> <%= chef_review.rating %> </p>
+                  <p class="p-1 mt-0"><strong>Content:</strong> <%= chef_review.content %></p>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h5 class="mb-0 text-center">
+          <button class=" text-decoration-none btn btn-link link-user-dash collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            My Recipe Reviews
+          </button>
+        </h5>
+      </div>
+      <div id="collapseThree" class="collapse " aria-labelledby="headingThree" data-parent="#accordion">
+        <div class="card-body">
+          <% if !current_user.recipe_reviews.empty? %>
+            <% current_user.recipe_reviews.each do |recipe_review|
+            %>
+            <div class="container mt-3">
+              <div class="row">
+                <div class="col-3">
+                  <%= link_to cl_image_tag recipe_review.recipe.photo.key, class: "avatar-large",  crop: :fill %>
+                </div>
+                <div class="col-9">
+                  <h5 class="mb-0"><%= link_to recipe_review.recipe.name, recipe_path(recipe_review.recipe),class: "link-recipe-dash text-decoration-none font-weight-bold" %></h5 >
+                  <p class="pl-1 mb-0"><strong>Rating:</strong> <%= recipe_review.rating %> </p>
+                  <p class="pl-1 mt-0"><strong>Content:</strong> <%= recipe_review.content %></p>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
-  <div class="card">
-    <div class="card-header" id="headingTwo">
-      <h5 class="mb-0 text-center">
-        <button class="btn btn-link link-user-dash collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          My Chef Reviews
-        </button>
-      </h5>
-    </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-      <div class="card-body">
-        <% if !current_user.chef_reviews.empty? %>
-          <% current_user.chef_reviews.each do |chef_review|
-          %>
-            <h5 class="mb-0">Chef <%= chef_review.chef.user.first_name %> <%= chef_review.chef.user.last_name %></h5 >
-            <p>Rating: <%= chef_review.rating %> |  <%= chef_review.content %></p>
-            <hr>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingThree">
-      <h5 class="mb-0 text-center">
-        <button class="btn btn-link link-user-dash collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          My Recipe Reviews
-        </button>
-      </h5>
-    </div>
-    <div id="collapseThree" class="collapse " aria-labelledby="headingThree" data-parent="#accordion">
-      <div class="card-body">
-        <% if !current_user.recipe_reviews.empty? %>
-          <% current_user.recipe_reviews.each do |recipe_review|
-          %>
-            <h5 class="mb-0"><%= recipe_review.recipe.name %></h5 >
-            <p>Rating: <%= recipe_review.rating %> |  <%= recipe_review.content %></p>
-            <hr>
-          <% end %>
-        <% end %>
+      <div class="card mb-4">
+        <div class="card-header" id="headingFour">
+          <h5 class="mb-0 text-center">
+            <button class="text-decoration-none btn btn-link link-user-dash collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Favourite Recipes
+            </button>
+          </h5>
+        </div>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+          <div class="card-body">
+            <% if !@favorite_recipes.empty? %>
+              <% @favorite_recipes.each do |recipe| %>
+              <div class="container mt-3">
+                <div class="row">
+                  <div class="col-3">
+                    <%= link_to cl_image_tag recipe.photo.key, class: "avatar-large",  crop: :fill %>
+                  </div>
+                  <div class="col-9">
+                   <%= link_to recipe.name, recipe_path(recipe),class: "pl-0 link-recipe-dash text-decoration-none font-weight-bold" %>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-  <div class="card mb-4">
-    <div class="card-header" id="headingFour">
-      <h5 class="mb-0 text-center">
-        <button class="btn btn-link link-user-dash collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-          Favourites
-        </button>
-      </h5>
-    </div>
-    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-      <div class="card-body">
-        <% if !@favorite_recipes.empty? %>
-          <% @favorite_recipes.each do |recipe| %>
-            <%= link_to recipe.name, recipe_path(recipe),class: "link-recipe-dash" %>
-            <hr>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
-  </div>
-</div>
 
-</div>
-</div>
 
