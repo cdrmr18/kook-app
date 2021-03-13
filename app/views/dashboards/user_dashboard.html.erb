@@ -114,7 +114,7 @@
       <div class="card-body">
         <% if !@favorite_recipes.empty? %>
           <% @favorite_recipes.each do |recipe| %>
-            <%= link_to recipe.name, recipe_path(recipe),class: "link-user-dash" %>
+            <%= link_to recipe.name, recipe_path(recipe),class: "link-recipe-dash" %>
             <hr>
           <% end %>
         <% end %>
