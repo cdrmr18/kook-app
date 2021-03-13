@@ -22,7 +22,8 @@
         <h5>Next Session</h5>
         <p></p>
         <% if @bookings.empty? || !@bookings[-1].chef_review.blank? ||  !@bookings[-1].recipe_review.blank? %>
-          <h4>Book your next session <%= link_to "Recipes", recipes_path, class:"text-uppercase link-recipe-dash font-weight-bold text-decoration-none" %></h4>
+          <h4>Book your next session </h4>
+          <p><%= link_to "Recipes", recipes_path, class:"text-uppercase link-recipe-dash font-weight-bold text-decoration-none" %></p>
         <% else %>
           <h2 class="recipe-link"><%= @bookings[-1].recipe.name %></h2>
           <p></p>

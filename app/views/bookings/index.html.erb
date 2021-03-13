@@ -3,63 +3,74 @@
  <div class="container card shadow-sm my-4 p-4">
    <div class="row">
       <div class="col-12">
-        <% if @bookings[-1].recipe_review.nil? && @bookings[-1].chef_review.nil? %>
+        <% if @last_booking.recipe_review.nil? && @last_booking.chef_review.nil? %>
           <h1 class="text-center mb-3">Next Session</h1>
           <div class="card border-light mb-3" style="max-width: 100%;">
-            <div class="card-header" ><%= link_to "Session Details", booking_path(@bookings[-1]) %> | <%= @bookings[-1].recipe.chef.user.first_name %> <%= @bookings[-1].recipe.chef.user.last_name %>
+            <div class="card-header" ><%= link_to "Session Details", booking_path(@last_booking) %> | <%= @last_booking.recipe.chef.user.last_name %>
             </div>
             <div class="card-body">
-              <h5 class="card-title"><%= @bookings[-1].recipe.name %></h5>
+              <h5 class="card-title"><%= @last_booking.recipe.name %></h5>
               <div class="card-text">
-                <h5><%= @bookings[-1].date.strftime('%B %d, %Y') %></h5>
-                <p class="card-text mb-0">Start Time: <%= @bookings[-1].start_time.strftime("%I:%M%p") %></p>
-                <p>End Time: <%= @bookings[-1].end_time.strftime("%I:%M%p") %></p>
+                <h5><%= @last_booking.date.strftime('%B %d, %Y') %></h5>
+                <p class="card-text mb-0">Start Time: <%= @last_booking.start_time.strftime("%I:%M%p") %></p>
+                <p>End Time: <%= @last_booking.end_time.strftime("%I:%M%p") %></p>
               </div>
             </div>
           </div>
           <% else %>
             <div class="container text-center">
-              <h2>You have no sessions</h2>
-              <p>Book your next session</p>
+              <h4>Book your next session </h4>
+              <p><%= link_to "Recipes", recipes_path, class:"text-uppercase link-recipe-dash font-weight-bold text-decoration-none" %></p>
             </div>
         <% end %>
       </div>
     </div>
   </div>
+
+
+
+
+
+
+
 <!-- past bookings -->
-  <div class="container card my-4 shadow-sm p4-">
+  <div class="container card">
     <div class="row">
       <div class="col-12">
         <h2 class="text-center mb-3 mt-3">Past Sessions</h2>
         <% if @bookings.present? %>
           <% @bookings[0...-1].each do |booking| %>
-            <div class="card border-light mb-3" style="max-width: 100%;">
-              <div class="card-header" ><%= link_to "Session Details", booking_path(booking) %> | <%= booking.recipe.chef.user.first_name %> <%= booking.recipe.chef.user.last_name %>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><%= booking.recipe.name %></h5>
-                <div class="card-text">
-                  <h5><%= booking.date.strftime('%B %d, %Y') %></h5>
-                  <p class="card-text mb-0">Start Time: <%= booking.start_time.strftime("%I:%M%p") %></p>
-                  <p>End Time: <%= booking.end_time.strftime("%I:%M%p") %></p>
-                </div>
+            <div class="card-product">
+              <%= cl_image_tag booking.recipe.photo.key %>
+              <div class="card-product-infos">
+                <h2><%= booking.recipe.name %></h2>
+                <p>Chef <%= booking.recipe.chef.user.first_name %> <%= booking.recipe.chef.user.last_name %></p>
+                <p>Start Time: <%= booking.start_time.strftime("%I:%M%p") %></p>
+                    <p>End Time: <%= booking.end_time.strftime("%I:%M%p") %></p>
+                <%= link_to "Session Details", booking_path(booking) %>
               </div>
             </div>
           <% end %>
-            <% if !@bookings[-1].recipe_review.nil? || !@bookings[-1].chef_review.nil?%>
-              <div class="card border-light mb-3" style="max-width: 100%;">
-              <div class="card-header" ><%= link_to "Booking ##{@bookings[-1].id}", booking_path(@bookings[-1]) %> | <%= @bookings[-1].recipe.chef.user.first_name %> <%= @bookings[-1].recipe.chef.user.last_name %></div>
-              <div class="card-body">
-                <h5 class="card-title"><%= @bookings[-1].recipe.name %></h5>
-                <div class="card-text">
-                  <h5><%= @bookings[-1].date.strftime('%B %d, %Y') %></h5>
-                  <p class="card-text mb-0">Start Time: <%= @bookings[-1].start_time.strftime("%I:%M%p") %></p>
-                  <p>End Time: <%= @bookings[-1].end_time.strftime("%I:%M%p") %></p>
-                </div>
-              </div>
+          <!--  -->
+          <% if !@last_booking.recipe_review.nil? || !@last_booking.chef_review.nil?%>
+
+          <div class="card-product">
+            <%= cl_image_tag @last_booking.recipe.photo.key %>
+            <div class="card-product-infos">
+              <h2><%= @last_booking.recipe.name %></h2>
+              <p>Chef <%= @last_booking.recipe.chef.user.first_name %> <%= @last_booking.recipe.chef.user.last_name %></p>
+              <p class="card-text mb-0">Start Time: <%= @last_booking.start_time.strftime("%I:%M%p") %></p>
+                  <p>End Time: <%= @last_booking.end_time.strftime("%I:%M%p") %></p>
+            </div>
+            <%= link_to "Session Details", booking_path(@last_booking) %>
+          </div>
             <% end %>
           <% end %>
-          </div>
+      </div>
+    </div>
+   </div>
+
+
         </div>
       </div>
     </div>
