@@ -158,6 +158,7 @@ h4 {
   text-decoration: none;
   font-family: 'Nunito Sans', sans-serif;
   border: solid 1px #c076f8;
+  border-radius: 10px;
 }
 
 
@@ -222,6 +223,11 @@ h4 {
 
 
 
+      #tag_container{
+        top: 60px !important ;
+        position: absolute !important;
+        transform: none !important;
+      }
 
 
 
