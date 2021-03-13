@@ -19,16 +19,18 @@
         <% if @bookings.empty? %>
           <h3>You have no bookings</h3>
         <% else  %>
-          <h4>Booking #<%= @bookings[-1].id %></h4>
+          <h4>Confirm Session</h4>
           <h5><%= @bookings[-1].recipe.name %></h5>
-            <p><%= @bookings[-1].date.strftime("%B %e, %Y") %> <%= @bookings[-1].start_time.strftime("%I:%M%p") %> - <%= @bookings[-1].start_time.strftime("%I:%M%p") %></p>
-            <div class="col card card-body pb-1 pt-2 d-inline-flex p-2">
-              <p class="link-user-dash" ><%= link_to "Accept "%><i class="far fa-check-square"></i></p>
-            </div>
-            <div class="col card card-body pb-1 pt-2">
-              <p class="link-user-dash"><%= link_to "Decline  " %><i class="fas fa-ban"></i></p>
-            </div>
-          <% end %>
+          <p>with <strong><%= @bookings[-1].user.first_name %> <%= @bookings[-1].user.last_name %></strong></p>
+          <p><%= @bookings[-1].date.strftime("%B %e, %Y") %> </p>
+          <p><%= @bookings[-1].start_time.strftime("%I:%M%p") %> - <%= @bookings[-1].start_time.strftime("%I:%M%p") %></p>
+          <div class="col card card-body pb-1 pt-2 d-inline-flex p-2">
+            <p class="link-user-dash" ><%= link_to "Accept "%><i class="far fa-check-square"></i></p>
+          </div>
+          <div class="col card card-body pb-1 pt-2">
+            <p class="link-user-dash"><%= link_to "Decline  " %><i class="fas fa-ban"></i></p>
+          </div>
+        <% end %>
       </div>
 
 
