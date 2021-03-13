@@ -6,7 +6,8 @@
         <%= cl_image_tag current_user.photo.key, width: 175, height: 175,  crop: :fill, class: "chef-avatar mb-4"  %>
        </div>
        <div class="col-12">
-        <h1 class="user-dash-name" ><%= @chef.user.first_name %> <%= @chef.user.last_name %></h1>
+        <h2 class="text-center mb-0">Chef</h2>
+        <h2 class="user-dash-name" ><%= @chef.user.first_name %> <%= @chef.user.last_name %></h2>
       </div>
     </div>
   </div>

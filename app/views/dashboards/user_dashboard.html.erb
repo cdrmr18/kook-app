@@ -2,16 +2,16 @@
 <div class="container mt-4">
   <div class="container text-center card py-3 shadow-sm  container-dash ">
 
-    
+
 
     <div class="row">
       <div class="col-12">
         <%= cl_image_tag current_user.photo.key, width: 175, height: 175,  crop: :fill, class: "chef-avatar mb-4"  %>
        </div>
        <div class="col-12">
-        <h1 class="user-dash-name" ><%= current_user.first_name %> <%= current_user.last_name %></h1>
+        <h2 class="user-dash-name" ><%= current_user.first_name %> <%= current_user.last_name %></h2>
           <!-- create chef link -->
-        <% if !current_user.chef.present? %>
+        <% unless current_user.chef.present? %>
           <%= link_to "Become a chef", new_chef_path, class: "btn btn-light mt-2 shadow-sm", id: "chef-btn" %>
         <% end %>
       </div>
@@ -24,7 +24,9 @@
     <div class="col-12 card card-body pb-2 pt-3 container-dash">
       <h5>Next Session</h5>
       <p></p>
-      <% if !@bookings.empty? %>
+      <% if @bookings.empty? %>
+        <h4>Book your next session <%= link_to "Recipes", recipes_path, class:"text-uppercase link-recipe-dash font-weight-bold text-decoration-none" %></h4>
+      <% else %>
         <h2 class="recipe-link"><%= @bookings[-1].recipe.name %></h2>
         <p></p>
         <p id="booking-times"><%= @bookings[-1].date.strftime("%B %e, %Y") %> <br> <%= @bookings[-1].start_time.strftime("%I:%M%p") %> - <%= @bookings[-1].start_time.strftime("%I:%M%p") %>
@@ -114,7 +116,7 @@
       <div class="card-body">
         <% if !@favorite_recipes.empty? %>
           <% @favorite_recipes.each do |recipe| %>
-            <%= link_to recipe.name, recipe_path(recipe),class: "link-recipe-dash" %>
+            <%= link_to recipe.name, recipe_path(recipe),class: "link-recipe-dash text-decoration-none" %>
             <hr>
           <% end %>
         <% end %>
