@@ -58,7 +58,7 @@
 
   <!-- ADD INGREDIENTS -->
   <% if current_user == @recipe.chef.user %>
-    <div class="container my-3 py-3 border shadow-sm text-center" id="add-measurement">
+    <div class="container mt-5 py-3 border shadow-sm text-center" id="add-measurement">
       <p class="text-center py-2"><i class="fas fa-plus"></i> Add Ingredient
       <%= simple_form_for([@recipe, @measurement], remote: true) do |f| %>
         <p class="mb-0"><i class="fas fa-weight mr-2"></i>Ingredient Quantity</p>
@@ -71,7 +71,7 @@
 
     <div class="container text-center">
       <!-- chef dashboard link -->
-      <%= link_to "Go to Chef Dashboard", chef_dashboard_path(@chef), class: "btn button col-10 shadow-sm my-3" %>
+      <%= link_to "Go to Chef Dashboard", chef_dashboard_path(@chef), class: "btn btn-light col-10 shadow mt-5 mb-3" %>
       </div>
   <% end %>
 </div>
