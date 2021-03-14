@@ -32,17 +32,19 @@
   <!--  -->
 <br>
   <!-- ingredients/ SHOPPING LIST -->
-  <div class="container card pt-3 shadow-sm" >
+  <div class="container card pt-3 shadow-sm shopping-list-container" >
     <h4 id="shopping-list"  class="text-center recipe-link mb-0">Shopping List</h4>
     <p class="text-center mt-0 chef-recipe-name"> <%= @recipe.name %> </p>
     <div class="container">
       <div class="container  mt-4">
       <% @recipe.measurements.each do |measurement| %>
-        <p id="measurement-<%= measurement.id %>"> <i class="fas fa-square fa-xs"></i>
-        <%= measurement.description %> <%= measurement.ingredient.capitalize %>
-        <% if current_user ==  measurement.recipe.chef.user %> |
-        <%= link_to "remove", measurement_path(measurement), method: :delete, remote: true %></p>
-        <% end %>
+        <div class="shopping-list-ingredients">
+          <span  id="measurement-<%= measurement.id %>"> <i class="fas fa-square fa-xs mr-4"></i></span>
+          <span><%= measurement.description %> <%= measurement.ingredient.capitalize %>
+          <% if current_user ==  measurement.recipe.chef.user %> |
+          <%= link_to "remove", measurement_path(measurement), method: :delete, remote: true %></span>
+          <% end %>
+        </div>
       <% end %>
       </div>
     </div>
@@ -91,10 +93,7 @@
       <%= link_to "All Recipes", recipes_path, class: "btn button shadow", id:"chef-btn" %>
     </div>
     <div class="px-2">
-     <%# <i class="fas fa-arrow-circle-up"></i> %>
       <%= link_to "⬆", recipe_path(@recipe), class: "btn btn-light shadow" %>
-
-
     </div>
   </div>
 </div>
