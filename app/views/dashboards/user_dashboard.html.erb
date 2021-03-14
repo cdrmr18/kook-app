@@ -20,9 +20,9 @@
     <div class="row booking-confirm mt-4 text-center">
       <div class="col-12 card card-body pb-2 pt-3 container-dash shadow-sm">
         <h5>Next Session</h5>
-        <p></p>
         <% if @bookings.empty? || !@bookings[-1].chef_review.blank? ||  !@bookings[-1].recipe_review.blank? %>
-          <h4>Book your next session </h4>
+          <h4 class="chef-dash-header">Book your next session </h4>
+          <p></p>
           <p><%= link_to "Recipes", recipes_path, class:"text-uppercase link-recipe-dash font-weight-bold text-decoration-none" %></p>
         <% else %>
           <h2 class="recipe-link"><%= @bookings[-1].recipe.name %></h2>
