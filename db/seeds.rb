@@ -445,7 +445,7 @@ roger_two.save!
 file = URI.open('https://images.unsplash.com/photo-1605591099585-087b3d54cd45?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1342&q=80')
 roger_three = Recipe.new(
   name: 'Chorizo & Egg Breakfast Pizza',
-  description: "",
+  description: "A yummy and savory dish for your next brunch. Buttery crescent dough is baked with chorizo sausage, eggs, and cheese, then sprinkled with all of your favorite taco-style toppings!",
   cuisine: 'French',
   cook_time: rand(30..90),
   chef_id: roger_chef.id,
@@ -616,7 +616,7 @@ slavo_three.save!
 file = URI.open('https://images.unsplash.com/photo-1602873520153-ec56ca3c205b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YmFrZWQlMjBiZWFuc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 slavo_four = Recipe.new(
   name: 'Baked Beans',
-  description: "A dish traditionally containing white beans which are parboiled and then baked at a low temperature for a lengthy period of time in some sort of sauce."
+  description: "A dish traditionally containing white beans which are parboiled and then baked at a low temperature for a lengthy period of time in some sort of sauce.",
   cuisine: 'Balkan',
   cook_time: rand(30..90),
   chef_id: slavo_chef.id,
