@@ -13,28 +13,27 @@
   </div>
 
 <!-- booking confirmation -->
-<div class="container shadow-sm ">
+<div class="container">
   <div class="row booking-confirm mt-4 text-center">
-    <div class="col-12 card card-body pb-2 pt-3">
+    <div class="col-12 card card-body pb-2 pt-3 shadow-sm">
         <% if @bookings.empty? %>
           <h3>You have no bookings</h3>
         <% else  %>
-          <h4>Confirm Session</h4>
-          <h5><%= @bookings[-1].recipe.name %></h5>
-          <p>with <strong><%= @bookings[-1].user.first_name %> <%= @bookings[-1].user.last_name %></strong></p>
-          <p><%= @bookings[-1].date.strftime("%B %e, %Y") %> </p>
-          <p><%= @bookings[-1].start_time.strftime("%I:%M%p") %> - <%= @bookings[-1].start_time.strftime("%I:%M%p") %></p>
-          <div class="col card card-body pb-1 pt-2 d-inline-flex p-2">
-            <p class="link-user-dash" ><%= link_to "Accept "%><i class="far fa-check-square"></i></p>
-          </div>
-          <div class="col card card-body pb-1 pt-2">
-            <p class="link-user-dash"><%= link_to "Decline  " %><i class="fas fa-ban"></i></p>
+          <h4 class="chef-dash-header mt-2">Session Confirmation</h4>
+          <h5 class="recipe-link"><%= @bookings[-1].recipe.name %></h5>
+          <p class="recipe-link">with <%= @bookings[-1].user.first_name %> <%= @bookings[-1].user.last_name %></p>
+          <p class="booking-times mb-0"><%= @bookings[-1].date.strftime("%B %e, %Y") %> </p>
+          <p class="booking-times"><%= @bookings[-1].start_time.strftime("%I:%M%p") %> - <%= @bookings[-1].end_time.strftime("%I:%M%p") %></p>
+          <div class="row shadow-sm">
+            <div class="col-6 card pb-1 pt-3 d-inline-flex p-2">
+              <p class="link-recipe-dash" >Accept <i class="far fa-check-square"></i></p>
+            </div>
+            <div class="col-6 card pb-1 pt-3">
+              <p class="link-recipe-dash">Decline <i class="fas fa-ban"></i></p>
+            </div>
           </div>
         <% end %>
       </div>
-
-
-
   </div>
 </div>
 
@@ -154,7 +153,7 @@
   </div>
 <!-- account cancellation -->
   <div class="container text-center mb-4">
-    <p><%= link_to "Delete Chef Account",  chef_path(@chef), method: :delete, class: "text-decoration-none mt-4 btn btn-light mb-4 shadow del-chef" %></p>
+    <p><%= link_to "Delete Chef Account",  chef_path(@chef), method: :delete, class: "text-decoration-none mt-4 btn btn-light mb-4 del-chef" %></p>
   </div>
 </div>
 

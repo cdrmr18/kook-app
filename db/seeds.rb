@@ -2559,7 +2559,7 @@ Measurement.create!(
 Measurement.create!(
   recipe_id: bec_one.id,
   description: "1kg",
-  ingredient: "1kg large green prawns, peeled (tails intact), deveined, butterflied"
+  ingredient: "large green prawns, peeled (tails intact), deveined, butterflied"
 )
 Measurement.create!(
   recipe_id: bec_one.id,
