@@ -353,7 +353,7 @@ chaz_six.save!
 file = URI.open('https://images.unsplash.com/photo-1598683386906-71ef9caef177?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8&auto=format&fit=crop&w=800&q=60')
 jamal_one = Recipe.new(
   name: 'Hummus',
-  description: "",
+  description: "A Middle Eastern dip, spread, or savory dish made from cooked, mashed chickpeas blended with tahini, lemon juice, and garlic.",
   cuisine: 'Middle Eastern',
   cook_time: rand(30..90),
   chef_id: jamal_chef.id,
@@ -366,7 +366,7 @@ jamal_one.save!
 file = URI.open('https://images.unsplash.com/photo-1594040815645-5442fb6d48f6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dGFib3VsaXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 jamal_two = Recipe.new(
   name: 'Tabbouleh',
-  description: "",
+  description: "A Levantine vegetarian salad made mostly of finely chopped parsley, with tomatoes, mint, onion, bulgur (soaked, not cooked), and seasoned with olive oil, lemon juice, salt and sweet pepper.",
   cuisine: 'Middle Eastern',
   cook_time: rand(30..90),
   chef_id: jamal_chef.id,
@@ -379,7 +379,7 @@ jamal_two.save!
 file = URI.open('https://images.unsplash.com/photo-1573821662905-00f8c205c148?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80')
 jamal_three = Recipe.new(
   name: 'Manakeesh',
-  description: "",
+  description: "Delicious and crispy homemade dough is topped with a za'atar topping or a blend of cheeses for two different variety of flatbread topped with a variety of possible toppings.",
   cuisine: 'Middle Eastern',
   cook_time: rand(30..90),
   chef_id: jamal_chef.id,
@@ -392,7 +392,7 @@ jamal_three.save!
 file = URI.open('https://images.unsplash.com/photo-1603496987674-79600a000f55?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjl8fGNoaWNrZW4lMjBmb29kJTIwcmljZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 jamal_four = Recipe.new(
   name: 'Kabsa',
-  description: "",
+  description: "It is a dish made of rice and meat, cooked either separately or together. It can be made with spices and camel meat, lamb, chicken or fish.",
   cuisine: 'Middle Eastern',
   cook_time: rand(30..90),
   chef_id: jamal_chef.id,
@@ -405,7 +405,7 @@ jamal_four.save!
 file = URI.open('https://images.unsplash.com/photo-1593001872095-7d5b3868fb1d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8ZmFsYWZlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=800&q=60')
 jamal_five = Recipe.new(
   name: 'Falafel',
-  description: "",
+  description: "A staple Middle Eastern dish—and a popular street food around the world—that consists of fried spiced balls or patties of ground chickpeas or fava beans stuffed into a pita or wrapped in laffa bread with hot sauce, tahini sauce, and tomatoes.",
   cuisine: 'Middle Eastern',
   cook_time: rand(30..90),
   chef_id: jamal_chef.id,
