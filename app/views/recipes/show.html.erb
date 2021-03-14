@@ -34,8 +34,8 @@
   <!-- ingredients/ SHOPPING LIST -->
   <div class="container card pt-3 shadow-sm" >
     <h4 id="shopping-list"  class="text-center recipe-link mb-0">Shopping List</h4>
-    <h5 class="text-center recipe-link mt-0"> <%= @recipe.name %> </h5>
-    <div class="container mx-5 mb-4">
+    <p class="text-center mt-0 chef-recipe-name"> <%= @recipe.name %> </p>
+    <div class="container">
       <div class="container  mt-4">
       <% @recipe.measurements.each do |measurement| %>
         <p id="measurement-<%= measurement.id %>"> <i class="fas fa-square fa-xs"></i>
@@ -60,7 +60,7 @@
       <% end %>
 
       <!-- add new recipe -->
-      <%= link_to "Add Recipe", new_recipe_path, class: "btn button col-10 shadow-sm mt-2" %>
+      <%= link_to "Add Recipe", new_recipe_path, class: "btn button col-10 shadow-sm mt-4" %>
       <!-- chef dashboard link -->
       <%= link_to "Chef Dashboard", chef_dashboard_path(@chef), class: "btn btn-light col-10 shadow-sm mt-2" %>
     </div>
