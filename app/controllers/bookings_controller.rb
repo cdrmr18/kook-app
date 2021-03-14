@@ -39,8 +39,8 @@ class BookingsController < ApplicationController
         currency: 'aud',
         quantity: 1
       }],
-      success_url: root_url,
-      cancel_url: root_url
+      success_url: bookings_url,
+      cancel_url: bookings_url
     )
 
 
