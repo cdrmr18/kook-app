@@ -61,9 +61,9 @@
     <div class="container mt-5 mb-3 py-3 border shadow-sm text-center" id="add-measurement">
       <p class="text-center py-2"><i class="fas fa-plus"></i> Add Ingredient
       <%= simple_form_for([@recipe, @measurement], remote: true) do |f| %>
-        <p class="mb-0"><i class="fas fa-weight mr-2"></i>Ingredient Quantity</p>
+        <p class="mb-0"></i>Ingredient Quantity</p>
         <%= f.input_field :description, placeholder: "    1 oz" %>
-        <p class="mb-0 mt-2"><i class="fas fa-carrot mr-2"></i>Add an ingredient</p>
+        <p class="mb-0 mt-4"></i>Add an ingredient</p>
         <%= f.input_field :ingredient, placeholder: "    Chicken"%>
         <%= f.button :submit, "Add Ingredient", class: "btn button col-6 mt-3 shadow-sm" %>
       <% end %>
