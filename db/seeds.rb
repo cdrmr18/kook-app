@@ -181,13 +181,6 @@ slavo_chef = Chef.create!(
   cuisine: 'Balkan',
   user_id: slavo.id,
   )
-luis_chef = Chef.create!(
-  restaurant: Faker::Restaurant.name,
-  job_title: "Sous Chef",
-  introduction: "To provide an exceptional learning experience that satisfies our users grown-up tastes by being a Cut-Above in everything I do. Services shall be delivered consistently and measured one satisfied customer at a time.",
-  cuisine: 'Balkan',
-  user_id: luis.id,
-  )
 
 puts "#{Chef.count} chefs created"
 
@@ -202,7 +195,7 @@ puts 'creating recipes...'
 file = URI.open('https://images.unsplash.com/photo-1514944288352-fffac99f0bdf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJhd25zfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 bec_one = Recipe.new(
   name: 'Prawns with Sweet Chilli Sauce',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'Thai',
   cook_time: rand(30..90),
   chef_id: bec_chef.id,
@@ -215,7 +208,7 @@ bec_one.save!
 file = URI.open('https://images.unsplash.com/photo-1612443016520-314f09b3d449?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hpY2tlbiUyMGZvb2R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 bec_two = Recipe.new(
   name: 'Roast Chicken with Sauce Chasseur',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'Thai',
   cook_time: rand(30..90),
   chef_id: bec_chef.id,
@@ -228,7 +221,7 @@ bec_two.save!
 file = URI.open('https://images.unsplash.com/photo-1595456982104-14cc660c4d22?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTJ8fHNhc2hpbWl8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 bec_three = Recipe.new(
   name: 'Sashimi with Chilli-lime Dressing',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'Thai',
   cook_time: rand(30..90),
   chef_id: bec_chef.id,
@@ -241,7 +234,7 @@ bec_three.save!
 file = URI.open('https://images.unsplash.com/photo-1601091745482-b2b5942e567e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDZ8fGZyaWVkJTIwYXNwYXJhZ3VzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 bec_four = Recipe.new(
   name: 'Stir-fried Asparagus',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'Thai',
   cook_time: rand(30..90),
   chef_id: bec_chef.id,
@@ -254,7 +247,7 @@ bec_four.save!
 file = URI.open('https://images.unsplash.com/photo-1603356887214-0441954124ae?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
 bec_five = Recipe.new(
   name: 'Pork & Eggs',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'Thai',
   cook_time: rand(30..90),
   chef_id: bec_chef.id,
@@ -267,7 +260,7 @@ bec_five.save!
 file = URI.open('https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c291cCUyMG5vb2RsZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 bec_six = Recipe.new(
   name: 'Ginger Garlic Noodle Soup',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'Thai',
   cook_time: rand(30..90),
   chef_id: bec_chef.id,
@@ -281,7 +274,7 @@ bec_six.save!
 file = URI.open('https://images.unsplash.com/photo-1471253387723-35c53c9f97ca?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fGZyaXR0ZXJzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 chaz_one = Recipe.new(
   name: 'Zucchini Fritters',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'Modern Australian',
   cook_time: rand(30..90),
   chef_id: chaz_chef.id,
@@ -294,7 +287,7 @@ chaz_one.save!
 file = URI.open('https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OTV8fGZpc2glMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 chaz_two = Recipe.new(
   name: 'Seared Hiramasa Salmon',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'Modern Australian',
   cook_time: rand(30..90),
   chef_id: chaz_chef.id,
@@ -307,7 +300,7 @@ chaz_two.save!
 file = URI.open('https://images.unsplash.com/photo-1591107576521-87091dc07797?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fHRhcnQlMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 chaz_three = Recipe.new(
   name: 'Baked Passionfruit Tarts',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'Modern Australian',
   cook_time: rand(30..90),
   chef_id: chaz_chef.id,
@@ -320,7 +313,7 @@ chaz_three.save!
 file = URI.open('https://images.unsplash.com/photo-1609770424775-39ec362f2d94?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8cmlzb3R0b3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 chaz_four = Recipe.new(
   name: 'Mushroom & Chestnut Risotto',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'Modern Australian',
   cook_time: rand(30..90),
   chef_id: chaz_chef.id,
@@ -333,7 +326,7 @@ chaz_four.save!
 file = URI.open('https://images.unsplash.com/photo-1513623954575-263b061498a3?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8ZHVjayUyMGZvb2R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 chaz_five = Recipe.new(
   name: 'Glazed Duck Drumsticks',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'Modern Australian',
   cook_time: rand(30..90),
   chef_id: chaz_chef.id,
@@ -346,7 +339,7 @@ chaz_five.save!
 file = URI.open('https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTR8fGJ1cmdlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 chaz_six = Recipe.new(
   name: 'Lamb Karaage Sliders',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'Modern Australian',
   cook_time: rand(30..90),
   chef_id: chaz_chef.id,
@@ -360,7 +353,7 @@ chaz_six.save!
 file = URI.open('https://images.unsplash.com/photo-1598683386906-71ef9caef177?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8&auto=format&fit=crop&w=800&q=60')
 jamal_one = Recipe.new(
   name: 'Hummus',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'Middle Eastern',
   cook_time: rand(30..90),
   chef_id: jamal_chef.id,
@@ -373,7 +366,7 @@ jamal_one.save!
 file = URI.open('https://images.unsplash.com/photo-1594040815645-5442fb6d48f6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dGFib3VsaXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 jamal_two = Recipe.new(
   name: 'Tabbouleh',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'Middle Eastern',
   cook_time: rand(30..90),
   chef_id: jamal_chef.id,
@@ -386,7 +379,7 @@ jamal_two.save!
 file = URI.open('https://images.unsplash.com/photo-1573821662905-00f8c205c148?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80')
 jamal_three = Recipe.new(
   name: 'Manakeesh',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'Middle Eastern',
   cook_time: rand(30..90),
   chef_id: jamal_chef.id,
@@ -399,7 +392,7 @@ jamal_three.save!
 file = URI.open('https://images.unsplash.com/photo-1603496987674-79600a000f55?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjl8fGNoaWNrZW4lMjBmb29kJTIwcmljZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 jamal_four = Recipe.new(
   name: 'Kabsa',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'Middle Eastern',
   cook_time: rand(30..90),
   chef_id: jamal_chef.id,
@@ -412,7 +405,7 @@ jamal_four.save!
 file = URI.open('https://images.unsplash.com/photo-1593001872095-7d5b3868fb1d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8ZmFsYWZlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=800&q=60')
 jamal_five = Recipe.new(
   name: 'Falafel',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'Middle Eastern',
   cook_time: rand(30..90),
   chef_id: jamal_chef.id,
@@ -426,7 +419,7 @@ jamal_five.save!
 file = URI.open('https://images.unsplash.com/photo-1605992728160-8d119bf2b5db?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cGF0ZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 roger_one = Recipe.new(
   name: 'Duck Liver Parfait',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'French',
   cook_time: rand(30..90),
   chef_id: roger_chef.id,
@@ -439,7 +432,7 @@ roger_one.save!
 file = URI.open('https://images.unsplash.com/photo-1591386767153-987783380885?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YmVhbiUyMHN0ZXd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 roger_two = Recipe.new(
   name: 'Cassoulet',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'French',
   cook_time: rand(30..90),
   chef_id: roger_chef.id,
@@ -452,7 +445,7 @@ roger_two.save!
 file = URI.open('https://images.unsplash.com/photo-1605591099585-087b3d54cd45?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1342&q=80')
 roger_three = Recipe.new(
   name: 'Chorizo & Egg Breakfast Pizza',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'French',
   cook_time: rand(30..90),
   chef_id: roger_chef.id,
@@ -465,7 +458,7 @@ roger_three.save!
 file = URI.open('https://images.unsplash.com/photo-1535920527002-b35e96722eb9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80')
 roger_four = Recipe.new(
   name: 'Pecan Pie',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'French',
   cook_time: rand(30..90),
   chef_id: roger_chef.id,
@@ -478,7 +471,7 @@ roger_four.save!
 file = URI.open('https://images.unsplash.com/photo-1481070555726-e2fe8357725c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjJ8fHxlbnwwfHx8&auto=format&fit=crop&w=800&q=60')
 roger_five = Recipe.new(
   name: 'Le Burger du Poulet',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'French',
   cook_time: rand(30..90),
   chef_id: roger_chef.id,
@@ -491,7 +484,7 @@ roger_five.save!
 file = URI.open('https://images.unsplash.com/photo-1513623954575-263b061498a3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')
 roger_six = Recipe.new(
   name: 'Duck Confit',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'French',
   cook_time: rand(30..90),
   chef_id: roger_chef.id,
@@ -505,7 +498,7 @@ roger_six.save!
 file = URI.open('https://images.unsplash.com/photo-1611712142269-12b7433e28e9?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTV8fGFmcmljYW4lMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 samuel_one = Recipe.new(
   name: 'Moroccan Chicken Rfissa',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'North African',
   cook_time: rand(30..90),
   chef_id: samuel_chef.id,
@@ -518,7 +511,7 @@ samuel_one.save!
 file = URI.open('https://images.unsplash.com/photo-1576577445504-6af96477db52?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTgyfHxtZWF0YmFsbCUyMHNvdXB8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 samuel_two = Recipe.new(
   name: 'Moroccan Meatball Soup',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'North African',
   cook_time: rand(30..90),
   chef_id: samuel_chef.id,
@@ -531,7 +524,7 @@ samuel_two.save!
 file = URI.open('https://images.unsplash.com/photo-1532636875304-0c89119d9b4d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')
 samuel_three = Recipe.new(
   name: 'Aromatic Lamb with Dates',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'North African',
   cook_time: rand(30..90),
   chef_id: samuel_chef.id,
@@ -544,7 +537,7 @@ samuel_three.save!
 file = URI.open('https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTl8fHJvYXN0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 samuel_four = Recipe.new(
   name: 'Morrocan Roast Lamb',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'North African',
   cook_time: rand(30..90),
   chef_id: samuel_chef.id,
@@ -557,7 +550,7 @@ samuel_four.save!
 file = URI.open('https://images.unsplash.com/photo-1519624014191-508652cbd7b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80')
 samuel_five = Recipe.new(
   name: 'Chicken Tagine',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'North African',
   cook_time: rand(30..90),
   chef_id: samuel_chef.id,
@@ -570,7 +563,7 @@ samuel_five.save!
 file = URI.open('https://images.unsplash.com/photo-1512058556646-c4da40fba323?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8cGFuJTIwZnJ5fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 samuel_six = Recipe.new(
   name: 'Mixed-grain Paella with Lamb',
-  description: Faker::Food.description,
+  description: "",
   cuisine: 'North African',
   cook_time: rand(30..90),
   chef_id: samuel_chef.id,
@@ -583,8 +576,8 @@ samuel_six.save!
 # chef slavo recipes
 file = URI.open('https://images.unsplash.com/photo-1585325701165-351af916e581?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=988&q=80')
 slavo_one = Recipe.new(
-  name: 'Bosnian Cevapi',
-  description: Faker::Food.description,
+  name: 'Bosnian Cevap',
+  description: "Cevap represent a piece of grilled minced meat, something like a meat dumpling, but in an elongated shape.",
   cuisine: 'Balkan',
   cook_time: rand(30..90),
   chef_id: slavo_chef.id,
@@ -597,7 +590,7 @@ slavo_one.save!
 file = URI.open('https://images.unsplash.com/photo-1580476262843-d5e9b687d4d4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8cm9hc3R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 slavo_two = Recipe.new(
   name: 'Roast Pork Shoulder',
-  description: Faker::Food.description,
+  description: "Master crispy crackling with this simple roast pork shoulder recipe and you’ll have the perfect roast dinner. ",
   cuisine: 'Balkan',
   cook_time: rand(30..90),
   chef_id: slavo_chef.id,
@@ -610,7 +603,7 @@ slavo_two.save!
 file = URI.open('https://images.unsplash.com/photo-1613552496394-4e4b3f074e4f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTl8fHN0ZXd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 slavo_three = Recipe.new(
   name: 'Bosnian Pot',
-  description: Faker::Food.description,
+  description: "Bosnian pot or Bosanski lonac is the speciality of Bosnian traditional cuisine. This is a simple, but delicious and invigorating dish at the same time. Basically, it is a slow cooking stew made with meat and lots of vegetables.",
   cuisine: 'Balkan',
   cook_time: rand(30..90),
   chef_id: slavo_chef.id,
@@ -623,7 +616,7 @@ slavo_three.save!
 file = URI.open('https://images.unsplash.com/photo-1602873520153-ec56ca3c205b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YmFrZWQlMjBiZWFuc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 slavo_four = Recipe.new(
   name: 'Baked Beans',
-  description: Faker::Food.description,
+  description: "A dish traditionally containing white beans which are parboiled and then baked at a low temperature for a lengthy period of time in some sort of sauce."
   cuisine: 'Balkan',
   cook_time: rand(30..90),
   chef_id: slavo_chef.id,
