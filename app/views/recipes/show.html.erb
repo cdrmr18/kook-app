@@ -44,10 +44,10 @@
               <span  id="measurement-<%= measurement.id %>" class="shopping-list-checkbox"><i class="far fa-square"></i></span>
             </div>
             <div class="col-10 shopping-list-description">
-              <span><%= measurement.description %> <%= measurement.ingredient.capitalize %>
-              <% if current_user ==  measurement.recipe.chef.user %> |
-              <%= link_to "remove", measurement_path(measurement), method: :delete, remote: true %></span>
-              <% end %>
+              <span><% if current_user ==  measurement.recipe.chef.user %>
+                <%= link_to "x", measurement_path(measurement), remote: true, method: :delete,  class:"recipe-link" %><% end %> <%= measurement.description %> <%= measurement.ingredient.capitalize %>
+              </span>
+
             </div>
           </div>
         </div>
@@ -58,18 +58,15 @@
 
   <!-- ADD INGREDIENTS -->
   <% if current_user == @recipe.chef.user %>
-    <div class="container mt-4" id="add-measurement">
-      <p class="text-center">Add Ingredient
+    <div class="container mt-5 mb-3 py-3 border shadow-sm text-center" id="add-measurement">
+      <p class="text-center py-2"><i class="fas fa-plus"></i> Add Ingredient
       <%= simple_form_for([@recipe, @measurement], remote: true) do |f| %>
-        <%= f.input :description, label: "Quantity"%>
-        <%= f.input :ingredient %>
-        <%= f.button :submit, "Add Ingredient", class: "btn button col-10" %>
+        <p class="mb-0"></i>Ingredient Quantity</p>
+        <%= f.input_field :description, placeholder: "    1 oz" %>
+        <p class="mb-0 mt-4"></i>Add an ingredient</p>
+        <%= f.input_field :ingredient, placeholder: "    Chicken"%>
+        <%= f.button :submit, "Add Ingredient", class: "btn button col-6 mt-3 shadow-sm" %>
       <% end %>
-
-      <!-- add new recipe -->
-      <%= link_to "Add Recipe", new_recipe_path, class: "btn button col-10 shadow-sm mt-4" %>
-      <!-- chef dashboard link -->
-      <%= link_to "Chef Dashboard", chef_dashboard_path(@chef), class: "btn btn-light col-10 shadow-sm mt-2" %>
     </div>
   <% end %>
 </div>
@@ -95,7 +92,7 @@
 <div class="container text-center my-2 justify-content-between">
   <div class="d-flex justify-content-between row">
     <div class="mr-auto px-2">
-      <%= link_to "All Recipes", recipes_path, class: "btn button shadow", id:"chef-btn" %>
+      <%= link_to "All Recipes", recipes_path, class: "btn btn-light shadow"%>
     </div>
     <div class="px-2">
       <%= link_to "⬆", recipe_path(@recipe), class: "btn btn-light shadow" %>
