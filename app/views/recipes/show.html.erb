@@ -58,19 +58,19 @@
 
   <!-- ADD INGREDIENTS -->
   <% if current_user == @recipe.chef.user %>
-    <div class="container mt-4" id="add-measurement">
-      <p class="text-center">Add Ingredient
+    <div class="container my-3 py-3 border shadow-sm text-center" id="add-measurement">
+      <p class="text-center py-2"><i class="fas fa-plus"></i> Add Ingredient
       <%= simple_form_for([@recipe, @measurement], remote: true) do |f| %>
-        <%= f.input :description, label: "Quantity"%>
-        <%= f.input :ingredient %>
-        <%= f.button :submit, "Add Ingredient", class: "btn button col-10" %>
+        <%= f.input :description, label: "Ingredient Quantity" %>
+        <%= f.input :ingredient, label: "Add an ingredient" %>
+        <%= f.button :submit, "Add Ingredient", class: "btn del-chef col-10" %>
       <% end %>
-
-      <!-- add new recipe -->
-      <%= link_to "Add Recipe", new_recipe_path, class: "btn button col-10 shadow-sm mt-4" %>
-      <!-- chef dashboard link -->
-      <%= link_to "Chef Dashboard", chef_dashboard_path(@chef), class: "btn btn-light col-10 shadow-sm mt-2" %>
     </div>
+
+    <div class="container text-center ">
+      <!-- chef dashboard link -->
+      <%= link_to "Chef Dashboard", chef_dashboard_path(@chef), class: "btn button col-10 shadow-sm my-3" %>
+      </div>
   <% end %>
 </div>
   <!--  -->
