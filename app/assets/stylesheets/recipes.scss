@@ -19,12 +19,10 @@
   border: solid 0.2em;
 
 }
-.shopping-list-action {
-    cursor: pointer;
+.shopping-list-checkbox {
     width: 40px;
     padding: 10px 5px;
     text-align: center;
-    border-right: 1px solid #efe0d3;
 }
 .shopping-list-ingredients {
     border-bottom: 1px solid #efe0d3;
@@ -33,10 +31,12 @@
     font-family: poppins;
     font-weight: 400;
 }
-.shopping-list-container" {
-
+.shopping-list-container {
+  background-color: #faf5f1;
 }
-
+.shopping-list-description {
+  border-left: 1px solid #efe0d3;
+}
 #recipe-card-style{
     background-size: cover;
     background-position: center;

@@ -36,14 +36,20 @@
     <h4 id="shopping-list"  class="text-center recipe-link mb-0">Shopping List</h4>
     <p class="text-center mt-0 chef-recipe-name"> <%= @recipe.name %> </p>
     <div class="container">
-      <div class="container  mt-4">
+      <div class="container mt-4">
       <% @recipe.measurements.each do |measurement| %>
         <div class="shopping-list-ingredients">
-          <span  id="measurement-<%= measurement.id %>"> <i class="fas fa-square fa-xs mr-4"></i></span>
-          <span><%= measurement.description %> <%= measurement.ingredient.capitalize %>
-          <% if current_user ==  measurement.recipe.chef.user %> |
-          <%= link_to "remove", measurement_path(measurement), method: :delete, remote: true %></span>
-          <% end %>
+          <div class="row">
+            <div class="col-2">
+              <span  id="measurement-<%= measurement.id %>" class="shopping-list-checkbox"> <i class="fas fa-square fa-xs mr-4 "></i></span>
+            </div>
+            <div class="col-10 shopping-list-description">
+              <span><%= measurement.description %> <%= measurement.ingredient.capitalize %>
+              <% if current_user ==  measurement.recipe.chef.user %> |
+              <%= link_to "remove", measurement_path(measurement), method: :delete, remote: true %></span>
+              <% end %>
+            </div>
+          </div>
         </div>
       <% end %>
       </div>
