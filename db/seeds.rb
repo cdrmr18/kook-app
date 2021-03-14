@@ -274,7 +274,7 @@ bec_six.save!
 file = URI.open('https://images.unsplash.com/photo-1471253387723-35c53c9f97ca?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fGZyaXR0ZXJzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 chaz_one = Recipe.new(
   name: 'Zucchini Fritters',
-  description: "",
+  description: "These fritters are unbelievably easy to make, low calorie, and the perfect way to sneak in some veggies!",
   cuisine: 'Modern Australian',
   cook_time: rand(30..90),
   chef_id: chaz_chef.id,
@@ -287,7 +287,7 @@ chaz_one.save!
 file = URI.open('https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OTV8fGZpc2glMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 chaz_two = Recipe.new(
   name: 'Seared Hiramasa Salmon',
-  description: "",
+  description: "Quick, crispy and flavourful, this meal will become a fast family favourite.",
   cuisine: 'Modern Australian',
   cook_time: rand(30..90),
   chef_id: chaz_chef.id,
@@ -300,7 +300,7 @@ chaz_two.save!
 file = URI.open('https://images.unsplash.com/photo-1591107576521-87091dc07797?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fHRhcnQlMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 chaz_three = Recipe.new(
   name: 'Baked Passionfruit Tarts',
-  description: "",
+  description: "These tartlets are delicious and simple to make, and even easier to eat. With a luscious passionfruit filling that's lightly caramelised just before serving, they are irresistible.",
   cuisine: 'Modern Australian',
   cook_time: rand(30..90),
   chef_id: chaz_chef.id,
@@ -313,7 +313,7 @@ chaz_three.save!
 file = URI.open('https://images.unsplash.com/photo-1609770424775-39ec362f2d94?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8cmlzb3R0b3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 chaz_four = Recipe.new(
   name: 'Mushroom & Chestnut Risotto',
-  description: "",
+  description: "This gorgeous risotto, make with  mushrooms and chestnuts, is the perfect vegetarian meal for two on a cosy night in.",
   cuisine: 'Modern Australian',
   cook_time: rand(30..90),
   chef_id: chaz_chef.id,
@@ -326,7 +326,7 @@ chaz_four.save!
 file = URI.open('https://images.unsplash.com/photo-1513623954575-263b061498a3?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8ZHVjayUyMGZvb2R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 chaz_five = Recipe.new(
   name: 'Glazed Duck Drumsticks',
-  description: "",
+  description: "Impress your guests with roasted duck legs in a sweet and sticky glaze of maple syrup, soy sauce and orange juice.",
   cuisine: 'Modern Australian',
   cook_time: rand(30..90),
   chef_id: chaz_chef.id,
@@ -339,7 +339,7 @@ chaz_five.save!
 file = URI.open('https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTR8fGJ1cmdlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 chaz_six = Recipe.new(
   name: 'Lamb Karaage Sliders',
-  description: "",
+  description: "Big juicy lamb nuggets marinated with soy sauce, ginger, garlic and curry powder before being coated in potato starch and fried till crisp.",
   cuisine: 'Modern Australian',
   cook_time: rand(30..90),
   chef_id: chaz_chef.id,
