@@ -195,7 +195,7 @@ puts 'creating recipes...'
 file = URI.open('https://images.unsplash.com/photo-1514944288352-fffac99f0bdf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJhd25zfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 bec_one = Recipe.new(
   name: 'Prawns with Sweet Chilli Sauce',
-  description: "",
+  description: "The shrimp is spicy, sticky, sweet and savory, with the citrusy tang of lime juice. This recipe takes only 15 minutes to make for dinner and probably the best shrimp recipe you can make in a jiffy.",
   cuisine: 'Thai',
   cook_time: rand(30..90),
   chef_id: bec_chef.id,
@@ -208,7 +208,7 @@ bec_one.save!
 file = URI.open('https://images.unsplash.com/photo-1612443016520-314f09b3d449?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hpY2tlbiUyMGZvb2R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 bec_two = Recipe.new(
   name: 'Roast Chicken with Sauce Chasseur',
-  description: "",
+  description: "A classically thickened with a rich demi-glace, but this version uses cream which allows the flavors of the herbs, tomatoes, and acidic wine to come through.",
   cuisine: 'Thai',
   cook_time: rand(30..90),
   chef_id: bec_chef.id,
@@ -221,7 +221,7 @@ bec_two.save!
 file = URI.open('https://images.unsplash.com/photo-1595456982104-14cc660c4d22?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTJ8fHNhc2hpbWl8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 bec_three = Recipe.new(
   name: 'Sashimi with Chilli-lime Dressing',
-  description: "",
+  description: "A Thai twist to traditional sashimi, for a simple, elegant starter. Seek out the freshest piece of snapper you can find for this simple yet stunning recipe.",
   cuisine: 'Thai',
   cook_time: rand(30..90),
   chef_id: bec_chef.id,
@@ -234,7 +234,7 @@ bec_three.save!
 file = URI.open('https://images.unsplash.com/photo-1601091745482-b2b5942e567e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDZ8fGZyaWVkJTIwYXNwYXJhZ3VzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 bec_four = Recipe.new(
   name: 'Stir-fried Asparagus',
-  description: "",
+  description: "This asparagus stir fry recipe is one of those 15-minute, over-rice, easy-to-make, one-pan dishes with lots of nice sauce to soak into the rice. The fresh asparagus gives a fresh and unique favor with a texture similar to bamboo shoots.",
   cuisine: 'Thai',
   cook_time: rand(30..90),
   chef_id: bec_chef.id,
@@ -247,7 +247,7 @@ bec_four.save!
 file = URI.open('https://images.unsplash.com/photo-1603356887214-0441954124ae?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
 bec_five = Recipe.new(
   name: 'Pork & Eggs',
-  description: "",
+  description: "A a classic Thailand dish of Chinese origin. It's prepared by braising pork belly slices in an herb paste made from coriander root, garlic, and black pepper, then simmering them with hard-boiled eggs in a sweet sauce that includes the flavors of cinnamon, star anise, cumin, coriander seed, and Sichuan pepper.",
   cuisine: 'Thai',
   cook_time: rand(30..90),
   chef_id: bec_chef.id,
@@ -260,7 +260,7 @@ bec_five.save!
 file = URI.open('https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c291cCUyMG5vb2RsZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 bec_six = Recipe.new(
   name: 'Ginger Garlic Noodle Soup',
-  description: "",
+  description: "A nutritious, comforting, and flu-fighting twenty-minute recipe made with homemade vegetarian broth, noodles, mushrooms, and baby bok choy.",
   cuisine: 'Thai',
   cook_time: rand(30..90),
   chef_id: bec_chef.id,
@@ -279,7 +279,7 @@ chaz_one = Recipe.new(
   cook_time: rand(30..90),
   chef_id: chaz_chef.id,
   price: rand(30..75),
-  tag_list: ["Modern Australian", "zucchini"]
+  tag_list: ["Modern Australian", "zucchini", "vegetarian"]
   )
 chaz_one.photo.attach(io: file, filename: "nes15.png", content_type: 'image/png')
 chaz_one.save!
@@ -305,7 +305,7 @@ chaz_three = Recipe.new(
   cook_time: rand(30..90),
   chef_id: chaz_chef.id,
   price: rand(30..75),
-  tag_list: ["Modern Australian", "tart", "dessert"]
+  tag_list: ["Modern Australian", "tart", "dessert", "vegetarian"]
   )
 chaz_three.photo.attach(io: file, filename: "nes17.png", content_type: 'image/png')
 chaz_three.save!
@@ -318,7 +318,7 @@ chaz_four = Recipe.new(
   cook_time: rand(30..90),
   chef_id: chaz_chef.id,
   price: rand(30..75),
-  tag_list: ["Modern Australian", "mushroom", "rice"]
+  tag_list: ["Modern Australian", "mushroom", "rice", "vegetarian"]
   )
 chaz_four.photo.attach(io: file, filename: "nes18.png", content_type: 'image/png')
 chaz_four.save!
@@ -358,7 +358,7 @@ jamal_one = Recipe.new(
   cook_time: rand(30..90),
   chef_id: jamal_chef.id,
   price: rand(30..75),
-  tag_list: ["Middle Eastern", "hummus"]
+  tag_list: ["Middle Eastern", "hummus", "vegetarian"]
   )
 jamal_one.photo.attach(io: file, filename: "nes21.png", content_type: 'image/png')
 jamal_one.save!
@@ -371,7 +371,7 @@ jamal_two = Recipe.new(
   cook_time: rand(30..90),
   chef_id: jamal_chef.id,
   price: rand(30..75),
-  tag_list: ["Middle Eastern", "grain"]
+  tag_list: ["Middle Eastern", "grain", "vegetarian"]
   )
 jamal_two.photo.attach(io: file, filename: "nes22.png", content_type: 'image/png')
 jamal_two.save!
