@@ -419,7 +419,7 @@ jamal_five.save!
 file = URI.open('https://images.unsplash.com/photo-1605992728160-8d119bf2b5db?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cGF0ZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 roger_one = Recipe.new(
   name: 'Duck Liver Parfait',
-  description: "",
+  description: "A brilliantly simple duck liver parfait recipe that is coupled with subtly smoked duck breast and a sweet chutney. Add some warm toast and a glass of sauternes to make this meal a little slice of heaven.",
   cuisine: 'French',
   cook_time: rand(30..90),
   chef_id: roger_chef.id,
@@ -432,7 +432,7 @@ roger_one.save!
 file = URI.open('https://images.unsplash.com/photo-1591386767153-987783380885?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YmVhbiUyMHN0ZXd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 roger_two = Recipe.new(
   name: 'Cassoulet',
-  description: "",
+  description: "This is a yummy and savory dish for your next brunch. Buttery crescent dough is baked with chorizo sausage, eggs, and cheese, then sprinkled with all of your favorite taco-style toppings!",
   cuisine: 'French',
   cook_time: rand(30..90),
   chef_id: roger_chef.id,
@@ -458,7 +458,7 @@ roger_three.save!
 file = URI.open('https://images.unsplash.com/photo-1535920527002-b35e96722eb9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80')
 roger_four = Recipe.new(
   name: 'Pecan Pie',
-  description: "",
+  description: "A pie of pecan nuts mixed with a filling of eggs, butter, and sugar (typically corn syrup).",
   cuisine: 'French',
   cook_time: rand(30..90),
   chef_id: roger_chef.id,
@@ -471,7 +471,7 @@ roger_four.save!
 file = URI.open('https://images.unsplash.com/photo-1481070555726-e2fe8357725c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjJ8fHxlbnwwfHx8&auto=format&fit=crop&w=800&q=60')
 roger_five = Recipe.new(
   name: 'Le Burger du Poulet',
-  description: "",
+  description: "A delicious, gourmet French chicken burger.",
   cuisine: 'French',
   cook_time: rand(30..90),
   chef_id: roger_chef.id,
@@ -484,7 +484,7 @@ roger_five.save!
 file = URI.open('https://images.unsplash.com/photo-1513623954575-263b061498a3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')
 roger_six = Recipe.new(
   name: 'Duck Confit',
-  description: "",
+  description: "This one of the most luxurious of foods in French cuisine. Gently cured duck legs bathed in their own fat and slowly cooked to falling-off-the-bone perfection. Then the skin is crisped in a pan or oven, giving you the sinful combination of silky meat and crackling skin.",
   cuisine: 'French',
   cook_time: rand(30..90),
   chef_id: roger_chef.id,
