@@ -498,7 +498,7 @@ roger_six.save!
 file = URI.open('https://images.unsplash.com/photo-1611712142269-12b7433e28e9?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTV8fGFmcmljYW4lMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 samuel_one = Recipe.new(
   name: 'Moroccan Chicken Rfissa',
-  description: "",
+  description: "A fabulous Moroccan dish of stewed chicken, lentils and onions served on a bed of shredded msemen, trid pastry or bread.",
   cuisine: 'North African',
   cook_time: rand(30..90),
   chef_id: samuel_chef.id,
@@ -511,7 +511,7 @@ samuel_one.save!
 file = URI.open('https://images.unsplash.com/photo-1576577445504-6af96477db52?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTgyfHxtZWF0YmFsbCUyMHNvdXB8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 samuel_two = Recipe.new(
   name: 'Moroccan Meatball Soup',
-  description: "",
+  description: "A flavorful broth spiced with Moroccan flavors with meatballs and Israeli couscous. This soup is so warm and comforting. It can be made with ground lamb or beef that is seasoned and baked.",
   cuisine: 'North African',
   cook_time: rand(30..90),
   chef_id: samuel_chef.id,
@@ -524,7 +524,7 @@ samuel_two.save!
 file = URI.open('https://images.unsplash.com/photo-1532636875304-0c89119d9b4d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')
 samuel_three = Recipe.new(
   name: 'Aromatic Lamb with Dates',
-  description: "",
+  description: "Moroccan seasonings mingle for a bright balance of flavors: sweetness comes from dates and onions, and heat and spice from ginger and cumin. This tagine is traditionally accompanied only by warm whole wheat pita or Arab flatbread. But, if you wish, serve with buttered couscous or even mashed potatoes.",
   cuisine: 'North African',
   cook_time: rand(30..90),
   chef_id: samuel_chef.id,
@@ -537,7 +537,7 @@ samuel_three.save!
 file = URI.open('https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTl8fHJvYXN0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 samuel_four = Recipe.new(
   name: 'Morrocan Roast Lamb',
-  description: "",
+  description: "A warm and mellow spice rub gives this super-simple Moroccan roast lamb its flavour and slow roasting ensures you'll have perfect melt-in-the-mouth tender meat. ",
   cuisine: 'North African',
   cook_time: rand(30..90),
   chef_id: samuel_chef.id,
@@ -550,7 +550,7 @@ samuel_four.save!
 file = URI.open('https://images.unsplash.com/photo-1519624014191-508652cbd7b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80')
 samuel_five = Recipe.new(
   name: 'Chicken Tagine',
-  description: "",
+  description: "A traditional Moroccan dish of chicken pieces braised with spices, garlic, onion, olives, and preserved lemons. It’s scrumptious and easy to throw together.",
   cuisine: 'North African',
   cook_time: rand(30..90),
   chef_id: samuel_chef.id,
@@ -563,7 +563,7 @@ samuel_five.save!
 file = URI.open('https://images.unsplash.com/photo-1512058556646-c4da40fba323?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8cGFuJTIwZnJ5fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 samuel_six = Recipe.new(
   name: 'Mixed-grain Paella with Lamb',
-  description: "",
+  description: "For hassle-free entertaining at its best, you cant look past this hearty paella with lamb – its all cooked in the one pan!",
   cuisine: 'North African',
   cook_time: rand(30..90),
   chef_id: samuel_chef.id,
@@ -590,7 +590,7 @@ slavo_one.save!
 file = URI.open('https://images.unsplash.com/photo-1580476262843-d5e9b687d4d4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8cm9hc3R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 slavo_two = Recipe.new(
   name: 'Roast Pork Shoulder',
-  description: "Master crispy crackling with this simple roast pork shoulder recipe and you’ll have the perfect roast dinner. ",
+  description: "Master crispy crackling with this simple roast pork shoulder recipe and you’ll have the perfect roast dinner for any dinners at home.",
   cuisine: 'Balkan',
   cook_time: rand(30..90),
   chef_id: slavo_chef.id,
@@ -603,7 +603,7 @@ slavo_two.save!
 file = URI.open('https://images.unsplash.com/photo-1613552496394-4e4b3f074e4f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTl8fHN0ZXd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 slavo_three = Recipe.new(
   name: 'Bosnian Pot',
-  description: "Bosnian pot or Bosanski lonac is the speciality of Bosnian traditional cuisine. This is a simple, but delicious and invigorating dish at the same time. Basically, it is a slow cooking stew made with meat and lots of vegetables.",
+  description: "Bosnian pot or Bosanski lonac is the speciality of Bosnian traditional cuisine. This is a simple, but delicious and invigorating dish at the same time. Basically, it is a slow cooking stew made with meat and lots of vibrant vegetables.",
   cuisine: 'Balkan',
   cook_time: rand(30..90),
   chef_id: slavo_chef.id,
