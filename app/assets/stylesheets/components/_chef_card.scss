@@ -25,5 +25,13 @@
   height: 200px;
   width: 100%;
   object-fit: cover;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border: solid 0.2em;
+  color: white;
+
 }
+
 
