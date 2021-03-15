@@ -2,7 +2,7 @@ class Chef < ApplicationRecord
   belongs_to :user
   has_many :recipes, dependent: :destroy
   has_many :bookings, through: :recipes
-  has_many :chef_reviews, through: :bookings, dependent: :destroy
+  has_many :chef_reviews, through: :bookings
 
   validates :cuisine, presence: true
 
