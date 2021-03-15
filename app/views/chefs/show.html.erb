@@ -37,11 +37,11 @@
         <div class="card-food-infos">
           <div>
             <h2><%= recipe.name %></h2>
-
+            <p class="mt-2"><%= recipe.recipe_reviews.blank? ? "0 reviews" : "⭐️ " * recipe.recipe_reviews.average(:rating).round(2) %></p>
           <div class="container mt-2">
             <div class="row">
-              <div class="col-6 pl-0"><p><span class="mr-3"><%= recipe.cuisine %></span> <%= recipe.recipe_reviews.blank? ? "✩ 0 reviews" : "⭐️ " * recipe.recipe_reviews.average(:rating).round(2) %></p></div>
-              <div class="col-6"><span>Est cook time: <%= recipe.cook_time %> mins</span></div>
+              <div class="col-6 pl-0 pb-0"><p class="mr-3"><strong><%= recipe.cuisine %></strong></p></div>
+              <div class="col-6"><span><strong>Cook time: <%= recipe.cook_time %> mins</strong></span></div>
             </div>
           </div>
 
