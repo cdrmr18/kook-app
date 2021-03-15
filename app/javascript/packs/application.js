@@ -18,7 +18,8 @@ require("channels")
 require("flatpickr")
 // External imports
 import "bootstrap";
-require("flatpickr/dist/themes/dark.css");
+// require("flatpickr/dist/themes/dark.css");
+require("flatpickr/dist/themes/airbnb.css");
 
 
 

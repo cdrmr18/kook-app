@@ -38,10 +38,13 @@
 
   <!-- recipe review -->
     <% if @booking.recipe_review.blank? %>
+    <div class="container card my-4 p-4 shadow-sm">
       <div class="text-center my-2 ">
        <%= link_to (cl_image_tag @booking.recipe.photo.key, width: 200, height: 200, crop: :fill, class: "shadow-sm"), recipe_path(@booking.recipe) %>
       </div>
-      <div class="text-center my-3"><%= link_to "Add Recipe Review", new_booking_recipe_review_path(@booking), class: "btn button ml-2 shadow-sm" %></div>
+      <div class="text-center my-3"><%= link_to "Add Recipe Review", new_booking_recipe_review_path(@booking), class: "btn button ml-2 shadow-sm" %>
+      </div>
+    </div>
     <% else %>
       <div class="container card my-4 p-4 shadow-sm">
         <div class="text-center my-2">
