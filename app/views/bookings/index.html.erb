@@ -36,8 +36,8 @@
                 <h2><%= booking.recipe.name %></h2>
                 <p>Chef <%= booking.recipe.chef.user.first_name %> <%= booking.recipe.chef.user.last_name %></p>
                 <p><%= booking.start_time.strftime("%I:%M%p") %> - <%= booking.end_time.strftime("%I:%M%p") %></p>
+                <p><%= link_to "Leave your review", booking_path(booking), class:" link-recipe-dash font-weight-bold text-decoration-none pl-0 pr-2" %></p>
               </div>
-              <%= link_to "Review", booking_path(booking), class:" link-recipe-dash font-weight-bold text-decoration-none ml-2 pl-0 pr-2 text-right" %>
             </div>
           <% end %>
           <!--  -->
@@ -48,8 +48,8 @@
                 <h2><%= @last_booking.recipe.name %></h2>
                 <p>Chef <%= @last_booking.recipe.chef.user.first_name %> <%= @last_booking.recipe.chef.user.last_name %></p>
                 <p><%= @last_booking.start_time.strftime("%I:%M%p") %> - <%= @last_booking.end_time.strftime("%I:%M%p") %></p>
+                <p><%= link_to "Leave your review", booking_path(@last_booking), class:"link-recipe-dash font-weight-bold text-decoration-none pl-0 pr-2" %></p>
               </div>
-              <%= link_to "Review", booking_path(@last_booking), class:"link-recipe-dash font-weight-bold text-decoration-none ml-2 pl-0 pr-2 text-right" %>
             </div>
            <% end %>
            <% else %>
