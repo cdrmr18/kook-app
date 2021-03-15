@@ -239,7 +239,7 @@ bec_four = Recipe.new(
   cook_time: rand(30..90),
   chef_id: bec_chef.id,
   price: rand(30..75),
-  tag_list: ["thai", "asparagus", "stir-fried"]
+  tag_list: ["thai", "asparagus", "stir-fried", "vegetarian"]
   )
 bec_four.photo.attach(io: file, filename: "nes12.png", content_type: 'image/png')
 bec_four.save!
@@ -318,7 +318,7 @@ chaz_four = Recipe.new(
   cook_time: rand(30..90),
   chef_id: chaz_chef.id,
   price: rand(30..75),
-  tag_list: ["Modern Australian", "mushroom", "rice", "vegetarian"]
+  tag_list: ["Modern Australian", "mushroom", "rice", "vegan"]
   )
 chaz_four.photo.attach(io: file, filename: "nes18.png", content_type: 'image/png')
 chaz_four.save!
@@ -2940,7 +2940,7 @@ start_time: Time.now + 4,
 end_time: Time.now + 5,
 video_url: 'www.video.com',
 user_id: dragan.id,
-recipe_id: roger_two.id
+recipe_id: jamal_one.id
 )
 booking_four = Booking.create!(
   date: Faker::Date.backward(days: 20),
@@ -2948,7 +2948,7 @@ booking_four = Booking.create!(
   end_time: Time.now - 3,
   video_url: 'www.video.com',
   user_id: dragan.id,
-  recipe_id: samuel_one.id
+  recipe_id: jamal_two.id
 )
 booking_five = Booking.create!(
 date: Faker::Date.forward(days: 8),
@@ -2956,7 +2956,7 @@ start_time: Time.now - 2 ,
 end_time: Time.now - 1,
 video_url: 'www.video.com',
 user_id: dragan.id,
-recipe_id: slavo_four.id
+recipe_id: bec_four.id
 )
 booking_six = Booking.create!(
   date: Faker::Date.backward(days: 5),
@@ -2964,7 +2964,7 @@ booking_six = Booking.create!(
   end_time: Time.now + 1,
   video_url: 'www.video.com',
   user_id: dragan.id,
-  recipe_id: bec_five.id
+  recipe_id: jamal_four.id
 )
 booking_seven = Booking.create!(
   date: Faker::Date.forward(days: 25),

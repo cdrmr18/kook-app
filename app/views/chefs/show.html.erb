@@ -36,12 +36,27 @@
         <%= link_to cl_image_tag(recipe.photo.key, class: "chef-recipe-show",  crop: :fill), recipe_path(recipe)%>
         <div class="card-food-infos">
           <div>
-            <h2><%= recipe.name %></h2>
+            <div class="row justify-content-center" >
+            <%= link_to recipe.name, recipe_path(recipe),class: "recipe-link" %></div>
 
+<!--FAVOURITES START-->
+          <div class="container">
+              <p class="tinytext text-center mt-2 mb-2">add to favourites</p>
+              <div class="text-center" id="like-heart">
+              <% if user_signed_in? %>
+                <%= link_to toggle_favorite_recipe_path(recipe), remote: true, method: :post do %>
+                  <p><%= render 'recipes/like_button', recipe: recipe %> </p>
+                <% end %>
+              <% end %>
+              </div>
+            </div>
+<!--FAVOURITES END-->
+
+            <p class="mt-2"><%= recipe.recipe_reviews.blank? ? "0 reviews" : "⭐️ " * recipe.recipe_reviews.average(:rating).round(2) %></p>
           <div class="container mt-2">
             <div class="row">
-              <div class="col-6 pl-0"><p><span class="mr-3"><%= recipe.cuisine %></span> <%= recipe.recipe_reviews.blank? ? "✩ 0 reviews" : "⭐️ " * recipe.recipe_reviews.average(:rating).round(2) %></p></div>
-              <div class="col-6"><span>Est cook time: <%= recipe.cook_time %> mins</span></div>
+              <div class="col-6 pl-0 pb-0"><p class="mr-3"><strong><%= recipe.cuisine %></strong></p></div>
+              <div class="col-6"><span><strong>Cook time: <%= recipe.cook_time %> mins</strong></span></div>
             </div>
           </div>
 

@@ -24,12 +24,12 @@
           <p class="recipe-link">with <%= @bookings[-1].user.first_name %> <%= @bookings[-1].user.last_name %></p>
           <p class="booking-times mb-0"><%= @bookings[-1].date.strftime("%B %e, %Y") %> </p>
           <p class="booking-times"><%= @bookings[-1].start_time.strftime("%I:%M%p") %> - <%= @bookings[-1].end_time.strftime("%I:%M%p") %></p>
-          <div class="row shadow-sm">
-            <div class="col-6 card pb-1 pt-3 d-inline-flex p-2">
-              <p class="link-recipe-dash" >Accept <i class="far fa-check-square"></i></p>
+          <div class="row text-center mx-4 mt-2">
+            <div class="col-6">
+              <p class="btn button px-3  shadow-sm" >Accept <i class="far fa-check-square"></i></p>
             </div>
-            <div class="col-6 card pb-1 pt-3">
-              <p class="link-recipe-dash">Decline <i class="fas fa-ban"></i></p>
+            <div class="col-6">
+              <p class="btn button px-3 shadow-sm">Decline <i class="fas fa-ban"></i></p>
             </div>
           </div>
         <% end %>
