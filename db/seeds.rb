@@ -318,7 +318,7 @@ chaz_four = Recipe.new(
   cook_time: rand(30..90),
   chef_id: chaz_chef.id,
   price: rand(30..75),
-  tag_list: ["Modern Australian", "mushroom", "rice", "vegetarian"]
+  tag_list: ["Modern Australian", "mushroom", "rice", "vegan"]
   )
 chaz_four.photo.attach(io: file, filename: "nes18.png", content_type: 'image/png')
 chaz_four.save!
