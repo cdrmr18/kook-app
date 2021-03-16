@@ -25,7 +25,8 @@ class RecipesController < ApplicationController
   def show
     # @recipes = Recipe.find(params[:id])
     # @related_recipes = @recipes.find_related_tags
-    @bookings = Booking.all
+    @bookings_unsorted = Booking.all
+    @bookings = @bookings_unsorted.sort_by(&:id)
     @next_booking = @bookings.last
     # needed to add ingredient and measurements in recipe show page
     @measurement = Measurement.new
