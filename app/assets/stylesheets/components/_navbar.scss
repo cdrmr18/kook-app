@@ -152,3 +152,11 @@ cursor: pointer;
   text-align: center;
 }
 
+.form-control:disabled, .form-control[readonly]{
+  background: #faf5f1;
+  border-radius: 4px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  left:35px;
+  margin-bottom:20px;
+ 
+}
