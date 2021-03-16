@@ -2934,70 +2934,70 @@ booking_two = Booking.create!(
   recipe_id: samuel_four.id
 )
    # dragan bookings
-booking_three = Booking.create!(
-date: Faker::Date.forward(days: 10),
-start_time: Time.now + 4,
-end_time: Time.now + 5,
-video_url: 'www.video.com',
-user_id: dragan.id,
-recipe_id: jamal_one.id
-)
-booking_four = Booking.create!(
-  date: Faker::Date.backward(days: 20),
-  start_time: Time.now - 4,
-  end_time: Time.now - 3,
-  video_url: 'www.video.com',
-  user_id: dragan.id,
-  recipe_id: jamal_two.id
-)
-booking_five = Booking.create!(
-date: Faker::Date.forward(days: 8),
-start_time: Time.now - 2 ,
-end_time: Time.now - 1,
-video_url: 'www.video.com',
-user_id: dragan.id,
-recipe_id: bec_four.id
-)
-booking_six = Booking.create!(
-  date: Faker::Date.backward(days: 5),
-  start_time: Time.now,
-  end_time: Time.now + 1,
-  video_url: 'www.video.com',
-  user_id: dragan.id,
-  recipe_id: jamal_four.id
-)
-booking_seven = Booking.create!(
-  date: Faker::Date.forward(days: 25),
-  start_time: Time.now,
-  end_time: Time.now + 1,
-  video_url: 'www.video.com',
-  user_id: bec.id,
-  recipe_id: chaz_three.id
-)
-booking_eight = Booking.create!(
-  date: Faker::Date.backward(days: 2),
-  start_time: Time.now,
-  end_time: Time.now + 1,
-  video_url: 'www.video.com',
-  user_id: roger.id,
-  recipe_id: jamal_five.id
-)
-booking_nine = Booking.create!(
-  date: Faker::Date.backward(days: 25),
-  start_time: Time.now,
-  end_time: Time.now + 1,
-  video_url: 'www.video.com',
-  user_id: raj.id,
-  recipe_id: roger_five.id
-)
-booking_ten = Booking.create!(
-  date: Faker::Date.backward(days: 3),
-  start_time: Time.now,
-  end_time: Time.now + 1,
-  video_url: 'www.video.com',
-  user_id: luis.id,
-  recipe_id: jamal_one.id
-)
+# booking_three = Booking.create!(
+# date: Faker::Date.forward(days: 10),
+# start_time: Time.now + 4,
+# end_time: Time.now + 5,
+# video_url: 'www.video.com',
+# user_id: dragan.id,
+# recipe_id: jamal_one.id
+# )
+# booking_four = Booking.create!(
+#   date: Faker::Date.backward(days: 20),
+#   start_time: Time.now - 4,
+#   end_time: Time.now - 3,
+#   video_url: 'www.video.com',
+#   user_id: dragan.id,
+#   recipe_id: jamal_two.id
+# )
+# booking_five = Booking.create!(
+# date: Faker::Date.forward(days: 8),
+# start_time: Time.now - 2 ,
+# end_time: Time.now - 1,
+# video_url: 'www.video.com',
+# user_id: dragan.id,
+# recipe_id: bec_four.id
+# )
+# booking_six = Booking.create!(
+#   date: Faker::Date.backward(days: 5),
+#   start_time: Time.now,
+#   end_time: Time.now + 1,
+#   video_url: 'www.video.com',
+#   user_id: dragan.id,
+#   recipe_id: jamal_four.id
+# )
+# booking_seven = Booking.create!(
+#   date: Faker::Date.forward(days: 25),
+#   start_time: Time.now,
+#   end_time: Time.now + 1,
+#   video_url: 'www.video.com',
+#   user_id: bec.id,
+#   recipe_id: chaz_three.id
+# )
+# booking_eight = Booking.create!(
+#   date: Faker::Date.backward(days: 2),
+#   start_time: Time.now,
+#   end_time: Time.now + 1,
+#   video_url: 'www.video.com',
+#   user_id: roger.id,
+#   recipe_id: jamal_five.id
+# )
+# booking_nine = Booking.create!(
+#   date: Faker::Date.backward(days: 25),
+#   start_time: Time.now,
+#   end_time: Time.now + 1,
+#   video_url: 'www.video.com',
+#   user_id: raj.id,
+#   recipe_id: roger_five.id
+# )
+# booking_ten = Booking.create!(
+#   date: Faker::Date.backward(days: 3),
+#   start_time: Time.now,
+#   end_time: Time.now + 1,
+#   video_url: 'www.video.com',
+#   user_id: luis.id,
+#   recipe_id: jamal_one.id
+# )
 
 puts "#{Booking.count} bookings created"
 # -------- BOOKINGS END ----------------

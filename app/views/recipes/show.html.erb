@@ -39,7 +39,8 @@
       <p class="text-center recipe-link mb-0">for Chef <%= @chef_name %>'s </p>
       <p class="text-center mt-0 chef-recipe-name"> <%= @recipe.name %> </p>
       <hr class="mt-0">
-      <p class="text-center mb-3"><i class="fas fa-shopping-cart"></i> <em>Get ready for your cooking session</em></p>
+      <p class="text-center mb-3"><em>Items needed for your next session</em></p>
+      <p class="text-center"><i class="fas fa-shopping-cart"></i> </p>
       <div class="container px-0 pb-3">
         <% @recipe.measurements.each do |measurement| %>
           <div class="shopping-list-ingredients">
@@ -62,6 +63,7 @@
             </div>
           </div>
         <% end %>
+        <p class="text-center"><%= link_to "Back to My Bookings", bookings_path, class: "btn button mt-4 shadow", id:"chef-btn" %></p>
       </div>
     </div>
   <% end %>
