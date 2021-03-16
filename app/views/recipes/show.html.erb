@@ -67,6 +67,39 @@
       </div>
     </div>
     <% elsif @next_booking.recipe.present? && @next_booking.recipe == @recipe %>
+     <div class="container card pt-3 shadow-sm shopping-list-container" >
+      <h4 id="shopping-list"  class="text-center recipe-link mb-0">Your</h4>
+      <h4 class="text-center recipe-link mb-0">Shopping List</h4>
+      <p class="text-center recipe-link mb-0">for Chef <%= @chef_name %>'s </p>
+      <p class="text-center mt-0 chef-recipe-name"> <%= @recipe.name %> </p>
+      <hr class="mt-0">
+      <p class="text-center mb-3"><em>Items needed for your next session</em></p>
+      <p class="text-center"><i class="fas fa-shopping-cart"></i> </p>
+      <div class="container px-0 pb-3">
+        <% @recipe.measurements.each do |measurement| %>
+          <div class="shopping-list-ingredients">
+            <div class="row">
+              <div class="col-2">
+                <span  id="measurement-<%= measurement.id %>" class="shopping-list-checkbox">
+                  <% if current_user ==  measurement.recipe.chef.user %>
+                    <%= link_to "X", measurement_path(measurement), remote: true, method: :delete,  class:"recipe-link" %>
+                  <% else %>
+                    <i class="far fa-square"></i>
+                  <% end %>
+                </span>
+              </div>
+              <div class="col-10 shopping-list-description">
+                <span>
+                  <%= measurement.description %> <%= measurement.ingredient.capitalize %>
+                </span>
+
+              </div>
+            </div>
+          </div>
+        <% end %>
+        <p class="text-center"><%= link_to "Back to My Bookings", bookings_path, class: "btn button mt-4 shadow", id:"chef-btn" %></p>
+      </div>
+    </div>
   <% end %>
   <!--     -->
 
