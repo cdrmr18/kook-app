@@ -25,7 +25,8 @@ class RecipesController < ApplicationController
   def show
     # @recipes = Recipe.find(params[:id])
     # @related_recipes = @recipes.find_related_tags
-    @next_booking = current_user.bookings.last
+    @bookings = Booking.all
+    @next_booking = @bookings.last
     # needed to add ingredient and measurements in recipe show page
     @measurement = Measurement.new
     # chef name to display link to chef

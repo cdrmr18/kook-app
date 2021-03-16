@@ -32,7 +32,7 @@
   <!--  -->
 <br>
   <!-- ingredients/ SHOPPING LIST -->
-  <% if current_user ==  @recipe.chef.user || @next_booking.recipe == @recipe %>
+  <% if current_user ==  @recipe.chef.user %>
     <div class="container card pt-3 shadow-sm shopping-list-container" >
       <h4 id="shopping-list"  class="text-center recipe-link mb-0">Your</h4>
       <h4 class="text-center recipe-link mb-0">Shopping List</h4>
@@ -66,6 +66,7 @@
         <p class="text-center"><%= link_to "Back to My Bookings", bookings_path, class: "btn button mt-4 shadow", id:"chef-btn" %></p>
       </div>
     </div>
+    <% elsif @next_booking.recipe.present? && @next_booking.recipe == @recipe %>
   <% end %>
   <!--     -->
 
