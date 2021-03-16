@@ -2963,8 +2963,8 @@ booking_six = Booking.create!(
   start_time: Time.now,
   end_time: Time.now + 1,
   video_url: 'www.video.com',
-  user_id: raj.id,
-  recipe_id: dragan_four.id
+  user_id: dragan.id,
+  recipe_id: jamal_four.id
 )
 booking_seven = Booking.create!(
   date: Faker::Date.forward(days: 25),
