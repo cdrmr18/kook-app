@@ -41,7 +41,9 @@
                 <p class="mb-0">Chef <%= booking.recipe.chef.user.first_name %> <%= booking.recipe.chef.user.last_name %></p>
                 <p class="m-0"><%= booking.date.strftime('%B %d, %Y')  %></p>
                 <p class="m-0"><%= booking.start_time.strftime("%I:%M%p") %> - <%= booking.end_time.strftime("%I:%M%p") %></p>
-                <p><%= link_to "Leave your review", booking_path(booking), class:" link-recipe-dash font-weight-bold text-decoration-none pl-0 pr-2" %></p>
+                <% if booking.recipe_review.nil? || booking.chef_review.nil?  %>
+                  <p><%= link_to "Leave your review", booking_path(booking), class:" link-recipe-dash font-weight-bold text-decoration-none pl-0 pr-2" %></p>
+                <% end %>
               </div>
             </div>
           <% end %>
@@ -54,7 +56,9 @@
                 <p class="m-0">Chef <%= @next_booking.recipe.chef.user.first_name %> <%= @next_booking.recipe.chef.user.last_name %></p>
                 <p class="m-0"><%= @next_booking.date.strftime('%B %d, %Y')  %>
                 <p class="m-0"><%= @next_booking.start_time.strftime("%I:%M%p") %> - <%= @next_booking.end_time.strftime("%I:%M%p") %></p>
-                <p><%= link_to "Leave your review", booking_path(@next_booking), class:"link-recipe-dash font-weight-bold text-decoration-none pl-0 pr-2" %></p>
+                <% if booking.recipe_review.nil? || booking.chef_review.nil?  %>
+                  <p><%= link_to "Leave your review", booking_path(@next_booking), class:"link-recipe-dash font-weight-bold text-decoration-none pl-0 pr-2" %></p>
+                <% end %>
               </div>
             </div>
            <% end %>
