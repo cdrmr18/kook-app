@@ -2933,13 +2933,13 @@ booking_two = Booking.create!(
   user_id: chaz.id,
   recipe_id: samuel_four.id
 )
-   # kathy bookings
+   # dragan bookings
 booking_three = Booking.create!(
 date: Faker::Date.forward(days: 10),
 start_time: Time.now + 4,
 end_time: Time.now + 5,
 video_url: 'www.video.com',
-user_id: kathy.id,
+user_id: dragan.id,
 recipe_id: jamal_one.id
 )
 booking_four = Booking.create!(
@@ -2963,7 +2963,7 @@ booking_six = Booking.create!(
   start_time: Time.now,
   end_time: Time.now + 1,
   video_url: 'www.video.com',
-  user_id: raj.id,
+  user_id: dragan.id,
   recipe_id: jamal_four.id
 )
 booking_seven = Booking.create!(
@@ -2987,8 +2987,8 @@ booking_nine = Booking.create!(
   start_time: Time.now,
   end_time: Time.now + 1,
   video_url: 'www.video.com',
-  user_id: raj.id,
-  recipe_id: roger_five.id
+  user_id: dragan.id,
+  recipe_id: bec_four.id
 )
 booking_ten = Booking.create!(
   date: Faker::Date.backward(days: 3),
