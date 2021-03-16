@@ -10,7 +10,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find_by(id: params[:id])
     current_user.favorited?(@recipe)  ? current_user.unfavorite(@recipe) : current_user.favorite(@recipe)
   end
- 
+
 
   def index
     if params[ :query ].present?
@@ -25,7 +25,7 @@ class RecipesController < ApplicationController
   def show
     # @recipes = Recipe.find(params[:id])
     # @related_recipes = @recipes.find_related_tags
-
+    @next_booking = current_user.bookings.last
     # needed to add ingredient and measurements in recipe show page
     @measurement = Measurement.new
     # chef name to display link to chef

@@ -4,7 +4,8 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = policy_scope(Booking)
-    @last_booking = @bookings[-1]
+    @next_booking = @bookings.last
+    @past_bookings = @bookings[0...-1]
   end
 
   def show
