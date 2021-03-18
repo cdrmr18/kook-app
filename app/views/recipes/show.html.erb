@@ -66,7 +66,7 @@
         <p class="text-center"><%= link_to "Save List", bookings_path, class: "btn button mt-4 shadow", id:"chef-btn" %></p>
       </div>
     </div>
-    <% elsif @next_booking.recipe.present? && @next_booking.recipe == @recipe %>
+    <% elsif @next_booking.recipe.present? && @next_booking.recipe == @recipe && @next_booking.recipe_review.nil? && @next_booking.chef_review.nil? %>
      <div class="container card pt-3 shadow-sm shopping-list-container" id="shopping-list" >
       <h4 class="text-center recipe-link mb-0">Shopping List</h4>
       <p class="text-center recipe-link mb-0">for Chef <%= @chef_name %>'s </p>
@@ -91,7 +91,6 @@
                 <span>
                   <%= measurement.description %> <%= measurement.ingredient.capitalize %>
                 </span>
-
               </div>
             </div>
           </div>
