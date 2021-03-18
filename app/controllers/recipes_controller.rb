@@ -25,7 +25,7 @@ class RecipesController < ApplicationController
   def show
     # @recipes = Recipe.find(params[:id])
     # @related_recipes = @recipes.find_related_tags
-    @bookings_unsorted = Booking.all
+    @bookings_unsorted = current_user.bookings
     @bookings = @bookings_unsorted.sort_by(&:id)
     @next_booking = @bookings.last
 
