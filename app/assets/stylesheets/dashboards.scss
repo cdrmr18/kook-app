@@ -27,6 +27,7 @@
 
 .container-dash{
   border-radius: 10px;
+  width: 95%;
 }
 
 .chef-dash-header{
@@ -34,16 +35,17 @@ font-family: 'Nunito Sans', sans-serif;
 font-weight: 600;
 font-size: 15px;
 text-transform: uppercase;
-padding: 10px;
-margin: 20px;
+padding: 20px 0;
 color:rgb(161, 161, 161);
 letter-spacing: 2px;
 }
 
 .chef-avatar{
+  padding-top: 10px;
   border-radius:20px;
   padding: 5px;
   border-color:#e2d7ff;
+  margin-top: 20px;
 }
 
 
@@ -88,7 +90,10 @@ letter-spacing: 2px;
 
 
 
-
+.chef-svg{
+  width: 25%;
+  justify-content: center;
+}
 
 
 
