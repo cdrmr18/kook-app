@@ -7,8 +7,8 @@
           <h1 class="text-center mb-3 recipe-link">Next Step</h1>
           <h3 class="text-center mb-3">Get ready to cook with </h3>
           <h3 class="text-center mb-3 chef-recipe-name">Chef <em><%= @next_booking.recipe.chef.user.first_name %> <%= @next_booking.recipe.chef.user.last_name %></em></h3>
-          <div class="mb-4 text-center border bg-light px-3 py-3 shadow">
-            <h4><%= link_to "Go to Shopping List", recipe_path(@next_booking.recipe, anchor: "shopping-list"), class:"h3 recipe-link text-decoration-none pl-0 pr-2" %><i class="fas fa-list-ul"></i>
+          <div class="mb-4 text-center border rounded-pill bg-white px-3 py-3 shadow">
+            <h4><%= link_to "Shopping List", recipe_path(@next_booking.recipe, anchor: "shopping-list"), class:"h3 recipe-link text-decoration-none pl-0 pr-2" %><i class="fas fa-list-ul"></i>
                </h4>
           </div>
           <div class="card-product mb-4 shadow">
