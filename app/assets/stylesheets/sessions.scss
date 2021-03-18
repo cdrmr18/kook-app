@@ -10,6 +10,19 @@
   margin: 48px auto 48px;
   box-shadow: rgba(0,0,0,0.2) 0px 6px 16px;
   border-radius: 5px;
+  text-align: center;
+}
+
+.input-fields {
+  margin: auto;
+}
+
+#login-banner {
+    background-image: url("https://source.unsplash.com/Orz90t6o0e4") ;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    color:white;
+    height: 20vh;
 }
 
 #forgot-pass-btn, button {
