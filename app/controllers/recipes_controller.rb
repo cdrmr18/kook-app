@@ -28,6 +28,7 @@ class RecipesController < ApplicationController
     @bookings_unsorted = Booking.all
     @bookings = @bookings_unsorted.sort_by(&:id)
     @next_booking = @bookings.last
+
     # needed to add ingredient and measurements in recipe show page
     @measurement = Measurement.new
     # chef name to display link to chef
