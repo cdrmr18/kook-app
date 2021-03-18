@@ -19,7 +19,9 @@
                 <p class="m-0"><%= @next_booking.date.strftime('%B %d, %Y')  %></p>
                 <p class="m-0"><%= @next_booking.start_time.strftime("%I:%M%p") %> - <%= @next_booking.end_time.strftime("%I:%M%p") %></p>
               </div>
+
             </div>
+            <p class="text-center"><%= link_to "Cancel Booking", booking_path(@next_booking), method: :delete, data: {confirm: "Are you sure?"}, class: "del-chef btn button-delete shadow" %> </p>
           <% else %>
             <div class="container text-center">
               <h4>Book your next session </h4>
