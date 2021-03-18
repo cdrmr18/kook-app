@@ -80,7 +80,7 @@ document.addEventListener('turbolinks:load', () => {
 var TxtType = function(el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
-  this.loopNum = 0;
+  this.loopNum = 99;
   this.period = parseInt(period, 10) || 2000;
   this.txt = '';
   this.tick();
@@ -118,7 +118,10 @@ TxtType.prototype.tick = function() {
   }, delta);
 };
 
-window.onload = function() {
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
   var elements = document.getElementsByClassName('typewrite');
   for (var i=0; i<elements.length; i++) {
       var toRotate = elements[i].getAttribute('data-type');
@@ -132,6 +135,40 @@ window.onload = function() {
   css.type = "text/css";
   css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
   document.body.appendChild(css);
-};
+});
+
+
+
+// window.onload = function() {
+//   var elements = document.getElementsByClassName('typewrite');
+//   for (var i=0; i<elements.length; i++) {
+//       var toRotate = elements[i].getAttribute('data-type');
+//       var period = elements[i].getAttribute('data-period');
+//       if (toRotate) {
+//         new TxtType(elements[i], JSON.parse(toRotate), period);
+//       }
+//   }
+//   // INJECT CSS
+//   var css = document.createElement("style");
+//   css.type = "text/css";
+//   css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+//   document.body.appendChild(css);
+// };
+
+// const animation = setInterval(function() {
+//   var elements = document.getElementsByClassName('typewrite');
+//   for (var i=0; i<elements.length; i++) {
+//       var toRotate = elements[i].getAttribute('data-type');
+//       var period = elements[i].getAttribute('data-period');
+//       if (toRotate) {
+//         new TxtType(elements[i], JSON.parse(toRotate), period);
+//       }
+//   }
+//   // INJECT CSS
+//   var css = document.createElement("style");
+//   css.type = "text/css";
+//   css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+//   document.body.appendChild(css);
+// },2000);
 
 // TYPEWRITER EFFECT END------------------------------------------------
