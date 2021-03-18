@@ -2940,7 +2940,7 @@ start_time: Time.now + 4,
 end_time: Time.now + 5,
 video_url: 'www.video.com',
 user_id: dragan.id,
-recipe_id: jamal_one.id
+recipe_id: jamal_three.id
 )
 booking_four = Booking.create!(
   date: Faker::Date.backward(days: 20),
@@ -2964,7 +2964,7 @@ booking_six = Booking.create!(
   end_time: Time.now + 1,
   video_url: 'www.video.com',
   user_id: dragan.id,
-  recipe_id: jamal_three.id
+  recipe_id: jamal_one.id
 )
 booking_seven = Booking.create!(
   date: Faker::Date.forward(days: 25),
