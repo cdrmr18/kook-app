@@ -3,8 +3,10 @@ class BookingsController < ApplicationController
   before_action :set_recipe, only: [:create, :new]
 
   def index
-    @bookings = policy_scope(Booking)
-    @last_booking = @bookings[-1]
+    @bookings_unsorted = policy_scope(Booking)
+    @bookings = @bookings_unsorted.sort_by(&:id)
+    @next_booking = @bookings.last
+    @past_bookings = @bookings[0...-1].reverse
   end
 
   def show

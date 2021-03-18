@@ -2,12 +2,12 @@
 
  <!--  increased the jumbotron width -->
   <div class="container-full-bg jumbotron bg-main">
-    <div class="container my-4">
+    <div class="container my-4" id="mainquestion">
     <h1 class="banner-header">What are you inspired to create today?</h1>
-        <div class="d-flex align-items-center justify-content-center" style="height:100px">
+        <div class="d-flex  justify-content-center" style="height:80px">
               <%= form_tag recipes_path, method: :get do %>
           <div class="d-flex">
-              <%= text_field_tag :query, params[:query], class: "form-control me-2", id: "form-cont-home",
+              <%= text_field_tag :query, params[:query], class: "form-control me-1", id: "form-cont-home",
                   placeholder: "search cuisine..." %>
                     <%= submit_tag "search", class:"btn",  id: "search-btn" %>
           </div>     
@@ -16,10 +16,22 @@
       </div>
   </div>
       
-        
 
-
-                
+       
+<!--  KOOK info with some taglines -->
+    <br>
+    <div class="container">
+        <div class="col-12">
+            <h1 class="typewritereffect">
+            <div class="typewrite" data-period="3000" data-type='[ "Anyone can become a chef!", "Personalized cooking lessons", "Mouthwatering recipes" ]'>
+                <span class="wrap"></span>
+            </div>
+            </h1>
+         </div>
+        </div>
+        <br>
+    <br>
+<!--  KOOK info with some taglines END-->
 
 
 <div class="container">

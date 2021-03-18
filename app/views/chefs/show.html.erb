@@ -45,7 +45,7 @@
               <div class="text-center" id="like-heart">
               <% if user_signed_in? %>
                 <%= link_to toggle_favorite_recipe_path(recipe), remote: true, method: :post do %>
-                  <p><%= render 'recipes/like_button', recipe: recipe %> </p>
+                  <p><%= render 'recipes/like_button', recipe: recipe %> </p>  <!--CAUSING ERRORS IN FOOTER STYLING-->
                 <% end %>
               <% end %>
               </div>

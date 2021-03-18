@@ -1,54 +1,67 @@
 <div class="container mt-4">
  <!-- current booking -->
- <div class="container card shadow-sm mb-4 p-4">
+ <div class="container card shadow-sm mb-4 p-4 " id='add-measurement'>
    <div class="row">
       <div class="col-12">
-        <% if @last_booking.present? && @last_booking.recipe_review.nil? && @last_booking.chef_review.nil? %>
-          <h2 class="text-center mb-3 recipe-link">Next Session</h2>
-            <div class="card-product mb-4">
-                <%= cl_image_tag @last_booking.recipe.photo.key, width: 100, height: 100,  crop: :fill %>
-                <div class="card-product-infos pr-0">
-                  <h2 class="pt-1"><%= @last_booking.recipe.name %></h2>
-                  <p>Chef <%= @last_booking.recipe.chef.user.first_name %> <%= @last_booking.recipe.chef.user.last_name %></p>
-                  <p class="mb-2"><%= @last_booking.start_time.strftime("%I:%M%p") %> - <%= @last_booking.end_time.strftime("%I:%M%p") %></p>
-                   <i class="fas fa-list-ul"></i> <%= link_to "Shopping List", recipe_path(@last_booking.recipe, anchor: "shopping-list"), class:" link-recipe-dash  text-decoration-none pl-0 pr-2" %>
-                </div>
+        <% if @next_booking.present? && @next_booking.recipe_review.nil? && @next_booking.chef_review.nil? %>
+          <h1 class="text-center mb-3 recipe-link">Next Step</h1>
+          <h3 class="text-center mb-3">Get ready to cook with </h3>
+          <h3 class="text-center mb-3 chef-recipe-name">Chef <em><%= @next_booking.recipe.chef.user.first_name %> <%= @next_booking.recipe.chef.user.last_name %></em></h3>
+          <div class="mb-4 text-center border bg-light px-3 py-3 shadow">
+            <h4><%= link_to "Go to Shopping List", recipe_path(@next_booking.recipe, anchor: "shopping-list"), class:"h3 recipe-link text-decoration-none pl-0 pr-2" %><i class="fas fa-list-ul"></i>
+               </h4>
+          </div>
+          <div class="card-product mb-4 shadow">
+              <%= cl_image_tag @next_booking.recipe.photo.key, width: 100, height: 100,  crop: :fill %>
+              <div class="card-product-infos pr-0">
+                <h2 class="pt-1"><%= @next_booking.recipe.name %></h2>
+                <p >Chef <%= @next_booking.recipe.chef.user.first_name %> <%= @next_booking.recipe.chef.user.last_name %></p>
+                <p class="m-0"><%= @next_booking.date.strftime('%B %d, %Y')  %></p>
+                <p class="m-0"><%= @next_booking.start_time.strftime("%I:%M%p") %> - <%= @next_booking.end_time.strftime("%I:%M%p") %></p>
               </div>
-            <% else %>
-              <div class="container text-center">
-                <h4>Book your next session </h4>
-                <p><i class="far fa-hand-point-right"></i><%= link_to "Recipes", recipes_path, class:"text-uppercase link-recipe-dash font-weight-bold text-decoration-none" %></p>
-              </div>
+            </div>
+          <% else %>
+            <div class="container text-center">
+              <h4>Book your next session </h4>
+              <p><i class="far fa-hand-point-right"></i><%= link_to "Recipes", recipes_path, class:"text-uppercase link-recipe-dash font-weight-bold text-decoration-none" %></p>
+            </div>
         <% end %>
       </div>
     </div>
   </div>
 <!-- past bookings -->
-  <div class="container card mb-4 shadow-sm">
+  <div class="container card mb-4 shadow-sm" id='add-measurement'>
     <div class="row">
       <div class="col-12">
         <h2 class="text-center mb-3 mt-3 recipe-link">Past Sessions</h2>
         <% if @bookings.present? %>
-          <% @bookings[0...-1].each do |booking| %>
+          <% @past_bookings.each do |booking| %>
+          <% break if booking == @next_booking %>
             <div class="card-product mb-4 ">
               <%= cl_image_tag booking.recipe.photo.key, width: 100, height: 100,  crop: :fill %>
-              <div class="card-product-infos pr-0">
-                <h2><%= booking.recipe.name %></h2>
-                <p>Chef <%= booking.recipe.chef.user.first_name %> <%= booking.recipe.chef.user.last_name %></p>
-                <p><%= booking.start_time.strftime("%I:%M%p") %> - <%= booking.end_time.strftime("%I:%M%p") %></p>
-                <p><%= link_to "Leave your review", booking_path(booking), class:" link-recipe-dash font-weight-bold text-decoration-none pl-0 pr-2" %></p>
+              <div class="card-product-infos pr-1">
+                <h2 class="pt-2"><%= booking.recipe.name %></h2>
+                <p class="m-0">Chef <%= booking.recipe.chef.user.first_name %> <%= booking.recipe.chef.user.last_name %></p>
+                <p class="m-0"><%= booking.date.strftime('%B %d, %Y')  %></p>
+                <p class="m-0"><%= booking.start_time.strftime("%I:%M%p") %> - <%= booking.end_time.strftime("%I:%M%p") %></p>
+                <% if booking.recipe_review.nil? || booking.chef_review.nil?  %>
+                  <p class="mt-0 pb-2"><%= link_to "Leave your review", booking_path(booking), class:" link-recipe-dash font-weight-bold text-decoration-none pl-0 pr-2" %></p>
+                <% end %>
               </div>
             </div>
           <% end %>
           <!--  -->
-          <% if !@last_booking.recipe_review.nil? || !@last_booking.chef_review.nil?%>
+          <% if !@next_booking.recipe_review.nil? || !@next_booking.chef_review.nil?%>
             <div class="card-product mb-4">
-              <%= cl_image_tag @last_booking.recipe.photo.key, width: 100, height: 100,  crop: :fill %>
+              <%= cl_image_tag @next_booking.recipe.photo.key, width: 100, height: 100,  crop: :fill %>
               <div class="card-product-infos pr-0">
-                <h2><%= @last_booking.recipe.name %></h2>
-                <p>Chef <%= @last_booking.recipe.chef.user.first_name %> <%= @last_booking.recipe.chef.user.last_name %></p>
-                <p><%= @last_booking.start_time.strftime("%I:%M%p") %> - <%= @last_booking.end_time.strftime("%I:%M%p") %></p>
-                <p><%= link_to "Leave your review", booking_path(@last_booking), class:"link-recipe-dash font-weight-bold text-decoration-none pl-0 pr-2" %></p>
+                <h2 class="pt-2"><%= @next_booking.recipe.name %></h2>
+                <p class="m-0 ">Chef <%= @next_booking.recipe.chef.user.first_name %> <%= @next_booking.recipe.chef.user.last_name %></p>
+                <p class="m-0"><%= @next_booking.date.strftime('%B %d, %Y')  %>
+                <p class="m-0"><%= @next_booking.start_time.strftime("%I:%M%p") %> - <%= @next_booking.end_time.strftime("%I:%M%p") %></p>
+                <% if @next_booking.recipe_review.nil? || @next_booking.chef_review.nil?  %>
+                  <p class="mt-0 pb-2"><%= link_to "Leave your review", booking_path(@next_booking), class:"link-recipe-dash font-weight-bold text-decoration-none pl-0 pr-2" %></p>
+                <% end %>
               </div>
             </div>
            <% end %>

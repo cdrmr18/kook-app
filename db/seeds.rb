@@ -2930,7 +2930,7 @@ booking_two = Booking.create!(
   start_time: Time.now,
   end_time: Time.now + 1,
   video_url: 'www.video.com',
-  user_id: kathy.id,
+  user_id: chaz.id,
   recipe_id: samuel_four.id
 )
    # dragan bookings
@@ -2947,16 +2947,16 @@ booking_four = Booking.create!(
   start_time: Time.now - 4,
   end_time: Time.now - 3,
   video_url: 'www.video.com',
-  user_id: dragan.id,
-  recipe_id: jamal_two.id
+  user_id: kathy.id,
+  recipe_id: samuel_two.id
 )
 booking_five = Booking.create!(
 date: Faker::Date.forward(days: 8),
 start_time: Time.now - 2 ,
 end_time: Time.now - 1,
 video_url: 'www.video.com',
-user_id: dragan.id,
-recipe_id: bec_four.id
+user_id: raj.id,
+recipe_id: slavo_four.id
 )
 booking_six = Booking.create!(
   date: Faker::Date.backward(days: 5),
@@ -2964,7 +2964,7 @@ booking_six = Booking.create!(
   end_time: Time.now + 1,
   video_url: 'www.video.com',
   user_id: dragan.id,
-  recipe_id: jamal_four.id
+  recipe_id: jamal_three.id
 )
 booking_seven = Booking.create!(
   date: Faker::Date.forward(days: 25),
@@ -2972,7 +2972,7 @@ booking_seven = Booking.create!(
   end_time: Time.now + 1,
   video_url: 'www.video.com',
   user_id: bec.id,
-  recipe_id: chaz_three.id
+  recipe_id: jamal_three.id
 )
 booking_eight = Booking.create!(
   date: Faker::Date.backward(days: 2),
@@ -2980,15 +2980,15 @@ booking_eight = Booking.create!(
   end_time: Time.now + 1,
   video_url: 'www.video.com',
   user_id: roger.id,
-  recipe_id: jamal_five.id
+  recipe_id: chaz_five.id
 )
 booking_nine = Booking.create!(
   date: Faker::Date.backward(days: 25),
   start_time: Time.now,
   end_time: Time.now + 1,
   video_url: 'www.video.com',
-  user_id: raj.id,
-  recipe_id: roger_five.id
+  user_id: dragan.id,
+  recipe_id: bec_four.id
 )
 booking_ten = Booking.create!(
   date: Faker::Date.backward(days: 3),
@@ -2996,7 +2996,7 @@ booking_ten = Booking.create!(
   end_time: Time.now + 1,
   video_url: 'www.video.com',
   user_id: luis.id,
-  recipe_id: jamal_one.id
+  recipe_id: chaz_one.id
 )
 
 puts "#{Booking.count} bookings created"
