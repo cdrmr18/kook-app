@@ -55,7 +55,6 @@ ActiveRecord::Schema.define(version: 2021_03_08_021429) do
     t.bigint "booking_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "name"
     t.index ["booking_id"], name: "index_chats_on_booking_id"
   end
 
