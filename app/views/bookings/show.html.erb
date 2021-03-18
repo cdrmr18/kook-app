@@ -7,7 +7,6 @@
   <!-- booking links -->
   <p> <%= link_to "My Bookings", bookings_path, class: "btn button mt-4 shadow", id:"chef-btn" %> </p>
   <% if @booking.chef_review.blank? ||  @booking.recipe_review.blank? %>
-  <p> <%= link_to "Cancel Booking", booking_path(@booking), method: :delete, data: {confirm: "Are you sure?"}, class: "del-chef btn button-delete shadow" %> </p>
   <% end %>
 </div>
 
