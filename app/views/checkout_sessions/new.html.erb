@@ -1,4 +1,4 @@
-<div class="container card text-center">
+<div class="container card text-center shadow-sm p-4" id="add-measurement">
   <div class="row p-4">
     <div class="card container pt-3 text-center mb-5 shadow">
       <div class="col-md-3 mt-4"><%= cl_image_tag @booking.recipe.photo.key, width: '80%', class: "img-thumbnail" %>
@@ -6,11 +6,14 @@
         <div class="col p-5">
           <!-- booking details -->
           <h1>Checkout Summary</h1>
+          <br>
           <p>x1 Recipe of <strong><%= @booking.recipe.name %></strong> with</p>
           <h5> <strong>Chef <%= @booking.recipe.chef.user.first_name %> <%= @booking.recipe.chef.user.last_name %></strong></h5>
-          <h5><%= @booking.date.strftime('%B %d, %Y') %></h5>
+          
+          <br><h5><%= @booking.date.strftime('%B %d, %Y') %></h5>
           <h5 class="card-text mb-3"><%= @booking.start_time.strftime("%I:%M%p") %> -
                         <%= @booking.end_time.strftime("%I:%M%p") %></h5>
+                        <br>
           <h5>Total <strong><%= humanized_money_with_symbol @booking.recipe.price %></strong></h5>
           <!--  -->
 
