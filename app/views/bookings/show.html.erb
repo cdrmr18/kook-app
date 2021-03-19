@@ -1,5 +1,6 @@
 <!-- booking details -->
-<div class=" card container pt-3 text-center">
+<div class="card container pt-3 text-center rounded
+" id='add-measurement'>
     <h1><%= @booking.recipe.name %></h1>
     <h3> Chef <%= @booking.recipe.chef.user.first_name %> <%= @booking.recipe.chef.user.last_name %></h3>
     <h4><%= @booking.date.strftime('%B %d, %Y') %></h4>
@@ -12,11 +13,11 @@
 
 
 <!-- chef review -->
-<div class="container mt-3 pt-3 ">
+<div class="container mt-3 pt-3 rounded">
   <% if @booking.chef_review.blank? %>
-    <div class="container card my-4 p-4 shadow-sm">
-      <div class="text-center my-2 ">
-        <%= link_to cl_image_tag(@booking.recipe.chef.user.photo.key, width: 200, height: 200, crop: :fill, class: "shadow-sm"), chef_path(@booking.recipe.chef) %>
+    <div class="container card my-4 p-4 shadow-sm" id='add-measurement'>
+      <div class="text-center my-2">
+        <%= link_to cl_image_tag(@booking.recipe.chef.user.photo.key, width: 200, height: 200, crop: :fill, class: "shadow rounded"), chef_path(@booking.recipe.chef) %>
       </div>
       <div class="text-center my-3"><%= link_to "Add Chef Review", new_booking_chef_review_path(@booking), class: "btn button ml-2 shadow-sm" %>
       </div>
@@ -24,10 +25,10 @@
   <% else %>
     <div class="container card my-4 p-4 shadow-sm">
       <div class="text-center my-2 ">
-        <%= link_to cl_image_tag(@booking.recipe.chef.user.photo.key, width: 200, height: 200, crop: :fill, class: "shadow"), chef_path(@booking.recipe.chef) %>
+        <%= link_to cl_image_tag(@booking.recipe.chef.user.photo.key, width: 200, height: 200, crop: :fill, class: "shadow rounded"), chef_path(@booking.recipe.chef) %>
       </div>
       <h5 class="text-center my-3 review-head">Thanks for your review!</h5>
-      <div class="container px-5 ml-3">
+      <div class="container px-2 ml-3">
         <h5 class="mb-0"><%= @booking.chef_review.created_at.strftime("%B %e, %Y") %></h5>
         <p class="mt-2 mb-0"><strong class="mr-2">Rating: </strong> <%= " ⭐️ " * @booking.chef_review.rating %></p>
         <p class="mt-0"><strong class="mr-2">Content:</strong>"<%=  @booking.chef_review.content %>"</p>
@@ -37,20 +38,20 @@
 
   <!-- recipe review -->
     <% if @booking.recipe_review.blank? %>
-    <div class="container card my-4 p-4 shadow-sm">
-      <div class="text-center my-2 ">
-       <%= link_to (cl_image_tag @booking.recipe.photo.key, width: 200, height: 200, crop: :fill, class: "shadow-sm"), recipe_path(@booking.recipe) %>
+    <div class="container card my-4 p-4 shadow-sm rounded" >
+      <div class="text-center my-2 " id='add-measurement'>
+       <%= link_to (cl_image_tag @booking.recipe.photo.key, width: 200, height: 200, crop: :fill, class: "shadow rounded"), recipe_path(@booking.recipe) %>
       </div>
       <div class="text-center my-3"><%= link_to "Add Recipe Review", new_booking_recipe_review_path(@booking), class: "btn button ml-2 shadow-sm" %>
       </div>
     </div>
     <% else %>
-      <div class="container card my-4 p-4 shadow-sm">
+      <div class="container card my-4 p-4 shadow-sm rounded" id='add-measurement'>
         <div class="text-center my-2">
-         <%= link_to (cl_image_tag @booking.recipe.photo.key, width: 200, height: 200, crop: :fill, class: "shadow-sm text-center"), recipe_path(@booking.recipe) %>
+         <%= link_to (cl_image_tag @booking.recipe.photo.key, width: 200, height: 200, crop: :fill, class: "shadow text-center rounded"), recipe_path(@booking.recipe) %>
         </div>
           <h5 class="text-center my-3 review-head">Thanks for your review!</h5>
-        <div class="container px-5 ml-3">
+        <div class="container px-2 ml-3">
           <h5 class="mb-0"><%= @booking.recipe_review.created_at.strftime("%B %e, %Y") %></h5>
           <p class="mt-2 mb-0"><strong class="mr-2">Rating: </strong> <%=  " ⭐️ " * @booking.recipe_review.rating %></p>
           <p class="mt-0"><strong class="mr-2">Content: </strong>"<%=  @booking.recipe_review.content %>"</p>
