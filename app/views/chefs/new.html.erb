@@ -4,9 +4,9 @@
   <div class="container mt-4 mb-4">
     <div class="row">
       <div class="col-12">
-        <h2 class="mb-3 text-center">Create your chef profile</h2>
+        <h2 class="mb-3 text-center chef-dash-header">Create your chef profile</h2>
         <%= simple_form_for @chef do |f| %>
-          <div class="container ml-4">
+          <div class="container">
             <%= f.input :restaurant, label: "What is the name of your restaurant?" %>
             <%= f.input :job_title, label: "What is your job title?" %>
             <%= f.input :introduction, label: "Tell us about yourself and skills" %>

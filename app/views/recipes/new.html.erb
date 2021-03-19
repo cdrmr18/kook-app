@@ -9,12 +9,12 @@
       <br>
 
       <%= simple_form_for @recipe do |f| %>
-        <%= f.input :name, class:"recipe_input_field"%>
-        <%= f.input :description, id:"recipe_description" %>
-        <%= f.input :cuisine %>
-        <%= f.input :cook_time %>
-        <%= f.input :price %>
-        <%= f.input :photo %>
+        <%= f.input :name, label: "What is the name of your recipe?", class:"recipe_input_field"%>
+        <%= f.input :description, id:"recipe_description", label: "Recipe details:" %>
+        <%= f.input :cuisine, label: "What is the cuisine type?" %>
+        <%= f.input :cook_time, label: "What is the cook time" %>
+        <%= f.input :price, label: "What is the session cost per hour?" %>
+        <%= f.input :photo, label: "Add a photo" %>
         <%= f.input :tag_list, label: "Add tags", hint: "Add your tags, separated by commas" %>
         <%= f.button :submit, class: "btn button col-12" %>
       <% end %>
