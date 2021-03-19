@@ -22,18 +22,18 @@
   margin-top: 2px;
   border-color:#A288E3;
   border-width:2px;
-  
-  
+
+
 }
 
 
 .navbar-light .navbar-toggler-icon {
   background-image: asset-url("hamburger-solid.svg");
-  
+
 }
 
 
-#drpdown { 
+#drpdown {
 
   margin:10px;
   padding: 20px;
@@ -105,7 +105,7 @@ cursor: pointer;
   [id*="drpdown"] {
     width:100px;
   }
- 
+
 }
 
 @media (max-width: 580px) {
@@ -139,8 +139,7 @@ cursor: pointer;
 
 .form-control{
   width: 80%;
-  margin: auto;
-  
+
 }
 
 .navbar .navbar-nav {
@@ -157,5 +156,5 @@ cursor: pointer;
   border-radius: 4px;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
   margin-bottom:20px;
- 
+
 }
