@@ -1,12 +1,16 @@
 
 <!-- recipe review form and recipe image-->
-<div class="container card mb-4" style="width: 100%;">
-  <div class="row card-body justify-content-center">
+<div class="container  p-4" id="add-measurement" style="width: 100%;">
+  <div class="row card shadow-sm card-body justify-content-center">
     <div class="col-12 col-md-8 ">
-      <h1>Add Recipe</h1>
+     <div class="container recipe-svg text-center"><%= image_tag "recipe.svg"%></div>
+     <br>
+      <h1 class="text-center newrecipeh1">Add Recipe</h1>
+      <br>
+
       <%= simple_form_for @recipe do |f| %>
-        <%= f.input :name %>
-        <%= f.input :description %>
+        <%= f.input :name, class:"recipe_input_field"%>
+        <%= f.input :description, id:"recipe_description" %>
         <%= f.input :cuisine %>
         <%= f.input :cook_time %>
         <%= f.input :price %>

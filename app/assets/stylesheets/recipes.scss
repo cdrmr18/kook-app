@@ -296,15 +296,49 @@ h4 {
 }
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .recipe-cards {
-    grid-template-columns: 1fr 1fr;
-  }
-}
+// @media (min-width: 768px) {
+//   .recipe-cards {
+//     grid-template-columns: 1fr 1fr;
+//   }
+// }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .recipe-cards {
-    grid-template-columns: 1fr 1fr 1fr;
-    }
-  }
+// @media (min-width: 992px) {
+//   .recipe-cards {
+//     grid-template-columns: 1fr 1fr 1fr;
+//     }
+//   }
+
+
+.recipe-svg img{
+  width:25%;
+}
+
+#recipe_name{
+  width: 285px;
+}
+
+#recipe_description{
+  width: 285px;
+}
+
+#recipe_cuisine{
+  width: 285px;
+}
+
+#recipe_cook_time{
+  width: 285px;
+}
+
+#recipe_price{
+  width: 285px;
+}
+
+
+#recipe_tag_list{
+  width: 285px;
+}
+
+.newrecipeh1{
+  color:#b2015a;
+}
