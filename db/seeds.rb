@@ -50,7 +50,7 @@ luis = User.new(
 luis.photo.attach(io: file, filename: 'nes2.png', content_type: 'image/png')
 luis.save!
 
-file = URI.open('https://images.unsplash.com/photo-1482849737880-498de71dda8d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1280&q=80')
+file = URI.open('https://images.unsplash.com/photo-1543716627-839b54c40519?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fGNoZWZ8ZW58MHx8MHw%3D&auto=format&fit=crop&w=800&q=60')
 dragan = User.new(
   first_name: 'Dragan',
   last_name: Faker::Name.last_name,
