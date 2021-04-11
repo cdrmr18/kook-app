@@ -1,7 +1,7 @@
 class MeasurementsController < ApplicationController
   before_action :set_recipe, only: [:new, :create]
   before_action :set_measurement, only: [:edit, :update, :destroy]
-
+  
   def new
     @measurement = Measurement.new
     authorize @measurement

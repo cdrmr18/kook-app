@@ -1,6 +1,6 @@
 class RecipeReviewsController < ApplicationController
   before_action :set_booking
-
+  
   def new
     @recipe_review =RecipeReview.new
     authorize @recipe_review
