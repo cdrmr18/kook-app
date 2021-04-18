@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  skip_before_action :authenticate_user!, onlyexcept: []
+  skip_before_action :authenticate_user!, except: []
   before_action :set_recipe, only: [:show, :update, :edit, :destroy, :toggle_favorite]
   
   def top
@@ -25,10 +25,12 @@ class RecipesController < ApplicationController
   def show
     # @recipes = Recipe.find(params[:id])
     # @related_recipes = @recipes.find_related_tags
-    @bookings_unsorted = current_user.bookings if user_signed_in? 
-    @bookings = @bookings_unsorted.sort_by(&:id) if user_signed_in? 
-    @next_booking = @bookings.last if user_signed_in? 
-
+    if user_signed_in? 
+      @bookings_unsorted = current_user.bookings 
+      @bookings = @bookings_unsorted.sort_by(&:id) 
+      @next_booking = @bookings.last 
+    end
+    # raise
     # needed to add ingredient and measurements in recipe show page
     @measurement = Measurement.new
     # chef name to display link to chef

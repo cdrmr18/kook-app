@@ -23,7 +23,7 @@
     <p id="cost-recipe" class="text-center my-0 recipe-head"> <%= humanized_money_with_symbol(@recipe.price) %> / hour</p>
   <!--  -->
   <!-- Booking Link -->
-    <% if user_signed_in?  && current_user != @recipe.chef.user %>
+    <% if user_signed_in?  && current_user != @recipe.chef.user || @bookings.nil?%>
       <div class="container text-center mt-3 mb-4">
         <label><em>Ready to start cooking with chef <%= @chef_name %>?</em></label>
       <%= link_to "Book Session", new_recipe_booking_path(@recipe), class: "btn button button-book col-8 mt-3", id:"chef-btn" %>
@@ -59,7 +59,6 @@
                   <%= measurement.description %> <%= measurement.ingredient.capitalize %>
                 </span>
 
-              </div>
             </div>
           </div>
         <% end %>
